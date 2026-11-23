@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Comprehensive pet reptile breeds and species guide on PetSathi. Explore popular lizards, snakes, turtles, tortoises, beginner-friendly reptiles, and essential habitat requirements.">
-  <title>Reptile Breeds &amp; Species Guide | Popular Companion Reptiles | PetSathi</title>
+    content="Explore popular fish breeds and aquarium species on PetSathi. Discover freshwater, saltwater, and beginner-friendly fish, understand aquarium care requirements, and choose the right companion for your tank.">
+  <title>Explore Different Fish Breeds | PetSathi</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,26 +48,10 @@
       font-weight: 400 !important;
     }
 
-    /* Custom Definition for Font Awesome 'fa-turtle' */
-    .fa-turtle {
-      display: inline-block;
-    }
-
-    .fa-turtle::before {
-      content: "" !important;
-      display: inline-block !important;
-      width: 1.15em !important;
-      height: 1.15em !important;
-      vertical-align: -0.15em !important;
-      background-color: currentColor !important;
-      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23000' d='M256 16c-22 0-40 18-40 46 0 24 14 46 26 58h28c12-12 26-34 26-58 0-28-18-46-40-46zM250 435l6 55 6-55zM210 165c-65-30-145-42-185-10-22 18-12 44 14 54 58 22 130 14 171-4zM302 165c65-30 145-42 185-10 22 18 12 44-14 54-58 22-130 14-171-4zM190 355c-55 24-105 78-90 105 14 12 42 2 74-30 20-20 28-45 30-55zM322 355c55 24 105 78 90 105-14 12-42 2-74-30-20-20-28-45-30-55zM256 135c-28 0-52 14-68 36l42 42h52l42-42c-16-22-40-36-68-36zM224 225l-38 38 18 55h104l18-55-38-38h-64zM212 328l44 82 44-82h-88zM176 182c-26 22-42 54-46 90l44 18 20-60-18-48zM172 300l-42-16c4 38 22 72 50 96l14-50-22-30zM336 182l-18 48 20 60 44-18c-4-36-20-68-46-90zM340 300l-22 30 14 50c28-24 46-58 50-96l-42 16z'/%3E%3C/svg%3E") no-repeat center / contain !important;
-      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23000' d='M256 16c-22 0-40 18-40 46 0 24 14 46 26 58h28c12-12 26-34 26-58 0-28-18-46-40-46zM250 435l6 55 6-55zM210 165c-65-30-145-42-185-10-22 18-12 44 14 54 58 22 130 14 171-4zM302 165c65-30 145-42 185-10 22 18 12 44-14 54-58 22-130 14-171-4zM190 355c-55 24-105 78-90 105 14 12 42 2 74-30 20-20 28-45 30-55zM322 355c55 24 105 78 90 105-14 12-42 2-74-30-20-20-28-45-30-55zM256 135c-28 0-52 14-68 36l42 42h52l42-42c-16-22-40-36-68-36zM224 225l-38 38 18 55h104l18-55-38-38h-64zM212 328l44 82 44-82h-88zM176 182c-26 22-42 54-46 90l44 18 20-60-18-48zM172 300l-42-16c4 38 22 72 50 96l14-50-22-30zM336 182l-18 48 20 60 44-18c-4-36-20-68-46-90zM340 300l-22 30 14 50c28-24 46-58 50-96l-42 16z'/%3E%3C/svg%3E") no-repeat center / contain !important;
-    }
-
     /* -------------------------------------------------------------
-       Reptile Badge Strip Matching Dog/Cat Index
+       Fish Badge Strip Matching Dog/Cat Index
        ------------------------------------------------------------- */
-    .rep-badge-strip {
+    .fish-badge-strip {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -88,7 +72,7 @@
       font-style: normal;
     }
 
-    /* Hero Wrapper without Horizontal Divider */
+    /* Hero Section matching Dog/Cat Index */
     .hero-section-wrapper {
       background: linear-gradient(180deg, #edf4ee 0%, #fafcf7 100%);
       padding: 10px 0 40px;
@@ -118,10 +102,51 @@
       margin-top: 26px;
     }
 
+    .hero-actions .button {
+      background: var(--green, #246b43);
+      color: #ffffff;
+      border: 1.5px solid var(--green, #246b43);
+      border-radius: 9999px;
+      padding: 13px 26px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .hero-actions .button:hover {
+      background: #194f31;
+      border-color: #194f31;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(36, 107, 67, 0.2);
+    }
+
+    .hero-actions .button-outline {
+      background: transparent !important;
+      color: #246b43 !important;
+      border: 1.5px solid #246b43 !important;
+    }
+
+    .hero-actions .button-outline:hover {
+      background: #246b43 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(36, 107, 67, 0.2);
+    }
+
     .hero-note {
       margin-top: 22px;
-      color: var(--muted);
+      color: var(--muted, #6d8276);
       font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-note i {
+      color: var(--green, #246b43);
     }
 
     .hero-visual {
@@ -145,7 +170,7 @@
       height: 370px;
       object-fit: cover;
       border-radius: 48% 48% 24px 24px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow, 0 10px 30px rgba(0, 0, 0, 0.08));
     }
 
     .floating-card {
@@ -154,39 +179,45 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: white;
+      background: #ffffff;
       padding: 12px 18px;
       border-radius: 16px;
-      box-shadow: var(--shadow);
-      border: 1px solid #e2ebe4;
+      box-shadow: 0 8px 24px rgba(35, 80, 50, 0.12);
+      border: 1px solid #dceade;
+    }
+
+    .floating-card i {
+      font-size: 1.4rem;
     }
 
     .floating-card span {
-      display: grid;
+      display: flex;
+      flex-direction: column;
     }
 
     .floating-card b {
       font-size: 0.84rem;
-      color: var(--ink);
+      color: #1a251e;
+      line-height: 1.2;
     }
 
     .floating-card small {
       font-size: 0.72rem;
-      color: var(--muted);
+      color: var(--muted, #6d8276);
     }
 
     .card-top {
-      top: 40px;
-      right: 0;
+      top: 15%;
+      right: 2%;
     }
 
     .card-bottom {
-      bottom: 25px;
-      left: 0;
+      bottom: 12%;
+      left: 2%;
     }
 
     /* -------------------------------------------------------------
-       Quick Navigation Hub - Matched with dogs/index.html
+       Quick Navigation Hub matching Dogs and Cats Index
        ------------------------------------------------------------- */
     .guides-nav-strip {
       position: relative;
@@ -215,11 +246,7 @@
       width: 130px;
       height: 130px;
       background: radial-gradient(circle at 10% 10%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 22px 0 0 22px;
-      gap: 6px;
+      border-radius: 0 0 100% 0;
     }
 
     .decor-bottom-right {
@@ -228,22 +255,41 @@
       width: 130px;
       height: 130px;
       background: radial-gradient(circle at 90% 90%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      padding: 0 22px 22px 0;
-      gap: 6px;
+      border-radius: 100% 0 0 0;
     }
 
     .decor-paw {
-      font-size: 15px;
+      position: absolute;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .decor-paw-1 {
+      top: 14px;
+      left: 28px;
+      font-size: 28px;
       transform: rotate(-15deg);
     }
 
-    .decor-paw-2,
-    .decor-paw-4 {
+    .decor-paw-2 {
+      top: 38px;
+      left: 12px;
+      font-size: 19px;
       transform: rotate(20deg);
-      font-size: 13px;
+    }
+
+    .decor-paw-3 {
+      bottom: 14px;
+      right: 28px;
+      font-size: 28px;
+      transform: rotate(15deg);
+    }
+
+    .decor-paw-4 {
+      bottom: 38px;
+      right: 12px;
+      font-size: 19px;
+      transform: rotate(-20deg);
     }
 
     .quick-nav-header {
@@ -258,80 +304,90 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .quick-nav-line {
-      display: inline-block;
-      width: 48px;
       height: 1px;
-      background: #c2dcc8;
+      width: 110px;
+      background: #d6ead9;
     }
 
     .quick-nav-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 5px 14px;
-      border-radius: 999px;
-      background: #edf7ef;
-      border: 1px solid #d5ead9;
-      color: #246b43;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+      padding: 6px 16px;
+      background: #f4faf5;
+      border: 1px solid #b7deb8;
+      border-radius: 9999px;
+      color: #1e6f43;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
+    }
+
+    .quick-nav-badge i {
+      font-size: 0.95rem;
+      line-height: 1;
+      color: #1e6f43;
+      flex-shrink: 0;
     }
 
     .quick-nav-header h2 {
-      font-family: Georgia, serif !important;
-      font-size: clamp(20px, 2.8vw, 28px);
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-size: clamp(1.45rem, 2.4vw, 1.95rem);
       font-weight: 700;
-      color: #263b30;
+      color: #1a251e;
       margin: 0;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      text-align: center;
     }
 
     .quick-nav-header h2 span {
-      color: #28764a;
+      color: #246b43;
     }
 
     .guides-nav-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
     }
 
     .guide-nav-item {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 11px 12px;
+      padding: 10px 14px;
       border-radius: 999px;
       background: #fafcf8;
       border: 1.5px solid #dbe8dd;
       color: #2d4536;
       text-decoration: none;
       font-weight: 700;
-      font-size: 12.5px;
+      font-size: 13px;
       transition: all 0.25s ease;
       box-shadow: 0 2px 6px rgba(35, 80, 50, 0.02);
     }
 
     .guide-nav-item:hover {
-      background: #246b43;
+      background: #eaf3eb;
       border-color: #246b43;
-      color: #ffffff;
+      color: #246b43;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(36, 107, 67, 0.18);
+      box-shadow: 0 6px 14px rgba(35, 80, 50, 0.08);
     }
 
     .guide-nav-icon {
       display: grid;
       place-items: center;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: #eaf3eb;
       color: #246b43;
@@ -341,8 +397,8 @@
     }
 
     .guide-nav-item:hover .guide-nav-icon {
-      background: #ffffff;
-      color: #246b43;
+      background: #246b43;
+      color: #ffffff;
     }
 
     .guide-nav-label {
@@ -352,48 +408,23 @@
     }
 
     /* -------------------------------------------------------------
-       Section Rhythm & Foundations (NO Horizontal Dividers)
-       ------------------------------------------------------------- */
-    .rep-section {
-      padding: 65px 0 75px;
-    }
-
-    .bg-cream {
-      background: #fafcf7;
-    }
-
-    .bg-white {
-      background: #ffffff;
-    }
-
-    .bg-soft-green {
-      background: #f4faf5;
-    }
-
-    /* -------------------------------------------------------------
-       Signature Section Heading Cards matching reptiles.html & dogs/index.html
+       Signature Section Heading Cards matching Dog/Cat Index
        ------------------------------------------------------------- */
     .section-heading-wrap {
       position: relative;
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto 36px;
-      padding: 44px 35px 38px;
+      padding: 42px 35px 36px;
       overflow: hidden;
       text-align: center;
-      border-radius: 35px;
+      border-radius: 32px;
       border: 1px solid #dcebc9;
       background: #fafcf7;
       box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
     }
 
-    .bg-cream .section-heading-wrap {
-      background: #ffffff;
-    }
-
     .corner-wave {
       position: absolute;
-      width: 190px;
-      height: 110px;
       pointer-events: none;
       z-index: 0;
     }
@@ -401,14 +432,17 @@
     .wave-tl {
       top: 0;
       left: 0;
+      width: 220px;
+      height: 130px;
     }
 
     .wave-br {
       bottom: 0;
       right: 0;
+      width: 220px;
+      height: 130px;
     }
 
-    /* Floating Paw Background Accents (Exact match to reptiles.html & dogs/index.html) */
     .paw {
       position: absolute;
       color: rgba(115, 173, 91, 0.28);
@@ -467,7 +501,6 @@
     }
 
     .heading-label i {
-      font-size: 14px;
       color: #246b43;
       line-height: 1;
     }
@@ -479,7 +512,7 @@
       font-size: clamp(24px, 3.2vw, 36px);
       font-weight: 700;
       margin: 0 0 12px;
-      line-height: 1.2;
+      line-height: 1.25;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -496,12 +529,12 @@
     }
 
     .heading-burst {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       position: relative;
       width: 24px;
       height: 24px;
-      flex-shrink: 0;
-      vertical-align: middle;
     }
 
     .heading-burst span {
@@ -516,23 +549,24 @@
     }
 
     .heading-burst.left span:nth-child(1) {
-      top: 3px;
       width: 14px;
-      height: 2.8px;
-      transform: rotate(35deg);
+      height: 3px;
+      transform: rotate(25deg);
+      top: 5px;
     }
 
     .heading-burst.left span:nth-child(2) {
-      top: 11px;
       width: 18px;
-      height: 2.8px;
+      height: 3px;
+      transform: rotate(0deg);
+      top: 11px;
     }
 
     .heading-burst.left span:nth-child(3) {
-      bottom: 3px;
       width: 14px;
-      height: 2.8px;
-      transform: rotate(-35deg);
+      height: 3px;
+      transform: rotate(-25deg);
+      top: 17px;
     }
 
     .heading-burst.right span {
@@ -541,261 +575,258 @@
     }
 
     .heading-burst.right span:nth-child(1) {
-      top: 3px;
       width: 14px;
-      height: 2.8px;
-      transform: rotate(-35deg);
+      height: 3px;
+      transform: rotate(-25deg);
+      top: 5px;
     }
 
     .heading-burst.right span:nth-child(2) {
-      top: 11px;
       width: 18px;
-      height: 2.8px;
+      height: 3px;
+      transform: rotate(0deg);
+      top: 11px;
     }
 
     .heading-burst.right span:nth-child(3) {
-      bottom: 3px;
       width: 14px;
-      height: 2.8px;
-      transform: rotate(35deg);
+      height: 3px;
+      transform: rotate(25deg);
+      top: 17px;
     }
 
+    .heading-content p,
     .section-heading-wrap p {
-      max-width: 720px;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+      color: #55675c;
+      max-width: 680px;
       margin: 0 auto;
-      color: #64736a;
-      font-size: 15px;
       line-height: 1.65;
     }
 
     /* -------------------------------------------------------------
-       Species Cards Grid & Card Styling (3 columns desktop)
+       Sections & Background Alternation
        ------------------------------------------------------------- */
-    .species-card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
+    .fish-section {
+      padding: 70px 0 80px;
     }
 
-    .species-card {
+    .bg-white {
       background: #ffffff;
-      border: 1.5px solid #dce8dd;
-      border-radius: 24px;
+    }
+
+    .bg-cream {
+      background: #fafcf7;
+    }
+
+    .bg-soft-green {
+      background: #f4faf5;
+    }
+
+    /* -------------------------------------------------------------
+       Fish Breed Cards (Responsive 3 Desktop, 2 Tablet, 1 Mobile)
+       ------------------------------------------------------------- */
+    .fish-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .fish-card {
+      background: #ffffff;
+      border: 1px solid #dceade;
+      border-radius: 22px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: all 0.3s ease;
       box-shadow: 0 4px 18px rgba(35, 75, 45, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       text-align: center;
     }
 
-    .species-card:hover {
-      transform: translateY(-6px);
+    .fish-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(35, 75, 45, 0.1);
       border-color: #246b43;
-      box-shadow: 0 12px 30px rgba(36, 107, 67, 0.12);
     }
 
-    .species-card-media {
+    .fish-card-media {
       position: relative;
-      height: 220px;
       width: 100%;
+      height: 220px;
       overflow: hidden;
-      background: #edf4ed;
+      background: #eef4f0;
     }
 
-    .species-card-media img {
+    .fish-card-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      display: block;
+      transition: transform 0.35s ease;
     }
 
-    .species-card:hover .species-card-media img {
-      transform: scale(1.06);
+    .fish-card:hover .fish-card-media img {
+      transform: scale(1.05);
     }
 
-    .species-tag {
+    .fish-tag {
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(4px);
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #246b43;
-      letter-spacing: 0.5px;
-      border: 1px solid #d0e4d5;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      padding: 5px 12px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(4px);
+      border: 1px solid #dceade;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #246b43;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       z-index: 2;
     }
 
-    .species-card-body {
-      padding: 24px 22px 26px;
+    .fish-card-body {
+      padding: 24px 22px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       align-items: center;
+      flex-grow: 1;
     }
 
-    .species-card-body h3 {
-      font-size: 1.25rem;
-      color: #1a2920;
+    .fish-card-body h3 {
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a251e;
       margin: 0 0 4px;
-      font-family: Georgia, serif;
+      line-height: 1.3;
     }
 
-    .species-scientific {
+    .fish-scientific {
       font-size: 0.82rem;
-      color: #6c7e72;
       font-style: italic;
+      color: #6d8276;
       margin-bottom: 12px;
     }
 
-    .species-card-body p {
-      color: #55665b;
+    .fish-card-body p {
       font-size: 0.92rem;
-      line-height: 1.6;
+      line-height: 1.65;
+      color: #55665b;
       margin: 0 0 18px;
       flex-grow: 1;
     }
 
-    /* Compact Key Specs Table */
-    .species-specs {
+    .fish-specs {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
-      background: #f7faf7;
-      padding: 12px 14px;
-      border-radius: 14px;
-      margin-bottom: 0;
-      border: 1px solid #e4ede6;
-      text-align: left;
+      padding-top: 14px;
+      border-top: 1px solid #edf4ee;
+      margin-bottom: 4px;
     }
 
     .spec-item {
+      background: #fafcf8;
+      border: 1px solid #eef4ed;
+      border-radius: 10px;
+      padding: 7px 10px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .spec-label {
       font-size: 0.68rem;
       font-weight: 700;
-      color: #7b8e81;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
+      color: #7d9084;
+      margin-bottom: 2px;
     }
 
     .spec-val {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: #213629;
-    }
-
-    .species-card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.86rem;
-      font-weight: 700;
-      color: #246b43;
-      text-decoration: none;
-      transition: gap 0.2s ease, color 0.2s ease;
-      margin-top: auto;
-    }
-
-    .species-card:hover .species-card-link {
-      gap: 10px;
-      color: #194f31;
+      color: #263b30;
     }
 
     /* -------------------------------------------------------------
-       Information & Topic Cards (3 columns desktop, center aligned)
+       Info / Factor Cards for Choosing Right Fish
        ------------------------------------------------------------- */
-    .info-card-grid {
+    .factor-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .info-card {
+    .factor-card {
       background: #ffffff;
-      border: 1.5px solid #dce8dd;
+      border: 1px solid #dceade;
       border-radius: 22px;
-      padding: 32px 24px;
+      padding: 30px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 18px rgba(35, 75, 45, 0.03);
+      box-shadow: 0 4px 18px rgba(35, 75, 45, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
-    .info-card:hover {
-      transform: translateY(-5px);
+    .factor-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(35, 75, 45, 0.09);
       border-color: #246b43;
-      box-shadow: 0 10px 26px rgba(36, 107, 67, 0.1);
     }
 
-    .info-icon-bubble {
-      width: 56px;
-      height: 56px;
+    .factor-icon-wrap {
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: #eaf3eb;
+      background: #edf7f0;
+      border: 1px solid #cce4d2;
       color: #246b43;
       display: grid;
       place-items: center;
-      font-size: 22px;
+      font-size: 1.45rem;
       margin-bottom: 18px;
-      border: 1px solid #d5ead9;
-      transition: all 0.3s ease;
+      transition: background 0.25s ease, color 0.25s ease;
     }
 
-    .info-card:hover .info-icon-bubble {
+    .factor-card:hover .factor-icon-wrap {
       background: #246b43;
       color: #ffffff;
-      transform: scale(1.08);
     }
 
-    .info-card h3 {
-      font-family: Georgia, serif;
+    .factor-card h3 {
+      font-family: Georgia, "Times New Roman", serif !important;
       font-size: 1.25rem;
-      color: #1c2b21;
+      font-weight: 700;
+      color: #1a251e;
       margin: 0 0 10px;
     }
 
-    .info-card p {
-      color: #55665b;
+    .factor-card p {
       font-size: 0.92rem;
       line-height: 1.65;
-      margin: 0 0 16px;
-      flex-grow: 1;
-    }
-
-    .info-card-footer {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #246b43;
-      text-decoration: none;
-      transition: gap 0.2s ease;
-      margin-top: auto;
-    }
-
-    .info-card:hover .info-card-footer {
-      gap: 10px;
+      color: #55665b;
+      margin: 0;
     }
 
     /* -------------------------------------------------------------
-       Final Light Pink CTA Section (Left-Aligned, No Pill Badge)
+       Final Light Pink CTA Section
        ------------------------------------------------------------- */
-    .rep-pink-cta {
+    .fish-pink-cta {
       position: relative;
       background: #fdf2f4;
       border: 1px solid #f8d7da;
@@ -812,7 +843,7 @@
       overflow: hidden;
     }
 
-    .rep-pink-cta .eyebrow {
+    .fish-pink-cta .eyebrow {
       display: block !important;
       background: transparent !important;
       border: none !important;
@@ -829,7 +860,7 @@
       justify-content: flex-start !important;
     }
 
-    .rep-pink-cta h2 {
+    .fish-pink-cta h2 {
       font-family: Georgia, "Times New Roman", serif !important;
       font-size: clamp(1.7rem, 2.7vw, 2.25rem);
       margin: 0 0 10px;
@@ -838,12 +869,12 @@
       text-align: left !important;
     }
 
-    .rep-pink-cta h2 em {
+    .fish-pink-cta h2 em {
       color: #246b43;
       font-style: normal;
     }
 
-    .rep-pink-cta p {
+    .fish-pink-cta p {
       color: #55665b;
       font-size: 0.95rem;
       max-width: 620px;
@@ -852,14 +883,14 @@
       text-align: left !important;
     }
 
-    .rep-pink-cta-actions {
+    .fish-pink-cta-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
       flex-shrink: 0;
     }
 
-    .rep-pink-cta-actions .button {
+    .fish-pink-cta-actions .button {
       background: #246b43;
       color: white;
       border: 1.5px solid #246b43;
@@ -874,20 +905,20 @@
       white-space: nowrap;
     }
 
-    .rep-pink-cta-actions .button:hover {
+    .fish-pink-cta-actions .button:hover {
       background: #194f31;
       border-color: #194f31;
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(36, 107, 67, 0.2);
     }
 
-    .rep-pink-cta-actions .button-outline {
+    .fish-pink-cta-actions .button-outline {
       background: #ffffff !important;
       color: #246b43 !important;
       border: 1.5px solid #246b43 !important;
     }
 
-    .rep-pink-cta-actions .button-outline:hover {
+    .fish-pink-cta-actions .button-outline:hover {
       background: #246b43 !important;
       color: #ffffff !important;
       transform: translateY(-2px);
@@ -897,123 +928,143 @@
     /* -------------------------------------------------------------
        Responsive Design (Desktop 3, Tablet 2, Mobile 1)
        ------------------------------------------------------------- */
+    @media (max-width: 1024px) {
+      .guides-nav-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     @media (max-width: 960px) {
       .hero {
         grid-template-columns: 1fr;
-        gap: 32px;
+        padding-block: 30px;
+        text-align: center;
       }
 
-      .species-card-grid,
-      .info-card-grid {
+      .hero-copy > p {
+        margin: 0 auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-note {
+        justify-content: center;
+      }
+
+      .fish-grid,
+      .factor-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
 
-      .guides-nav-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .rep-pink-cta {
+      .fish-pink-cta {
         flex-direction: column;
         align-items: flex-start;
         padding: 34px 28px;
       }
+    }
 
-      .section-heading-wrap {
-        padding: 35px 20px 30px;
-      }
-
-      .paw-left-1,
-      .paw-right-1 {
-        display: none;
+    @media (max-width: 680px) {
+      .guides-nav-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 640px) {
-      .species-card-grid,
-      .info-card-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 580px) {
+      .guides-nav-strip {
+        padding: 28px 18px;
+        width: calc(100% - 24px);
+      }
+
+      .quick-nav-line {
+        width: 40px;
       }
 
       .guides-nav-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-photo {
-        height: 280px;
+      .fish-grid,
+      .factor-grid {
+        grid-template-columns: 1fr;
       }
 
-      .rep-pink-cta {
+      .section-heading-wrap {
+        padding: 32px 18px 28px;
+      }
+
+      .paw-left-1, .paw-left-2, .paw-right-1, .paw-right-2 {
+        display: none;
+      }
+
+      .fish-pink-cta {
         padding: 26px 20px;
       }
 
-      .rep-pink-cta-actions {
+      .fish-pink-cta-actions {
         width: 100%;
       }
 
-      .rep-pink-cta-actions .button {
+      .fish-pink-cta-actions .button,
+      .fish-pink-cta-actions .button-outline {
         width: 100%;
         text-align: center;
         justify-content: center;
-      }
-
-      .guides-nav-strip {
-        padding: 24px 18px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Reusable Site Header Placeholder -->
+  <!-- Header Placeholder -->
   <div id="header"></div>
 
-  <main id="main-content">
-
+  <main>
     <!-- ========================================================
          1. MAIN HERO SECTION
          ======================================================== -->
     <div class="hero-section-wrapper">
-      <section class="hero section-wrap" id="reptile-hero">
+      <section class="hero section-wrap" id="fish-hero">
         <div class="hero-copy">
-          <div class="rep-badge-strip">
-            <i class="fa-solid fa-dragon" aria-hidden="true"></i> PetSathi • Herpetological Species Guide
+          <div class="fish-badge-strip">
+            <i class="fa-solid fa-fish" aria-hidden="true"></i> Species Directory &amp; Aquatic Varieties
           </div>
-          <h1>Explore Different <em>Reptile Species</em></h1>
+          <h1>Explore Different <em>Fish Breeds</em></h1>
           <p>
-            Reptiles are captivating, quiet, and fascinating companion animals with prehistoric heritage and unique environmental needs. Discover popular pet lizards, snakes, tortoises, and turtles to understand their distinct temperaments, thermal gradients, and lifelong habitat requirements.
+            Dive into the peaceful, vibrant universe of pet fish! From colorful freshwater livebearers and tranquil schooling tetras to majestic marine reef-dwellers, discover their unique characteristics, behaviors, and environmental needs to create a thriving aquarium home.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#popular-species" id="hero-btn-species">
-              Explore Reptile Species &rarr;
+            <a class="button" href="#popular-fish" id="hero-cta-explore">
+              <i class="fa-solid fa-water" aria-hidden="true"></i> Explore Fish Breeds
             </a>
-            <a class="button button-outline" href="care.html" id="hero-btn-care">
-              Reptile Care Guide
+            <a class="button button-outline" href="care.html" id="hero-cta-care">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Fish Care Guide
             </a>
           </div>
           <div class="hero-note">
-            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Providing species-appropriate heating, UVB lighting, and balanced nutrition ensures your reptile thrives for decades.
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Dedicated to sustainable fishkeeping and healthy, flourishing aquatic life.
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-blob"></div>
           <img class="hero-photo"
-            src="../../../assets/images/reptiles/bearded-dragon.jpg"
-            alt="Central bearded dragon basking on natural rock in a temperature-controlled terrarium" />
-
-          <!-- Floating Badges Matching Dog/Cat Index -->
+            src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=1000&q=85"
+            alt="Vibrant tropical aquarium fish swimming gracefully in lush planted aquascape" />
           <div class="floating-card card-top">
-            <i class="fa-solid fa-sun" style="color: #e67e22; font-size: 1.4rem;" aria-hidden="true"></i>
+            <i class="fa-solid fa-fish" style="color: #246b43;" aria-hidden="true"></i>
             <span>
-              <b>UVB &amp; Thermal Basking</b>
-              <small>Vital metabolic care</small>
+              <b>30,000+ Species</b>
+              <small>Diverse Aquatic World</small>
             </span>
           </div>
           <div class="floating-card card-bottom">
-            <i class="fa-solid fa-shield-halved" style="color: #246b43; font-size: 1.4rem;" aria-hidden="true"></i>
+            <i class="fa-solid fa-droplet" style="color: #0284c7;" aria-hidden="true"></i>
             <span>
-              <b>Fascinating Heritage</b>
-              <small>Calm &amp; hypoallergenic</small>
+              <b>Pristine Waters</b>
+              <small>Fresh &amp; Marine Habitats</small>
             </span>
           </div>
         </div>
@@ -1043,42 +1094,44 @@
           </div>
           <span class="quick-nav-line"></span>
         </div>
-        <h2>Explore Dedicated <span>Reptile Species Chapters</span></h2>
+        <h2>Explore Dedicated <span>Fish Breed Chapters</span></h2>
       </div>
 
-      <!-- Six Navigation Buttons Required by Issue #256 -->
+      <!-- Five Navigation Buttons Required by Issue #250 -->
       <div class="guides-nav-grid">
-        <a href="#popular-species" class="guide-nav-item" id="hub-link-popular">
+        <a href="#popular-fish" class="guide-nav-item" id="hub-link-popular">
           <span class="guide-nav-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Popular Species</span>
+          <span class="guide-nav-label">Popular Fish Breeds</span>
         </a>
-        <a href="#lizards" class="guide-nav-item" id="hub-link-lizards">
-          <span class="guide-nav-icon"><i class="fa-solid fa-dragon" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Lizards</span>
+
+        <a href="#freshwater-fish" class="guide-nav-item" id="hub-link-freshwater">
+          <span class="guide-nav-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Freshwater Fish</span>
         </a>
-        <a href="#snakes" class="guide-nav-item" id="hub-link-snakes">
-          <span class="guide-nav-icon"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Snakes</span>
+
+        <a href="#saltwater-fish" class="guide-nav-item" id="hub-link-saltwater">
+          <span class="guide-nav-icon"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Saltwater Fish</span>
         </a>
-        <a href="#turtles-tortoises" class="guide-nav-item" id="hub-link-turtles">
-          <span class="guide-nav-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Turtles &amp; Tortoises</span>
+
+        <a href="#beginner-fish" class="guide-nav-item" id="hub-link-beginner">
+          <span class="guide-nav-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Beginner-Friendly Fish</span>
         </a>
-        <a href="#beginner-friendly" class="guide-nav-item" id="hub-link-beginner">
-          <span class="guide-nav-icon"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Beginner Friendly</span>
-        </a>
-        <a href="#choosing-reptile" class="guide-nav-item" id="hub-link-choosing">
-          <span class="guide-nav-icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Choosing Guide</span>
+
+        <a href="#choosing-fish" class="guide-nav-item" id="hub-link-choosing">
+          <span class="guide-nav-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Choosing the Right Fish</span>
         </a>
       </div>
     </div>
 
     <!-- ========================================================
-         3. SECTION A: POPULAR REPTILE SPECIES
+         3. MAIN CONTENT SECTIONS
          ======================================================== -->
-    <section id="popular-species" class="rep-section bg-cream" aria-labelledby="heading-popular">
+
+    <!-- SECTION A: POPULAR FISH BREEDS -->
+    <section id="popular-fish" class="fish-section bg-cream" aria-labelledby="heading-popular">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1090,189 +1143,141 @@
             <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
           </svg>
 
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <i class="fa-solid fa-paw paw paw-left-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-left-2" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-2" aria-hidden="true"></i>
 
           <div class="heading-content">
             <span class="heading-label">
               <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <span>Most Kept Species</span>
+              Aquatic Highlights
             </span>
             <h2 id="heading-popular">
               <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Popular <span>Reptile Species</span>
+              Popular <em>Fish Breeds</em>
               <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
             </h2>
-            <p>From social desert agamas to calm nocturnal geckos and gentle colubrid snakes, explore the eight most cherished companion reptile species and their key biological traits.</p>
+            <p>
+              Explore beloved aquatic favorites known for captivating coloration, graceful swimming, and charming tank personalities.
+            </p>
           </div>
         </div>
 
-        <!-- 8 Popular Species Cards Required by Issue #256 -->
-        <div class="species-card-grid">
-
-          <!-- 1. Bearded Dragon -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-sun" aria-hidden="true"></i> Agamid Lizard</span>
-              <img src="../../../assets/images/reptiles/bearded-dragon.jpg" alt="Central Bearded Dragon basking on warm terrarium branch" loading="lazy" />
+        <div class="fish-grid">
+          <!-- Card 1: Betta Fish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Freshwater</span>
+              <img src="https://images.unsplash.com/photo-1769006604234-8f6e32bb0d77?auto=format&fit=crop&w=700&q=85"
+                alt="Vibrant red and blue Betta splendens with elaborate fins" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Bearded Dragon</h3>
-              <div class="species-scientific">Pogona vitticeps</div>
-              <p>Inquisitive, diurnal, and calm Australian agamid known for responsive social behavior, hand-feeding ease, and arm-waving communications.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">18–24 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">10–15 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Omnivore (Greens &amp; Insects)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">120 Gallons (4x2x2 ft)</span></div>
+            <div class="fish-card-body">
+              <h3>Betta Fish</h3>
+              <div class="fish-scientific">Betta splendens</div>
+              <p>Celebrated for their flamboyant flowing fins and intelligent curiosity, Bettas have a labyrinth organ that allows surface breathing in gently filtered tanks.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">5+ Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Solitary / Feisty</span></div>
               </div>
             </div>
           </article>
 
-          <!-- 2. Leopard Gecko -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-moon" aria-hidden="true"></i> Eublepharid Gecko</span>
-              <img src="../../../assets/images/reptiles/leopard-gecko.jpg" alt="Leopard Gecko resting in natural arid enclosure hide" loading="lazy" />
+          <!-- Card 2: Goldfish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-temperature-arrow-down" aria-hidden="true"></i> Coldwater</span>
+              <img src="https://images.unsplash.com/photo-1785822387462-1b8dd36804be?auto=format&fit=crop&w=700&q=85"
+                alt="Fancy orange goldfish swimming gracefully in clean water" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Leopard Gecko</h3>
-              <div class="species-scientific">Eublepharis macularius</div>
-              <p>Docile, terrestrial crepuscular gecko native to arid rocky grasslands. Renowned for move-able eyelids, peaceful nature, and easy handling.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">8–10 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">15–20 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Insectivore (Crickets &amp; Roaches)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">20–40 Gallons</span></div>
+            <div class="fish-card-body">
+              <h3>Goldfish</h3>
+              <div class="fish-scientific">Carassius auratus</div>
+              <p>Friendly, sociable coldwater classics admired worldwide for their playful personalities, requiring ample swimming volume and robust filtration.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">20–30 Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Peaceful &amp; Social</span></div>
               </div>
             </div>
           </article>
 
-          <!-- 3. Crested Gecko -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-tree" aria-hidden="true"></i> Arboreal Gecko</span>
-              <img src="../../../assets/images/reptiles/crested-gecko.png" alt="Crested Gecko clinging to tropical terrarium foliage" loading="lazy" />
+          <!-- Card 3: Guppy -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Freshwater</span>
+              <img src="https://images.unsplash.com/photo-1711826949355-30acbe1b385a?auto=format&fit=crop&w=700&q=85"
+                alt="Male Guppy with vibrant multicoloured fan tail" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Crested Gecko</h3>
-              <div class="species-scientific">Correlophus ciliatus</div>
-              <p>Vibrant New Caledonian arboreal gecko with hair-like eyelash crests. Thrives at standard room temperature and relishes commercial fruit powder diets.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">7–9 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">15–20 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Frugivore (Complete Meal Puree)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">20 Gallon Tall (Arboreal)</span></div>
+            <div class="fish-card-body">
+              <h3>Guppy</h3>
+              <div class="fish-scientific">Poecilia reticulata</div>
+              <p>Active and exceptionally peaceful livebearers famous for endless rainbow tail patterns, thriving easily in community setups with stable water quality.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">10 Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Lively &amp; Docile</span></div>
               </div>
             </div>
           </article>
 
-          <!-- 4. Corn Snake -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i> Colubrid Snake</span>
-              <img src="../../../assets/images/reptiles/corn-snake.jpg" alt="Corn Snake coiled gracefully on substrate in vivarium" loading="lazy" />
+          <!-- Card 4: Neon Tetra -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Freshwater</span>
+              <img src="https://images.unsplash.com/photo-1737688670910-084f54254e73?auto=format&fit=crop&w=700&q=85"
+                alt="School of Neon Tetras shimmering with electric blue and red stripes" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Corn Snake</h3>
-              <div class="species-scientific">Pantherophis guttatus</div>
-              <p>Slender, gentle, and hardy North American rat snake available in stunning color morphs. Highly recommended for first-time snake keepers.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">4–5.5 feet</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">18–22 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Carnivore (Frozen-Thawed Rodents)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">40–75 Gallons</span></div>
+            <div class="fish-card-body">
+              <h3>Neon Tetra</h3>
+              <div class="fish-scientific">Paracheirodon innesi</div>
+              <p>Dazzling schooling nano-fish featuring iridescent electric blue and ruby stripes, creating captivating synchronized motion in peaceful planted aquariums.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">10+ Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Peaceful Shoaler</span></div>
               </div>
             </div>
           </article>
 
-          <!-- 5. Ball Python -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-shield" aria-hidden="true"></i> Pythonid Snake</span>
-              <img src="../../../assets/images/reptiles/ball-python.jpg" alt="Ball Python resting peacefully in secure warm terrarium hide" loading="lazy" />
+          <!-- Card 5: Angelfish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Freshwater</span>
+              <img src="https://images.unsplash.com/photo-1646022103851-022a7544a3b5?auto=format&fit=crop&w=700&q=85"
+                alt="Regal freshwater Angelfish with tall fins in planted aquarium" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Ball Python</h3>
-              <div class="species-scientific">Python regius</div>
-              <p>Heavy-bodied, docile African python famous for curling into a defensive ball. Appreciates warm, humid microclimates and quiet surroundings.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">3–5 feet</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">25–35 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Carnivore (Frozen-Thawed Rodents)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">120 Gallons (4x2x2 ft)</span></div>
+            <div class="fish-card-body">
+              <h3>Angelfish</h3>
+              <div class="fish-scientific">Pterophyllum scalare</div>
+              <p>Regal, disc-shaped centerpiece cichlids that glide majestically through deep planted tanks with warm, pristine currents and peaceful companions.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">30+ Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Semi-Aggressive</span></div>
               </div>
             </div>
           </article>
 
-          <!-- 6. Blue-Tongued Skink -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-gem" aria-hidden="true"></i> Scincid Lizard</span>
-              <img src="../../../assets/images/reptiles/blue-tongued-skink.jpg" alt="Blue-Tongued Skink exploring forest substrate with bright blue tongue" loading="lazy" />
+          <!-- Card 6: Molly Fish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Freshwater</span>
+              <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=700&q=85"
+                alt="Healthy sleek tropical Molly livebearer fish swimming" loading="lazy" />
             </div>
-            <div class="species-card-body">
-              <h3>Blue-Tongued Skink</h3>
-              <div class="species-scientific">Tiliqua scincoides</div>
-              <p>Stout, inquisitive Australian lizard celebrated for its striking cobalt-blue tongue, robust body, and exceptionally gentle disposition with regular handling.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">18–24 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">18–25 years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Omnivore (Greens, Vegetables, Insects)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">120 Gallons (4x2x2 ft)</span></div>
+            <div class="fish-card-body">
+              <h3>Molly Fish</h3>
+              <div class="fish-scientific">Poecilia sphenops</div>
+              <p>Hardy, adaptable livebearers prized for velvety black, sailfin, and lyretail varieties that actively graze algae and bring continuous energy to tanks.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">20 Gallons</span></div>
+                <div class="spec-item"><span class="spec-label">Temperament</span><span class="spec-val">Active &amp; Friendly</span></div>
               </div>
             </div>
           </article>
-
-          <!-- 7. Russian Tortoise -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-mountain" aria-hidden="true"></i> Testudinid Tortoise</span>
-              <img src="../../../assets/images/reptiles/russian-tortoise.jpg" alt="Russian Tortoise grazing on leafy greens inside dedicated tortoise table" loading="lazy" />
-            </div>
-            <div class="species-card-body">
-              <h3>Russian Tortoise</h3>
-              <div class="species-scientific">Testudo horsfieldii</div>
-              <p>Compact, energetic arid-land tortoise with great personality. Requires deep burrowing substrate, high-calcium leafy greens, and open-top wooden tortoise tables.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">6–8 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">40–50+ years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Herbivore (High-Fiber Weeds &amp; Grasses)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">Tortoise Table (4x2 ft minimum)</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- 8. Red-Eared Slider Turtle -->
-          <article class="species-card">
-            <div class="species-card-media">
-              <span class="species-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Emydid Aquatic Turtle</span>
-              <img src="../../../assets/images/reptiles/red-eared-slider.jpg" alt="Red-Eared Slider Turtle resting on dry basking dock under warm heat lamp" loading="lazy" />
-            </div>
-            <div class="species-card-body">
-              <h3>Red-Eared Slider</h3>
-              <div class="species-scientific">Trachemys scripta elegans</div>
-              <p>Active, popular freshwater turtle with distinctive red ear stripes. Demands high-capacity canister water filtration, spacious swimming volume, and dry basking platforms.</p>
-              <div class="species-specs">
-                <div class="spec-item"><span class="spec-label">Adult Size</span><span class="spec-val">8–12 inches</span></div>
-                <div class="spec-item"><span class="spec-label">Lifespan</span><span class="spec-val">30–40+ years</span></div>
-                <div class="spec-item"><span class="spec-label">Diet</span><span class="spec-val">Omnivore (Pellets, Greens, Insects)</span></div>
-                <div class="spec-item"><span class="spec-label">Enclosure</span><span class="spec-val">75–120 Gallon Aquaterrarium</span></div>
-              </div>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ========================================================
-         4. SECTION B: LIZARDS
-         ======================================================== -->
-    <section id="lizards" class="rep-section bg-white" aria-labelledby="heading-lizards">
+    <!-- SECTION B: FRESHWATER FISH -->
+    <section id="freshwater-fish" class="fish-section bg-white" aria-labelledby="heading-freshwater">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1284,58 +1289,87 @@
             <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
           </svg>
 
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <i class="fa-solid fa-paw paw paw-left-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-left-2" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-2" aria-hidden="true"></i>
 
           <div class="heading-content">
             <span class="heading-label">
-              <i class="fa-solid fa-dragon" aria-hidden="true"></i>
-              <span>Saurian Characteristics</span>
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+              River &amp; Lake Biotope
             </span>
-            <h2 id="heading-lizards">
+            <h2 id="heading-freshwater">
               <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Fascinating <span>Pet Lizards</span>
+              Freshwater <em>Fish Species</em>
               <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
             </h2>
-            <p>Pet lizards showcase astonishing diversity in locomotion, activity periods, and habitat adaptations. Understanding their unique environmental dependencies is fundamental to responsible husbandry.</p>
+            <p>
+              Freshwater aquariums are the most accessible and diverse realm of fishkeeping, offering thriving planted biotope environments and peaceful community dynamics.
+            </p>
           </div>
         </div>
 
-        <div class="info-card-grid">
-          <!-- Card 1 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-temperature-arrow-up" aria-hidden="true"></i></div>
-            <h3>Thermal &amp; UVB Gradients</h3>
-            <p>Lizards are ectothermic and depend entirely on calibrated external heat. Diurnal lizards require full-spectrum T5 linear UVB lighting and a distinct basking zone (95°–105°F) paired with a cool retreat (75°–80°F) to prevent metabolic bone disease.</p>
-            <a href="care.html#heating" class="info-card-footer">UVB Guidelines &rarr;</a>
+        <div class="fish-grid">
+          <!-- Freshwater 1: Platy Fish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Livebearer</span>
+              <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=700&q=85"
+                alt="Bright red and sunset orange Platy fish swimming in planted tank" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Platy Fish</h3>
+              <div class="fish-scientific">Xiphophorus maculatus</div>
+              <p>Delightfully hardy and prolific livebearers displaying dazzling sunset tones, living in harmony with other community species in planted tanks.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">pH Range</span><span class="spec-val">7.0 – 8.2</span></div>
+                <div class="spec-item"><span class="spec-label">Water Temp</span><span class="spec-val">21°C – 26°C</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 2 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-bugs" aria-hidden="true"></i></div>
-            <h3>Nutritional Dynamics</h3>
-            <p>Lizard diets range from obligate insectivores (leopard geckos) and omnivores (bearded dragons, skinks) to frugivores (crested geckos). Live feeder insects must always be thoroughly gut-loaded and dusted with calcium and vitamin D3.</p>
-            <a href="nutrition.html" class="info-card-footer">Feeding Protocols &rarr;</a>
+          <!-- Freshwater 2: Discus Fish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-crown" aria-hidden="true"></i> Amazonian</span>
+              <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=700&q=85"
+                alt="Majestic turquoise and red Discus fish gliding in warm river setup" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Discus Fish</h3>
+              <div class="fish-scientific">Symphysodon aequifasciatus</div>
+              <p>Revered as the King of the Aquarium for magnificent disc-shaped silhouettes, intricate striations, and calm elegance in pristine warm waters.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">pH Range</span><span class="spec-val">6.0 – 6.8</span></div>
+                <div class="spec-item"><span class="spec-label">Water Temp</span><span class="spec-val">28°C – 31°C</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 3 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-tree" aria-hidden="true"></i></div>
-            <h3>Terrestrial vs. Arboreal Setup</h3>
-            <p>Terrestrial species require expansive floor space with safe dig-substrates, while arboreal geckos demand vertical enclosures with bamboo bars, sturdy cork rounds, and daily misting cycles for optimal shedding and hydration.</p>
-            <a href="care.html#housing" class="info-card-footer">Terrarium Setup &rarr;</a>
+          <!-- Freshwater 3: Zebra Danio -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Shoaling</span>
+              <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=700&q=85"
+                alt="Lively schooling freshwater fish in pristine planted biotope" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Zebra Danio</h3>
+              <div class="fish-scientific">Danio rerio</div>
+              <p>Energetic surface swimmers adorned with vivid horizontal blue-and-silver stripes. Highly tolerant of varying temperatures and delightfully active.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">pH Range</span><span class="spec-val">6.5 – 7.5</span></div>
+                <div class="spec-item"><span class="spec-label">Water Temp</span><span class="spec-val">18°C – 24°C</span></div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ========================================================
-         5. SECTION C: SNAKES
-         ======================================================== -->
-    <section id="snakes" class="rep-section bg-soft-green" aria-labelledby="heading-snakes">
+    <!-- SECTION C: SALTWATER FISH -->
+    <section id="saltwater-fish" class="fish-section bg-soft-green" aria-labelledby="heading-saltwater">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1347,58 +1381,87 @@
             <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
           </svg>
 
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <i class="fa-solid fa-paw paw paw-left-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-left-2" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-2" aria-hidden="true"></i>
 
           <div class="heading-content">
             <span class="heading-label">
-              <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
-              <span>Serpentine Biology</span>
+              <i class="fa-solid fa-water-ladder" aria-hidden="true"></i>
+              Marine Coral Reefs
             </span>
-            <h2 id="heading-snakes">
+            <h2 id="heading-saltwater">
               <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Gentle Companion <span>Snakes</span>
+              Saltwater <em>Fish Breeds</em>
               <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
             </h2>
-            <p>Pet snakes are solitary, scent-oriented, and remarkably quiet companions. When properly housed in escape-proof vivariums, they thrive on infrequent feeding schedules and gentle handling sessions.</p>
+            <p>
+              Saltwater fish bring extraordinary marine biodiversity, neon fluorescents, and symbiotic reef behaviors, requiring strict salinity control and stable water chemistry.
+            </p>
           </div>
         </div>
 
-        <div class="info-card-grid">
-          <!-- Card 1 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
-            <h3>Escape-Proof Security</h3>
-            <p>Snakes possess extraordinary muscular strength and can squeeze through openings as thin as their head width. Enclosures must feature sliding glass wedge locks or heavy-duty screen lid tension clips to guarantee zero accidental escapes.</p>
-            <a href="safety.html" class="info-card-footer">Vivarium Security &rarr;</a>
+        <div class="fish-grid">
+          <!-- Saltwater 1: Ocellaris Clownfish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i> Marine Reef</span>
+              <img src="https://images.unsplash.com/photo-1516683037151-9a17603a8dc7?auto=format&fit=crop&w=700&q=85"
+                alt="Orange and white Ocellaris Clownfish in purple marine anemone" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Ocellaris Clownfish</h3>
+              <div class="fish-scientific">Amphiprion ocellaris</div>
+              <p>Beloved marine treasures famous for bold curiosity and iconic symbiotic associations with sea anemones. Extremely hardy among saltwater species.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Salinity</span><span class="spec-val">1.020 – 1.025 SG</span></div>
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">20 Gallons</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 2 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></div>
-            <h3>Handling &amp; Temperament</h3>
-            <p>Popular species like corn snakes, kingsnakes, and ball pythons adapt readily to regular, respectful handling. Avoid handling 48 hours after feeding to allow proper digestion and prevent regurgitation stress.</p>
-            <a href="care.html#handling" class="info-card-footer">Handling Etiquette &rarr;</a>
+          <!-- Saltwater 2: Yellow Tang -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i> Coral Reef</span>
+              <img src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?auto=format&fit=crop&w=800&q=85"
+                alt="Vibrant lemon-yellow Tang grazing across coral reef aquarium" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Yellow Tang</h3>
+              <div class="fish-scientific">Zebrasoma flavescens</div>
+              <p>Vivid lemon-yellow reef herbivores celebrated for active algae grazing. They require long swimming corridors, strong water flow, and mature live rock.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Salinity</span><span class="spec-val">1.023 – 1.025 SG</span></div>
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">75+ Gallons</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 3 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></div>
-            <h3>Whole-Prey Feeding</h3>
-            <p>Snakes are strict carnivores consuming appropriately sized frozen-thawed rodents once every 7 to 14 days based on age. Whole prey provides complete calcium, protein, and fat without synthetic vitamin powders.</p>
-            <a href="nutrition.html" class="info-card-footer">Feeding Schedules &rarr;</a>
+          <!-- Saltwater 3: Blue Damselfish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i> Marine Nano</span>
+              <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=700&q=85"
+                alt="Electric blue marine fish swimming past living coral formations" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Blue Damselfish</h3>
+              <div class="fish-scientific">Chrysiptera cyanea</div>
+              <p>Striking electric-blue reef dwellers renowned for their rugged resilience and assertive defense of rocky territory in mature saltwater tanks.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Salinity</span><span class="spec-val">1.020 – 1.025 SG</span></div>
+                <div class="spec-item"><span class="spec-label">Min Tank</span><span class="spec-val">30 Gallons</span></div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ========================================================
-         6. SECTION D: TURTLES AND TORTOISES
-         ======================================================== -->
-    <section id="turtles-tortoises" class="rep-section bg-cream" aria-labelledby="heading-turtles">
+    <!-- SECTION D: BEGINNER-FRIENDLY FISH -->
+    <section id="beginner-fish" class="fish-section bg-cream" aria-labelledby="heading-beginner">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1410,121 +1473,87 @@
             <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
           </svg>
 
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <i class="fa-solid fa-paw paw paw-left-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-left-2" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-2" aria-hidden="true"></i>
 
           <div class="heading-content">
             <span class="heading-label">
-              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-              <span>Chelonian Distinctions</span>
-            </span>
-            <h2 id="heading-turtles">
-              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Turtles &amp; <span>Tortoises</span>
-              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
-            </h2>
-            <p>While sharing iconic protective shells, aquatic turtles and land tortoises represent distinct evolutionary branches with vastly differing aquatic volumes, dietary fiber needs, and multi-decade lifespans.</p>
-          </div>
-        </div>
-
-        <div class="info-card-grid">
-          <!-- Card 1 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-water" aria-hidden="true"></i></div>
-            <h3>Aquatic Turtles</h3>
-            <p>Semi-aquatic swimmers like sliders and musk turtles require 10 gallons of water per inch of shell length, powerful heavy-duty canister filtration (rated 3x tank capacity), and completely dry basking docks under intense heat and UVB lamps.</p>
-            <a href="care.html#aquatic" class="info-card-footer">Aquatic Filtration &rarr;</a>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i></div>
-            <h3>Land-Dwelling Tortoises</h3>
-            <p>Strictly terrestrial grazers like Russian and Greek tortoises thrive in open-top wooden tortoise tables rather than enclosed glass tanks. They demand deep burrowing substrate, high-fiber weeds, broadleaf plantain, and zero humid condensation.</p>
-            <a href="care.html#housing" class="info-card-footer">Tortoise Table Setup &rarr;</a>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></div>
-            <h3>Generational Longevity</h3>
-            <p>Chelonians are notable for multi-decade life expectancy: pet turtles regularly survive 30 to 45 years, while tortoises easily surpass 50 to 80+ years. Adopting a tortoise is a generational commitment that may become a family heirloom.</p>
-            <a href="care.html#health" class="info-card-footer">Lifespan Planning &rarr;</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         7. SECTION E: BEGINNER-FRIENDLY REPTILES
-         ======================================================== -->
-    <section id="beginner-friendly" class="rep-section bg-white" aria-labelledby="heading-beginner">
-      <div class="section-wrap">
-        <div class="section-heading-wrap">
-          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
-            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
-          </svg>
-          <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
-            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
-          </svg>
-
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-
-          <div class="heading-content">
-            <span class="heading-label">
-              <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i>
-              <span>Ideal Starter Companions</span>
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              Easy Care &amp; Resilient
             </span>
             <h2 id="heading-beginner">
               <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Beginner-Friendly <span>Reptiles</span>
+              Beginner-Friendly <em>Fish</em>
               <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
             </h2>
-            <p>For newcomers seeking gentle temperaments, forgiving environmental ranges, and manageable feeding routines, these three species represent the gold standard of companion reptile keeping.</p>
+            <p>
+              Starting your first aquarium? These adaptable species tolerate minor parameter fluctuations and are ideal for learning water cycling and daily care.
+            </p>
           </div>
         </div>
 
-        <div class="info-card-grid">
-          <!-- Card 1: Leopard Gecko -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
-            <h3>Leopard Gecko</h3>
-            <p>Exceptionally docile and manageable in compact 20-gallon long enclosures. With simple belly heat via an under-tank heat pad on a digital thermostat, they tolerate beginner handling beautifully and don't require high-intensity UVB lamps.</p>
-            <a href="#popular-species" class="info-card-footer">View Species Card &rarr;</a>
+        <div class="fish-grid">
+          <!-- Beginner 1: Corydoras Catfish -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-shield-cat" aria-hidden="true"></i> Bottom Feeder</span>
+              <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=700&q=85"
+                alt="Peaceful Corydoras catfish foraging on smooth aquarium substrate" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Corydoras Catfish</h3>
+              <div class="fish-scientific">Corydoras paleatus</div>
+              <p>Charming, armored bottom-dwellers that constantly forage for leftover food, keeping gravel clean while delighting keepers with friendly social antics.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Care Level</span><span class="spec-val">Very Easy</span></div>
+                <div class="spec-item"><span class="spec-label">Group Size</span><span class="spec-val">6+ Together</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 2: Corn Snake -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-shield-cat" aria-hidden="true"></i></div>
-            <h3>Corn Snake</h3>
-            <p>Hardy, curious, and predictable feeders with remarkably placid temperaments. They tolerate minor temperature fluctuations well, rarely show aggression, and maintain steady feeding enthusiasm on frozen-thawed mice.</p>
-            <a href="#popular-species" class="info-card-footer">View Species Card &rarr;</a>
+          <!-- Beginner 2: Cherry Barb -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Peaceful Barb</span>
+              <img src="https://images.unsplash.com/photo-1737688670910-084f54254e73?auto=format&fit=crop&w=700&q=85"
+                alt="Vibrant cherry red freshwater fish in lush green planted tank" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Cherry Barb</h3>
+              <div class="fish-scientific">Puntius titteya</div>
+              <p>Unlike aggressive barb varieties, Cherry Barbs are calm, timid, and strikingly red. They thrive peacefully in community tanks with live plants.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Care Level</span><span class="spec-val">Easy</span></div>
+                <div class="spec-item"><span class="spec-label">Group Size</span><span class="spec-val">5+ Together</span></div>
+              </div>
+            </div>
           </article>
 
-          <!-- Card 3: Crested Gecko -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
-            <h3>Crested Gecko</h3>
-            <p>Ideal for keepers hesitant to handle live feeder insects. They thrive on nutritionally complete powdered fruit purees mixed with water, stay comfortable at room temperature (70°–78°F), and require simple daily water misting.</p>
-            <a href="#popular-species" class="info-card-footer">View Species Card &rarr;</a>
+          <!-- Beginner 3: Harlequin Rasbora -->
+          <article class="fish-card">
+            <div class="fish-card-media">
+              <span class="fish-tag"><i class="fa-solid fa-water" aria-hidden="true"></i> Shoaler</span>
+              <img src="https://images.unsplash.com/photo-1691387824643-227cc84127cf?auto=format&fit=crop&w=700&q=80"
+                alt="Harlequin Rasboras schooling gracefully in clean planted tank" loading="lazy" />
+            </div>
+            <div class="fish-card-body">
+              <h3>Harlequin Rasbora</h3>
+              <div class="fish-scientific">Trigonostigma heteromorpha</div>
+              <p>Recognized by their distinctive black porkchop-shaped wedge and coppery-orange shimmer. Extremely peaceful, hardy, and tight schoolers.</p>
+              <div class="fish-specs">
+                <div class="spec-item"><span class="spec-label">Care Level</span><span class="spec-val">Very Easy</span></div>
+                <div class="spec-item"><span class="spec-label">Group Size</span><span class="spec-val">6–8 Together</span></div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ========================================================
-         8. SECTION F: CHOOSING THE RIGHT REPTILE
-         ======================================================== -->
-    <section id="choosing-reptile" class="rep-section bg-soft-green" aria-labelledby="heading-choosing">
+    <!-- SECTION E: CHOOSING THE RIGHT FISH -->
+    <section id="choosing-fish" class="fish-section bg-white" aria-labelledby="heading-choosing">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1536,96 +1565,103 @@
             <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
           </svg>
 
-          <!-- Floating Paws Accents -->
-          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
-          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <i class="fa-solid fa-paw paw paw-left-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-left-2" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-1" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw paw paw-right-2" aria-hidden="true"></i>
 
           <div class="heading-content">
             <span class="heading-label">
-              <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-              <span>Husbandry Decision Matrix</span>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              Key Selection Factors
             </span>
             <h2 id="heading-choosing">
               <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-              Choosing the <span>Right Reptile</span>
+              Choosing the <em>Right Fish</em>
               <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
             </h2>
-            <p>Every reptile species possesses distinct spatial, dietary, and financial realities. Before bringing an animal home, evaluate these six core parameters to verify an ethical and successful match.</p>
+            <p>
+              Before introducing new aquatic companions, evaluate these five critical factors to ensure lifelong health, balanced tank chemistry, and peaceful cohabitation.
+            </p>
           </div>
         </div>
 
-        <div class="info-card-grid">
-          <!-- Parameter 1 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i></div>
-            <h3>Adult Size &amp; Lifespan</h3>
-            <p>Cute juvenile lizards and tortoises grow significantly. Ensure your living space accommodates adult enclosures (e.g., 4x2x2 ft for bearded dragons) and prepare for commitments ranging from 15 to 50+ years.</p>
-            <a href="care.html#housing" class="info-card-footer">Enclosure Sizing &rarr;</a>
+        <div class="factor-grid">
+          <!-- Factor 1: Aquarium Size -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+            </div>
+            <h3>Aquarium Size</h3>
+            <p>Always base tank size on adult dimensions, not juvenile store size. Larger water volumes dilute waste and provide biological stability that prevents toxic ammonia spikes.</p>
           </article>
 
-          <!-- Parameter 2 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
-            <h3>Thermal &amp; Humidity Specs</h3>
-            <p>Reptiles cannot generate body warmth. Keepers must install digital dimming thermostats, high-output linear T5 UVB fixtures, and ceramic heat emitters calibrated for precise diurnal cycles.</p>
-            <a href="care.html#heating" class="info-card-footer">Thermostat Calibrations &rarr;</a>
+          <!-- Factor 2: Water Requirements -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+            </div>
+            <h3>Water Requirements</h3>
+            <p>Every fish requires specific water parameters—pH, general hardness, and temperature. Never mix species with opposing chemical or thermal habitat preferences.</p>
           </article>
 
-          <!-- Parameter 3 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
-            <h3>Feeding Requirements</h3>
-            <p>Ensure all family members are fully comfortable housing live feeder insects (dubia roaches, crickets) or storing ethically sourced frozen-thawed rodents in household freezers.</p>
-            <a href="nutrition.html" class="info-card-footer">Nutrition Principles &rarr;</a>
+          <!-- Factor 3: Fish Compatibility -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+            </div>
+            <h3>Fish Compatibility</h3>
+            <p>Combine fish that share compatible temperaments and occupy distinct water column tiers (surface, mid-level, bottom) to prevent territorial aggression and fin nipping.</p>
           </article>
 
-          <!-- Parameter 4 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
-            <h3>Exotic Veterinary Care</h3>
-            <p>Conventional small-animal veterinarians do not treat reptiles. Confirm the local presence of a certified avian/exotic veterinary practitioner experienced in reptile diagnostics before purchase.</p>
-            <a href="health.html" class="info-card-footer">Veterinary Directory &rarr;</a>
+          <!-- Factor 4: Maintenance Requirements -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-hand-holding-droplet" aria-hidden="true"></i>
+            </div>
+            <h3>Maintenance Requirements</h3>
+            <p>Assess the time commitment required for weekly partial water changes, filter maintenance, water testing, and gravel siphoning before purchasing high-bioload species.</p>
           </article>
 
-          <!-- Parameter 5 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
-            <h3>Interaction Expectations</h3>
-            <p>Reptiles are observation-oriented pets rather than cuddly companions. While many appreciate quiet lap sitting and calm handling, they do not require human socialization like dogs or cats.</p>
-            <a href="behaviour.html" class="info-card-footer">Reptile Behavior &rarr;</a>
+          <!-- Factor 5: Experience Level -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <h3>Experience Level</h3>
+            <p>Match fish choices to your aquarium experience. Beginners thrive with hardy livebearers or tetras, while sensitive discus or delicate saltwater reef fish demand advanced skills.</p>
           </article>
 
-          <!-- Parameter 6 -->
-          <article class="info-card">
-            <div class="info-icon-bubble"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></div>
-            <h3>Upfront Hardware Investment</h3>
-            <p>Initial enclosure, digital temperature sensors, smart thermostats, and lighting fixtures routinely cost 3x to 5x the purchase price of the reptile itself. Budget thoroughly before acquiring the animal.</p>
-            <a href="care.html" class="info-card-footer">Equipment Checklists &rarr;</a>
+          <!-- Factor 6: Diet & Feeding Habits -->
+          <article class="factor-card">
+            <div class="factor-icon-wrap">
+              <i class="fa-solid fa-bowl-rice" aria-hidden="true"></i>
+            </div>
+            <h3>Diet &amp; Feeding Habits</h3>
+            <p>Ensure you can reliably supply species-specific diets, whether herbivorous algae wafers, micro-pellets, or specialized frozen foods like bloodworms and brine shrimp.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ========================================================
-         9. FINAL LIGHT PINK CTA SECTION
+         5. FINAL CTA SECTION (Light Pink Background)
          ======================================================== -->
     <section class="section-wrap" aria-labelledby="cta-heading">
-      <div class="rep-pink-cta">
+      <div class="fish-pink-cta">
         <div>
-          <div class="eyebrow">START YOUR REPTILE JOURNEY</div>
-          <h2 id="cta-heading">Ready to Welcome a <em>Reptile Companion?</em></h2>
+          <div class="eyebrow">START YOUR AQUATIC JOURNEY</div>
+          <h2 id="cta-heading">Ready to Welcome Your <em>First Fish?</em></h2>
           <p>
-            Explore proper reptile care, vivarium engineering, and dietary requirements before choosing a species. Ensure you have the time, habitat, and commitment for a healthy, lifelong partnership.
+            Explore our comprehensive fish care guides to learn about tank cycling, filtration, optimal nutrition, and peaceful community compatibility before bringing home your aquatic companion.
           </p>
         </div>
-        <div class="rep-pink-cta-actions">
+        <div class="fish-pink-cta-actions">
           <a class="button" href="care.html" id="cta-explore-care">
-            Explore Reptile Care &rarr;
+            <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Explore Fish Care &rarr;
           </a>
-          <a class="button button-outline" href="reptiles.html" id="cta-back-reptiles">
-            Back to Reptiles Guide
+          <a class="button button-outline" href="fish.html" id="cta-back-fish">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All Fish Overview
           </a>
         </div>
       </div>

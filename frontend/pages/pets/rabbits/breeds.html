@@ -434,10 +434,11 @@
     /* ========================================================
        3. SIGNATURE SECTION HEADING CARDS (Matching Dogs/Cats Index)
        ======================================================== */
+    .dog-topics-heading,
     .rabbit-topics-heading {
       position: relative;
-      width: 100%;
-      margin: 50px auto 35px;
+      max-width: 1400px;
+      margin: 45px auto 35px;
       padding: 44px 35px 38px;
       overflow: hidden;
       text-align: center;
@@ -468,36 +469,39 @@
       height: 130px;
     }
 
-    .heading-decor-icon {
+    .paw {
       position: absolute;
-      pointer-events: none;
+      color: rgba(115, 173, 91, 0.28);
       z-index: 1;
-      color: #c9decb;
-      opacity: 0.55;
+      pointer-events: none;
     }
 
-    .decor-pos-1 {
-      left: 35px;
-      top: 25px;
-      font-size: 34px;
+    .paw-left-1 {
+      top: 66px;
+      left: 108px;
+      font-size: 58px;
+      transform: rotate(20deg);
     }
 
-    .decor-pos-2 {
-      left: 18px;
-      bottom: 14px;
-      font-size: 24px;
+    .paw-left-2 {
+      bottom: 24px;
+      left: 82px;
+      font-size: 38px;
+      transform: rotate(-15deg);
     }
 
-    .decor-pos-3 {
-      right: 25px;
-      top: 25px;
-      font-size: 34px;
+    .paw-right-1 {
+      top: 60px;
+      right: 75px;
+      font-size: 56px;
+      transform: rotate(18deg);
     }
 
-    .decor-pos-4 {
-      right: 65px;
-      bottom: 14px;
-      font-size: 24px;
+    .paw-right-2 {
+      bottom: 35px;
+      right: 140px;
+      font-size: 38px;
+      transform: rotate(-15deg);
     }
 
     .heading-content {
@@ -521,6 +525,7 @@
       text-transform: uppercase;
     }
 
+    .dog-topics-heading h2,
     .rabbit-topics-heading h2 {
       color: #263b30;
       font-family: Georgia, serif;
@@ -534,15 +539,17 @@
       flex-wrap: wrap;
     }
 
+    .dog-topics-heading h2 span,
     .rabbit-topics-heading h2 span {
-      color: var(--rab-green-primary);
+      color: #28764a;
     }
 
+    .dog-topics-heading p,
     .rabbit-topics-heading p {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      font-size: 0.98rem;
-      color: var(--rab-muted);
+      color: #64736a;
+      font-size: 15px;
       line-height: 1.65;
     }
 
@@ -608,6 +615,13 @@
       bottom: 3px;
       width: 14px;
       height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    @media (max-width: 768px) {
+      .paw {
+        display: none;
+      }
     }
 
     /* Scroll Margin Guard */
@@ -1521,7 +1535,7 @@
          3. EXPLORE POPULAR RABBIT BREEDS (8 Cards + Filter Toolbar)
          ======================================================== -->
     <div class="section-wrap" id="popular-breeds">
-      <div class="rabbit-topics-heading">
+      <div class="dog-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1530,16 +1544,22 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-star heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-left-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-fire" aria-hidden="true"></i> POPULAR COMPANIONS
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-fire" aria-hidden="true"></i> Popular Companions
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Explore <span>Popular Rabbit Breeds</span>
@@ -1570,7 +1590,7 @@
         <!-- 1. Holland Lop -->
         <article class="rabbit-breed-card" data-size="small" data-name="holland lop">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Holland_lop_rabbit.jpg?width=800" alt="Holland Lop rabbit with drooping ears" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80" alt="Holland Lop rabbit with drooping ears" loading="lazy">
             <span class="rabbit-size-tag">Small • Lop-Eared</span>
           </div>
           <div class="rabbit-card-content">
@@ -1590,7 +1610,7 @@
         <!-- 2. Netherland Dwarf -->
         <article class="rabbit-breed-card" data-size="small" data-name="netherland dwarf">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Netherland_Dwarf.jpg?width=800" alt="Netherland Dwarf rabbit with short upright ears" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1577741314755-048d8525d31e?auto=format&fit=crop&w=800&q=80" alt="Netherland Dwarf rabbit with short upright ears" loading="lazy">
             <span class="rabbit-size-tag">Dwarf • Upright Ears</span>
           </div>
           <div class="rabbit-card-content">
@@ -1610,7 +1630,7 @@
         <!-- 3. Mini Rex -->
         <article class="rabbit-breed-card" data-size="small" data-name="mini rex">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Rex_Rabbit.jpg?width=800" alt="Mini Rex rabbit with velvety plush coat" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1591382696684-38c427c7547a?auto=format&fit=crop&w=800&q=80" alt="Mini Rex rabbit with velvety plush coat" loading="lazy">
             <span class="rabbit-size-tag">Small • Rex Plush</span>
           </div>
           <div class="rabbit-card-content">
@@ -1630,7 +1650,7 @@
         <!-- 4. Dutch Rabbit -->
         <article class="rabbit-breed-card" data-size="medium" data-name="dutch rabbit">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dutch_rabbit_2.jpg?width=800" alt="Dutch rabbit with iconic white blaze and saddle pattern" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1559214369-a6b1d7919865?auto=format&fit=crop&w=800&q=80" alt="Dutch rabbit with iconic white blaze and saddle pattern" loading="lazy">
             <span class="rabbit-size-tag">Medium • Two-Tone</span>
           </div>
           <div class="rabbit-card-content">
@@ -1650,7 +1670,7 @@
         <!-- 5. Lionhead -->
         <article class="rabbit-breed-card" data-size="small" data-name="lionhead">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rabbit_-_Lionhead_breed.jpg?width=800" alt="Lionhead rabbit with fluffy woolly mane" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?auto=format&fit=crop&w=800&q=80" alt="Lionhead rabbit with fluffy woolly mane" loading="lazy">
             <span class="rabbit-size-tag">Small • Wool Mane</span>
           </div>
           <div class="rabbit-card-content">
@@ -1670,7 +1690,7 @@
         <!-- 6. English Angora -->
         <article class="rabbit-breed-card" data-size="medium" data-name="english angora">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/English_Angora_rabbit_sitting_on_carpet.jpg?width=800" alt="English Angora rabbit with full wool coverage and facial furnishings" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?auto=format&fit=crop&w=800&q=80" alt="English Angora rabbit with full wool coverage and facial furnishings" loading="lazy">
             <span class="rabbit-size-tag">Medium • Full Wool</span>
           </div>
           <div class="rabbit-card-content">
@@ -1690,7 +1710,7 @@
         <!-- 7. Flemish Giant -->
         <article class="rabbit-breed-card" data-size="large" data-name="flemish giant">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flemish_Giant_Rabbit.jpg?width=800" alt="Flemish Giant rabbit with large powerful build" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80" alt="Flemish Giant rabbit with large powerful build" loading="lazy">
             <span class="rabbit-size-tag">Giant • King of Rabbits</span>
           </div>
           <div class="rabbit-card-content">
@@ -1710,7 +1730,7 @@
         <!-- 8. New Zealand White -->
         <article class="rabbit-breed-card" data-size="large" data-name="new zealand white">
           <div class="rabbit-card-media">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_Zealand_White_rabbit.jpg?width=800" alt="New Zealand White rabbit with dense flyback fur" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1518796745738-41048802f99a?auto=format&fit=crop&w=800&q=80" alt="New Zealand White rabbit with dense flyback fur" loading="lazy">
             <span class="rabbit-size-tag">Large • Broad Build</span>
           </div>
           <div class="rabbit-card-content">
@@ -1733,7 +1753,7 @@
          4. RABBIT BREEDS BY SIZE (Small, Medium, Large Sections)
          ======================================================== -->
     <div class="section-wrap" id="breeds-by-size">
-      <div class="rabbit-topics-heading">
+      <div class="dog-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1742,16 +1762,22 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-scale-balanced heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-carrot heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-left-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-arrows-left-right-to-line" aria-hidden="true"></i> SIZE CLASSIFICATIONS
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-arrows-left-right-to-line" aria-hidden="true"></i> Size Classifications
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Rabbit Breeds <span>by Size Category</span>
@@ -1774,7 +1800,7 @@
         <div class="rabbit-cards-grid">
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Netherland_Dwarf.jpg?width=800" alt="Netherland Dwarf rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1577741314755-048d8525d31e?auto=format&fit=crop&w=800&q=80" alt="Netherland Dwarf rabbit" loading="lazy">
               <span class="rabbit-size-tag">Dwarf • ~0.5–1.1 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1790,7 +1816,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Holland_lop_rabbit.jpg?width=800" alt="Holland Lop rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80" alt="Holland Lop rabbit" loading="lazy">
               <span class="rabbit-size-tag">Small • ~0.9–1.8 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1806,7 +1832,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Rex_Rabbit.jpg?width=800" alt="Mini Rex rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1591382696684-38c427c7547a?auto=format&fit=crop&w=800&q=80" alt="Mini Rex rabbit" loading="lazy">
               <span class="rabbit-size-tag">Small • ~1.4–2.0 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1833,7 +1859,7 @@
         <div class="rabbit-cards-grid">
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dutch_rabbit_2.jpg?width=800" alt="Dutch rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1559214369-a6b1d7919865?auto=format&fit=crop&w=800&q=80" alt="Dutch rabbit" loading="lazy">
               <span class="rabbit-size-tag">Medium • ~1.8–2.5 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1849,7 +1875,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rabbit_-_Lionhead_breed.jpg?width=800" alt="Lionhead rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?auto=format&fit=crop&w=800&q=80" alt="Lionhead rabbit" loading="lazy">
               <span class="rabbit-size-tag">Medium • ~1.1–1.7 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1865,7 +1891,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/English_spot_rabbit.jpg?width=800" alt="English Spot rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=80" alt="English Spot rabbit" loading="lazy">
               <span class="rabbit-size-tag">Medium • ~2.3–3.6 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1892,7 +1918,7 @@
         <div class="rabbit-cards-grid">
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flemish_Giant_Rabbit.jpg?width=800" alt="Flemish Giant rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80" alt="Flemish Giant rabbit" loading="lazy">
               <span class="rabbit-size-tag">Giant • ~6.0–10.0+ kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1908,7 +1934,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_Zealand_White_rabbit.jpg?width=800" alt="New Zealand White rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1518796745738-41048802f99a?auto=format&fit=crop&w=800&q=80" alt="New Zealand White rabbit" loading="lazy">
               <span class="rabbit-size-tag">Large • ~4.1–5.4 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1924,7 +1950,7 @@
 
           <article class="rabbit-breed-card">
             <div class="rabbit-card-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Checkered_Giant_rabbit.jpg?width=800" alt="Checkered Giant rabbit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=800&q=80" alt="Checkered Giant rabbit" loading="lazy">
               <span class="rabbit-size-tag">Giant • ~5.0–6.5 kg</span>
             </div>
             <div class="rabbit-card-content">
@@ -1945,7 +1971,7 @@
          5. COAT TYPES & GROOMING NEEDS
          ======================================================== -->
     <div class="section-wrap" id="coat-types">
-      <div class="rabbit-topics-heading">
+      <div class="dog-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1954,19 +1980,25 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-wand-magic-sparkles heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-scissors heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-left-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-sparkles" aria-hidden="true"></i> FUR CARE &amp; TEXTURES
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-sparkles" aria-hidden="true"></i> Fur Care & Textures
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Coat Types &amp; <span>Grooming Needs</span>
+            Coat Types & <span>Grooming Needs</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -2030,7 +2062,7 @@
          6. CHOOSING THE RIGHT RABBIT BREED (5 Cards)
          ======================================================== -->
     <div class="section-wrap" id="choosing-guide">
-      <div class="rabbit-topics-heading">
+      <div class="dog-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -2039,16 +2071,22 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-compass heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-house heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-clock heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-left-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-circle-question" aria-hidden="true"></i> ADOPTION &amp; COMPATIBILITY
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i> Adoption & Compatibility
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Choosing the <span>Right Rabbit Breed</span>
@@ -2107,7 +2145,7 @@
          7. RABBIT BREED COMPARISON (Responsive Table & Interactive)
          ======================================================== -->
     <div class="section-wrap" id="breed-comparison">
-      <div class="rabbit-topics-heading">
+      <div class="dog-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -2116,16 +2154,22 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-table-list heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-check heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-star heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-left-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-1">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
+        <div class="paw paw-right-2">
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+        </div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> COMPARATIVE OVERVIEW
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Comparative Overview
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Rabbit Breed <span>Comparison Guide</span>

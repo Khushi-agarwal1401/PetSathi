@@ -1,6 +1,6 @@
 /**
  * PetSathi - FAQ & Help Center Interactive Script
- * Provides search filtering, accordion expand/collapse, category tabs, and contact form handling.
+ * Provides search filtering, accordion expand/collapse, and category tabs.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusCountEl = document.getElementById("faq-matches-count");
   const noResultsEl = document.getElementById("faq-no-results");
   const resetSearchBtn = document.getElementById("faq-reset-search");
-  const contactForm = document.getElementById("faq-contact-form");
-  const formSuccessAlert = document.getElementById("faq-form-success");
-  const formErrorAlert = document.getElementById("faq-form-error");
 
   // State
   let currentCategory = "all";
@@ -62,7 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggleAllBtn) {
     toggleAllBtn.addEventListener("click", () => {
       isAllExpanded = !isAllExpanded;
-      toggleAllBtn.textContent = isAllExpanded ? "Collapse All ↑" : "Expand All ↓";
+      toggleAllBtn.innerHTML = isAllExpanded
+        ? '<i class="fa-solid fa-chevron-up" aria-hidden="true"></i> Collapse All'
+        : '<i class="fa-solid fa-chevron-down" aria-hidden="true"></i> Expand All';
+      toggleAllBtn.setAttribute("aria-expanded", String(isAllExpanded));
 
       // Only toggle currently visible items
       faqItems.forEach((item) => {
@@ -72,6 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Keep open panels correctly sized when the viewport changes
+  window.addEventListener("resize", () => {
+    faqItems.forEach((item) => {
+      if (!item.classList.contains("active")) return;
+      const panel = item.querySelector(".faq-answer-panel");
+      if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+  });
 
   // ========================================================
   // 2. SEARCH & FILTERING LOGIC
@@ -217,54 +226,5 @@ document.addEventListener("DOMContentLoaded", () => {
         targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 200);
     }
-  }
-
-  // ========================================================
-  // 6. CONTACT FORM INTERACTION
-  // ========================================================
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const nameInput = document.getElementById("faq-contact-name");
-      const emailInput = document.getElementById("faq-contact-email");
-      const messageInput = document.getElementById("faq-contact-message");
-
-      const name = nameInput ? nameInput.value.trim() : "";
-      const email = emailInput ? emailInput.value.trim() : "";
-      const message = messageInput ? messageInput.value.trim() : "";
-
-      if (!name || !email || !message) {
-        if (formErrorAlert) {
-          formErrorAlert.textContent = "Please fill in your name, email, and message.";
-          formErrorAlert.style.display = "flex";
-        }
-        if (formSuccessAlert) formSuccessAlert.style.display = "none";
-        return;
-      }
-
-      // Email format validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        if (formErrorAlert) {
-          formErrorAlert.textContent = "Please enter a valid email address.";
-          formErrorAlert.style.display = "flex";
-        }
-        if (formSuccessAlert) formSuccessAlert.style.display = "none";
-        return;
-      }
-
-      // Success feedback
-      if (formErrorAlert) formErrorAlert.style.display = "none";
-      if (formSuccessAlert) {
-        formSuccessAlert.style.display = "flex";
-      }
-
-      contactForm.reset();
-
-      setTimeout(() => {
-        if (formSuccessAlert) formSuccessAlert.style.display = "none";
-      }, 7000);
-    });
   }
 });

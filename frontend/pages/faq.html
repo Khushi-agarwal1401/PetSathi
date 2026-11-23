@@ -39,27 +39,53 @@
          3. FAQ HERO SECTION
          ======================================================== -->
     <section class="faq-hero">
-      <div class="faq-hero-inner">
-        <div class="eyebrow">🐾 PETSATHI • HELP CENTER &amp; FAQ</div>
-        <h1>How Can We Help <em>You &amp; Your Pet?</em></h1>
-        <p class="hero-subtitle">
-          Have questions about finding a trusted walking companion, species care guides, or managing your PetSathi account? Browse our categorized answers or search below for instant help.
-        </p>
+      <div class="faq-hero-inner section-wrap">
+        <div class="faq-hero-main">
+          <div class="faq-hero-copy">
+            <div class="faq-badge-strip">
+              <i class="fa-solid fa-paw" aria-hidden="true"></i>
+              <span>PetSathi • Help Center &amp; FAQ</span>
+            </div>
+            <h1>How Can We Help <em>You &amp; Your Pet?</em></h1>
+            <p class="hero-subtitle">
+              Find quick answers about trusted walking companions, species care guides, owner guidelines, and managing your PetSathi account. Search below or browse by category.
+            </p>
 
-        <!-- Live Search Bar -->
-        <div class="faq-search-wrapper">
-          <form class="faq-search-bar" id="faq-search-form" role="search" aria-label="Search FAQs">
-            <span class="faq-search-icon" aria-hidden="true">🔍</span>
-            <input
-              type="search"
-              class="faq-search-input"
-              id="faq-search"
-              placeholder="Search by keywords (e.g. dog walking, diet, safety, account)..."
-              autocomplete="off"
+            <!-- Live Search Bar -->
+            <div class="faq-search-wrapper">
+              <form class="faq-search-bar" id="faq-search-form" role="search" aria-label="Search FAQs">
+                <span class="faq-search-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input
+                  type="search"
+                  class="faq-search-input"
+                  id="faq-search"
+                  placeholder="Search by keywords (e.g. dog walking, diet, safety, account)..."
+                  autocomplete="off"
+                >
+                <button type="button" class="faq-search-clear" id="faq-search-clear" aria-label="Clear search input"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                <button type="submit" class="faq-search-btn">
+                  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="faq-hero-visual">
+            <div class="faq-hero-blob"></div>
+            <img
+              src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85"
+              alt="Two happy dogs playing together on a sunny grass field"
+              class="faq-hero-photo"
             >
-            <button type="button" class="faq-search-clear" id="faq-search-clear" aria-label="Clear search input">✕</button>
-            <button type="submit" class="faq-search-btn">Search</button>
-          </form>
+            <div class="faq-floating-card faq-card-top">
+              <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              <span><b>Friendly Support</b><small>Answers for every pet parent</small></span>
+            </div>
+            <div class="faq-floating-card faq-card-bottom">
+              <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+              <span><b>Trusted Guidance</b><small>25 expert answers</small></span>
+            </div>
+          </div>
         </div>
 
         <!-- Quick Filter Pills -->
@@ -87,7 +113,7 @@
         <!-- Support row link -->
         <div class="faq-hero-support-row">
           <span>Can't find the answer you're looking for?</span>
-          <a href="#contact">Contact Our Support Team ↓</a>
+          <a href="contact.html">Contact Us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -100,8 +126,8 @@
         Showing all <em>25</em> frequently asked questions
       </div>
       <div class="faq-accordion-controls">
-        <button class="faq-toggle-all-btn" id="faq-toggle-all" type="button">
-          Expand All ↓
+        <button class="faq-toggle-all-btn" id="faq-toggle-all" type="button" aria-expanded="false">
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i> Expand All
         </button>
       </div>
     </div>
@@ -112,23 +138,24 @@
     <div class="faq-main-content">
       <!-- Empty Search Result State -->
       <div class="faq-no-results" id="faq-no-results">
-        <div class="faq-no-results-emoji">🐾🔍</div>
+        <div class="faq-no-results-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
         <h3>No Matching Questions Found</h3>
         <p>We couldn't find any questions matching your keywords. Try checking for typos or searching for broader terms.</p>
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <div class="faq-no-results-actions">
           <button class="button button-small" id="faq-reset-search" type="button">Reset Search</button>
-          <a class="button button-small button-outline" href="#contact">Contact Support</a>
+          <a class="button button-small button-outline" href="contact.html">Contact Us</a>
         </div>
       </div>
 
       <!-- CATEGORY 1: GENERAL QUESTIONS -->
       <section class="faq-category-block" id="category-general" data-category="general">
         <div class="faq-category-header">
-          <div class="faq-category-icon">🌱</div>
+          <div class="faq-category-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
           <div class="faq-category-title-wrap">
             <h2>General Questions</h2>
             <p>Fundamental information about PetSathi's mission, community, and open-source platform.</p>
           </div>
+          <span class="faq-category-count">5 Questions</span>
         </div>
 
         <div class="faq-list">
@@ -139,7 +166,7 @@
                 <span class="faq-q-mark">Q1</span>
                 <span class="faq-question-text">What is PetSathi and how does it help pet lovers?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-general-1">
               <div class="faq-answer-content">
@@ -150,7 +177,7 @@
                   Whether you are seeking daily exercise for an energetic dog, specialized care guidance for a feline, or setting up a tranquil tropical aquarium, PetSathi provides an all-in-one trusted companion space.
                 </p>
                 <div class="faq-answer-tip">
-                  💡 <b>Tip:</b> Visit our <a href="about.html">About Us page</a> to learn more about our founding vision and open-source milestones.
+                  <i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <b>Tip:</b> Visit our <a href="about.html">About Us page</a> to learn more about our founding vision and open-source milestones.
                 </div>
               </div>
             </div>
@@ -163,7 +190,7 @@
                 <span class="faq-q-mark">Q2</span>
                 <span class="faq-question-text">Is PetSathi free to use for pet owners?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-general-2">
               <div class="faq-answer-content">
@@ -184,17 +211,17 @@
                 <span class="faq-q-mark">Q3</span>
                 <span class="faq-question-text">Which animal companions are supported on PetSathi?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-general-3">
               <div class="faq-answer-content">
                 <p>PetSathi provides dedicated guides and companionship services for a wide variety of household pets:</p>
                 <ul>
-                  <li><b>Dogs (🐕):</b> Breed temperaments, daily walking routines, leash training, and canine nutrition.</li>
-                  <li><b>Cats (🐈):</b> Indoor environmental enrichment, scratch post setups, and feline wellness.</li>
-                  <li><b>Birds (🐦):</b> Aviary housing, cage safety, diet diversity, and vocalization insights.</li>
-                  <li><b>Rabbits (🐇):</b> Bunny-proofing, high-fiber hay diets, and gentle handling techniques.</li>
-                  <li><b>Aquarium Fish &amp; Others (🐠):</b> Freshwater species profiles, tank water chemistry, and cycling.</li>
+                  <li><b>Dogs (<i class="fa-solid fa-dog faq-inline-icon" aria-hidden="true"></i>):</b> Breed temperaments, daily walking routines, leash training, and canine nutrition.</li>
+                  <li><b>Cats (<i class="fa-solid fa-cat faq-inline-icon" aria-hidden="true"></i>):</b> Indoor environmental enrichment, scratch post setups, and feline wellness.</li>
+                  <li><b>Birds (<i class="fa-solid fa-dove faq-inline-icon" aria-hidden="true"></i>):</b> Aviary housing, cage safety, diet diversity, and vocalization insights.</li>
+                  <li><b>Rabbits (<i class="fa-solid fa-carrot faq-inline-icon" aria-hidden="true"></i>):</b> Bunny-proofing, high-fiber hay diets, and gentle handling techniques.</li>
+                  <li><b>Aquarium Fish &amp; Others (<i class="fa-solid fa-fish faq-inline-icon" aria-hidden="true"></i>):</b> Freshwater species profiles, tank water chemistry, and cycling.</li>
                 </ul>
               </div>
             </div>
@@ -207,7 +234,7 @@
                 <span class="faq-q-mark">Q4</span>
                 <span class="faq-question-text">How can I contribute to PetSathi's open-source development?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-general-4">
               <div class="faq-answer-content">
@@ -228,7 +255,7 @@
                 <span class="faq-q-mark">Q5</span>
                 <span class="faq-question-text">Where is PetSathi currently available?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-general-5">
               <div class="faq-answer-content">
@@ -244,11 +271,12 @@
       <!-- CATEGORY 2: PET CARE -->
       <section class="faq-category-block" id="category-pet-care" data-category="pet-care">
         <div class="faq-category-header">
-          <div class="faq-category-icon">🩺</div>
+          <div class="faq-category-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div>
           <div class="faq-category-title-wrap">
             <h2>Pet Care &amp; Health</h2>
             <p>Reliable guidance on nutrition, veterinary care, preventative wellness, and daily husbandry.</p>
           </div>
+          <span class="faq-category-count">5 Questions</span>
         </div>
 
         <div class="faq-list">
@@ -259,7 +287,7 @@
                 <span class="faq-q-mark">Q6</span>
                 <span class="faq-question-text">Where can I find feeding and nutrition advice for my pet?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-care-1">
               <div class="faq-answer-content">
@@ -283,7 +311,7 @@
                 <span class="faq-q-mark">Q7</span>
                 <span class="faq-question-text">What should I do if my pet has a medical emergency?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-care-2">
               <div class="faq-answer-content">
@@ -291,7 +319,7 @@
                   <b>Please contact an emergency veterinary hospital immediately!</b> While PetSathi provides preventative guidance and wellness education, online platforms cannot replace emergency clinical examination.
                 </p>
                 <div class="faq-answer-tip">
-                  🚨 <b>Red Flag Signs:</b> Difficulty breathing, pale gums, inability to stand, sudden seizures, repeated vomiting, or acute abdominal bloating require urgent emergency hospital transport without delay.
+                  <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> <b>Red Flag Signs:</b> Difficulty breathing, pale gums, inability to stand, sudden seizures, repeated vomiting, or acute abdominal bloating require urgent emergency hospital transport without delay.
                 </div>
               </div>
             </div>
@@ -304,7 +332,7 @@
                 <span class="faq-q-mark">Q8</span>
                 <span class="faq-question-text">How often should I take my companion pet to the veterinarian?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-care-3">
               <div class="faq-answer-content">
@@ -327,7 +355,7 @@
                 <span class="faq-q-mark">Q9</span>
                 <span class="faq-question-text">What is the most crucial step when setting up an aquarium?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-care-4">
               <div class="faq-answer-content">
@@ -348,7 +376,7 @@
                 <span class="faq-q-mark">Q10</span>
                 <span class="faq-question-text">How do I keep indoor pets active and prevent boredom?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-care-5">
               <div class="faq-answer-content">
@@ -364,11 +392,12 @@
       <!-- CATEGORY 3: PET WALKING -->
       <section class="faq-category-block" id="category-pet-walking" data-category="pet-walking">
         <div class="faq-category-header">
-          <div class="faq-category-icon">🚶</div>
+          <div class="faq-category-icon"><i class="fa-solid fa-person-walking" aria-hidden="true"></i></div>
           <div class="faq-category-title-wrap">
             <h2>Pet Walking Services</h2>
             <p>Everything you need to know about finding walkers, safety protocols, and daily exercise routines.</p>
           </div>
+          <span class="faq-category-count">5 Questions</span>
         </div>
 
         <div class="faq-list">
@@ -379,7 +408,7 @@
                 <span class="faq-q-mark">Q11</span>
                 <span class="faq-question-text">How does finding a pet walker work on PetSathi?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-walking-1">
               <div class="faq-answer-content">
@@ -400,7 +429,7 @@
                 <span class="faq-q-mark">Q12</span>
                 <span class="faq-question-text">How are walkers and caregivers vetted for reliability and safety?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-walking-2">
               <div class="faq-answer-content">
@@ -418,7 +447,7 @@
                 <span class="faq-q-mark">Q13</span>
                 <span class="faq-question-text">What happens if the weather is too hot or stormy during a scheduled walk?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-walking-3">
               <div class="faq-answer-content">
@@ -426,7 +455,7 @@
                   The safety of the animal always comes first. During high-heat weather (when asphalt temperatures can burn sensitive paw pads) or heavy monsoon downpours, walks can be rescheduled to cooler evening hours or substituted with indoor enrichment, gentle play, and relief breaks.
                 </p>
                 <div class="faq-answer-tip">
-                  🐾 <b>7-Second Rule:</b> Place the back of your hand on the asphalt for 7 seconds. If it's too hot for your skin, it's too hot for your pet's paws!
+                  <i class="fa-solid fa-paw" aria-hidden="true"></i> <b>7-Second Rule:</b> Place the back of your hand on the asphalt for 7 seconds. If it's too hot for your skin, it's too hot for your pet's paws!
                 </div>
               </div>
             </div>
@@ -439,7 +468,7 @@
                 <span class="faq-q-mark">Q14</span>
                 <span class="faq-question-text">Can I arrange daily or weekly recurring walks?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-walking-4">
               <div class="faq-answer-content">
@@ -457,7 +486,7 @@
                 <span class="faq-q-mark">Q15</span>
                 <span class="faq-question-text">Do caregivers provide updates and photos during the walk?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-walking-5">
               <div class="faq-answer-content">
@@ -473,11 +502,12 @@
       <!-- CATEGORY 4: PET OWNERS -->
       <section class="faq-category-block" id="category-pet-owners" data-category="pet-owners">
         <div class="faq-category-header">
-          <div class="faq-category-icon">🐾</div>
+          <div class="faq-category-icon"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
           <div class="faq-category-title-wrap">
             <h2>Pet Owners &amp; Guidelines</h2>
             <p>Best practices for preparing your pet, multi-pet households, and building positive relationships.</p>
           </div>
+          <span class="faq-category-count">5 Questions</span>
         </div>
 
         <div class="faq-list">
@@ -488,7 +518,7 @@
                 <span class="faq-q-mark">Q16</span>
                 <span class="faq-question-text">How should I prepare my pet for their first walk with a new companion?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-owners-1">
               <div class="faq-answer-content">
@@ -509,7 +539,7 @@
                 <span class="faq-q-mark">Q17</span>
                 <span class="faq-question-text">Can I arrange care or walking for multiple pets at the same time?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-owners-2">
               <div class="faq-answer-content">
@@ -527,7 +557,7 @@
                 <span class="faq-q-mark">Q18</span>
                 <span class="faq-question-text">What information should I include in my pet's profile?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-owners-3">
               <div class="faq-answer-content">
@@ -551,7 +581,7 @@
                 <span class="faq-q-mark">Q19</span>
                 <span class="faq-question-text">What if my pet is nervous, shy, or has special medical requirements?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-owners-4">
               <div class="faq-answer-content">
@@ -569,7 +599,7 @@
                 <span class="faq-q-mark">Q20</span>
                 <span class="faq-question-text">How do I leave feedback or reviews for a caregiver?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-owners-5">
               <div class="faq-answer-content">
@@ -585,11 +615,12 @@
       <!-- CATEGORY 5: ACCOUNT & PLATFORM -->
       <section class="faq-category-block" id="category-account" data-category="account">
         <div class="faq-category-header">
-          <div class="faq-category-icon">⚙️</div>
+          <div class="faq-category-icon"><i class="fa-solid fa-gear" aria-hidden="true"></i></div>
           <div class="faq-category-title-wrap">
             <h2>Account &amp; Platform</h2>
             <p>Registration, profile management, becoming a caregiver, and platform data privacy.</p>
           </div>
+          <span class="faq-category-count">5 Questions</span>
         </div>
 
         <div class="faq-list">
@@ -600,7 +631,7 @@
                 <span class="faq-q-mark">Q21</span>
                 <span class="faq-question-text">How do I register for a new PetSathi account?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-account-1">
               <div class="faq-answer-content">
@@ -618,7 +649,7 @@
                 <span class="faq-q-mark">Q22</span>
                 <span class="faq-question-text">How can I apply to become a pet walker or caregiver?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-account-2">
               <div class="faq-answer-content">
@@ -636,7 +667,7 @@
                 <span class="faq-q-mark">Q23</span>
                 <span class="faq-question-text">How do I reset my password if I forget it?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-account-3">
               <div class="faq-answer-content">
@@ -654,7 +685,7 @@
                 <span class="faq-q-mark">Q24</span>
                 <span class="faq-question-text">How is my personal and pet data secured?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-account-4">
               <div class="faq-answer-content">
@@ -672,7 +703,7 @@
                 <span class="faq-q-mark">Q25</span>
                 <span class="faq-question-text">Is PetSathi accessible on mobile devices and smartphones?</span>
               </span>
-              <span class="faq-question-icon">+</span>
+              <span class="faq-question-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
             </button>
             <div class="faq-answer-panel" id="ans-account-5">
               <div class="faq-answer-content">
@@ -687,134 +718,25 @@
     </div>
 
     <!-- ========================================================
-         6. CONTACT US & DIRECT SUPPORT SECTION
+         6. CALL TO ACTION BANNER
          ======================================================== -->
-    <section class="faq-contact-section" id="contact">
-      <div class="section-wrap">
-        <div class="faq-contact-grid">
-          <!-- Left Info & Channels -->
-          <div class="faq-contact-info">
-            <div class="eyebrow">WE'RE HERE TO HELP</div>
-            <h2>Still Have <em>Questions?</em></h2>
-            <p class="lead">
-              Our community team and pet care advocates are always eager to assist. Reach out through any of our channels or send us a direct message below.
-            </p>
-
-            <div class="faq-channels-list">
-              <div class="faq-channel-card">
-                <div class="faq-channel-icon">📧</div>
-                <div class="faq-channel-body">
-                  <h4>Email Support</h4>
-                  <p>Send your queries directly to <a href="mailto:support@petsathi.com">support@petsathi.com</a></p>
-                </div>
-              </div>
-
-              <div class="faq-channel-card">
-                <div class="faq-channel-icon">💬</div>
-                <div class="faq-channel-body">
-                  <h4>Community Discussions</h4>
-                  <p>Ask questions and share advice on our <a href="https://github.com/Riya-Kharade/PetSathi/discussions" target="_blank" rel="noreferrer">GitHub Community</a></p>
-                </div>
-              </div>
-
-              <div class="faq-channel-card">
-                <div class="faq-channel-icon">⚡</div>
-                <div class="faq-channel-body">
-                  <h4>Response Time</h4>
-                  <p>Our volunteer support team typically responds within <b>24 business hours</b>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Interactive Contact Form -->
-          <div class="faq-form-card">
-            <h3>Send a Message</h3>
-            <p class="form-desc">Fill in the form below and our team will get back to you promptly.</p>
-
-            <form class="faq-contact-form" id="faq-contact-form" novalidate>
-              <div class="faq-form-row">
-                <div class="faq-form-group">
-                  <label for="faq-contact-name">Your Full Name *</label>
-                  <input type="text" id="faq-contact-name" placeholder="e.g. Ananya Sharma" required>
-                </div>
-
-                <div class="faq-form-group">
-                  <label for="faq-contact-email">Email Address *</label>
-                  <input type="email" id="faq-contact-email" placeholder="name@example.com" required>
-                </div>
-              </div>
-
-              <div class="faq-form-row">
-                <div class="faq-form-group">
-                  <label for="faq-contact-pet">Pet Type</label>
-                  <select id="faq-contact-pet">
-                    <option value="">Select your pet type...</option>
-                    <option value="dog">Dog (🐕)</option>
-                    <option value="cat">Cat (🐈)</option>
-                    <option value="bird">Bird (🐦)</option>
-                    <option value="rabbit">Rabbit (🐇)</option>
-                    <option value="fish">Aquarium Fish (🐠)</option>
-                    <option value="other">Other Companion Pet (🐾)</option>
-                  </select>
-                </div>
-
-                <div class="faq-form-group">
-                  <label for="faq-contact-topic">Inquiry Category *</label>
-                  <select id="faq-contact-topic" required>
-                    <option value="general">General Inquiry</option>
-                    <option value="care">Pet Care &amp; Health Question</option>
-                    <option value="walking">Pet Walking Assistance</option>
-                    <option value="walker-apply">Become a Caregiver</option>
-                    <option value="technical">Account &amp; Technical Support</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="faq-form-group">
-                <label for="faq-contact-message">How Can We Help You? *</label>
-                <textarea id="faq-contact-message" placeholder="Please describe your question or issue in detail..." required></textarea>
-              </div>
-
-              <div class="faq-form-alert success" id="faq-form-success">
-                <span>✔</span> <span>Thank you for reaching out! We've received your message and will respond shortly.</span>
-              </div>
-
-              <div class="faq-form-alert error" id="faq-form-error">
-                <span>✖</span> <span>Please fill in all required fields with valid information.</span>
-              </div>
-
-              <button class="button" type="submit" style="width: 100%; margin-top: 8px;">
-                Send Message ↗
-              </button>
-            </form>
-          </div>
-        </div>
+    <section class="cta section-wrap faq-final-cta">
+      <div>
+        <div class="eyebrow">Join the PetSathi Community</div>
+        <h2>Building a Loving World for <em>Every Pet</em></h2>
+        <p>
+          Connect with dedicated pet companions, explore verified species care guides, and give your little friend the joyful life they deserve.
+        </p>
       </div>
-    </section>
-
-    <!-- ========================================================
-         7. CALL TO ACTION BANNER
-         ======================================================== -->
-    <section class="section-wrap" style="padding-top: 60px;">
-      <div class="cta">
-        <div>
-          <div class="eyebrow" style="color: var(--dark);">Join the PetSathi Community</div>
-          <h2>Building a Loving World for <em>Every Pet</em></h2>
-          <p>
-            Connect with dedicated pet companions, explore verified species care guides, and give your little friend the joyful life they deserve.
-          </p>
-        </div>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0;">
-          <a class="button" href="auth/register.html">Get Started ↗</a>
-          <a class="button button-outline" href="../../index.html">Back to Home</a>
-        </div>
+      <div class="cta-actions">
+        <a class="button button-light" href="auth/register.html">Get Started ↗</a>
+        <a class="button button-outline" href="contact.html">Contact Us</a>
       </div>
     </section>
   </main>
 
   <!-- ========================================================
-       8. PETSATHI FOOTER
+       7. PETSATHI FOOTER
        ======================================================== -->
   <div id="footer"></div>
 

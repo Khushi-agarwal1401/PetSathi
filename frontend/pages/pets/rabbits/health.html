@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Rabbit health guide on PetSathi. Learn the signs of a healthy rabbit, common health problems, warning signs, dental and digestive health, preventive care, and when to visit a veterinarian.">
+  <meta name="theme-color" content="#fcfaf5">
+  <title>Rabbit Health &amp; Wellness Guide | PetSathi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/global.css">
+  <link rel="stylesheet" href="../../../css/home.css">
+  <link rel="stylesheet" href="../../../css/inner.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* =========================================
+       RABBIT HEALTH PAGE — PETSATHI THEME
+       Reuses the Dog Index / Cat Index visual language.
+    ========================================= */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    i[class*="fa-"],
+    i[class*="fa-"]::before {
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 900 !important;
+      font-style: normal !important;
+      font-variant: normal !important;
+      text-rendering: auto !important;
+      line-height: 1 !important;
+    }
+
+    i.fa-brands,
+    i.fa-brands::before {
+      font-family: "Font Awesome 6 Brands" !important;
+      font-weight: 400 !important;
+    }
+
+    .fa-regular,
+    .fa-regular::before {
+      font-weight: 400 !important;
+    }
+
+    /* Disable global automatic pseudo-element icons inside dropdowns */
+    .dropdown a::before,
+    .dropdown a::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    .dropdown a {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 16px !important;
+    }
+
+    .dropdown a i {
+      width: 18px;
+      text-align: center;
+    }
+
+    /* ---------- Hero ---------- */
+    .health-badge-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: #eaf2e9;
+      color: var(--green);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .health-badge-strip i {
+      color: var(--green);
+      font-size: 0.85rem;
+    }
+
+    .hero-visual .floating-card i {
+      color: var(--green) !important;
+      font-size: 1.25rem !important;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .hero-note i {
+      color: var(--green);
+      margin-right: 3px;
+    }
+
+    /* ---------- Quick navigation hub ---------- */
+    .guides-nav-strip {
+      position: relative;
+      background: #ffffff;
+      margin: 40px auto;
+      max-width: 1200px;
+      width: calc(100% - 40px);
+      border: 1px solid #dceade;
+      border-radius: 32px;
+      padding: 42px 36px 38px;
+      box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
+      overflow: hidden;
+    }
+
+    .quick-nav-decor {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      color: #cde4d3;
+      opacity: 0.55;
+    }
+
+    .decor-top-left {
+      top: -8px;
+      left: -8px;
+      width: 130px;
+      height: 130px;
+      background: radial-gradient(circle at 10% 10%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
+      border-radius: 0 0 100% 0;
+    }
+
+    .decor-bottom-right {
+      bottom: -8px;
+      right: -8px;
+      width: 130px;
+      height: 130px;
+      background: radial-gradient(circle at 90% 90%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
+      border-radius: 100% 0 0 0;
+    }
+
+    .decor-paw {
+      position: absolute;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .decor-paw-1 {
+      top: 14px;
+      left: 28px;
+      font-size: 28px;
+      transform: rotate(-15deg);
+    }
+
+    .decor-paw-2 {
+      top: 38px;
+      left: 12px;
+      font-size: 19px;
+      transform: rotate(20deg);
+    }
+
+    .decor-paw-3 {
+      bottom: 36px;
+      right: 14px;
+      font-size: 19px;
+      transform: rotate(-25deg);
+    }
+
+    .decor-paw-4 {
+      bottom: 14px;
+      right: 28px;
+      font-size: 28px;
+      transform: rotate(15deg);
+    }
+
+    .quick-nav-header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .quick-nav-eyebrow-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .quick-nav-line {
+      height: 1px;
+      width: 110px;
+      background: #d6ead9;
+    }
+
+    .quick-nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: #f4faf5;
+      border: 1px solid #b7deb8;
+      border-radius: 9999px;
+      color: #1e6f43;
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
+    }
+
+    .quick-nav-badge i {
+      font-size: 0.95rem;
+      line-height: 1;
+      color: #1e6f43;
+      flex-shrink: 0;
+    }
+
+    .quick-nav-title {
+      font-family: 'Manrope', sans-serif !important;
+      font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+      font-weight: 800;
+      color: #1a251e;
+      margin: 0;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .quick-nav-title span {
+      color: #1e6f43;
+      font-weight: 800;
+    }
+
+    .guides-nav-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+    }
+
+    .guide-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      padding: 9px 16px 9px 9px;
+      background: #edf7f0;
+      border: 1px solid #cce4d2;
+      border-radius: 9999px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .guide-nav-item:hover,
+    .guide-nav-item:focus-visible,
+    .guide-nav-item.active {
+      background: #e4f4e8;
+      border-color: #237847;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(35, 100, 55, 0.12);
+      outline: none;
+    }
+
+    .guide-nav-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #d1ecda;
+      color: #1e6f43;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      line-height: 1;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .guide-nav-icon i {
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .guide-nav-item:hover .guide-nav-icon,
+    .guide-nav-item:focus-visible .guide-nav-icon,
+    .guide-nav-item.active .guide-nav-icon {
+      background: #1e6f43;
+      color: #ffffff;
+    }
+
+    .guide-nav-label {
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1d5039;
+      line-height: 1.25;
+      white-space: normal;
+    }
+
+    /* ---------- Shared section headings ---------- */
+    .health-section {
+      padding: 72px 0;
+      scroll-margin-top: 96px;
+    }
+
+    .health-section.soft {
+      background: #ffffff;
+    }
+
+    /* Signature PetSathi heading card — matches index.html / rabbits index */
+    .health-heading-card {
+      position: relative;
+      width: 100%;
+      margin: 0 auto 34px;
+      padding: 44px 35px 38px;
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid #dcebc9;
+      border-radius: 35px;
+      background: #fafcf7;
+      box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+    }
+
+    .health-corner-wave {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .health-wave-tl {
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .health-wave-br {
+      bottom: 0;
+      right: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .health-paw {
+      position: absolute;
+      z-index: 1;
+      color: rgba(115, 173, 91, 0.28);
+      pointer-events: none;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .health-paw-left-1 {
+      top: 66px;
+      left: 108px;
+      font-size: 58px;
+      transform: rotate(20deg);
+    }
+
+    .health-paw-left-2 {
+      bottom: 24px;
+      left: 82px;
+      font-size: 38px;
+      transform: rotate(-15deg);
+    }
+
+    .health-paw-right-1 {
+      top: 60px;
+      right: 75px;
+      font-size: 56px;
+      transform: rotate(18deg);
+    }
+
+    .health-paw-right-2 {
+      bottom: 35px;
+      right: 140px;
+      font-size: 38px;
+      transform: rotate(-15deg);
+    }
+
+    .health-heading-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .health-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 20px;
+      margin-bottom: 16px;
+      border-radius: 50px;
+      background: #edf6df;
+      border: 1px solid #dcebc9;
+      color: #246b43;
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
+    }
+
+    .health-label i {
+      font-size: 14px;
+      color: #246b43;
+      line-height: 1;
+    }
+
+    .health-heading-card h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0 0 12px;
+      color: #263b30;
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .health-heading-card h2 em {
+      color: #28764a;
+      font-style: normal;
+    }
+
+    /* Radiating three-ray bursts on either side of the heading */
+    .health-heading-burst {
+      display: inline-block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    .health-heading-burst span {
+      position: absolute;
+      background: #60a872;
+      border-radius: 9999px;
+    }
+
+    .health-heading-burst.left span {
+      right: 0;
+      transform-origin: right center;
+    }
+
+    .health-heading-burst.left span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    .health-heading-burst.left span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .health-heading-burst.left span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .health-heading-burst.right span {
+      left: 0;
+      transform-origin: left center;
+    }
+
+    .health-heading-burst.right span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .health-heading-burst.right span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .health-heading-burst.right span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    .health-heading-card p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #64736a;
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ---------- Card grids ---------- */
+    .health-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .health-grid.two-col {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .health-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      padding: 26px 22px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .health-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbd9ce;
+    }
+
+    .health-card-icon {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #eaf2e9;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    .health-card-icon i {
+      color: var(--green);
+      font-size: 1.35rem;
+    }
+
+    .health-card h3 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-size: 1.08rem;
+      line-height: 1.3;
+      letter-spacing: -0.2px;
+    }
+
+    .health-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    /* Cream warning cards keep the same card system. */
+    .health-card.is-warning {
+      background: #fffaf3;
+      border-color: #f0e2cf;
+    }
+
+    .health-card.is-warning:hover {
+      border-color: #e4cfb3;
+    }
+
+    .health-card.is-warning .health-card-icon {
+      background: #fdf0e2;
+    }
+
+    .health-card.is-warning .health-card-icon,
+    .health-card.is-warning .health-card-icon i {
+      color: #a9652c;
+    }
+
+    .health-card.is-warning h3 {
+      color: #704a2a;
+    }
+
+    /* Common health problem cards add a short "signs to watch for" list. */
+    .health-signs {
+      width: 100%;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #edf4ee;
+      text-align: left;
+    }
+
+    .health-signs-label {
+      display: block;
+      margin-bottom: 8px;
+      color: #246b43;
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .health-signs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .health-signs-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      color: #55665b;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .health-signs-list li i {
+      margin-top: 4px;
+      color: #246b43;
+      font-size: 0.62rem;
+      flex-shrink: 0;
+    }
+
+    /* ---------- Alert panels ---------- */
+    .health-alert {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: #fdf8ed;
+      border: 1px solid #ecdfc8;
+      border-left: 4px solid #c28b45;
+      border-radius: 16px;
+    }
+
+    .health-alert-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: #f8ecd8;
+      color: #a9652c;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.15rem;
+    }
+
+    .health-alert h3 {
+      margin: 0 0 4px;
+      color: #5f4529;
+      font-size: 1.05rem;
+      line-height: 1.35;
+    }
+
+    .health-alert p {
+      margin: 0;
+      color: #6e5c48;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .health-alert.urgent {
+      background: #fdf2ee;
+      border-color: #efd8ce;
+      border-left-color: #b45b43;
+    }
+
+    .health-alert.urgent .health-alert-icon {
+      background: #f9e3dc;
+      color: #a84832;
+    }
+
+    .health-alert.urgent h3 {
+      color: #6f3527;
+    }
+
+    .health-alert.urgent p {
+      color: #6f554c;
+    }
+
+    /* ---------- Veterinary guidance ---------- */
+    .vet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .vet-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      padding: 28px 24px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .vet-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbd9ce;
+    }
+
+    .vet-card-icon {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #eaf2e9;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    .vet-card h3 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-size: 1.12rem;
+      line-height: 1.3;
+    }
+
+    .vet-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .vet-list {
+      width: 100%;
+      margin: 14px 0 0;
+      padding: 14px 0 0;
+      border-top: 1px solid #edf4ee;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      list-style: none;
+      text-align: left;
+    }
+
+    .vet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: #55665b;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .vet-list li i {
+      margin-top: 3px;
+      color: var(--green);
+      font-size: 0.68rem;
+      flex-shrink: 0;
+    }
+
+    .vet-card.is-emergency {
+      background: #fffaf3;
+      border-color: #f0e2cf;
+    }
+
+    .vet-card.is-emergency .vet-card-icon {
+      background: #fdf0e2;
+      color: #a9652c;
+    }
+
+    .vet-card.is-emergency h3 {
+      color: #704a2a;
+    }
+
+    .vet-card.is-emergency .vet-list li i {
+      color: #a9652c;
+    }
+
+    .emergency-panel {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 28px;
+      padding: 24px;
+      border: 1px solid #ead8c5;
+      border-radius: 18px;
+      background: #fff8ef;
+      scroll-margin-top: 96px;
+    }
+
+    .emergency-panel-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: #f8ecd8;
+      color: #a9652c;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+
+    .emergency-panel h3 {
+      margin: 0 0 6px;
+      color: #6b4a2a;
+      font-size: 1.1rem;
+      line-height: 1.35;
+    }
+
+    .emergency-panel p {
+      margin: 0;
+      color: #6e5c48;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .health-disclaimer {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 24px;
+      padding: 22px 24px;
+      border: 1px solid #dce8d8;
+      border-radius: 16px;
+      background: #f0f6ed;
+    }
+
+    .health-disclaimer-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #ffffff;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .health-disclaimer h3 {
+      margin: 0 0 4px;
+      color: var(--dark);
+      font-size: 1.05rem;
+      line-height: 1.35;
+    }
+
+    .health-disclaimer p {
+      margin: 0;
+      color: #53675a;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ---------- FAQs ---------- */
+    .health-faq-list {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .health-faq-item {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #ffffff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .health-faq-item[open] {
+      border-color: #cbd9ce;
+      box-shadow: 0 6px 20px rgba(35, 57, 43, 0.06);
+    }
+
+    .health-faq-item summary {
+      position: relative;
+      padding: 19px 52px 19px 21px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .health-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .health-faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eaf2e9;
+      color: var(--green);
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .health-faq-item[open] summary::after {
+      content: "−";
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    .health-faq-item summary:hover {
+      color: var(--green);
+    }
+
+    .health-faq-item p {
+      margin: 0;
+      padding: 0 21px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .faq-more-wrap {
+      text-align: center;
+    }
+
+    .faq-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 22px;
+      color: var(--green);
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .faq-more-link:hover {
+      color: var(--dark);
+      transform: translateX(4px);
+    }
+
+    /* ---------- Trusted resources ---------- */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      padding: 26px 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbd9ce;
+    }
+
+    .resource-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #eaf2e9;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .resource-card h3 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    .resource-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.89rem;
+      line-height: 1.65;
+    }
+
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+      color: var(--green);
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .resource-link i {
+      font-size: 0.78rem;
+    }
+
+    .resource-card:hover .resource-link {
+      color: var(--dark);
+    }
+
+    .resources-note {
+      margin: 22px 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- Final CTA — soft light pink, matching the index CTA layout ---------- */
+    main>.cta,
+    .health-cta.cta {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 25px !important;
+      width: 85% !important;
+      max-width: 1350px !important;
+      margin: 40px auto 92px !important;
+      margin-inline: auto !important;
+      padding: 48px 56px !important;
+      border: 1px solid #ecd9d2 !important;
+      border-radius: 30px !important;
+      background: #f9eae6 !important;
+      background-image: none !important;
+      box-sizing: border-box !important;
+    }
+
+    .health-cta>div:first-child {
+      flex: 1 !important;
+      min-width: 0 !important;
+    }
+
+    .health-cta .eyebrow {
+      display: block !important;
+      margin: 0 0 14px 0 !important;
+      padding: 0 !important;
+      background: none !important;
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      color: #286849 !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.7px !important;
+      line-height: normal !important;
+      text-transform: uppercase !important;
+      text-align: left !important;
+      width: auto !important;
+    }
+
+    .health-cta h2 {
+      display: block !important;
+      margin: 0 0 8px 0 !important;
+      font-family: Georgia, 'Times New Roman', serif !important;
+      font-size: clamp(24px, 3.2vw, 36px) !important;
+      font-weight: 700 !important;
+      line-height: 1.2 !important;
+      letter-spacing: normal !important;
+      color: #1d5039 !important;
+      text-align: left !important;
+    }
+
+    .health-cta h2 em {
+      color: #286849 !important;
+      font-family: Georgia, 'Times New Roman', serif !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+    }
+
+    .health-cta p {
+      display: block !important;
+      margin: 0 !important;
+      color: #26372e !important;
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 1.65 !important;
+      font-style: normal !important;
+      max-width: 600px !important;
+      text-align: left !important;
+    }
+
+    .health-cta .cta-actions {
+      display: flex !important;
+      gap: 14px !important;
+      flex-wrap: wrap !important;
+      flex-shrink: 0 !important;
+      align-items: center !important;
+    }
+
+    .health-cta .button-light {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      min-height: 49px !important;
+      padding: 0 22px !important;
+      border-radius: 999px !important;
+      background: #ffffff !important;
+      border: 1px solid #ffffff !important;
+      color: #1d5039 !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+      transition: 0.2s !important;
+      box-sizing: border-box !important;
+    }
+
+    .health-cta .button-light:hover {
+      background: #edf3ec !important;
+      color: #1d5039 !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .health-cta .button-outline {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      min-height: 49px !important;
+      padding: 0 22px !important;
+      border-radius: 999px !important;
+      background: transparent !important;
+      color: #286849 !important;
+      border: 1px solid #286849 !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: 0.2s !important;
+      box-sizing: border-box !important;
+    }
+
+    .health-cta .button-outline:hover {
+      background: #286849 !important;
+      color: #ffffff !important;
+      border-color: #286849 !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .guide-nav-label {
+        font-size: 0.86rem;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .guides-nav-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .health-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .health-grid.two-col,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .vet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .health-section {
+        padding: 56px 0;
+      }
+
+      .health-heading-card {
+        padding: 35px 16px 30px;
+        border-radius: 24px;
+        margin-bottom: 28px;
+      }
+
+      .health-corner-wave {
+        width: 170px;
+        height: 110px;
+      }
+
+      .health-heading-card h2 {
+        font-size: clamp(20px, 5vw, 26px);
+      }
+
+      .health-heading-burst {
+        width: 16px;
+        height: 18px;
+      }
+
+      .health-heading-card p {
+        font-size: 14px;
+      }
+
+      .health-label {
+        font-size: 11px;
+        padding: 6px 14px;
+        margin-bottom: 12px;
+      }
+
+      .health-paw-left-1 {
+        left: 35px;
+        top: 25px;
+        font-size: 34px;
+      }
+
+      .health-paw-left-2 {
+        left: 18px;
+        bottom: 14px;
+        font-size: 24px;
+      }
+
+      .health-paw-right-1 {
+        right: 25px;
+        top: 25px;
+        font-size: 34px;
+      }
+
+      .health-paw-right-2 {
+        right: 35px;
+        bottom: 14px;
+        font-size: 24px;
+      }
+
+      .health-grid,
+      .health-grid.two-col,
+      .resource-grid,
+      .vet-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .health-card,
+      .vet-card {
+        padding: 23px 20px;
+      }
+
+      .health-alert,
+      .emergency-panel,
+      .health-disclaimer {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .guides-nav-strip {
+        width: calc(100% - 32px);
+        padding: 24px 18px;
+        border-radius: 24px;
+      }
+
+      .guides-nav-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .quick-nav-eyebrow-wrap {
+        gap: 9px;
+      }
+
+      .quick-nav-line {
+        width: 42px;
+      }
+
+      .quick-nav-badge {
+        font-size: 0.68rem;
+        padding: 6px 12px;
+      }
+
+      main>.cta,
+      .health-cta.cta {
+        width: calc(100% - 34px) !important;
+        max-width: none !important;
+        margin-bottom: 65px !important;
+        padding: 34px 24px !important;
+        display: block !important;
+      }
+
+      .health-cta .cta-actions {
+        width: 100% !important;
+        flex-direction: column !important;
+        margin-top: 18px !important;
+      }
+
+      .health-cta .cta-actions .button {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <main id="main-content">
+    <!-- ============================= HERO ============================= -->
+    <section class="hero section-wrap" id="rabbit-health-hero">
+      <div class="hero-copy">
+        <div class="health-badge-strip">
+          <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+          PetSathi • Rabbit Health &amp; Wellness Guide
+        </div>
+        <h1>Keeping Your Bunny <em>Healthy &amp; Happy</em></h1>
+        <p>
+          Rabbits are gentle, curious companions who thrive on routine, a high-fibre diet, and attentive daily
+          observation. Learn the signs of good health, common problems to watch for, and when to seek veterinary
+          care—so you can act early and keep every hop comfortable.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#healthy-signs" id="hero-cta-health-guide">Explore Health Guide ↗</a>
+          <a class="button button-outline" href="index.html" id="hero-cta-rabbits-home">Rabbits Home</a>
+        </div>
+        <div class="hero-note">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i>
+          &nbsp; Dedicated to bright eyes, healthy appetites, and happy hops.
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+        <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?auto=format&fit=crop&w=1000&q=85"
+          alt="Healthy rabbit resting alertly on green grass with bright eyes and clean coat" class="hero-photo" id="hero-rabbit-health-image">
+        <div class="floating-card card-top" id="hero-healthy-card">
+          <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+          <span><b>Bright &amp; Active</b><small>Daily wellness checks</small></span>
+        </div>
+        <div class="floating-card card-bottom" id="hero-care-card">
+          <i class="fa-solid fa-tooth" aria-hidden="true"></i>
+          <span><b>Health &amp; Happiness</b><small>Routine care, early action</small></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= QUICK NAVIGATION ============================= -->
+    <nav class="guides-nav-strip" id="quick-nav" aria-label="Rabbit health sections">
+      <div class="quick-nav-decor decor-top-left" aria-hidden="true">
+        <i class="fa-solid fa-paw decor-paw decor-paw-1"></i>
+        <i class="fa-solid fa-paw decor-paw decor-paw-2"></i>
+      </div>
+      <div class="quick-nav-decor decor-bottom-right" aria-hidden="true">
+        <i class="fa-solid fa-paw decor-paw decor-paw-3"></i>
+        <i class="fa-solid fa-paw decor-paw decor-paw-4"></i>
+      </div>
+
+      <div class="quick-nav-header">
+        <div class="quick-nav-eyebrow-wrap">
+          <span class="quick-nav-line"></span>
+          <div class="quick-nav-badge">
+            <i class="fa-regular fa-compass quick-nav-badge-icon" aria-hidden="true"></i>
+            <span>QUICK NAVIGATION</span>
+          </div>
+          <span class="quick-nav-line"></span>
+        </div>
+        <h2 class="quick-nav-title">Explore the <span>Rabbit Health Guide</span></h2>
+      </div>
+
+      <div class="guides-nav-grid">
+        <a href="#healthy-signs" class="guide-nav-item health-nav-link" id="hub-link-healthy-signs">
+          <span class="guide-nav-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Healthy Rabbit Signs</span>
+        </a>
+        <a href="#common-problems" class="guide-nav-item health-nav-link" id="hub-link-common-problems">
+          <span class="guide-nav-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Common Health Problems</span>
+        </a>
+        <a href="#warning-signs" class="guide-nav-item health-nav-link" id="hub-link-warning-signs">
+          <span class="guide-nav-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Warning Signs</span>
+        </a>
+        <a href="#dental-health" class="guide-nav-item health-nav-link" id="hub-link-dental-health">
+          <span class="guide-nav-icon"><i class="fa-solid fa-tooth" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Dental Health</span>
+        </a>
+        <a href="#digestive-health" class="guide-nav-item health-nav-link" id="hub-link-digestive-health">
+          <span class="guide-nav-icon"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Digestive Health</span>
+        </a>
+        <a href="#preventive-care" class="guide-nav-item health-nav-link" id="hub-link-preventive-care">
+          <span class="guide-nav-icon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Preventive Care</span>
+        </a>
+        <a href="#vet-visits" class="guide-nav-item health-nav-link" id="hub-link-vet-visits">
+          <span class="guide-nav-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Veterinary Visits</span>
+        </a>
+        <a href="#emergency-care" class="guide-nav-item health-nav-link" id="hub-link-emergency-care">
+          <span class="guide-nav-icon"><i class="fa-solid fa-kit-medical" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Emergency Care</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ============================= 1. HEALTHY SIGNS ============================= -->
+    <section class="health-section" id="healthy-signs">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Know What's Normal</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Signs of a <em>Healthy Rabbit</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Rabbits are creatures of routine. Learning what is normal for your rabbit—how much they eat, drink,
+              move, and produce droppings—helps you notice small changes before they become serious.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+            <h3>Bright and Clear Eyes</h3>
+            <p>Eyes should be bright, clear, and free from discharge, with no squinting, redness, or swelling.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-ear-listen" aria-hidden="true"></i></div>
+            <h3>Clean Ears and Nose</h3>
+            <p>Ears should be clean and free from discharge, while the nose should be dry without unusual mucus or
+              sounds.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i></div>
+            <h3>Healthy Coat and Skin</h3>
+            <p>A glossy coat and healthy skin with no bald patches, flakes, sores, or constant scratching.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
+            <h3>Normal Appetite and Drinking Habits</h3>
+            <p>Eating hay, greens, and pellets steadily, and drinking fresh water every day.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i></div>
+            <h3>Regular, Healthy Droppings</h3>
+            <p>Plenty of firm, round droppings produced consistently is one of the best signs of good gut health.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></div>
+            <h3>Comfortable Movement and Activity</h3>
+            <p>Hopping, stretching, exploring, and binkying comfortably without stiffness, limping, or reluctance to
+              move.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 2. COMMON HEALTH PROBLEMS ============================= -->
+    <section class="health-section soft" id="common-problems">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Know the Risks</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Common Rabbit <em>Health Problems</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Rabbits can be affected by several common health issues. Learn the early signs to watch for and contact a
+              rabbit-experienced veterinarian if you are concerned. This page does not diagnose or treat illness.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-tooth" aria-hidden="true"></i></div>
+            <h3>Dental Problems</h3>
+            <p>Rabbit teeth grow continuously, so overgrowth, misalignment, or painful spurs can affect eating and
+              grooming.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Drooling or a wet chin</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Difficulty chewing or dropping food</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Reduced appetite or weight loss</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></div>
+            <h3>Digestive Problems</h3>
+            <p>Sensitive digestive systems can be upset by sudden diet changes, low fibre, stress, or infection.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Soft, watery, or misshapen droppings</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Reduced appetite or drinking</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Bloating or a painful-looking abdomen</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></div>
+            <h3>Gastrointestinal Stasis</h3>
+            <p>The gut slows or stops moving, which can become a life-threatening emergency very quickly.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>No droppings or much fewer than usual</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Not eating or refusing favourite foods</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Hunched posture, lethargy, or pain</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div>
+            <h3>Respiratory Problems</h3>
+            <p>Infections or irritants can affect the nose, throat, and lungs, making breathing uncomfortable.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Sneezing or nasal discharge</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Noisy, rapid, or laboured breathing</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Eye discharge or reduced activity</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-ear-listen" aria-hidden="true"></i></div>
+            <h3>Ear Problems</h3>
+            <p>Ear infections, mites, or abscesses can cause discomfort and may affect balance.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Head shaking or scratching at the ears</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Discharge, redness, or a bad smell</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Head tilt or loss of balance</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-bug" aria-hidden="true"></i></div>
+            <h3>Skin and Parasite Problems</h3>
+            <p>Parasites, allergies, or skin infections can irritate the coat and make your rabbit uncomfortable.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Scratching, biting, or rubbing the skin</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Hair loss, scabs, dandruff, or redness</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Visible fleas, mites, or tiny specks</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+            <h3>Sore Hocks and Foot Problems</h3>
+            <p>Pressure, poor flooring, or excess weight can damage the skin on the feet, especially the hocks.</p>
+            <div class="health-signs">
+              <span class="health-signs-label">Signs to watch for</span>
+              <ul class="health-signs-list">
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Sores, bald patches, or redness on the feet</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Swelling or crusting around the hocks</li>
+                <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Limping or reluctance to move</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 3. WARNING SIGNS ============================= -->
+    <section class="health-section" id="warning-signs">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Act
+              Early</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Warning Signs &amp; <em>Symptoms</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Rabbits are prey animals and often hide illness. Contact a rabbit-experienced veterinarian promptly if you
+              notice any of these changes.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+            <h3>Loss of Appetite</h3>
+            <p>Not eating, eating much less, or refusing favourite foods is always a reason to seek advice.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i></div>
+            <h3>Reduced or Absent Droppings</h3>
+            <p>Fewer droppings, smaller droppings, or none at all can signal a digestive emergency.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+            <h3>Unusual Droppings</h3>
+            <p>Soft, watery, misshapen, or mucus-covered droppings should be discussed with a veterinarian.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-moon" aria-hidden="true"></i></div>
+            <h3>Unusual Tiredness or Hiding</h3>
+            <p>Lethargy, reluctance to move, or hiding more than usual can be an early sign of pain or illness.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div>
+            <h3>Difficulty Breathing</h3>
+            <p>Laboured, noisy, or rapid breathing, or breathing with the mouth open, needs urgent veterinary care.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-rotate" aria-hidden="true"></i></div>
+            <h3>Head Tilt or Balance Problems</h3>
+            <p>A tilted head, circling, rolling, or unsteady movement should be assessed promptly.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-eye-dropper" aria-hidden="true"></i></div>
+            <h3>Unusual Eye or Nose Discharge</h3>
+            <p>Discharge, crusting, redness, or swelling around the eyes or nose can indicate infection.</p>
+          </article>
+          <article class="health-card is-warning">
+            <div class="health-card-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+            <h3>Sudden Changes in Behaviour</h3>
+            <p>New aggression, fear, withdrawal, or a sudden change in routine can be a sign of discomfort.</p>
+          </article>
+        </div>
+
+        <div class="health-alert">
+          <div class="health-alert-icon"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i></div>
+          <div>
+            <h3>Rabbits hide signs of illness</h3>
+            <p>
+              As prey animals, rabbits may appear normal until they are seriously unwell. Do not wait for symptoms to
+              become severe. If your rabbit stops eating, stops passing droppings, has difficulty breathing, or shows a
+              sudden change in behaviour, contact a rabbit-experienced veterinarian immediately—day or night.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 4. DENTAL HEALTH ============================= -->
+    <section class="health-section soft" id="dental-health">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-tooth" aria-hidden="true"></i> Teeth That Keep
+              Growing</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Dental <em>Health</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Rabbit teeth grow continuously throughout life. A high-fibre diet, daily observation, and regular
+              veterinary checks help keep them worn and comfortable.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div>
+            <h3>Teeth Continue to Grow</h3>
+            <p>Rabbit incisors and cheek teeth grow continuously and need regular wear to stay healthy.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></div>
+            <h3>High-Fibre Hay Supports Wear</h3>
+            <p>Unlimited grass hay encourages chewing and helps teeth wear naturally.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
+            <h3>Monitor Eating and Chewing</h3>
+            <p>Watch for slower eating, dropping food, or choosing soft foods over hay.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></div>
+            <h3>Watch for Dental Warning Signs</h3>
+            <p>Drooling, difficulty eating, weight loss, a wet chin, or bulging eyes need veterinary assessment.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+            <h3>Arrange Veterinary Dental Checks</h3>
+            <p>Ask your veterinarian to examine your rabbit's teeth during routine checkups.</p>
+          </article>
+        </div>
+
+        <div class="health-alert">
+          <div class="health-alert-icon"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i></div>
+          <div>
+            <h3>Never trim your rabbit's teeth at home</h3>
+            <p>
+              Dental problems are painful and can worsen quickly. Do not attempt to trim, file, or treat your rabbit's
+              teeth yourself. Seek help from a rabbit-experienced veterinarian.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 5. DIGESTIVE HEALTH ============================= -->
+    <section class="health-section" id="digestive-health">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i> Gut Health Matters</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Digestive <em>Health</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              A rabbit's digestive system needs constant movement. Fibre, fresh water, and a steady routine are the
+              foundation of good gut health.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i></div>
+            <h3>Importance of a High-Fibre Diet</h3>
+            <p>Grass hay should make up most of the diet and be available at all times.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></div>
+            <h3>Daily Monitoring of Food Intake</h3>
+            <p>Check that your rabbit is eating hay, greens, and pellets every day.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i></div>
+            <h3>Monitoring Droppings</h3>
+            <p>Note the number, size, and consistency of droppings each day.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+            <h3>Access to Fresh Water</h3>
+            <p>Provide clean, fresh water daily in a bowl or bottle.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-shuffle" aria-hidden="true"></i></div>
+            <h3>Avoiding Sudden Diet Changes</h3>
+            <p>Introduce new foods gradually to avoid upsetting the gut.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></div>
+            <h3>Recognising Possible Digestive Emergencies</h3>
+            <p>No droppings, not eating, a painful abdomen, or diarrhoea need urgent veterinary help.</p>
+          </article>
+        </div>
+
+        <div class="health-alert urgent" id="digestive-emergency">
+          <div class="health-alert-icon"><i class="fa-solid fa-truck-medical" aria-hidden="true"></i></div>
+          <div>
+            <h3>Stops eating or passing droppings? Act now.</h3>
+            <p>
+              A rabbit that stops eating or passing droppings can deteriorate very quickly. Contact a
+              rabbit-experienced veterinarian immediately. Do not wait overnight, and do not give human medicines or
+              home remedies unless your vet instructs you to.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 6. PREVENTIVE CARE ============================= -->
+    <section class="health-section soft" id="preventive-care">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Stay Ahead</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Preventive <em>Health Care</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Routine care helps detect problems early and keeps your rabbit comfortable throughout life.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-grid">
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+            <h3>Regular Veterinary Checkups</h3>
+            <p>Schedule routine wellness examinations with a veterinarian experienced in rabbit medicine.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-syringe" aria-hidden="true"></i></div>
+            <h3>Vaccinations as Advised by a Veterinarian</h3>
+            <p>Vaccination recommendations vary by region. Ask your veterinarian what is appropriate for your rabbit.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-tooth" aria-hidden="true"></i></div>
+            <h3>Dental Checks</h3>
+            <p>Have your rabbit's teeth checked regularly, especially if eating or chewing habits change.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-weight-scale" aria-hidden="true"></i></div>
+            <h3>Weight Monitoring</h3>
+            <p>Track weight over time. Unexpected loss or gain should be discussed with your veterinarian.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i></div>
+            <h3>Grooming and Skin Checks</h3>
+            <p>Brush regularly and check the coat, skin, ears, eyes, and feet for changes.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i></div>
+            <h3>Hygiene and Parasite Prevention</h3>
+            <p>Keep the living area clean and ask your veterinarian about safe parasite prevention.</p>
+          </article>
+          <article class="health-card">
+            <div class="health-card-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+            <h3>Daily Behaviour Monitoring</h3>
+            <p>Watch for changes in appetite, activity, droppings, and interaction with family members.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 7. VETERINARY VISITS ============================= -->
+    <section class="health-section" id="vet-visits">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Know When to Seek
+              Help</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              When to Visit a <em>Vet</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Some health changes can wait for a routine appointment, while others need urgent care. Use these
+              guidelines and always follow your veterinarian's advice.
+            </p>
+          </div>
+        </div>
+
+        <div class="vet-grid">
+          <article class="vet-card">
+            <div class="vet-card-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+            <h3>Routine Checkups</h3>
+            <p>Regular visits help build a health baseline and catch small changes early.</p>
+            <ul class="vet-list">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Regular wellness examinations</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Dental and weight checks</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Vaccination discussions</li>
+            </ul>
+          </article>
+
+          <article class="vet-card">
+            <div class="vet-card-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+            <h3>Noticeable Changes</h3>
+            <p>Book an appointment if you notice a change from your rabbit's normal routine.</p>
+            <ul class="vet-list">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Appetite changes</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Unusual droppings</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Changes in movement or behaviour</li>
+            </ul>
+          </article>
+
+          <article class="vet-card is-emergency">
+            <div class="vet-card-icon"><i class="fa-solid fa-truck-medical" aria-hidden="true"></i></div>
+            <h3>Emergency Attention</h3>
+            <p>Contact a rabbit-experienced veterinarian or emergency clinic immediately.</p>
+            <ul class="vet-list">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Not eating</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>No droppings</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Breathing difficulties</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Severe weakness or injury</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="emergency-panel" id="emergency-care">
+          <div class="emergency-panel-icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+          <div>
+            <h3>Emergency care: do not wait</h3>
+            <p>
+              If your rabbit shows any emergency sign, contact a rabbit-experienced veterinarian or emergency clinic
+              immediately. Keep your rabbit warm, calm, and in a quiet carrier while you arrange transport. Do not wait
+              to see if things improve, and do not give human medicines or home remedies unless your vet instructs you
+              to.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-disclaimer">
+          <div class="health-disclaimer-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+          <div>
+            <h3>Important Veterinary Information</h3>
+            <p>
+              This page is educational and does not replace professional veterinary advice, diagnosis, or treatment.
+              Always consult a rabbit-experienced veterinarian about your rabbit's health. If you suspect an emergency,
+              contact your veterinarian or an emergency animal hospital immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 8. FAQs ============================= -->
+    <section class="health-section soft" id="rabbit-health-faqs">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-regular fa-circle-question" aria-hidden="true"></i> Quick
+              Answers</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Rabbit Health <em>FAQs</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Clear answers to common questions about keeping your rabbit healthy.
+            </p>
+          </div>
+        </div>
+
+        <div class="health-faq-list">
+          <details class="health-faq-item">
+            <summary>What are the signs of a healthy rabbit?</summary>
+            <p>A healthy rabbit usually has bright, clear eyes, clean ears and nose, a glossy coat, a steady appetite and
+              drinking routine, plenty of regular droppings, and comfortable movement. Learning your rabbit's normal
+              routine is the best way to notice changes early.</p>
+          </details>
+          <details class="health-faq-item">
+            <summary>What health problems are common in rabbits?</summary>
+            <p>Common concerns include dental problems, digestive problems, gastrointestinal stasis, respiratory
+              infections, ear problems, skin and parasite issues, and sore hocks. Because rabbits hide illness, contact
+              a rabbit-experienced veterinarian if you notice any warning signs.</p>
+          </details>
+          <details class="health-faq-item">
+            <summary>How can I keep my rabbit's teeth healthy?</summary>
+            <p>Offer unlimited grass hay to support natural tooth wear, monitor eating and chewing habits, and arrange
+              regular veterinary dental checks. Watch for drooling, difficulty eating, a wet chin, or weight changes.
+              Never trim or file your rabbit's teeth at home.</p>
+          </details>
+          <details class="health-faq-item">
+            <summary>How can I support good digestive health?</summary>
+            <p>Feed a high-fibre diet based on grass hay, provide fresh water daily, monitor food intake and droppings,
+              and introduce new foods gradually. A rabbit that stops eating or passing droppings needs urgent veterinary
+              assessment.</p>
+          </details>
+          <details class="health-faq-item">
+            <summary>When should I contact a veterinarian?</summary>
+            <p>Contact a rabbit-experienced veterinarian if you notice appetite changes, unusual droppings, tiredness or
+              hiding, breathing difficulties, a head tilt, unusual discharge, or a sudden change in behaviour. Not
+              eating, no droppings, breathing difficulties, and severe weakness or injury are emergencies.</p>
+          </details>
+        </div>
+
+        <div class="faq-more-wrap">
+          <a class="faq-more-link" href="../../faq.html" id="view-all-faqs">
+            View All FAQs <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 9. TRUSTED RESOURCES ============================= -->
+    <section class="health-section" id="rabbit-health-resources">
+      <div class="section-wrap">
+        <div class="health-heading-card">
+          <svg class="health-corner-wave health-wave-tl" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="health-corner-wave health-wave-br" viewBox="0 0 220 130" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="health-paw health-paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="health-paw health-paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="health-heading-content">
+            <span class="health-label"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Learn More</span>
+            <h2>
+              <span class="health-heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Trusted Rabbit <em>Health Resources</em>
+              <span class="health-heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Use recognised animal-welfare and veterinary resources for more detailed guidance. Local veterinary
+              advice should always take priority for your rabbit's health.
+            </p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.rspca.org.uk/adviceandwelfare/pets/rabbits" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+            <h3>RSPCA – Rabbit Health and Welfare</h3>
+            <p>Practical guidance on rabbit health, warning signs, preventive care, and everyday welfare.</p>
+            <span class="resource-link">Visit resource <i class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"></i></span>
+          </a>
+
+          <a class="resource-card" href="https://www.merckvetmanual.com/all-other-pets/rabbits" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><i class="fa-solid fa-book-medical" aria-hidden="true"></i></div>
+            <h3>Merck Veterinary Manual – Rabbit Health</h3>
+            <p>Detailed veterinary reference covering rabbit health, dental care, digestive disorders, and more.</p>
+            <span class="resource-link">Visit resource <i class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"></i></span>
+          </a>
+
+          <a class="resource-card" href="https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/rabbits"
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div>
+            <h3>PDSA – Rabbit Health</h3>
+            <p>Veterinary charity advice on keeping rabbits healthy, happy, and well cared for.</p>
+            <span class="resource-link">Visit resource <i class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"></i></span>
+          </a>
+
+          <a class="resource-card" href="https://hospital.cvm.ncsu.edu/services/caring-for-your-pet-rabbit/"
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+            <h3>NC State Veterinary Hospital – Caring for Your Pet Rabbit</h3>
+            <p>Veterinary hospital guidance on housing, nutrition, dental care, and signs of illness in rabbits.</p>
+            <span class="resource-link">Visit resource <i class="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"></i></span>
+          </a>
+        </div>
+
+        <p class="resources-note">External resources open in a new tab. PetSathi is not responsible for the content of
+          third-party websites.</p>
+      </div>
+    </section>
+
+    <!-- ============================= 10. FINAL CTA ============================= -->
+    <section class="cta section-wrap health-cta" id="rabbit-health-cta">
+      <div>
+        <div class="eyebrow">HEALTHY HABITS, HAPPY HOPS</div>
+        <h2>A Healthy Bunny Is a <em>Happy Bunny</em></h2>
+        <p>
+          Good health starts with daily observation, a fibre-rich diet, and timely veterinary care. Explore more rabbit
+          care and nutrition guidance from PetSathi.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a class="button button-light" href="care.html" id="cta-rabbit-care">Rabbit Care ↗</a>
+        <a class="button button-outline" href="nutrition.html" id="cta-rabbit-nutrition">Rabbit Nutrition</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../../../js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      /* ---------------------------------------------------------------
+         FAQ accordion: keep only one answer open at a time.
+      --------------------------------------------------------------- */
+      const healthFaqItems = document.querySelectorAll(".health-faq-item");
+      healthFaqItems.forEach(item => {
+        item.addEventListener("toggle", () => {
+          if (item.open) {
+            healthFaqItems.forEach(other => {
+              if (other !== item) other.open = false;
+            });
+          }
+        });
+      });
+
+      /* ---------------------------------------------------------------
+         Highlight the quick-navigation pill for the section in view.
+      --------------------------------------------------------------- */
+      const healthNavLinks = Array.from(document.querySelectorAll(".health-nav-link"));
+      const healthSections = healthNavLinks
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              healthNavLinks.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+              });
+            }
+          });
+        }, { rootMargin: "-20% 0px -65% 0px" });
+
+        healthSections.forEach(section => sectionObserver.observe(section));
+      }
+    });
+  </script>
+</body>
+
+</html>

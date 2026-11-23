@@ -49,47 +49,17 @@ body [class*="fa-brands"]::before,
   --faq-shadow-sm: 0 4px 14px rgba(35, 57, 43, 0.045);
 }
 
-/* ---------------- Breadcrumbs ---------------- */
-.faq-breadcrumb {
-  width: min(1160px, calc(100% - 48px));
-  margin: 18px auto 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  font-size: 0.84rem;
-  color: var(--faq-muted);
-}
-
-.faq-breadcrumb a {
-  color: var(--faq-accent);
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.faq-breadcrumb a:hover {
-  color: var(--faq-accent-dark);
-  text-decoration: underline;
-}
-
-.faq-breadcrumb .separator {
-  color: #a4b4ab;
-}
-
-.faq-breadcrumb .current {
-  color: var(--faq-ink);
-  font-weight: 700;
-}
-
 /* ========================================================
    HERO
    ======================================================== */
-/* The shared global reset paints every main section white, so the FAQ hero
-   artwork needs explicitly scoped overrides. */
-main .faq-hero {
-  background-color: #eef5eb !important;
-  background-image: radial-gradient(circle at 88% 10%, rgba(40, 104, 73, 0.08), transparent 42%),
-    linear-gradient(180deg, #eef5eb 0%, #f8fbf5 62%, var(--faq-cream) 100%) !important;
+main .faq-hero,
+.faq-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 52px 0 58px;
+  background: #ffffff !important;
+  background-image: none !important;
+  border-bottom: 1px solid var(--faq-line);
 }
 
 main .faq-hero-inner,
@@ -103,15 +73,8 @@ main .faq-hero-support-row {
 }
 
 main .faq-hero-blob {
-  background-color: #e6f0e2 !important;
+  background-color: #e8f0e4 !important;
   background-image: none !important;
-}
-
-.faq-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 52px 0 58px;
-  border-bottom: 1px solid var(--faq-line);
 }
 
 .faq-hero-main {
@@ -519,16 +482,6 @@ main .faq-hero-blob {
 main .faq-category-block {
   background-color: #f5f9f2 !important;
   background-image: linear-gradient(180deg, #f7faf4 0%, #f3f8f0 100%) !important;
-}
-
-.faq-category-block:nth-of-type(even) {
-  background: linear-gradient(180deg, #fdfbf5 0%, #fbf8f0 100%);
-  border-color: #efe7d9;
-}
-
-main .faq-category-block:nth-of-type(even) {
-  background-color: #fcf9f2 !important;
-  background-image: linear-gradient(180deg, #fdfbf5 0%, #fbf8f0 100%) !important;
 }
 
 .faq-category-header {
@@ -974,11 +927,6 @@ main .faq-category-block:nth-of-type(even) {
 }
 
 @media (max-width: 540px) {
-  .faq-breadcrumb {
-    width: calc(100% - 32px);
-    font-size: 0.78rem;
-  }
-
   .faq-hero-visual {
     min-height: 290px;
   }

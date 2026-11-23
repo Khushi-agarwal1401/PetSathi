@@ -74,19 +74,17 @@
       overflow-x: hidden;
     }
 
-    .section-wrap {
-      width: min(1200px, calc(100% - 48px));
-      margin-inline: auto;
-    }
-
-    .section-padding {
-      padding-block: 70px;
-    }
-
+    /* Soft alternating section background without any divider borders */
     .soft-bg {
       background: var(--cream);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    section {
+      border: none !important;
+      border-top: none !important;
+      border-bottom: none !important;
     }
 
     /* ---------------------------------------------------------
@@ -117,8 +115,8 @@
        --------------------------------------------------------- */
     .dog-topics-heading {
       position: relative;
-      max-width: 1400px;
-      margin: 20px auto 40px;
+      width: 100%;
+      margin: 0 auto 35px;
       padding: 44px 35px 38px;
       overflow: hidden;
       text-align: center;
@@ -126,6 +124,7 @@
       border: 1px solid #dcebc9;
       background: #fafcf7;
       box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+      box-sizing: border-box;
     }
 
     .corner-wave {
@@ -432,8 +431,15 @@
     }
 
     @keyframes floatBadge {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-7px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
     }
 
     .floating-badge-icon {
@@ -779,14 +785,18 @@
        Section 6: FAQ Section & Accordion
        --------------------------------------------------------- */
     .faq-container {
-      max-width: 820px;
+      width: 100%;
+      max-width: 100%;
       margin: 0 auto 36px;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      box-sizing: border-box;
     }
 
     .faq-item {
+      width: 100%;
+      box-sizing: border-box;
       background: #ffffff;
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -1207,12 +1217,9 @@
 
       <div class="services-hero-visual">
         <div class="services-hero-blob"></div>
-        <img
-          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
-          alt="Two happy companion dogs playing together joyfully outdoors in the sunlight"
-          class="services-hero-photo"
-          id="hero-services-image"
-          loading="eager" />
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+          alt="Two happy companion dogs playing together joyfully outdoors in the sunlight" class="services-hero-photo"
+          id="hero-services-image" loading="eager" />
         <div class="floating-card card-top">
           <span class="floating-badge-icon icon-star">
             <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
@@ -1232,8 +1239,9 @@
          2. Explore Our Services (8 Standard Cards)
          Exact /index.html Section Heading Design
          ====================================================================== -->
-    <section class="section-padding section-wrap" id="explore-services">
-      <div class="dog-topics-heading">
+    <section class="section" id="explore-services">
+      <div class="section-wrap">
+        <div class="dog-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
@@ -1365,6 +1373,7 @@
           </a>
         </article>
       </div>
+      </div>
     </section>
 
     <!-- ======================================================================
@@ -1372,7 +1381,7 @@
          Title: Services for Every Kind of Pet
          Exact /index.html Section Heading Design
          ====================================================================== -->
-    <section class="section-padding soft-bg" id="pet-type-services">
+    <section class="section soft-bg" id="pet-type-services">
       <div class="section-wrap">
         <div class="dog-topics-heading">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1416,7 +1425,8 @@
               <i class="fa-solid fa-dog" aria-hidden="true"></i>
             </div>
             <h3>Dogs</h3>
-            <p>Energetic daily walking, leash socialization, positive behavior training, and balanced canine nutrition.</p>
+            <p>Energetic daily walking, leash socialization, positive behavior training, and balanced canine nutrition.
+            </p>
             <a class="service-card-link" href="../pets/dogs/index.html" id="link-type-dogs">
               Explore Dogs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -1440,7 +1450,8 @@
               <i class="fa-solid fa-dove" aria-hidden="true"></i>
             </div>
             <h3>Birds</h3>
-            <p>Aviary flight safety, beak and claw grooming, interactive foraging perches, and species-specific seeds.</p>
+            <p>Aviary flight safety, beak and claw grooming, interactive foraging perches, and species-specific seeds.
+            </p>
             <a class="service-card-link" href="../pets/birds/index.html" id="link-type-birds">
               Explore Birds <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -1452,7 +1463,8 @@
               <i class="fa-solid fa-carrot" aria-hidden="true"></i>
             </div>
             <h3>Rabbits</h3>
-            <p>High-fiber digestive hay nutrition, gentle handling, chew toy enrichment, and safe indoor bunny spaces.</p>
+            <p>High-fiber digestive hay nutrition, gentle handling, chew toy enrichment, and safe indoor bunny spaces.
+            </p>
             <a class="service-card-link" href="../pets/rabbits/index.html" id="link-type-rabbits">
               Explore Rabbits <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -1478,8 +1490,9 @@
          4. Why Choose PetSathi?
          Exact /index.html Section Heading Design
          ====================================================================== -->
-    <section class="section-padding section-wrap" id="why-choose">
-      <div class="dog-topics-heading">
+    <section class="section" id="why-choose">
+      <div class="section-wrap">
+        <div class="dog-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
@@ -1508,7 +1521,8 @@
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
-            We are committed to empowering pet owners and contributors with transparent, accessible, and community-driven
+            We are committed to empowering pet owners and contributors with transparent, accessible, and
+            community-driven
             care essentials.
           </p>
         </div>
@@ -1569,13 +1583,14 @@
           <p>Access useful pet care guides and resources.</p>
         </article>
       </div>
+      </div>
     </section>
 
     <!-- ======================================================================
          5. How PetSathi Works (3 Steps)
          Exact /index.html Section Heading Design
          ====================================================================== -->
-    <section class="section-padding soft-bg" id="how-it-works">
+    <section class="section soft-bg" id="how-it-works">
       <div class="section-wrap">
         <div class="dog-topics-heading">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1650,8 +1665,9 @@
          6. Frequently Asked Questions
          Exact /index.html Section Heading Design & Accordion
          ====================================================================== -->
-    <section class="section-padding section-wrap" id="services-faq">
-      <div class="dog-topics-heading">
+    <section class="section" id="services-faq">
+      <div class="section-wrap">
+        <div class="dog-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
@@ -1680,7 +1696,8 @@
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
-            Have questions about PetSathi's care services, companion connections, or guides? Here are quick answers to the
+            Have questions about PetSathi's care services, companion connections, or guides? Here are quick answers to
+            the
             most common questions.
           </p>
         </div>
@@ -1748,6 +1765,7 @@
         <a class="button button-outline" href="../faq.html" id="link-view-all-faqs">
           View All FAQs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
+      </div>
       </div>
     </section>
 

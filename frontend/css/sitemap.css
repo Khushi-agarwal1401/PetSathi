@@ -442,37 +442,41 @@ body {
 }
 
 /* ==========================================================================
-   3. Search Control Bar
+   3. Search Control Bar (Matching PetSathi Dog Index Design)
    ========================================================================== */
-.sitemap-search-wrap {
+.sitemap-search-filter-wrap {
   width: min(1160px, calc(100% - 48px));
-  margin: 22px auto 34px;
-  display: flex;
-  justify-content: center;
-}
-
-.sitemap-search-box {
+  margin: 0 auto 35px;
   display: flex;
   align-items: center;
-  background: var(--white);
-  border: 1.5px solid #dcebc9;
-  border-radius: var(--radius-pill);
-  padding: 8px 18px 8px 24px;
-  box-shadow: 0 4px 18px rgba(35, 75, 45, 0.05);
-  transition: var(--transition);
-  width: 100%;
-  max-width: 660px;
+  gap: 16px;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 2;
 }
 
-.sitemap-search-box:focus-within {
-  border-color: var(--green);
-  box-shadow: 0 6px 24px rgba(40, 104, 73, 0.14);
-  transform: translateY(-1px);
+.sitemap-search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dcebc9;
+  border-radius: 999px;
+  padding: 6px 14px 6px 20px;
+  box-shadow: 0 4px 16px rgba(35, 75, 45, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 48px;
+  box-sizing: border-box;
 }
 
-.sitemap-search-icon {
-  font-size: 1.1rem;
-  color: var(--green);
+.sitemap-search-bar:focus-within {
+  border-color: var(--green, #286849);
+  box-shadow: 0 6px 20px rgba(35, 75, 45, 0.09);
+}
+
+.sitemap-search-bar > i {
+  color: #7a8c80;
+  font-size: 0.95rem;
   margin-right: 12px;
   flex-shrink: 0;
 }
@@ -482,36 +486,36 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  font-family: 'DM Sans', 'Manrope', sans-serif !important;
-  font-size: 0.98rem;
-  color: var(--ink);
+  font-family: 'DM Sans', 'Manrope', -apple-system, sans-serif !important;
+  font-size: 0.94rem;
+  color: var(--ink, #192b21);
   padding: 6px 0;
 }
 
 .sitemap-search-input::placeholder {
-  color: #8c9e94;
+  color: #8a9a90;
 }
 
 .sitemap-search-clear {
-  background: #f0f4ef;
+  background: #edf7f0;
   border: none;
-  font-size: 0.85rem;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   display: none;
   align-items: center;
   justify-content: center;
-  color: #64736a;
+  color: #55665c;
   cursor: pointer;
   border-radius: 50%;
-  transition: var(--transition);
+  transition: all 0.2s ease;
   margin-left: 8px;
   flex-shrink: 0;
+  font-size: 0.8rem;
 }
 
 .sitemap-search-clear:hover {
+  background: var(--green, #286849);
   color: #ffffff;
-  background: var(--green);
 }
 
 .sitemap-search-count {
@@ -521,11 +525,42 @@ body {
   font-size: 0.78rem;
   font-weight: 700;
   padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  border-radius: 999px;
   margin-left: 10px;
   white-space: nowrap;
   border: 1px solid #dcebc9;
   display: none;
+  flex-shrink: 0;
+}
+
+.sitemap-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #edf7f0;
+  border: 1px solid #cce4d2;
+  border-radius: 999px;
+  color: var(--green, #286849);
+  font-family: 'DM Sans', 'Manrope', sans-serif !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+
+.sitemap-filter-btn:hover {
+  background: #e0f2e5;
+  border-color: #b5d8be;
+  transform: translateY(-1px);
+}
+
+.sitemap-filter-btn:active {
+  transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -745,67 +780,78 @@ body {
 }
 
 /* ==========================================================================
-   6. Search Empty State
+   6. Search Empty State (Matching PetSathi Card Standards)
    ========================================================================== */
 .sitemap-empty-state {
   max-width: 620px;
-  margin: 36px auto;
-  padding: 44px 32px;
+  margin: 20px auto 40px;
+  padding: 48px 32px;
   background: #ffffff;
-  border: 1.5px solid #dcebc9;
-  border-radius: 24px;
+  border: 1.5px dashed #c8dccd;
+  border-radius: 28px;
   text-align: center;
-  box-shadow: 0 6px 24px rgba(35, 75, 45, 0.05);
+  box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
 }
 
 .sitemap-empty-icon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: #eaf2e9;
-  color: var(--green);
-  font-size: 1.5rem;
+  background: #edf6df;
+  color: var(--green, #286849);
+  font-size: 1.6rem;
   display: grid;
   place-items: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 18px;
+  border: 1px solid #dcebc9;
 }
 
 .sitemap-empty-title {
   font-family: Georgia, serif !important;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--ink, #192b21);
   margin: 0 0 10px;
 }
 
 .sitemap-empty-desc {
+  font-family: 'DM Sans', 'Manrope', -apple-system, sans-serif !important;
   font-size: 0.95rem;
   color: #55665c;
   line-height: 1.65;
   max-width: 480px;
-  margin: 0 auto 22px;
+  margin: 0 auto 24px;
+}
+
+.sitemap-empty-desc em {
+  color: var(--green, #286849);
+  font-style: normal;
+  font-weight: 600;
 }
 
 .sitemap-empty-reset {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 11px 24px;
-  border-radius: var(--radius-pill);
-  background: var(--green);
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--green, #286849);
   color: #ffffff;
-  border: none;
-  font-family: 'DM Sans', sans-serif !important;
+  border: 1.5px solid var(--green, #286849);
+  font-family: 'DM Sans', 'Manrope', sans-serif !important;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(40, 104, 73, 0.2);
 }
 
 .sitemap-empty-reset:hover {
-  background: var(--green-dark);
+  background: var(--green-dark, #1b4b34);
+  border-color: var(--green-dark, #1b4b34);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(40, 104, 73, 0.2);
+  box-shadow: 0 6px 18px rgba(27, 75, 52, 0.25);
 }
 
 /* ==========================================================================
@@ -958,6 +1004,16 @@ body {
   #sitemap-hero .hero-photo {
     height: 300px !important;
     width: 90% !important;
+  }
+  .sitemap-search-filter-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin-bottom: 25px !important;
+  }
+  .sitemap-filter-btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
   .sitemap-row-3,
   .sitemap-row-2 {

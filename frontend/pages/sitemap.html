@@ -156,18 +156,21 @@
     <!-- ========================================================
          4. SEARCH SECTION (Compact, Centered, Responsive)
          ======================================================== -->
-    <section class="section-wrap sitemap-search-wrap" id="sitemapSearchWrap">
-      <div class="sitemap-search-box">
-        <i class="fa-solid fa-magnifying-glass sitemap-search-icon" aria-hidden="true"></i>
+    <div class="sitemap-search-filter-wrap" id="sitemapSearchWrap">
+      <div class="sitemap-search-bar">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         <input type="text" id="sitemapSearchInput" class="sitemap-search-input"
-          placeholder="Search pages (e.g. dog walking, nutrition, breeds, login, health)..." autocomplete="off"
+          placeholder="Search all 47 pages (e.g. dog walking, nutrition, breeds, login, health)..." autocomplete="off"
           aria-label="Search pages in sitemap">
-        <button id="sitemapSearchClear" class="sitemap-search-clear" aria-label="Clear search" type="button">
+        <button id="sitemapSearchClear" class="sitemap-search-clear" aria-label="Clear search input" type="button" style="display: none;">
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
-        <span id="sitemapSearchCount" class="sitemap-search-count"></span>
+        <span id="sitemapSearchCount" class="sitemap-search-count" style="display: none;"></span>
       </div>
-    </section>
+      <button class="sitemap-filter-btn" id="sitemapResetFilterBtn" type="button">
+        <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset Search
+      </button>
+    </div>
 
     <!-- ========================================================
          5. SITEMAP DIRECTORY GROUP CARDS
@@ -457,14 +460,13 @@
       </div>
 
       <!-- Search Empty State -->
-      <div id="sitemapEmptyState" class="sitemap-empty-state" style="display: none;">
+      <div id="sitemapEmptyState" class="sitemap-empty-state" style="display: none;" role="status" aria-live="polite">
         <div class="sitemap-empty-icon">
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </div>
         <h3 class="sitemap-empty-title">No matching pages found</h3>
         <p class="sitemap-empty-desc">
-          We couldn't find any page matching your keywords. Try searching for broader terms like <em>dog, cat, walking,
-            nutrition, breeds, login,</em> or <em>care</em>.
+          We couldn't find any directory page matching your search. Try checking for typos or searching for broader terms like <em>dog, cat, rabbit, walking, nutrition, health,</em> or <em>login</em>.
         </p>
         <button id="sitemapResetBtn" class="sitemap-empty-reset" type="button">
           <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Clear Search Filter
@@ -523,6 +525,7 @@
       const searchInput = document.getElementById('sitemapSearchInput');
       const searchClear = document.getElementById('sitemapSearchClear');
       const searchCount = document.getElementById('sitemapSearchCount');
+      const resetFilterBtn = document.getElementById('sitemapResetFilterBtn');
       const emptyState = document.getElementById('sitemapEmptyState');
       const resetBtn = document.getElementById('sitemapResetBtn');
       const cards = Array.from(document.querySelectorAll('.sitemap-group-card'));
@@ -532,8 +535,17 @@
         document.getElementById('sitemapRow3')
       ].filter(Boolean);
 
+      function clearSearch() {
+        if (!searchInput) return;
+        searchInput.value = '';
+        searchInput.focus();
+        filterPages();
+      }
+
       function filterPages() {
-        const query = searchInput.value.trim().toLowerCase();
+        const rawQuery = searchInput ? searchInput.value.trim() : '';
+        const query = rawQuery.toLowerCase();
+        const terms = query.split(/\s+/).filter(Boolean);
         let totalVisibleLinks = 0;
 
         if (query.length > 0) {
@@ -544,6 +556,7 @@
         }
 
         cards.forEach(card => {
+          const cardTitle = (card.querySelector('.group-card-title')?.textContent || '').toLowerCase();
           const links = Array.from(card.querySelectorAll('.group-links-list li'));
           let cardVisibleLinks = 0;
 
@@ -553,11 +566,11 @@
             const text = a.textContent.toLowerCase();
             const href = (a.getAttribute('href') || '').toLowerCase();
             const keywords = (a.getAttribute('data-keywords') || '').toLowerCase();
+            const subcolLabel = (li.closest('.care-col')?.querySelector('.subcol-label')?.textContent || '').toLowerCase();
 
-            const matches = !query ||
-              text.includes(query) ||
-              href.includes(query) ||
-              keywords.includes(query);
+            const searchableText = `${text} ${href} ${keywords} ${cardTitle} ${subcolLabel}`;
+
+            const matches = terms.length === 0 || terms.every(t => searchableText.includes(t));
 
             if (matches) {
               li.style.display = 'block';
@@ -600,7 +613,7 @@
         // Update live result count badge
         if (searchCount && query.length > 0) {
           searchCount.style.display = 'inline-block';
-          searchCount.textContent = `${totalVisibleLinks} found`;
+          searchCount.textContent = totalVisibleLinks === 1 ? '1 page found' : `${totalVisibleLinks} found`;
         }
       }
 
@@ -608,26 +621,21 @@
         searchInput.addEventListener('input', filterPages);
         searchInput.addEventListener('keydown', (e) => {
           if (e.key === 'Escape') {
-            searchInput.value = '';
-            filterPages();
+            clearSearch();
           }
         });
       }
 
       if (searchClear) {
-        searchClear.addEventListener('click', () => {
-          searchInput.value = '';
-          searchInput.focus();
-          filterPages();
-        });
+        searchClear.addEventListener('click', clearSearch);
+      }
+
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', clearSearch);
       }
 
       if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-          searchInput.value = '';
-          searchInput.focus();
-          filterPages();
-        });
+        resetBtn.addEventListener('click', clearSearch);
       }
     });
   </script>

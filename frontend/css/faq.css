@@ -59,7 +59,7 @@ main .faq-hero,
   padding: 52px 0 58px;
   background: #ffffff !important;
   background-image: none !important;
-  border-bottom: 1px solid var(--faq-line);
+  border-bottom: none !important;
 }
 
 main .faq-hero-inner,

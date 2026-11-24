@@ -1,346 +1,766 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="A practical guide to daily bird care, safe housing, health and wellness, and household safety from PetSathi.">
+  <meta name="description"
+    content="A practical guide to daily bird care, safe housing, health and wellness, and household safety from PetSathi.">
 
-  <title>Bird Care & Health Guide | PetSathi</title>
+  <title>Bird Care &amp; Health Guide | PetSathi</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <!-- Existing PetSathi Stylesheets -->
   <link rel="stylesheet" href="../../../css/global.css">
+  <link rel="stylesheet" href="../../../css/home.css">
   <link rel="stylesheet" href="../../../css/inner.css">
 
   <style>
     /* =========================================
        BIRD CARE PAGE
-       Existing PetSathi theme is retained
+       Matches the Dog Index / Cat Index design
     ========================================= */
 
-    .care-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 65px 20px 58px;
-      text-align: center;
-      background: linear-gradient(135deg, #edf5e9, #f9f5e9 55%, #f9eee3);
+    /* Font Awesome protection against global font rules */
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src:
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2") format("woff2"),
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf") format("truetype");
     }
 
-    .care-hero::before,
-    .care-hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-      background: rgba(40, 104, 73, 0.07);
+    body [class*="fa-"],
+    body [class*="fa-"]::before,
+    .fa-solid,
+    .fa-regular,
+    .fa-brands {
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 900 !important;
+      font-style: normal !important;
+      font-variant: normal !important;
+      text-rendering: auto !important;
+      line-height: 1 !important;
     }
 
-    .care-hero::before {
-      width: 260px;
-      height: 260px;
-      top: -130px;
-      left: -70px;
+    .fa-regular {
+      font-weight: 400 !important;
     }
 
-    .care-hero::after {
-      width: 210px;
-      height: 210px;
-      right: -70px;
-      bottom: -110px;
+    body,
+    main {
+      background: #ffffff !important;
     }
 
-    .care-hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 780px;
-      margin: auto;
+    /* =========================================
+       HERO
+    ========================================= */
+
+    #bird-care-hero {
+      min-height: 580px;
+      padding-block: 55px 75px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: #ffffff !important;
     }
 
-    .care-hero .eyebrow {
-      display: inline-block;
-      padding: 7px 14px;
+    #bird-care-hero h1 {
+      max-width: 600px;
+      margin: 0 0 20px;
+      font-size: clamp(3rem, 5.4vw, 5rem);
+      letter-spacing: -3px;
+      line-height: 1.15;
+    }
+
+    #bird-care-hero h1 em {
+      color: var(--green);
+      font-style: normal;
+    }
+
+    .bird-badge-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      margin-bottom: 16px;
       border-radius: 999px;
-      background: rgba(40, 104, 73, 0.1);
+      background: #eaf2e9;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: left;
+      text-transform: uppercase;
     }
 
-    .care-hero .hero-bird {
-      font-size: 3.8rem;
-      margin-bottom: 10px;
+    .bird-badge-strip i {
+      font-size: 0.85rem;
     }
 
-    .care-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.1rem);
-      margin: 8px 0 15px;
-      letter-spacing: -2px;
-    }
-
-    .care-hero p {
-      max-width: 680px;
-      margin: 0 auto 25px;
-      font-size: 1.02rem;
-      line-height: 1.8;
+    #bird-care-hero .hero-copy>p {
+      max-width: 550px;
+      margin: 0 0 26px;
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: #53675a;
     }
 
-    .hero-actions {
+    #bird-care-hero .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 27px;
+    }
+
+    #bird-care-hero .hero-actions .button-outline {
+      background: transparent;
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    #bird-care-hero .hero-actions .button-outline:hover {
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    #bird-care-hero .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    #bird-care-hero .hero-note i {
+      color: var(--muted);
+    }
+
+    #bird-care-hero .hero-visual {
+      min-height: 430px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    #bird-care-hero .hero-blob {
+      position: absolute;
+      width: 85%;
+      height: 88%;
+      background: #e8f0e4;
+      border-radius: 48% 52% 42% 58%;
+      z-index: 0;
+    }
+
+    #bird-care-hero .hero-photo {
+      position: relative;
+      z-index: 1;
+      width: 78%;
+      height: 370px;
+      object-fit: cover;
+      object-position: 55% 58%;
+      border-radius: 48% 48% 24px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    #bird-care-hero .floating-card {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 13px 17px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      font-size: 1.15rem;
+    }
+
+    #bird-care-hero .floating-card i {
+      color: var(--green);
+      font-size: 1.05rem;
+    }
+
+    #bird-care-hero .floating-card span {
+      display: grid;
+      text-align: left;
+    }
+
+    #bird-care-hero .floating-card b {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    #bird-care-hero .floating-card small {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    #bird-care-hero .floating-card.card-top {
+      top: 48px;
+      right: 0;
+    }
+
+    #bird-care-hero .floating-card.card-bottom {
+      bottom: 30px;
+      left: 0;
+    }
+
+    /* =========================================
+       QUICK NAVIGATION HUB
+    ========================================= */
+
+    .guides-nav-strip {
+      position: relative;
+      width: calc(100% - 40px);
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 42px 36px 38px;
+      overflow: hidden;
+      border: 1px solid #dceade;
+      border-radius: 32px;
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
+    }
+
+    .quick-nav-decor {
+      position: absolute;
+      z-index: 0;
+      color: #cde4d3;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .decor-top-left {
+      top: -8px;
+      left: -8px;
+      width: 130px;
+      height: 130px;
+      border-radius: 0 0 100% 0;
+      background: radial-gradient(circle at 10% 10%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
+    }
+
+    .decor-bottom-right {
+      right: -8px;
+      bottom: -8px;
+      width: 130px;
+      height: 130px;
+      border-radius: 100% 0 0 0;
+      background: radial-gradient(circle at 90% 90%, #eaf5ed 0%, rgba(234, 245, 237, 0) 70%);
+    }
+
+    .decor-feather {
+      position: absolute;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .decor-feather-1 {
+      top: 14px;
+      left: 28px;
+      font-size: 28px;
+      transform: rotate(-15deg);
+    }
+
+    .decor-feather-2 {
+      top: 40px;
+      left: 14px;
+      font-size: 18px;
+      transform: rotate(20deg);
+    }
+
+    .decor-feather-3 {
+      right: 14px;
+      bottom: 38px;
+      font-size: 18px;
+      transform: rotate(-25deg);
+    }
+
+    .decor-feather-4 {
+      right: 28px;
+      bottom: 14px;
+      font-size: 28px;
+      transform: rotate(15deg);
+    }
+
+    .quick-nav-header {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .quick-nav-eyebrow-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .quick-nav-line {
+      width: 100px;
+      height: 1px;
+      background: #d6ead9;
+    }
+
+    .quick-nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border: 1px solid #b7deb8;
+      border-radius: 999px;
+      background: #f4faf5;
+      color: #1e6f43;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
+    }
+
+    .quick-nav-badge i {
+      flex-shrink: 0;
+      color: #1e6f43;
+      font-size: 0.9rem;
+    }
+
+    .quick-nav-title {
+      margin: 0;
+      color: #1a251e;
+      font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .quick-nav-title span {
+      color: #1e6f43;
+      font-weight: 800;
+    }
+
+    .guides-nav-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .guide-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      padding: 9px 16px 9px 9px;
+      border: 1px solid #cce4d2;
+      border-radius: 999px;
+      background: #edf7f0;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .guide-nav-item:hover,
+    .guide-nav-item.active {
+      border-color: #237847;
+      background: #e4f4e8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(35, 100, 55, 0.12);
+    }
+
+    .guide-nav-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #d1ecda;
+      color: #1e6f43;
+      font-size: 1rem;
+      line-height: 1;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .guide-nav-item:hover .guide-nav-icon,
+    .guide-nav-item.active .guide-nav-icon {
+      background: #1e6f43;
+      color: #ffffff;
+    }
+
+    .guide-nav-label {
+      overflow: hidden;
+      color: #1c2b20;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* =========================================
+       SECTION SHELLS & CONSISTENT WHITE CANVAS
+       Matches the clean white background of Dog Index & Cat Index.
+       All main sections share a consistent #ffffff canvas,
+       while signature heading cards, checklists, callouts, and
+       the final CTA provide the curated PetSathi theme accents.
+    ========================================= */
+
+    .birdcare-section {
+      padding: 64px 0 72px;
+      background: #ffffff !important;
+    }
+
+    .birdcare-section.bg-white,
+    .birdcare-section.cream-bg,
+    .birdcare-section.bg-cream,
+    .birdcare-section.soft-bg,
+    .birdcare-section.bg-soft-green {
+      background: #ffffff !important;
+      border: none !important;
+    }
+
+    /* =========================================
+       SIGNATURE SECTION HEADING CARD
+    ========================================= */
+
+    .care-topics-heading {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto 34px;
+      padding: 42px 35px 36px;
+      overflow: hidden;
+      border: 1px solid #dcebc9;
+      border-radius: 35px;
+      background: #fafcf7;
+      box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+      text-align: center;
+    }
+
+    .corner-wave {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .wave-tl {
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .wave-br {
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .heading-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .heading-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 20px;
+      margin-bottom: 15px;
+      border: 1px solid #dcebc9;
+      border-radius: 50px;
+      background: #edf6df;
+      color: #246b43;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
+    }
+
+    .heading-label i {
+      color: #246b43;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .care-topics-heading h2 {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
-    }
-
-    /* =========================================
-       QUICK NAVIGATION
-    ========================================= */
-
-    .care-quick-nav {
-      position: sticky;
-      top: 0;
-      z-index: 15;
-      background: rgba(252, 250, 245, 0.97);
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 5px 18px rgba(35, 57, 43, 0.04);
-    }
-
-    .care-quick-nav .section-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      overflow-x: auto;
-      scrollbar-width: thin;
-    }
-
-    .care-quick-nav a {
-      flex: 0 0 auto;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: white;
-      color: #53675a;
-      font-size: 0.82rem;
+      margin: 0 0 12px;
+      color: #263b30;
+      font-size: clamp(24px, 3.2vw, 36px);
       font-weight: 700;
-      transition: 0.2s ease;
+      line-height: 1.2;
     }
 
-    .care-quick-nav a:hover,
-    .care-quick-nav a.active {
-      background: var(--green);
-      color: white;
-      border-color: var(--green);
+    .care-topics-heading h2 span {
+      color: #28764a;
     }
 
-    /* =========================================
-       COMMON SECTIONS
-    ========================================= */
-
-    .care-section {
-      padding: 72px 0;
-      border-bottom: 1px solid var(--line);
-      scroll-margin-top: 78px;
-    }
-
-    .care-section.soft-bg {
-      background: #f5f8f2;
-    }
-
-    .care-heading {
+    .care-topics-heading p {
       max-width: 720px;
-      margin-bottom: 32px;
+      margin: 0 auto;
+      color: #64736a;
+      font-size: 15px;
+      line-height: 1.65;
     }
 
-    .care-heading.centered {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
+    .heading-burst {
+      position: relative;
+      display: inline-block;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
     }
 
-    .care-heading h2 {
-      margin: 5px 0 12px;
+    .heading-burst span {
+      position: absolute;
+      border-radius: 999px;
+      background: #60a872;
     }
 
-    .care-heading p {
-      margin: 0;
-      line-height: 1.75;
+    .heading-burst.left span {
+      right: 0;
+      transform-origin: right center;
+    }
+
+    .heading-burst.left span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    .heading-burst.left span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .heading-burst.left span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .heading-burst.right span {
+      left: 0;
+      transform-origin: left center;
+    }
+
+    .heading-burst.right span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .heading-burst.right span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .heading-burst.right span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    .heading-decor {
+      position: absolute;
+      z-index: 1;
+      color: rgba(115, 173, 91, 0.28);
+      pointer-events: none;
+    }
+
+    .heading-decor i {
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .decor-left-1 {
+      top: 60px;
+      left: 96px;
+      font-size: 48px;
+      transform: rotate(18deg);
+    }
+
+    .decor-left-2 {
+      bottom: 26px;
+      left: 76px;
+      font-size: 32px;
+      transform: rotate(-15deg);
+    }
+
+    .decor-right-1 {
+      top: 54px;
+      right: 82px;
+      font-size: 48px;
+      transform: rotate(-18deg);
+    }
+
+    .decor-right-2 {
+      right: 120px;
+      bottom: 28px;
+      font-size: 32px;
+      transform: rotate(15deg);
     }
 
     /* =========================================
-       CARE CARDS
+       CENTERED CARE CARDS
     ========================================= */
 
-    .care-grid {
+    .birdcare-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
 
-    .care-card {
+    .birdcare-grid.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 920px;
+      margin-inline: auto;
+    }
+
+    .birdcare-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       height: 100%;
-      padding: 26px;
-      background: white;
-      border: 1px solid #e3eae0;
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(35, 57, 43, 0.035);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 28px 24px 26px;
+      border: 1px solid #e3eadf;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 6px 20px rgba(35, 57, 43, 0.04);
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
-    .care-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 30px rgba(35, 57, 43, 0.08);
+    .birdcare-card:hover {
+      border-color: #cbd9ce;
+      box-shadow: var(--shadow);
+      transform: translateY(-5px);
     }
 
-    .care-icon {
+    .birdcare-icon {
       display: grid;
       place-items: center;
-      width: 54px;
-      height: 54px;
-      margin-bottom: 17px;
-      border-radius: 15px;
-      background: #edf4e9;
-      font-size: 1.7rem;
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 14px;
+      border-radius: 17px;
+      background: #eaf2e9;
+      color: var(--green);
+      font-size: 1.4rem;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
     }
 
-    .care-card h3 {
-      margin: 0 0 10px;
+    .birdcare-card:hover .birdcare-icon {
+      background: var(--green);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .birdcare-card h3 {
+      margin: 0 0 7px;
+      color: var(--ink);
       font-size: 1.16rem;
-      letter-spacing: -0.4px;
+      font-weight: 700;
+      line-height: 1.35;
     }
 
-    .care-card p {
+    .birdcare-card p {
+      max-width: 330px;
       margin: 0;
-      font-size: 0.91rem;
-      line-height: 1.75;
-    }
-
-    /* =========================================
-       CARE TIP
-    ========================================= */
-
-    .care-tip {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-top: 25px;
-      padding: 20px 22px;
-      border: 1px solid #dce8d8;
-      border-left: 4px solid var(--green);
-      border-radius: 13px;
-      background: #f0f6ed;
-    }
-
-    .care-tip .tip-icon {
-      font-size: 1.5rem;
-      line-height: 1.4;
-    }
-
-    .care-tip strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--dark);
-    }
-
-    .care-tip p {
-      margin: 0;
-      color: #53675a;
+      color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.65;
     }
 
     /* =========================================
-       DAILY CARE ROUTINE
-    ========================================= */
-
-    .routine-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .routine-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: white;
-    }
-
-    .routine-item .routine-icon {
-      font-size: 1.45rem;
-    }
-
-    .routine-item h3 {
-      margin: 0 0 5px;
-      font-size: 1rem;
-      letter-spacing: 0;
-    }
-
-    .routine-item p {
-      margin: 0;
-      font-size: 0.87rem;
-      line-height: 1.6;
-    }
-
-    /* =========================================
-       INTERACTIVE DAILY CHECKLIST
+       CHECKLIST
     ========================================= */
 
     .daily-checklist {
-      margin-top: 32px;
-      padding: 27px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(35, 57, 43, 0.04);
+      margin-top: 30px;
+      padding: 28px;
+      border: 1px solid #e3eadf;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(35, 57, 43, 0.045);
     }
 
     .checklist-header {
       display: flex;
+      align-items: flex-end;
       justify-content: space-between;
-      align-items: center;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
-    .checklist-header .eyebrow {
-      margin-bottom: 6px;
+    .checklist-kicker {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     .checklist-header h3 {
-      margin: 0 0 5px;
-      font-size: 1.25rem;
+      margin: 0 0 3px;
+      color: var(--ink);
+      font-size: 1.35rem;
+      font-weight: 700;
     }
 
     .checklist-header p {
       margin: 0;
+      color: var(--muted);
       font-size: 0.88rem;
     }
 
     .checklist-count {
       padding: 8px 14px;
+      border: 1px solid #dcebc9;
       border-radius: 999px;
-      background: #edf4e9;
+      background: #edf6df;
       color: var(--green);
       font-size: 0.84rem;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     .checklist-progress-track {
       height: 10px;
+      margin-bottom: 20px;
       overflow: hidden;
       border-radius: 999px;
       background: #e9eee6;
-      margin-bottom: 20px;
     }
 
     .checklist-progress-fill {
@@ -363,7 +783,7 @@
       gap: 12px;
       padding: 15px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 13px;
       background: #fcfaf5;
       cursor: pointer;
       transition: background 0.2s ease, border-color 0.2s ease;
@@ -375,19 +795,19 @@
     }
 
     .checklist-task input {
+      flex-shrink: 0;
       width: 18px;
       height: 18px;
       margin-top: 3px;
       accent-color: var(--green);
       cursor: pointer;
-      flex-shrink: 0;
     }
 
     .checklist-task strong {
       display: block;
-      margin-bottom: 3px;
-      font-size: 0.9rem;
+      margin-bottom: 2px;
       color: var(--ink);
+      font-size: 0.9rem;
     }
 
     .checklist-task small {
@@ -398,8 +818,8 @@
     }
 
     .checklist-task.is-checked {
-      background: #edf4e9;
       border-color: #cbdcc9;
+      background: #edf4e9;
     }
 
     .checklist-task.is-checked strong {
@@ -408,12 +828,12 @@
 
     .checklist-actions {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 19px;
-      padding-top: 17px;
+      margin-top: 18px;
+      padding-top: 16px;
       border-top: 1px solid var(--line);
     }
 
@@ -423,115 +843,127 @@
     }
 
     .checklist-actions button {
-      padding: 9px 15px;
+      padding: 9px 16px;
       border: 1px solid #cbd9ce;
       border-radius: 999px;
-      background: white;
+      background: #ffffff;
       color: var(--green);
       font: inherit;
       font-size: 0.82rem;
       font-weight: 700;
       cursor: pointer;
-      transition: 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
     .checklist-actions button:hover {
-      background: var(--green);
       border-color: var(--green);
-      color: white;
+      background: var(--green);
+      color: #ffffff;
     }
 
     /* =========================================
-       FEATURE BANNER
+       INFORMATION / TIP CARD
     ========================================= */
 
-    .feature-banner {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 28px;
-      align-items: center;
-      margin-top: 30px;
-      padding: 30px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #234f39, #347454);
-      color: white;
+    .care-tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-top: 22px;
+      padding: 20px 22px;
+      border: 1px solid #dcebc9;
+      border-left: 4px solid var(--green);
+      border-radius: 16px;
+      background: #edf6df;
     }
 
-    .feature-art {
+    .tip-icon-wrap {
       display: grid;
       place-items: center;
-      min-height: 210px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 17px;
-      background: rgba(255,255,255,0.09);
-      font-size: 5.5rem;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #ffffff;
+      color: var(--green);
+      font-size: 1.1rem;
     }
 
-    .feature-banner h3 {
-      margin: 0 0 12px;
-      color: white;
-      font-size: 1.55rem;
+    .care-tip strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--dark);
+      font-size: 0.98rem;
     }
 
-    .feature-banner p {
+    .care-tip p {
       margin: 0;
-      color: #e2eee5;
-      font-size: 0.92rem;
-      line-height: 1.8;
+      color: #53675a;
+      font-size: 0.9rem;
+      line-height: 1.65;
     }
 
     /* =========================================
-       SAFETY SECTION
+       HAPPY HABITAT BANNER
     ========================================= */
 
-    .warning-panel {
-      padding: 27px;
-      border: 1px solid #f0d5bd;
-      border-radius: 18px;
-      background: #fff8f1;
-    }
-
-    .warning-panel h3 {
-      margin: 0 0 15px;
-      color: #8e4d23;
-      font-size: 1.2rem;
-    }
-
-    .hazard-grid {
+    .habitat-banner {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 13px;
+      grid-template-columns: 110px minmax(0, 1fr);
+      align-items: center;
+      gap: 24px;
+      margin-top: 28px;
+      padding: 28px 32px;
+      border: 1px solid #dcebc9;
+      border-radius: 22px;
+      background: #edf6df !important;
     }
 
-    .hazard-item {
-      padding: 17px;
-      border: 1px solid #f0e0d2;
-      border-radius: 13px;
-      background: white;
+    .habitat-icon {
+      display: grid;
+      place-items: center;
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--green);
+      font-size: 2.1rem;
+      box-shadow: 0 6px 18px rgba(35, 57, 43, 0.06);
     }
 
-    .hazard-item strong {
+    .habitat-label {
       display: block;
-      margin-bottom: 5px;
-      color: #80451f;
-      font-size: 0.94rem;
+      margin-bottom: 6px;
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-    .hazard-item p {
+    .habitat-banner h3 {
+      margin: 0 0 7px;
+      color: var(--dark);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .habitat-banner p {
       margin: 0;
-      font-size: 0.85rem;
-      line-height: 1.6;
+      color: #53675a;
+      font-size: 0.92rem;
+      line-height: 1.75;
     }
 
     /* =========================================
-       HEALTH AND WELLNESS
+       HEALTH & SAFETY PANELS
     ========================================= */
 
     .health-layout {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
       align-items: start;
+      gap: 22px;
     }
 
     .health-signs {
@@ -543,205 +975,430 @@
     .health-sign {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
+      gap: 11px;
+      padding: 15px;
+      border: 1px solid #e3eadf;
+      border-radius: 14px;
+      background: #ffffff;
       font-size: 0.88rem;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
-    .health-sign span {
-      flex: 0 0 auto;
-      font-size: 1.2rem;
+    .sign-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #eaf2e9;
+      color: var(--green);
+      font-size: 0.9rem;
     }
 
     .vet-panel {
-      padding: 25px;
-      border: 1px solid #f1cccc;
+      padding: 24px;
+      border: 1px solid #dcebc9;
+      border-left: 4px solid var(--green);
       border-radius: 17px;
-      background: #fff3f2;
+      background: #fafcf7 !important;
     }
 
     .vet-panel h3 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
       margin: 0 0 10px;
-      color: #9d3434;
-      font-size: 1.2rem;
+      color: var(--dark);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .vet-panel h3 i {
+      color: var(--green);
     }
 
     .vet-panel p {
-      margin: 0 0 13px;
+      margin: 0 0 12px;
+      color: #53675a;
       font-size: 0.89rem;
       line-height: 1.7;
-      color: #744b4b;
     }
 
     .vet-panel ul {
       margin: 0;
       padding-left: 20px;
-      color: #744b4b;
+      color: #53675a;
       font-size: 0.88rem;
       line-height: 1.8;
     }
 
+    .vet-panel li::marker {
+      color: var(--green);
+    }
+
     .vet-checkup {
-      margin-top: 20px;
-      padding: 21px;
-      border-radius: 15px;
-      background: #edf4e9;
+      margin-top: 18px;
+      padding: 20px;
       border: 1px solid #dce8d8;
+      border-radius: 15px;
+      background: #f4faf5 !important;
     }
 
     .vet-checkup h3 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
       margin: 0 0 7px;
+      color: var(--ink);
       font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .vet-checkup h3 i {
+      color: var(--green);
     }
 
     .vet-checkup p {
       margin: 0;
+      color: var(--muted);
       font-size: 0.89rem;
       line-height: 1.7;
     }
 
-    /* =========================================
-       FREQUENTLY ASKED QUESTIONS
-    ========================================= */
-
-    .care-faq-list {
-      max-width: 850px;
-      margin: 30px auto 0;
-      display: grid;
-      gap: 12px;
+    .warning-panel {
+      padding: 26px;
+      border: 1px solid #dcebc9;
+      border-radius: 20px;
+      background: #fafcf7 !important;
     }
 
-    .care-faq-item {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: white;
-      transition: border-color 0.2s ease;
-    }
-
-    .care-faq-item[open] {
-      border-color: #cbd9ce;
-    }
-
-    .care-faq-item summary {
-      position: relative;
-      padding: 19px 48px 19px 20px;
-      color: var(--ink);
+    .warning-panel h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--dark);
+      font-size: 1.18rem;
       font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      list-style: none;
     }
 
-    .care-faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .care-faq-item summary::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
+    .warning-panel h3 i {
       color: var(--green);
-      font-size: 1.4rem;
-      font-weight: 500;
     }
 
-    .care-faq-item[open] summary::after {
-      content: "−";
+    .hazard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
     }
 
-    .care-faq-item p {
-      margin: 0;
-      padding: 0 20px 20px;
-      color: var(--muted);
+    .hazard-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 17px;
+      border: 1px solid #e3eadf;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .hazard-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #eaf2e9;
+      color: var(--green);
       font-size: 0.9rem;
-      line-height: 1.75;
     }
 
-    /* =========================================
-       SOURCES AND DISCLAIMER
-    ========================================= */
+    .hazard-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 0.94rem;
+    }
+
+    .hazard-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .birdcare-section .birdcare-grid.spaced {
+      margin-top: 22px;
+    }
 
     .care-disclaimer {
-      margin-top: 25px;
+      margin-top: 22px;
       padding: 17px 20px;
+      border: 1px solid var(--line);
       border-radius: 12px;
-      background: #f0f1ed;
+      background: #f4f5f0 !important;
       color: #59675e;
       font-size: 0.83rem;
       line-height: 1.7;
     }
 
-    .sources {
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: white;
-    }
-
-    .sources h3 {
-      margin: 0 0 12px;
-      font-size: 1.15rem;
-    }
-
-    .sources p {
-      margin: 0 0 14px;
-      font-size: 0.88rem;
-    }
-
-    .source-links {
-      display: grid;
-      gap: 10px;
-    }
-
-    .source-links a {
-      color: var(--green);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    /* =========================================
-       CTA
-    ========================================= */
-
-    .care-cta {
-      margin: 55px auto 65px;
-      padding: 42px 28px;
-      border-radius: 22px;
-      background: #1d5039;
-      color: white;
-      text-align: center;
-    }
-
-    .care-cta h2 {
-      margin: 0 0 12px;
-      color: white;
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-    }
-
-    .care-cta p {
-      max-width: 650px;
-      margin: 0 auto 22px;
-      color: #dce9df;
-      line-height: 1.75;
-    }
-
-    .care-cta .button {
-      background: white;
-      border-color: white;
+    .care-disclaimer strong {
       color: var(--dark);
     }
 
     /* =========================================
-       BACK TO TOP BUTTON
+       FAQ ACCORDION (MATCHING IMAGE 4)
+    ========================================= */
+
+    .faq-list {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #ffffff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: #cbd9ce;
+    }
+
+    .faq-item[open] {
+      border-color: #cbd9ce;
+      box-shadow: 0 6px 20px rgba(35, 57, 43, 0.06);
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 19px 52px 19px 21px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      cursor: pointer;
+      list-style: none;
+      transition: color 0.2s ease;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::marker {
+      content: "";
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eaf2e9;
+      color: var(--green);
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    .faq-item summary:hover {
+      color: var(--green);
+    }
+
+    .faq-answer {
+      padding: 0 21px 20px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .faq-more-wrap {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .faq-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--green);
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .faq-more-link:hover {
+      color: var(--dark);
+      transform: translateX(4px);
+    }
+
+    /* =========================================
+       TRUSTED RESOURCES (MATCHING IMAGE 1)
+    ========================================= */
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .resources-note {
+      margin: 22px 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      padding: 26px 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-sizing: border-box;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbd9ce;
+    }
+
+    .resource-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #eaf2e9;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .resource-card h3 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .resource-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-family: 'DM Sans', 'Manrope', sans-serif;
+      font-size: 0.89rem;
+      line-height: 1.65;
+    }
+
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+      color: var(--green);
+      font-family: 'DM Sans', 'Manrope', sans-serif !important;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .resource-link i {
+      font-size: 0.78rem;
+    }
+
+    .resource-card:hover .resource-link {
+      color: var(--dark);
+    }
+
+    /* =========================================
+       FINAL CTA (LIGHT PINK)
+       Follows CTA of cat index page except background color light pink
+    ========================================= */
+
+    .cta {
+      margin-top: 0;
+      margin-bottom: 92px;
+      border: 1px solid #ecd9d2;
+    }
+
+    main > .cta {
+      background: #f9eae6 !important;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .cta .button-outline {
+      background: transparent;
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    .cta .button-outline:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .cta .button-light:hover {
+      background-color: #edf3ec !important;
+      color: var(--dark) !important;
+      border-color: #edf3ec !important;
+    }
+
+    .cta > div:first-child {
+      text-align: left;
+    }
+
+    .cta > div:first-child .eyebrow,
+    .cta > div:first-child h2,
+    .cta > div:first-child p {
+      text-align: left;
+    }
+
+    /* =========================================
+       BACK TO TOP
     ========================================= */
 
     .back-to-top {
@@ -749,19 +1406,21 @@
       right: 24px;
       bottom: 24px;
       z-index: 30;
+      display: grid;
+      place-items: center;
       width: 46px;
       height: 46px;
       border: none;
       border-radius: 50%;
       background: var(--green);
-      color: white;
-      font-size: 1.35rem;
+      color: #ffffff;
+      font-size: 1rem;
       cursor: pointer;
       box-shadow: 0 5px 18px rgba(35, 57, 43, 0.2);
       opacity: 0;
       visibility: hidden;
       transform: translateY(10px);
-      transition: 0.25s ease;
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.25s ease;
     }
 
     .back-to-top.visible {
@@ -775,73 +1434,202 @@
     }
 
     /* =========================================
-       FOOTER
+       RESPONSIVE
     ========================================= */
 
-    .footer .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
+    @media (min-width: 701px) and (max-width: 960px) {
+      .birdcare-grid.three> :last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 12px);
+      }
     }
 
-    /* =========================================
-       RESPONSIVE DESIGN
-    ========================================= */
+    @media (max-width: 960px) {
+      #bird-care-hero {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding-top: 36px;
+      }
 
-    @media (max-width: 850px) {
-      .care-grid {
+      #bird-care-hero .hero-copy {
+        text-align: center;
+      }
+
+      #bird-care-hero .hero-copy>p,
+      #bird-care-hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #bird-care-hero .hero-actions,
+      #bird-care-hero .hero-note {
+        justify-content: center;
+      }
+
+      #bird-care-hero .hero-visual {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+      .birdcare-grid,
+      .birdcare-grid.four {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .guides-nav-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .health-layout {
         grid-template-columns: 1fr;
       }
 
-      .feature-banner {
-        grid-template-columns: 1fr;
+      .cta-actions {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 18px;
       }
 
-      .feature-art {
-        min-height: 150px;
+      .cta-actions .button {
+        width: 100%;
+      }
+
+      .decor-left-1,
+      .decor-right-1 {
+        display: none;
       }
     }
 
-    @media (max-width: 600px) {
-      .care-section {
-        padding: 52px 0;
+    @media (max-width: 700px) {
+      .guides-nav-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .care-grid,
-      .routine-list,
-      .hazard-grid,
-      .health-signs,
+      .birdcare-grid,
+      .birdcare-grid.four {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+      }
+
+      .health-signs {
+        grid-template-columns: 1fr;
+      }
+
+      .hazard-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .habitat-banner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .habitat-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+        font-size: 1.7rem;
+      }
+
+      .care-topics-heading {
+        padding: 34px 18px 30px;
+        border-radius: 24px;
+      }
+
+      .corner-wave {
+        width: 160px;
+        height: 100px;
+      }
+
+      .care-topics-heading h2 {
+        font-size: clamp(20px, 5.4vw, 26px);
+        gap: 8px;
+      }
+
+      .heading-label {
+        padding: 6px 14px;
+        font-size: 11px;
+      }
+
+      .heading-burst {
+        width: 16px;
+        height: 18px;
+      }
+
+      .heading-burst span:nth-child(1),
+      .heading-burst span:nth-child(3) {
+        width: 10px;
+      }
+
+      .heading-burst span:nth-child(2) {
+        width: 13px;
+      }
+
+      .heading-decor {
+        display: none;
+      }
+
+      .birdcare-section {
+        padding: 48px 0 56px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .guides-nav-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .guides-nav-strip {
+        width: calc(100% - 34px);
+        padding: 24px 18px;
+        border-radius: 24px;
+      }
+
+      .quick-nav-line {
+        width: 34px;
+      }
+
+      .quick-nav-badge {
+        padding: 6px 12px;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      #bird-care-hero {
+        padding: 30px 0 46px;
+      }
+
+      #bird-care-hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      #bird-care-hero .hero-photo {
+        width: 82%;
+        height: 300px;
+      }
+
       .checklist-items {
         grid-template-columns: 1fr;
       }
 
-      .care-card {
-        padding: 22px;
-      }
-
-      .care-hero {
-        padding: 48px 18px;
-      }
-
-      .care-hero h1 {
-        letter-spacing: -1.5px;
-      }
-
-      .feature-banner {
-        padding: 20px;
-      }
-
-      .warning-panel {
-        padding: 19px;
-      }
-
       .daily-checklist {
         padding: 20px;
+      }
+
+      .checklist-header {
+        align-items: flex-start;
       }
 
       .checklist-actions {
@@ -849,27 +1637,43 @@
         flex-direction: column;
       }
 
-      .sources {
-        padding: 22px;
+      .care-tip {
+        padding: 18px;
       }
 
-      .care-cta {
-        padding: 32px 20px;
+      .warning-panel {
+        padding: 19px;
+      }
+
+      .faq-item summary {
+        padding: 16px 48px 16px 18px;
+        font-size: 0.92rem;
+      }
+
+      .faq-item summary::after {
+        right: 14px;
+        width: 26px;
+        height: 26px;
+        font-size: 1.1rem;
+      }
+
+      .faq-answer {
+        padding: 0 16px 18px;
+      }
+
+      main > .cta {
+        width: calc(100% - 34px);
+        max-width: none;
+        margin-bottom: 65px;
+        padding: 30px 22px;
       }
 
       .back-to-top {
         right: 17px;
         bottom: 17px;
       }
-
-      .footer .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
     }
 
-    /* Respect reduced motion preferences */
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -882,37 +1686,48 @@
       }
     }
   </style>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
   <!-- =========================================
-       HEADER
+       HEADER (unchanged)
   ========================================= -->
 
   <div id="header"></div>
 
   <main>
 
+    <!-- Reusable decorative wave symbols -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="bird-wave-tl" viewBox="0 0 220 130">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7"></path>
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+            opacity="0.95"></path>
+        </symbol>
+        <symbol id="bird-wave-br" viewBox="0 0 220 130">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7"></path>
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+            opacity="0.95"></path>
+        </symbol>
+      </defs>
+    </svg>
+
     <!-- =========================================
-         HERO SECTION
+         HERO
     ========================================= -->
 
-    <section class="care-hero">
-
-      <div class="care-hero-content">
-
-        <div class="eyebrow">
-          PetSathi • BIRD CARE GUIDE
+    <section class="hero section-wrap" id="bird-care-hero">
+      <div class="hero-copy">
+        <div class="bird-badge-strip">
+          <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+          PetSathi &bull; Bird Care Guide
         </div>
 
-        <div class="hero-bird" aria-hidden="true">🦜</div>
-
-        <h1>
-          Little Wings,<br>
-          <em>Big Responsibilities.</em>
-        </h1>
+        <h1>Little Wings, <em>Big Responsibilities.</em></h1>
 
         <p>
           A healthy, happy bird needs more than food and a cage.
@@ -921,504 +1736,485 @@
         </p>
 
         <div class="hero-actions">
-          <a class="button" href="#daily-care">
-            Explore the Care Guide ↓
+          <a class="button" href="#daily-care" id="hero-cta-guide">
+            Explore the Care Guide <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
           </a>
-
-          <a class="button button-outline" href="../birds/index.html">
-            ← Birds Home
+          <a class="button button-outline" href="index.html" id="hero-cta-home">
+            Birds Home <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
 
+        <div class="hero-note">
+          &hearts; &nbsp; Dedicated to happy chirps and healthy feathers.
+        </div>
       </div>
 
+      <div class="hero-visual">
+        <div class="hero-blob" aria-hidden="true"></div>
+
+        <img
+          class="hero-photo"
+          id="hero-bird-image"
+          src="../../../assets/images/birds/bird-perching.png"
+          alt="Robin perched comfortably on a mossy branch, showing its complete body"
+          width="2048" height="1362" fetchpriority="high">
+
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+          <span>
+            <b>Daily Care</b>
+            <small>Small habits, healthy birds</small>
+          </span>
+        </div>
+
+        <div class="floating-card card-bottom">
+          <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+          <span>
+            <b>Safe Habitat</b>
+            <small>Comfort, space and enrichment</small>
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- =========================================
-         QUICK NAVIGATION
+         QUICK NAVIGATION HUB
     ========================================= -->
 
-    <nav class="care-quick-nav" aria-label="Bird care sections">
-
-      <div class="section-wrap">
-
-        <a href="#daily-care">Daily Care</a>
-        <a href="#housing">🏡 Housing</a>
-        <a href="#health">Health</a>
-        <a href="#safety">⚠️ Safety</a>
-        <a href="#vet">🩺 Vet Visits</a>
-
+    <nav class="guides-nav-strip" aria-label="Bird care sections">
+      <div class="quick-nav-decor decor-top-left" aria-hidden="true">
+        <i class="fa-solid fa-feather-pointed decor-feather decor-feather-1"></i>
+        <i class="fa-solid fa-dove decor-feather decor-feather-2"></i>
       </div>
 
+      <div class="quick-nav-decor decor-bottom-right" aria-hidden="true">
+        <i class="fa-solid fa-feather-pointed decor-feather decor-feather-3"></i>
+        <i class="fa-solid fa-dove decor-feather decor-feather-4"></i>
+      </div>
+
+      <div class="quick-nav-header">
+        <div class="quick-nav-eyebrow-wrap">
+          <span class="quick-nav-line"></span>
+          <div class="quick-nav-badge">
+            <i class="fa-regular fa-compass" aria-hidden="true"></i>
+            <span>Quick Navigation</span>
+          </div>
+          <span class="quick-nav-line"></span>
+        </div>
+        <h2 class="quick-nav-title">
+          Explore the <span>Bird Care Guide</span>
+        </h2>
+      </div>
+
+      <div class="guides-nav-grid">
+        <a class="guide-nav-item" href="#daily-care">
+          <span class="guide-nav-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Daily Care</span>
+        </a>
+        <a class="guide-nav-item" href="#housing">
+          <span class="guide-nav-icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Housing</span>
+        </a>
+        <a class="guide-nav-item" href="#health">
+          <span class="guide-nav-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Health</span>
+        </a>
+        <a class="guide-nav-item" href="#safety">
+          <span class="guide-nav-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Safety</span>
+        </a>
+        <a class="guide-nav-item" href="#vet">
+          <span class="guide-nav-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Vet Visits</span>
+        </a>
+      </div>
     </nav>
 
     <!-- =========================================
          1. DAILY BIRD CARE
     ========================================= -->
 
-    <section class="care-section" id="daily-care">
-
+    <section class="birdcare-section" id="daily-care">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">01 • EVERYDAY ROUTINE</div>
-
-          <h2>
-            Daily Bird <em>Care</em>
-          </h2>
-
-          <p>
-            Small, consistent routines make a big difference. Observe your
-            bird every day, keep its living space clean, and make time for
-            gentle interaction.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+              Everyday Routine
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Daily Bird <span>Care</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Small, consistent routines make a big difference. Observe your
+              bird every day, keep its living space clean, and make time for
+              gentle interaction.
+            </p>
+          </div>
         </div>
 
-        <div class="routine-list">
-
-          <article class="routine-item">
-
-            <span class="routine-icon" aria-hidden="true">💧</span>
-
-            <div>
-              <h3>Fresh, Clean Water</h3>
-              <p>
-                Provide fresh drinking water every day. Wash the water bowl
-                regularly and refill it whenever it becomes dirty or empty.
-              </p>
-            </div>
-
+        <div class="birdcare-grid four">
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+            <h3>Fresh, Clean Water</h3>
+            <p>
+              Provide fresh drinking water every day. Wash the water bowl
+              regularly and refill it whenever it becomes dirty or empty.
+            </p>
           </article>
 
-          <article class="routine-item">
-
-            <span class="routine-icon" aria-hidden="true">🌾</span>
-
-            <div>
-              <h3>Suitable Food</h3>
-              <p>
-                Offer a balanced, species-appropriate diet. Ask an avian
-                veterinarian about the right combination of formulated food,
-                vegetables, and other suitable foods for your bird.
-              </p>
-            </div>
-
+          <article class="birdcare-card" id="nutrition">
+            <div class="birdcare-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+            <h3>Suitable Food</h3>
+            <p>
+              Offer a balanced, species-appropriate diet. Ask an avian
+              veterinarian about the right combination of formulated food,
+              vegetables, and other suitable foods for your bird.
+            </p>
           </article>
 
-          <article class="routine-item">
-
-            <span class="routine-icon" aria-hidden="true">🧹</span>
-
-            <div>
-              <h3>Clean Cage and Bowls</h3>
-              <p>
-                Remove leftover fresh food, clean food and water dishes,
-                and replace soiled cage liners. A clean cage also makes it
-                easier to notice changes in droppings.
-              </p>
-            </div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+            <h3>Clean Cage and Bowls</h3>
+            <p>
+              Remove leftover fresh food, clean food and water dishes,
+              and replace soiled cage liners. A clean cage also makes it
+              easier to notice changes in droppings.
+            </p>
           </article>
 
-          <article class="routine-item">
-
-            <span class="routine-icon" aria-hidden="true">🫶</span>
-
-            <div>
-              <h3>Daily Interaction</h3>
-              <p>
-                Spend calm, positive time with your bird. Talking, gentle
-                training, supervised play, and foraging activities can
-                support social and mental well-being.
-              </p>
-            </div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
+            <h3>Daily Interaction</h3>
+            <p>
+              Spend calm, positive time with your bird. Talking, gentle
+              training, supervised play, and foraging activities can
+              support social and mental well-being.
+            </p>
           </article>
-
         </div>
 
-        <!-- INTERACTIVE CHECKLIST -->
-
+        <!-- Interactive daily checklist -->
         <div class="daily-checklist">
-
           <div class="checklist-header">
-
             <div>
-              <div class="eyebrow">YOUR DAILY ROUTINE</div>
-              <h3>Today's Bird Care Checklist 🐦</h3>
+              <span class="checklist-kicker">Your Daily Routine</span>
+              <h3>Today's Bird Care Checklist</h3>
               <p>Tick each task as you complete it.</p>
             </div>
 
-            <div
-              class="checklist-count"
-              id="careChecklistCount"
-              aria-live="polite">
+            <div class="checklist-count" id="careChecklistCount" aria-live="polite">
               0 of 6 completed
             </div>
-
           </div>
 
-          <div
-            class="checklist-progress-track"
-            id="careProgressTrack"
-            role="progressbar"
-            aria-label="Daily care checklist progress"
-            aria-valuemin="0"
-            aria-valuemax="6"
-            aria-valuenow="0">
-
-            <div
-              class="checklist-progress-fill"
-              id="careProgressFill">
-            </div>
-
+          <div class="checklist-progress-track" id="careProgressTrack" role="progressbar"
+            aria-label="Daily care checklist progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0">
+            <div class="checklist-progress-fill" id="careProgressFill"></div>
           </div>
 
           <div class="checklist-items">
-
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="water">
-
               <span>
                 <strong>Refresh drinking water</strong>
                 <small>Provide clean and fresh drinking water.</small>
               </span>
-
             </label>
 
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="food">
-
               <span>
                 <strong>Check food and remove leftovers</strong>
                 <small>Offer suitable food and remove spoiled food.</small>
               </span>
-
             </label>
 
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="clean">
-
               <span>
                 <strong>Clean bowls and cage liner</strong>
                 <small>Keep the feeding area and cage hygienic.</small>
               </span>
-
             </label>
 
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="observe">
-
               <span>
                 <strong>Observe your bird's behaviour</strong>
                 <small>Notice appetite, activity, and droppings.</small>
               </span>
-
             </label>
 
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="interaction">
-
               <span>
                 <strong>Spend time together</strong>
                 <small>Provide positive interaction and enrichment.</small>
               </span>
-
             </label>
 
             <label class="checklist-task">
-
               <input type="checkbox" data-care-task="safety">
-
               <span>
                 <strong>Check the surroundings</strong>
                 <small>Make sure the environment is safe.</small>
               </span>
-
             </label>
-
           </div>
 
           <div class="checklist-actions">
-
             <span id="careChecklistMessage" aria-live="polite">
-              Every little bit of care counts! 💚
+              Every little bit of care counts!
             </span>
 
             <button type="button" id="resetCareChecklist">
-              Reset checklist ↻
+              Reset Checklist <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
             </button>
-
           </div>
-
         </div>
 
         <div class="care-tip">
-
-          <span class="tip-icon" aria-hidden="true">💡</span>
-
+          <span class="tip-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-lightbulb"></i>
+          </span>
           <div>
             <strong>Make observation part of your routine</strong>
-
             <p>
               Notice your bird's normal appetite, activity, posture,
               vocalisations, and droppings. Knowing what is normal makes
               unusual changes easier to spot.
             </p>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- =========================================
          2. HOUSING AND ENVIRONMENT
     ========================================= -->
 
-    <section class="care-section soft-bg" id="housing">
-
+    <section class="birdcare-section" id="housing">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading centered">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">02 • A PLACE TO THRIVE</div>
-
-          <h2>
-            Housing & <em>Environment</em>
-          </h2>
-
-          <p>
-            Your bird's home should provide room to move, opportunities to
-            explore, and protection from everyday household dangers.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+              A Place to Thrive
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Housing &amp; <span>Environment</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Your bird's home should provide room to move, opportunities to
+              explore, and protection from everyday household dangers.
+            </p>
+          </div>
         </div>
 
-        <div class="care-grid">
-
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🏡</div>
-
+        <div class="birdcare-grid">
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-house-chimney-window" aria-hidden="true"></i></div>
             <h3>Choose the Right Cage</h3>
-
             <p>
               Choose the largest practical cage that suits your bird's
               species and size. It should allow comfortable movement,
               climbing, and wing stretching. Bar spacing must be small
               enough to prevent your bird from getting its head stuck.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🌿</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-tree" aria-hidden="true"></i></div>
             <h3>Perches for Healthy Feet</h3>
-
             <p>
               Provide secure, bird-safe perches with different diameters
               and textures. Arrange them so your bird can move comfortably
               without constantly sitting in the same position.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🧩</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i></div>
             <h3>Toys and Enrichment</h3>
-
             <p>
               Offer suitable toys, climbing opportunities, and supervised
               foraging activities. Check toys regularly for loose parts,
               sharp edges, or damage that could cause injury.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🌤️</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i></div>
             <h3>Comfortable Placement</h3>
-
             <p>
               Keep the cage in a calm, well-ventilated area away from
               draughts, cooking fumes, excessive noise, and direct heat.
               Avoid placing it beside radiators or hot appliances.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🕊️</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-dove" aria-hidden="true"></i></div>
             <h3>Safe Movement and Exercise</h3>
-
             <p>
               Give your bird appropriate opportunities for movement and
               exercise. Any out-of-cage activity should be supervised in
               a bird-proofed room with windows and doors secured.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🧼</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i></div>
             <h3>Clean Surroundings</h3>
-
             <p>
               Keep the cage, food area, and surrounding space clean.
               Use products known to be safe for birds, follow label
               directions, rinse surfaces thoroughly, and keep your bird
               away during cleaning.
             </p>
-
           </article>
-
         </div>
 
-        <div class="feature-banner">
-
-          <div class="feature-art" aria-hidden="true">
-            🪺
+        <div class="habitat-banner">
+          <div class="habitat-icon" aria-hidden="true">
+            <i class="fa-solid fa-seedling"></i>
           </div>
-
           <div>
-
-            <div class="eyebrow" style="color:#cce5d1;">
-              A HAPPY HABITAT
-            </div>
-
+            <span class="habitat-label">A Happy Habitat</span>
             <h3>More than just a cage.</h3>
-
             <p>
               Birds are active and intelligent animals. A thoughtful
               environment should include room to move, suitable perches,
               enrichment, social interaction, and a predictable routine.
               Adapt the setup to your bird's individual species and needs.
             </p>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- =========================================
          3. HEALTH AND WELLNESS
     ========================================= -->
 
-    <section class="care-section" id="health">
-
+    <section class="birdcare-section" id="health">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">03 • NOTICE THE LITTLE CHANGES</div>
-
-          <h2>
-            Health & <em>Wellness</em>
-          </h2>
-
-          <p>
-            Birds may hide signs of illness. Changes in normal behaviour,
-            eating, activity, or appearance deserve attention.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+              Notice the Little Changes
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Health &amp; <span>Wellness</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Birds may hide signs of illness. Changes in normal behaviour,
+              eating, activity, or appearance deserve attention.
+            </p>
+          </div>
         </div>
 
         <div class="health-layout">
-
           <div>
-
             <div class="health-signs">
-
               <div class="health-sign">
-                <span aria-hidden="true">🪶</span>
-                <div>
-                  Unusually fluffed-up feathers or a change in appearance.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i></span>
+                <div>Unusually fluffed-up feathers or a change in appearance.</div>
               </div>
 
               <div class="health-sign">
-                <span aria-hidden="true">😴</span>
-                <div>
-                  Sleeping more than usual or appearing unusually quiet.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-bed" aria-hidden="true"></i></span>
+                <div>Sleeping more than usual or appearing unusually quiet.</div>
               </div>
 
               <div class="health-sign">
-                <span aria-hidden="true">🍽️</span>
-                <div>
-                  Eating or drinking noticeably more or less than usual.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></span>
+                <div>Eating or drinking noticeably more or less than usual.</div>
               </div>
 
               <div class="health-sign">
-                <span aria-hidden="true">💩</span>
-                <div>
-                  Changes in the colour, amount, or consistency of droppings.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
+                <div>Changes in the colour, amount, or consistency of droppings.</div>
               </div>
 
               <div class="health-sign">
-                <span aria-hidden="true">🪽</span>
-                <div>
-                  Sitting at the bottom of the cage, weakness, or poor balance.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
+                <div>Sitting at the bottom of the cage, weakness, or poor balance.</div>
               </div>
 
               <div class="health-sign">
-                <span aria-hidden="true">🔇</span>
-                <div>
-                  Reduced singing, talking, interaction, or normal activity.
-                </div>
+                <span class="sign-icon"><i class="fa-solid fa-volume-xmark" aria-hidden="true"></i></span>
+                <div>Reduced singing, talking, interaction, or normal activity.</div>
               </div>
-
             </div>
 
             <div class="vet-checkup">
-
-              <h3>🩺 Preventive Veterinary Checkups</h3>
-
+              <h3>
+                <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+                Preventive Veterinary Checkups
+              </h3>
               <p>
                 Schedule routine wellness visits with an avian veterinarian.
                 They can assess your bird's weight, diet, feathers, beak,
                 nails, and general condition, and recommend a suitable
                 follow-up schedule.
               </p>
-
             </div>
-
           </div>
 
           <aside class="vet-panel">
-
-            <h3>⚠️ Don't ignore these signs</h3>
-
+            <h3>
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+              Don't ignore these signs
+            </h3>
             <p>
               Contact an avian veterinarian promptly if you notice a
               significant change in your bird's health or behaviour.
             </p>
-
             <ul>
               <li>Wheezing, open-mouth breathing, or tail bobbing while breathing.</li>
               <li>Loss of balance, severe weakness, or collapse.</li>
@@ -1426,832 +2222,677 @@
               <li>Sudden loss of appetite or marked lethargy.</li>
               <li>Bleeding, injury, or suspected poisoning.</li>
             </ul>
-
           </aside>
-
         </div>
 
         <div class="care-tip">
-
-          <span class="tip-icon" aria-hidden="true">✂️</span>
-
+          <span class="tip-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-scissors"></i>
+          </span>
           <div>
-
             <strong>Feather and beak care</strong>
-
             <p>
               Monitor feather condition, skin, beak shape, and nail length.
               Do not trim feathers, beaks, or nails yourself without proper
               training and veterinary guidance. Unusual overgrowth,
               breakage, or damaged feathers should be assessed by a vet.
             </p>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- =========================================
          4. SAFETY TIPS
     ========================================= -->
 
-    <section class="care-section soft-bg" id="safety">
-
+    <section class="birdcare-section" id="safety">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">04 • A BIRD-SAFE HOME</div>
-
-          <h2>
-            Safety <em>Tips</em>
-          </h2>
-
-          <p>
-            Some common household products and everyday activities can
-            expose birds to serious risks. Prevention is essential.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              A Bird-Safe Home
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Safety <span>Tips</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Some common household products and everyday activities can
+              expose birds to serious risks. Prevention is essential.
+            </p>
+          </div>
         </div>
 
         <div class="warning-panel">
-
-          <h3>🚫 Household hazards to avoid</h3>
+          <h3>
+            <i class="fa-solid fa-ban" aria-hidden="true"></i>
+            Household hazards to avoid
+          </h3>
 
           <div class="hazard-grid">
-
             <article class="hazard-item">
-
-              <strong>Non-stick cookware fumes</strong>
-
-              <p>
-                Overheated non-stick cookware and appliances with
-                PTFE-type coatings can release fumes that are dangerous
-                to birds. Keep birds away from kitchens and cooking fumes.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i></span>
+              <div>
+                <strong>Non-stick cookware fumes</strong>
+                <p>
+                  Overheated non-stick cookware and appliances with
+                  PTFE-type coatings can release fumes that are dangerous
+                  to birds. Keep birds away from kitchens and cooking fumes.
+                </p>
+              </div>
             </article>
 
             <article class="hazard-item">
-
-              <strong>Smoke, sprays, and strong fragrances</strong>
-
-              <p>
-                Keep birds away from cigarette smoke, aerosol sprays,
-                perfumes, paint fumes, and other airborne irritants.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-wind" aria-hidden="true"></i></span>
+              <div>
+                <strong>Smoke, sprays, and strong fragrances</strong>
+                <p>
+                  Keep birds away from cigarette smoke, aerosol sprays,
+                  perfumes, paint fumes, and other airborne irritants.
+                </p>
+              </div>
             </article>
 
             <article class="hazard-item">
-
-              <strong>Household chemicals and pesticides</strong>
-
-              <p>
-                Store cleaning products, insecticides, rodent poison,
-                and medicines securely. Never use chemicals near a bird
-                unless a veterinarian confirms they are safe.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-spray-can" aria-hidden="true"></i></span>
+              <div>
+                <strong>Household chemicals and pesticides</strong>
+                <p>
+                  Store cleaning products, insecticides, rodent poison,
+                  and medicines securely. Never use chemicals near a bird
+                  unless a veterinarian confirms they are safe.
+                </p>
+              </div>
             </article>
 
             <article class="hazard-item">
-
-              <strong>Unsafe foods</strong>
-
-              <p>
-                Avoid offering chocolate, caffeine, alcohol, avocado,
-                onion, garlic, or spoiled and mouldy food. Check unfamiliar
-                foods with an avian veterinarian first.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span>
+              <div>
+                <strong>Unsafe foods</strong>
+                <p>
+                  Avoid offering chocolate, caffeine, alcohol, avocado,
+                  onion, garlic, or spoiled and mouldy food. Check unfamiliar
+                  foods with an avian veterinarian first.
+                </p>
+              </div>
             </article>
 
             <article class="hazard-item">
-
-              <strong>Open windows and ceiling fans</strong>
-
-              <p>
-                Secure doors and windows before allowing supervised
-                movement outside the cage. Switch off ceiling fans and
-                cover large mirrors or windows where needed.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-fan" aria-hidden="true"></i></span>
+              <div>
+                <strong>Open windows and ceiling fans</strong>
+                <p>
+                  Secure doors and windows before allowing supervised
+                  movement outside the cage. Switch off ceiling fans and
+                  cover large mirrors or windows where needed.
+                </p>
+              </div>
             </article>
 
             <article class="hazard-item">
-
-              <strong>Electrical wires and hot surfaces</strong>
-
-              <p>
-                Keep birds away from exposed wires, open flames, hot
-                cookware, and kitchen appliances. Never leave a bird
-                unattended near cooking areas.
-              </p>
-
+              <span class="hazard-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></span>
+              <div>
+                <strong>Electrical wires and hot surfaces</strong>
+                <p>
+                  Keep birds away from exposed wires, open flames, hot
+                  cookware, and kitchen appliances. Never leave a bird
+                  unattended near cooking areas.
+                </p>
+              </div>
             </article>
-
           </div>
-
         </div>
 
-        <div class="care-grid" style="margin-top:22px;">
-
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🤲</div>
-
+        <div class="birdcare-grid spaced three">
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-hands" aria-hidden="true"></i></div>
             <h3>Gentle Handling</h3>
-
             <p>
               Allow your bird to become comfortable with you gradually.
               Use calm movements and positive reinforcement. Never squeeze
               its body or restrict its chest while handling.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🚪</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-door-open" aria-hidden="true"></i></div>
             <h3>Supervise Out-of-Cage Time</h3>
-
             <p>
               Keep windows and doors closed, remove nearby hazards, and
               supervise your bird throughout its time outside the cage.
               Keep other pets at a safe distance.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🧯</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-kit-medical" aria-hidden="true"></i></div>
             <h3>Plan for Emergencies</h3>
-
             <p>
               Keep the contact details of an avian veterinarian and an
               emergency clinic accessible. Know how to transport your
               bird safely if urgent care is needed.
             </p>
-
           </article>
-
         </div>
-
       </div>
-
     </section>
 
     <!-- =========================================
          5. WHEN TO VISIT A VET
     ========================================= -->
 
-    <section class="care-section" id="vet">
-
+    <section class="birdcare-section" id="vet">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading centered">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">05 • KNOW WHEN TO GET HELP</div>
-
-          <h2>
-            When to Visit a <em>Vet</em>
-          </h2>
-
-          <p>
-            Birds can become unwell without showing obvious signs at first.
-            Early veterinary attention can make an important difference.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+              Know When to Get Help
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              When to Visit a <span>Vet</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Birds can become unwell without showing obvious signs at first.
+              Early veterinary attention can make an important difference.
+            </p>
+          </div>
         </div>
 
-        <div class="care-grid">
-
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">📅</div>
-
+        <div class="birdcare-grid three">
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
             <h3>Routine Wellness Visit</h3>
-
             <p>
               Arrange regular checkups even when your bird appears healthy.
               Your avian veterinarian can advise how often visits are
               appropriate for its species, age, and health history.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🔎</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
             <h3>Noticeable Changes</h3>
-
             <p>
               Contact your vet when your bird eats less, becomes unusually
               quiet, changes its droppings, loses balance, or develops
               abnormal feather or beak changes.
             </p>
-
           </article>
 
-          <article class="care-card">
-
-            <div class="care-icon" aria-hidden="true">🚨</div>
-
+          <article class="birdcare-card">
+            <div class="birdcare-icon"><i class="fa-solid fa-truck-medical" aria-hidden="true"></i></div>
             <h3>Emergency Attention</h3>
-
             <p>
               Breathing difficulty, collapse, seizures, significant
               bleeding, serious injury, or suspected poisoning require
               immediate veterinary attention. Do not wait to see whether
               the condition improves.
             </p>
-
           </article>
-
         </div>
 
         <div class="care-tip">
-
-          <span class="tip-icon" aria-hidden="true">📞</span>
-
+          <span class="tip-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-phone"></i>
+          </span>
           <div>
-
             <strong>Keep an avian vet's contact details ready</strong>
-
             <p>
               Not every veterinary clinic has experience treating birds.
               Identify an avian or bird-experienced veterinarian before
               an emergency happens.
             </p>
-
           </div>
-
         </div>
 
         <div class="care-disclaimer">
-
           <strong>Important:</strong> This page provides general educational
           information and is not a diagnosis or a replacement for veterinary
           advice. Bird care requirements vary by species and individual
           health. Consult a qualified avian veterinarian for diet, housing,
           grooming, treatment, and emergency decisions.
-
         </div>
-
       </div>
-
     </section>
 
     <!-- =========================================
-         INTERACTIVE FAQ SECTION
+         BIRD CARE FAQS
     ========================================= -->
 
-    <section class="care-section soft-bg" id="bird-faqs">
-
+    <section class="birdcare-section" id="bird-faqs">
       <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-        <div class="care-heading centered">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-          <div class="eyebrow">QUICK ANSWERS</div>
-
-          <h2>
-            Bird Care <em>FAQs</em>
-          </h2>
-
-          <p>
-            Helpful answers to common questions from bird parents.
-          </p>
-
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+              Quick Answers
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Bird Care <span>FAQs</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Helpful answers to common questions from bird parents.
+            </p>
+          </div>
         </div>
 
-        <div class="care-faq-list">
-
-          <details class="care-faq-item">
-
-            <summary>
-              How often should I clean my bird's cage?
-            </summary>
-
-            <p>
-              Remove soiled liners and leftover fresh food regularly.
-              Clean food and water dishes daily, and schedule a thorough
-              cage cleaning based on your bird's needs and the level of soiling.
-            </p>
-
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How often should I clean my bird's cage?</summary>
+            <div class="faq-answer">
+              <p>
+                Remove soiled liners and leftover fresh food regularly.
+                Clean food and water dishes daily, and schedule a thorough
+                cage cleaning based on your bird's needs and the level of soiling.
+              </p>
+            </div>
           </details>
 
-          <details class="care-faq-item">
-
-            <summary>
-              Can I let my bird fly freely inside my home?
-            </summary>
-
-            <p>
-              Out-of-cage exercise can be beneficial, but only in a
-              bird-proofed and supervised room. Secure windows and doors,
-              switch off ceiling fans, and remove household hazards first.
-            </p>
-
+          <details class="faq-item">
+            <summary>Can I let my bird fly freely inside my home?</summary>
+            <div class="faq-answer">
+              <p>
+                Out-of-cage exercise can be beneficial, but only in a
+                bird-proofed and supervised room. Secure windows and doors,
+                switch off ceiling fans, and remove household hazards first.
+              </p>
+            </div>
           </details>
 
-          <details class="care-faq-item">
-
-            <summary>
-              Do birds need regular veterinary checkups?
-            </summary>
-
-            <p>
-              Yes. Routine wellness visits with an avian veterinarian
-              help assess your bird's general health and identify potential
-              problems early. Ask your vet about an appropriate schedule.
-            </p>
-
+          <details class="faq-item">
+            <summary>Do birds need regular veterinary checkups?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. Routine wellness visits with an avian veterinarian
+                help assess your bird's general health and identify potential
+                problems early. Ask your vet about an appropriate schedule.
+              </p>
+            </div>
           </details>
 
-          <details class="care-faq-item">
-
-            <summary>
-              How can I tell if my bird is unwell?
-            </summary>
-
-            <p>
-              Changes in appetite, droppings, posture, activity, breathing,
-              or behaviour can indicate a health problem. Contact an avian
-              veterinarian promptly rather than waiting for symptoms to worsen.
-            </p>
-
+          <details class="faq-item">
+            <summary>How can I tell if my bird is unwell?</summary>
+            <div class="faq-answer">
+              <p>
+                Changes in appetite, droppings, posture, activity, breathing,
+                or behaviour can indicate a health problem. Contact an avian
+                veterinarian promptly rather than waiting for symptoms to worsen.
+              </p>
+            </div>
           </details>
 
-          <details class="care-faq-item">
-
-            <summary>
-              Can I use regular household sprays around birds?
-            </summary>
-
-            <p>
-              Avoid exposing birds to aerosol sprays, smoke, strong fragrances,
-              and cleaning fumes. Birds have sensitive respiratory systems.
-              Follow veterinary advice when choosing cleaning products.
-            </p>
-
+          <details class="faq-item">
+            <summary>Can I use regular household sprays around birds?</summary>
+            <div class="faq-answer">
+              <p>
+                Avoid exposing birds to aerosol sprays, smoke, strong fragrances,
+                and cleaning fumes. Birds have sensitive respiratory systems.
+                Follow veterinary advice when choosing cleaning products.
+              </p>
+            </div>
           </details>
-
         </div>
 
+        <div class="faq-more-wrap">
+          <a class="faq-more-link" href="../../faq.html" id="view-all-faqs">
+            View All FAQs <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-
     </section>
 
     <!-- =========================================
-         TRUSTED RESOURCES
+         TRUSTED BIRD CARE RESOURCES
     ========================================= -->
 
-    <section class="section-wrap" style="padding-top:45px;">
+    <section class="birdcare-section" id="bird-resources">
+      <div class="section-wrap">
+        <div class="care-topics-heading">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-tl"></use>
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" aria-hidden="true">
+            <use href="#bird-wave-br"></use>
+          </svg>
 
-      <div class="sources">
+          <div class="heading-decor decor-left-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-left-2"><i class="fa-solid fa-dove"></i></div>
+          <div class="heading-decor decor-right-1"><i class="fa-solid fa-feather-pointed"></i></div>
+          <div class="heading-decor decor-right-2"><i class="fa-solid fa-dove"></i></div>
 
-        <div class="eyebrow">LEARN MORE</div>
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              Learn More
+            </span>
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Trusted Bird Care <span>Resources</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
+            <p>
+              Explore these veterinary and animal-welfare resources for more
+              detailed guidance on caring for companion birds.
+            </p>
+          </div>
+        </div>
 
-        <h3>Trusted Bird Care Resources</h3>
-
-        <p>
-          Explore these veterinary and animal-welfare resources for more
-          detailed guidance on caring for companion birds.
-        </p>
-
-        <div class="source-links">
-
-          <a
-            href="https://www.merckvetmanual.com/bird-owners/routine-care-and-safety-of-birds/illness-in-pet-birds"
-            target="_blank"
-            rel="noopener noreferrer">
-            Merck Veterinary Manual — Illness in Pet Birds ↗
-          </a>
-
-          <a
+        <div class="resource-grid">
+          <a class="resource-card"
             href="https://www.rspca.org.uk/adviceandwelfare/pets/birds/environment"
-            target="_blank"
-            rel="noopener noreferrer">
-            RSPCA — Housing and Environments for Pet Birds ↗
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon">
+              <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+            </div>
+            <h3>RSPCA — Housing and Environments for Pet Birds</h3>
+            <p>Practical guidance on bird health, warning signs, preventive care, and everyday welfare.</p>
+            <span class="resource-link">
+              Visit resource <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </span>
           </a>
 
-          <a
+          <a class="resource-card"
+            href="https://www.merckvetmanual.com/bird-owners/routine-care-and-safety-of-birds/illness-in-pet-birds"
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon">
+              <i class="fa-solid fa-book-medical" aria-hidden="true"></i>
+            </div>
+            <h3>Merck Veterinary Manual — Illness in Pet Birds</h3>
+            <p>Detailed veterinary reference covering bird health, feather care, digestive disorders, and more.</p>
+            <span class="resource-link">
+              Visit resource <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </span>
+          </a>
+
+          <a class="resource-card"
             href="https://kb.rspca.org.au/categories/companion-animals/other-pets/birds/how-will-i-keep-my-bird-safe-against-household-hazards"
-            target="_blank"
-            rel="noopener noreferrer">
-            RSPCA Knowledgebase — Household Hazards for Birds ↗
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon">
+              <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+            </div>
+            <h3>RSPCA Knowledgebase — Household Hazards for Birds</h3>
+            <p>Veterinary charity advice on keeping birds healthy, happy, and well cared for.</p>
+            <span class="resource-link">
+              Visit resource <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </span>
           </a>
 
-          <a
+          <a class="resource-card"
             href="https://www.aav.org/news/706047/Thinking-About-Seeing-Birds-Start-with-These-Simple-Tips.htm"
-            target="_blank"
-            rel="noopener noreferrer">
-            Association of Avian Veterinarians — Basic Bird Care Tips ↗
+            target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon">
+              <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+            </div>
+            <h3>Association of Avian Veterinarians — Basic Bird Care Tips</h3>
+            <p>Veterinary hospital guidance on housing, nutrition, beak care, and signs of illness in birds.</p>
+            <span class="resource-link">
+              Visit resource <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </span>
           </a>
-
         </div>
 
+        <p class="resources-note">External resources open in a new tab. PetSathi is not responsible for the content of third-party websites.</p>
       </div>
-
     </section>
 
     <!-- =========================================
-         CALL TO ACTION
+         FINAL CTA
     ========================================= -->
 
-    <section class="section-wrap">
-
-      <div class="care-cta">
-
-        <div class="eyebrow" style="color:#cce5d1;">
-          CARE WITH LOVE
-        </div>
-
-        <h2>
-          Healthy Birds. Happier Bonds. 💚
-        </h2>
-
+    <section class="cta section-wrap" id="bird-care-cta">
+      <div>
+        <div class="eyebrow">CARE WITH LOVE</div>
+        <h2>Healthy Birds. <em>Happier Bonds.</em></h2>
         <p>
           Responsible bird care is built on patience, observation,
           a safe environment, and regular veterinary support.
           Every little habit helps make a difference.
         </p>
-
-        <a class="button" href="../birds/index.html">
-          ← Explore Bird Information
-        </a>
-
       </div>
 
+      <div class="cta-actions">
+        <a class="button button-light" href="index.html" id="cta-bird-info">
+          Explore Bird Information ↗
+        </a>
+        <a class="button button-outline" href="species.html" id="cta-bird-species">
+          Browse Bird Species
+        </a>
+      </div>
     </section>
 
   </main>
 
   <!-- =========================================
-       BACK TO TOP BUTTON
+       BACK TO TOP (unchanged behavior)
   ========================================= -->
 
-  <button
-    type="button"
-    class="back-to-top"
-    id="backToTop"
-    aria-label="Back to top"
-    title="Back to top">
-    ↑
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
 
   <!-- =========================================
-       FOOTER
+       FOOTER (unchanged)
   ========================================= -->
 
   <div id="footer"></div>
 
-  <!-- Existing PetSathi JavaScript -->
   <script src="../../../js/main.js"></script>
-
-  <!-- =========================================
-       INTERACTIVE JAVASCRIPT
-  ========================================= -->
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-
       /* =====================================
          1. DAILY CARE CHECKLIST
       ===================================== */
-
-      const tasks = Array.from(
-        document.querySelectorAll("[data-care-task]")
-      );
-
-      const progressFill =
-        document.getElementById("careProgressFill");
-
-      const progressTrack =
-        document.getElementById("careProgressTrack");
-
-      const countText =
-        document.getElementById("careChecklistCount");
-
-      const messageText =
-        document.getElementById("careChecklistMessage");
-
-      const resetButton =
-        document.getElementById("resetCareChecklist");
-
+      const tasks = Array.from(document.querySelectorAll("[data-care-task]"));
+      const progressFill = document.getElementById("careProgressFill");
+      const progressTrack = document.getElementById("careProgressTrack");
+      const countText = document.getElementById("careChecklistCount");
+      const messageText = document.getElementById("careChecklistMessage");
+      const resetButton = document.getElementById("resetCareChecklist");
       const storageKey = "petsathi-bird-care-checklist";
 
       function updateChecklist() {
-
-        const completed = tasks.filter(
-          task => task.checked
-        ).length;
-
+        const completed = tasks.filter((task) => task.checked).length;
         const total = tasks.length;
-
-        const percentage = total
-          ? (completed / total) * 100
-          : 0;
+        const percentage = total ? (completed / total) * 100 : 0;
 
         if (progressFill) {
           progressFill.style.width = percentage + "%";
         }
 
         if (progressTrack) {
-          progressTrack.setAttribute(
-            "aria-valuenow",
-            completed
-          );
-
-          progressTrack.setAttribute(
-            "aria-valuemax",
-            total
-          );
+          progressTrack.setAttribute("aria-valuenow", completed);
+          progressTrack.setAttribute("aria-valuemax", total);
         }
 
         if (countText) {
-          countText.textContent =
-            `${completed} of ${total} completed`;
+          countText.textContent = `${completed} of ${total} completed`;
         }
 
         if (messageText) {
-
           if (completed === total && total > 0) {
-
-            messageText.textContent =
-              "Amazing! Today's care routine is complete. 🎉";
-
+            messageText.textContent = "Amazing! Today's care routine is complete.";
           } else if (completed > 0) {
-
-            messageText.textContent =
-              "You're making progress. Keep going! 💚";
-
+            messageText.textContent = "You're making progress. Keep going!";
           } else {
-
-            messageText.textContent =
-              "Every little bit of care counts! 💚";
-
+            messageText.textContent = "Every little bit of care counts!";
           }
-
         }
 
-        tasks.forEach(task => {
-
+        tasks.forEach((task) => {
           const label = task.closest(".checklist-task");
-
-          label?.classList.toggle(
-            "is-checked",
-            task.checked
-          );
-
+          label?.classList.toggle("is-checked", task.checked);
         });
-
       }
 
       function saveChecklist() {
-
         try {
-
           const savedTasks = {};
-
-          tasks.forEach(task => {
-
-            savedTasks[task.dataset.careTask] =
-              task.checked;
-
+          tasks.forEach((task) => {
+            savedTasks[task.dataset.careTask] = task.checked;
           });
-
-          localStorage.setItem(
-            storageKey,
-            JSON.stringify(savedTasks)
-          );
-
+          localStorage.setItem(storageKey, JSON.stringify(savedTasks));
         } catch (error) {
-
-          console.warn(
-            "Could not save checklist progress:",
-            error
-          );
-
+          console.warn("Could not save checklist progress:", error);
         }
-
       }
 
       // Restore previously completed tasks
-
       try {
-
-        const savedTasks = JSON.parse(
-          localStorage.getItem(storageKey) || "{}"
-        );
-
-        tasks.forEach(task => {
-
-          task.checked =
-            savedTasks[task.dataset.careTask] === true;
-
+        const savedTasks = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        tasks.forEach((task) => {
+          task.checked = savedTasks[task.dataset.careTask] === true;
         });
-
       } catch (error) {
-
-        console.warn(
-          "Could not restore checklist:",
-          error
-        );
-
+        console.warn("Could not restore checklist:", error);
       }
 
-      // Update progress whenever a task is checked
-
-      tasks.forEach(task => {
-
+      tasks.forEach((task) => {
         task.addEventListener("change", () => {
-
           saveChecklist();
-
           updateChecklist();
-
         });
-
       });
 
-      // Reset checklist
-
       resetButton?.addEventListener("click", () => {
-
-        tasks.forEach(task => {
-
+        tasks.forEach((task) => {
           task.checked = false;
-
         });
 
         try {
-
           localStorage.removeItem(storageKey);
-
         } catch (error) {
-
-          console.warn(
-            "Could not clear checklist progress:",
-            error
-          );
-
+          console.warn("Could not clear checklist progress:", error);
         }
 
         updateChecklist();
-
       });
 
-      // Initialize checklist on page load
-
       updateChecklist();
-
 
       /* =====================================
          2. ACTIVE QUICK NAVIGATION
       ===================================== */
-
       const navigationLinks = document.querySelectorAll(
-        ".care-quick-nav a[href^='#']"
+        ".guides-nav-strip a[href^='#']"
       );
 
       const observedSections = Array.from(navigationLinks)
-        .map(link => {
-
-          const target = link.getAttribute("href");
-
-          return document.querySelector(target);
-
-        })
+        .map((link) => document.querySelector(link.getAttribute("href")))
         .filter(Boolean);
 
       if ("IntersectionObserver" in window) {
-
         const sectionObserver = new IntersectionObserver(
-          entries => {
-
-            entries.forEach(entry => {
-
+          (entries) => {
+            entries.forEach((entry) => {
               if (entry.isIntersecting) {
-
-                navigationLinks.forEach(link => {
-
+                navigationLinks.forEach((link) => {
                   const isActive =
-                    link.getAttribute("href") ===
-                    "#" + entry.target.id;
-
-                  link.classList.toggle(
-                    "active",
-                    isActive
-                  );
-
+                    link.getAttribute("href") === "#" + entry.target.id;
+                  link.classList.toggle("active", isActive);
                 });
-
               }
-
             });
-
           },
           {
-            rootMargin: "-20% 0px -65% 0px"
+            rootMargin: "-20% 0px -65% 0px",
           }
         );
 
-        observedSections.forEach(section => {
-
+        observedSections.forEach((section) => {
           sectionObserver.observe(section);
-
         });
-
       }
-
 
       /* =====================================
          3. FAQ ACCORDION
       ===================================== */
+      const faqItems = document.querySelectorAll(".faq-item");
 
-      const faqItems = document.querySelectorAll(
-        ".care-faq-item"
-      );
-
-      faqItems.forEach(item => {
-
+      faqItems.forEach((item) => {
         item.addEventListener("toggle", () => {
-
           if (item.open) {
-
-            faqItems.forEach(otherItem => {
-
+            faqItems.forEach((otherItem) => {
               if (otherItem !== item) {
-
                 otherItem.open = false;
-
               }
-
             });
-
           }
-
         });
-
       });
-
 
       /* =====================================
          4. BACK TO TOP BUTTON
       ===================================== */
-
-      const backToTop =
-        document.getElementById("backToTop");
+      const backToTop = document.getElementById("backToTop");
 
       if (backToTop) {
-
         window.addEventListener(
           "scroll",
           () => {
-
-            backToTop.classList.toggle(
-              "visible",
-              window.scrollY > 450
-            );
-
+            backToTop.classList.toggle("visible", window.scrollY > 450);
           },
           { passive: true }
         );
 
-        backToTop.addEventListener(
-          "click",
-          () => {
+        backToTop.addEventListener("click", () => {
+          const reducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
 
-            const reducedMotion = window.matchMedia(
-              "(prefers-reduced-motion: reduce)"
-            ).matches;
-
-            window.scrollTo({
-
-              top: 0,
-
-              behavior: reducedMotion
-                ? "auto"
-                : "smooth"
-
-            });
-
-          }
-        );
-
+          window.scrollTo({
+            top: 0,
+            behavior: reducedMotion ? "auto" : "smooth",
+          });
+        });
       }
-
     });
   </script>
 
 </body>
+
 </html>

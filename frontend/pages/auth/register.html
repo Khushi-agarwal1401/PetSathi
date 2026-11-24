@@ -1,58 +1,169 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create your account | PetSathi</title>
-    <link rel="stylesheet" href="../../css/global.css" />
-    <link rel="stylesheet" href="../../css/inner.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Create your PetSathi account to join an active pet care community, register your companion animals, and book trusted dog walkers." />
+  <title>Create your account | PetSathi</title>
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Core & Page Stylesheets -->
+  <link rel="stylesheet" href="../../css/global.css" />
+  <link rel="stylesheet" href="../../css/inner.css" />
+  <link rel="stylesheet" href="../../css/auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
-  <body>
+
+<body>
+  <!-- Global Shared Site Header (Injected dynamically by main.js) -->
   <div id="header"></div>
-    <main>
-      <form
-        class="form-wrap"
-        onsubmit="
-          event.preventDefault();
-          alert(
-            'This is a UI preview. Account functionality will be available in a future development level.',
-          );
-        "
-      >
-        <div class="eyebrow">Welcome to PetSathi</div>
-        <h1>Create your account</h1>
-        <p>Join the PetSathi community. A happier pet journey starts here.</p>
-        <label for="name">Full name</label
-        ><input id="name" type="text" placeholder="Your name" required /><label
-          for="email"
-          >Email address</label
-        ><input
-          id="email"
-          type="email"
-          placeholder="you@example.com"
-          required
-        /><label for="role">I want to join as</label
-        ><select id="role">
-          <option>Pet Owner</option>
-          <option>Pet Walker</option></select
-        ><label for="password">Create password</label
-        ><input
-          id="password"
-          type="password"
-          placeholder="Create a password"
-          required
-        /><button class="button" type="submit">Create account</button>
-        <p class="form-note">
-          Already have an account? <a href="login.html">Log in</a>
-        </p>
-        <div class="sample-note">
-          Demo interface only. Registration and login are not connected to a
-          backend yet.
+
+  <main class="auth-page-wrap">
+    <div class="auth-container">
+      <!-- ====================================================================
+           Left Column: Pet Visual Story Pane
+           ==================================================================== -->
+      <div class="auth-visual-pane">
+        <img
+          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+          alt="Two happy companion dogs joyfully playing outdoors in a sunny green park"
+          class="auth-visual-img"
+          loading="eager"
+        />
+        <div class="auth-visual-overlay" aria-hidden="true"></div>
+
+        <div class="auth-visual-top-pill">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i>
+          <span>Join PetSathi</span>
         </div>
-      </form>
-    </main>
+
+        <div class="auth-floating-badge">
+          <div class="auth-badge-icon" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="auth-badge-text">
+            <b>100% Free &amp; Open Care</b>
+            <small>Connect with loving pet parents and walkers</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           Right Column: Registration Form Card
+           ==================================================================== -->
+      <div class="auth-form-pane">
+        <div class="auth-form-header">
+          <div class="eyebrow">Welcome to PetSathi</div>
+          <h1>Create your account</h1>
+          <p class="auth-subtitle">Join the PetSathi community. A happier pet journey starts here.</p>
+        </div>
+
+        <form class="auth-form" id="signupForm" method="post" action="#" novalidate>
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="role">I want to join as</label>
+            <select id="role" name="role">
+              <option value="owner">Pet Owner</option>
+              <option value="walker">Pet Walker</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Create password</label>
+            <div class="password-input-wrapper">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Create a password"
+                required
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="password-toggle-btn"
+                id="togglePassword"
+                aria-label="Show password"
+                title="Show or hide password"
+              >
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mandatory Privacy Policy & Terms Checkbox -->
+          <div class="form-terms-group">
+            <label class="terms-checkbox-label" for="termsConsent">
+              <input
+                type="checkbox"
+                id="termsConsent"
+                name="termsConsent"
+                class="terms-checkbox"
+              />
+              <span class="terms-text">
+                I agree to the <a href="../privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="../terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
+              </span>
+            </label>
+            <div id="termsError" class="auth-validation-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span>Please accept the Privacy Policy and Terms &amp; Conditions to continue.</span>
+            </div>
+          </div>
+
+          <button class="button button-auth" type="submit" id="signup-submit-btn">
+            <span>Create account</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <p class="form-note">
+            Already have an account? <a href="login.html" id="link-login">Log in</a>
+          </p>
+
+          <div class="sample-note">
+            Demo interface only. Registration and login are not connected to a backend yet.
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Shared Site Footer (Injected dynamically by main.js) -->
   <div id="footer"></div>
-    <script src="../../js/main.js"></script>
-  </body>
+
+  <!-- Scripts -->
+  <script src="../../js/main.js"></script>
+  <script src="../../js/auth.js"></script>
+</body>
+
 </html>

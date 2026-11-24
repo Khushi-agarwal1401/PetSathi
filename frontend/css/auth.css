@@ -1,0 +1,550 @@
+/* ==========================================================================
+   PetSathi Authentication Pages Stylesheet (auth.css)
+   Clean Two-Column Modern Design for Login and Sign Up Pages
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Font Awesome Icon Protection (Guards against global.css font-family override)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src:
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+body .auth-page-wrap [class*="fa-"],
+body .auth-page-wrap [class*="fa-"]::before,
+body .auth-page-wrap i.fa-solid,
+body .auth-page-wrap i.fa-regular,
+body .auth-page-wrap i.fa {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  line-height: 1 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Page Background & Wrapper
+   -------------------------------------------------------------------------- */
+.auth-page-wrap {
+  min-height: calc(100vh - 168px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 24px;
+  background: #fafcf8;
+  box-sizing: border-box;
+  font-family: "DM Sans", "Manrope", sans-serif;
+}
+
+.auth-page-wrap input,
+.auth-page-wrap select,
+.auth-page-wrap button,
+.auth-page-wrap textarea,
+.auth-page-wrap p,
+.auth-page-wrap span,
+.auth-page-wrap label,
+.auth-page-wrap div,
+.auth-page-wrap a {
+  font-family: "DM Sans", "Manrope", sans-serif;
+}
+
+.auth-form-header h1 {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+.auth-badge-text b {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   Two-Column Auth Container Card
+   -------------------------------------------------------------------------- */
+.auth-container {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  max-width: 1040px;
+  width: 100%;
+  min-height: 600px;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 1.5px solid #dcebc9;
+  box-shadow: 0 16px 40px rgba(35, 75, 45, 0.06);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Pet Visual Story Pane
+   -------------------------------------------------------------------------- */
+.auth-visual-pane {
+  position: relative;
+  background: #eaf2e9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.auth-visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.auth-container:hover .auth-visual-img {
+  transform: scale(1.02);
+}
+
+.auth-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 80, 57, 0.22) 0%,
+    rgba(29, 80, 57, 0.06) 38%,
+    rgba(26, 46, 34, 0.72) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top Pill Badge */
+.auth-visual-top-pill {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #286849;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(220, 235, 201, 0.8);
+}
+
+.auth-visual-top-pill i {
+  color: #286849;
+  font-size: 0.85rem;
+}
+
+/* Bottom Floating Trust Badge */
+.auth-floating-badge {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.auth-badge-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  background: #eaf2e9;
+  color: #286849;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  border: 1px solid #cbe0cb;
+}
+
+.auth-badge-text b {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: #263b30;
+  line-height: 1.25;
+}
+
+.auth-badge-text small {
+  display: block;
+  font-size: 0.82rem;
+  color: #59675e;
+  margin-top: 3px;
+  line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Form Pane & Card
+   -------------------------------------------------------------------------- */
+.auth-form-pane {
+  padding: 42px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.auth-form-header {
+  margin-bottom: 22px;
+}
+
+.auth-form-header .eyebrow {
+  display: inline-block;
+  color: #286849;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  background: #eaf2e9;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #dcebc9;
+}
+
+.auth-form-header h1 {
+  font-family: Georgia, serif;
+  font-size: 2.15rem;
+  color: #263b30;
+  margin: 6px 0 6px;
+  line-height: 1.25;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+.auth-subtitle {
+  color: #59675e;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Form Controls, Inputs, and Selects
+   -------------------------------------------------------------------------- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #263b30;
+  margin-bottom: 7px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #dcebc9;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: "DM Sans", "Manrope", sans-serif;
+  color: #1a2e22;
+  background: #fafcf8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #286849;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 3.5px rgba(40, 104, 73, 0.12);
+}
+
+.auth-form select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Password Input with Show/Hide Toggle Button
+   -------------------------------------------------------------------------- */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  padding-right: 48px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6a7b70;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: color 0.2s ease;
+  display: grid;
+  place-items: center;
+}
+
+.password-toggle-btn:hover {
+  color: #286849;
+}
+
+/* --------------------------------------------------------------------------
+   Mandatory Privacy Policy & Terms Checkbox & Validation Alert
+   -------------------------------------------------------------------------- */
+.form-terms-group {
+  margin: 16px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.terms-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.88rem;
+  color: #435449;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0 !important;
+}
+
+.terms-checkbox {
+  width: 19px !important;
+  height: 19px !important;
+  margin-top: 2px !important;
+  accent-color: #286849;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.terms-text {
+  flex: 1;
+}
+
+.terms-text a {
+  color: #286849;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.terms-text a:hover {
+  color: #1d4834;
+}
+
+/* Soft Amber Warning Box for Missing Checkbox Consent */
+.auth-validation-error {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  background: #fffcf8;
+  border: 1.5px solid #f6d8ae;
+  border-radius: 12px;
+  color: #92400e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  box-shadow: 0 4px 14px rgba(181, 106, 0, 0.08);
+  animation: fadeInAlert 0.25s ease;
+  margin-top: 4px;
+}
+
+.auth-validation-error i {
+  color: #b56a00 !important;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+@keyframes fadeInAlert {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Submit Button & Footer Links
+   -------------------------------------------------------------------------- */
+.button.button-auth {
+  width: 100%;
+  margin-top: 14px;
+  padding: 13px 24px;
+  background: #286849;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(40, 104, 73, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button.button-auth:hover {
+  background: #1d4834;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 104, 73, 0.28);
+}
+
+.button.button-auth i {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.button.button-auth:hover i {
+  transform: translateX(3px);
+}
+
+.form-note {
+  font-size: 0.88rem;
+  text-align: center;
+  color: #59675e;
+  margin: 18px 0 16px;
+}
+
+.form-note a {
+  color: #286849;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-note a:hover {
+  text-decoration: underline;
+}
+
+.sample-note {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #f6f3e9;
+  border: 1px solid #ebd9b8;
+  color: #7a704f;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Styles
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 20px auto 35px;
+  }
+
+  .auth-visual-pane {
+    min-height: 280px;
+    max-height: 320px;
+    padding: 24px;
+  }
+
+  .auth-form-pane {
+    padding: 34px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-page-wrap {
+    padding: 16px 12px;
+  }
+
+  .auth-container {
+    border-radius: 20px;
+  }
+
+  .auth-visual-pane {
+    min-height: 220px;
+    max-height: 240px;
+    padding: 16px;
+    justify-content: flex-end;
+  }
+
+  .auth-visual-top-pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 5px 12px;
+    font-size: 0.72rem;
+  }
+
+  .auth-floating-badge {
+    padding: 10px 14px;
+    border-radius: 14px;
+    gap: 10px;
+  }
+
+  .auth-badge-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 0.95rem;
+  }
+
+  .auth-badge-text b {
+    font-size: 0.86rem;
+  }
+
+  .auth-badge-text small {
+    display: none;
+  }
+
+  .auth-form-pane {
+    padding: 26px 18px;
+  }
+
+  .auth-form-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .button.button-auth {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}

@@ -43,7 +43,7 @@
         }
 
         body {
-            background: var(--cream);
+            background: #ffffff;
             overflow-x: hidden;
         }
 
@@ -191,6 +191,7 @@
         /* =========================================
            SIGNATURE SECTION HEADING CARDS
         ========================================= */
+        main .species-topics-heading,
         .species-topics-heading {
             position: relative;
             max-width: 1400px;
@@ -200,7 +201,7 @@
             text-align: center;
             border-radius: 35px;
             border: 1px solid #dcebc9;
-            background: #fafcf7;
+            background: #fafcf7 !important;
             box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
         }
 
@@ -648,9 +649,13 @@
         /* =========================================
            COMPARISON SECTION (Cream Background)
         ========================================= */
+        main section.comparison-section,
+        main .comparison-section,
+        section.comparison-section,
         .comparison-section {
             width: 100%;
             padding: 60px 24px 75px;
+            background-color: #f8faf6 !important;
             background: #f8faf6 !important;
             border-top: 1px solid #e2ebd0;
             border-bottom: 1px solid #e2ebd0;
@@ -824,18 +829,24 @@
         /* =========================================
            RESPONSIBLE BIRD OWNERSHIP (White Background with Pillars)
         ========================================= */
+        main section.ownership-section-wrap,
+        main .ownership-section-wrap,
+        section.ownership-section-wrap,
         .ownership-section-wrap {
             padding: 65px 0 75px;
+            background-color: #ffffff !important;
             background: #ffffff !important;
         }
 
+        main .ownership-card,
         .ownership-card {
             width: min(1120px, calc(100% - 48px));
             margin: 0 auto;
             padding: 44px;
             border: 1px solid var(--line);
             border-radius: 28px;
-            background: #fafcf8;
+            background-color: #fafcf8 !important;
+            background: #fafcf8 !important;
             text-align: center;
             box-shadow: 0 4px 20px rgba(35, 75, 45, 0.04);
         }
@@ -953,12 +964,19 @@
         /* =========================================
            FINAL LIGHT PINK CTA SECTION
         ========================================= */
+        main section.species-pink-cta-wrap,
+        main .species-pink-cta-wrap,
+        section.species-pink-cta-wrap,
         .species-pink-cta-wrap {
             padding: 20px 0 80px;
+            background-color: transparent !important;
+            background: transparent !important;
         }
 
+        main .bird-pink-cta,
         .bird-pink-cta {
             position: relative;
+            background-color: var(--bird-pink-bg) !important;
             background: var(--bird-pink-bg) !important;
             border: 1px solid var(--bird-pink-border);
             border-radius: 32px;

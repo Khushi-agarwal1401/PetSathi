@@ -715,13 +715,21 @@
       height: 80px;
       flex-shrink: 0;
       border-radius: 24px;
-      background: #286849;
-      color: #ffffff;
+      background: #edf7f0;
+      color: #246b43;
+      border: 1px solid #cce4d2;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 34px;
-      box-shadow: 0 8px 20px rgba(40, 104, 73, 0.24);
+      box-shadow: 0 4px 14px rgba(35, 75, 45, 0.08);
+    }
+
+    .banner-icon-badge i {
+      color: #246b43 !important;
+      font-size: 34px !important;
+      line-height: 1 !important;
+      display: inline-block !important;
     }
 
     .banner-text-content h3 {
@@ -1273,11 +1281,11 @@
           alt="Domestic rabbit grazing peacefully in a clean, safe environment"
         />
         <div class="floating-card card-top">
-          ✨
+          <i class="fa-solid fa-wand-magic-sparkles" style="color: #246b43; font-size: 1.35rem;" aria-hidden="true"></i>
           <span><b>Gentle &amp; Curious</b><small>Loving indoor companions</small></span>
         </div>
         <div class="floating-card card-bottom">
-          🐾
+          <i class="fa-solid fa-paw" style="color: #246b43; font-size: 1.35rem;" aria-hidden="true"></i>
           <span><b>Everyday Wellness</b><small>Healthy bunny routines</small></span>
         </div>
       </div>
@@ -2000,7 +2008,7 @@
         </div>
 
         <div class="checklist-feedback-msg" id="careChecklistMessage">
-          Every little bit of daily care counts towards a joyful bunny! 💚
+          Every little bit of daily care counts towards a joyful bunny! <i class="fa-solid fa-heart" style="color: #246b43;" aria-hidden="true"></i>
         </div>
       </div>
     </div>
@@ -2182,13 +2190,13 @@
 
         if (messageBox) {
           if (completed === total && total > 0) {
-            messageBox.textContent = "Wonderful! Today's complete rabbit care routine is finished! 🎉🐇";
+            messageBox.innerHTML = 'Wonderful! Today\'s complete rabbit care routine is finished! <i class="fa-solid fa-circle-check" style="color: #246b43;" aria-hidden="true"></i>';
           } else if (completed >= 4) {
-            messageBox.textContent = "Great job! More than half of today's bunny care is done! 💚";
+            messageBox.innerHTML = 'Great job! More than half of today\'s bunny care is done! <i class="fa-solid fa-heart" style="color: #246b43;" aria-hidden="true"></i>';
           } else if (completed > 0) {
-            messageBox.textContent = "You're making steady progress. Keep going! 🌿";
+            messageBox.innerHTML = 'You\'re making steady progress. Keep going! <i class="fa-solid fa-seedling" style="color: #246b43;" aria-hidden="true"></i>';
           } else {
-            messageBox.textContent = "Every little bit of daily care counts towards a joyful bunny! 💚";
+            messageBox.innerHTML = 'Every little bit of daily care counts towards a joyful bunny! <i class="fa-solid fa-heart" style="color: #246b43;" aria-hidden="true"></i>';
           }
         }
 

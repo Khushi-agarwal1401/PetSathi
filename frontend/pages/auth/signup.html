@@ -32,27 +32,14 @@
            Left Column: Pet Visual Story Pane
            ==================================================================== -->
       <div class="auth-visual-pane">
-        <img
-          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
-          alt="Two happy companion dogs joyfully playing outdoors in a sunny green park"
-          class="auth-visual-img"
-          loading="eager"
-        />
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+          alt="Two happy companion dogs joyfully playing outdoors in a sunny green park" class="auth-visual-img"
+          loading="eager" />
         <div class="auth-visual-overlay" aria-hidden="true"></div>
 
         <div class="auth-visual-top-pill">
           <i class="fa-solid fa-heart" aria-hidden="true"></i>
           <span>Join PetSathi</span>
-        </div>
-
-        <div class="auth-floating-badge">
-          <div class="auth-badge-icon" aria-hidden="true">
-            <i class="fa-solid fa-paw"></i>
-          </div>
-          <div class="auth-badge-text">
-            <b>100% Free &amp; Open Care</b>
-            <small>Connect with loving pet parents and walkers</small>
-          </div>
         </div>
       </div>
 
@@ -69,26 +56,12 @@
         <form class="auth-form" id="signupForm" method="post" action="#" novalidate>
           <div class="form-group">
             <label for="name">Full name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              required
-              autocomplete="name"
-            />
+            <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
           </div>
 
           <div class="form-group">
             <label for="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="you@example.com"
-              required
-              autocomplete="email"
-            />
+            <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
           </div>
 
           <div class="form-group">
@@ -98,48 +71,26 @@
                 <option value="owner" selected>Pet Owner</option>
                 <option value="walker">Pet Walker</option>
               </select>
-              <button
-                type="button"
-                class="custom-select-trigger"
-                id="signup-role-trigger"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-labelledby="signup-role-label signup-role-trigger"
-              >
+              <button type="button" class="custom-select-trigger" id="signup-role-trigger" aria-haspopup="listbox"
+                aria-expanded="false" aria-labelledby="signup-role-label signup-role-trigger">
                 <div class="select-trigger-content">
                   <i class="fa-solid fa-paw select-lead-icon" aria-hidden="true"></i>
                   <span class="select-label">Pet Owner</span>
                 </div>
                 <i class="fa-solid fa-chevron-down select-chevron" aria-hidden="true"></i>
               </button>
-              <div
-                class="custom-select-dropdown"
-                role="listbox"
-                aria-labelledby="signup-role-label"
-                id="signup-role-dropdown"
-              >
-                <div
-                  class="custom-select-option is-selected"
-                  role="option"
-                  data-value="owner"
-                  data-icon="fa-paw"
-                  aria-selected="true"
-                  tabindex="0"
-                >
+              <div class="custom-select-dropdown" role="listbox" aria-labelledby="signup-role-label"
+                id="signup-role-dropdown">
+                <div class="custom-select-option is-selected" role="option" data-value="owner" data-icon="fa-paw"
+                  aria-selected="true" tabindex="0">
                   <div class="option-content">
                     <i class="fa-solid fa-paw option-icon" aria-hidden="true"></i>
                     <span class="option-title">Pet Owner</span>
                   </div>
                   <i class="fa-solid fa-check option-check" aria-hidden="true"></i>
                 </div>
-                <div
-                  class="custom-select-option"
-                  role="option"
-                  data-value="walker"
-                  data-icon="fa-person-walking"
-                  aria-selected="false"
-                  tabindex="0"
-                >
+                <div class="custom-select-option" role="option" data-value="walker" data-icon="fa-person-walking"
+                  aria-selected="false" tabindex="0">
                   <div class="option-content">
                     <i class="fa-solid fa-person-walking option-icon" aria-hidden="true"></i>
                     <span class="option-title">Pet Walker</span>
@@ -153,21 +104,10 @@
           <div class="form-group">
             <label for="password">Create password</label>
             <div class="password-input-wrapper">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="Create a password"
-                required
-                autocomplete="new-password"
-              />
-              <button
-                type="button"
-                class="password-toggle-btn"
-                id="togglePassword"
-                aria-label="Show password"
-                title="Show or hide password"
-              >
+              <input id="password" name="password" type="password" placeholder="Create a password" required
+                autocomplete="new-password" />
+              <button type="button" class="password-toggle-btn" id="togglePassword" aria-label="Show password"
+                title="Show or hide password">
                 <i class="fa-solid fa-eye" aria-hidden="true"></i>
               </button>
             </div>
@@ -176,14 +116,11 @@
           <!-- Mandatory Privacy Policy & Terms Checkbox -->
           <div class="form-terms-group">
             <label class="terms-checkbox-label" for="termsConsent">
-              <input
-                type="checkbox"
-                id="termsConsent"
-                name="termsConsent"
-                class="terms-checkbox"
-              />
+              <input type="checkbox" id="termsConsent" name="termsConsent" class="terms-checkbox" />
               <span class="terms-text">
-                I agree to the <a href="../privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="../terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
+                I agree to the <a href="../privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy
+                  Policy</a> and <a href="../terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms
+                  &amp; Conditions</a>.
               </span>
             </label>
             <div id="termsError" class="auth-validation-error" role="alert">

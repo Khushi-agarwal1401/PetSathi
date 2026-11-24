@@ -189,7 +189,7 @@
         }
 
         /* =========================================
-           SIGNATURE SECTION HEADING CARDS
+           SIGNATURE SECTION HEADING CARDS (Matching Dog & Cat Index)
         ========================================= */
         main .species-topics-heading,
         .species-topics-heading {
@@ -348,36 +348,38 @@
 
         .paw {
             position: absolute;
-            color: rgba(115, 173, 91, 0.22);
+            color: rgba(115, 173, 91, 0.28);
             z-index: 1;
             pointer-events: none;
+            display: inline-block;
+            line-height: 1;
         }
 
         .paw-left-1 {
             top: 66px;
             left: 108px;
-            font-size: 54px;
+            font-size: 58px;
             transform: rotate(20deg);
         }
 
         .paw-left-2 {
             bottom: 24px;
             left: 82px;
-            font-size: 34px;
+            font-size: 38px;
             transform: rotate(-15deg);
         }
 
         .paw-right-1 {
             top: 60px;
             right: 75px;
-            font-size: 52px;
+            font-size: 56px;
             transform: rotate(18deg);
         }
 
         .paw-right-2 {
             bottom: 35px;
             right: 140px;
-            font-size: 34px;
+            font-size: 38px;
             transform: rotate(-15deg);
         }
 
@@ -439,8 +441,6 @@
            SPECIES SECTION & CARDS GRID
         ========================================= */
         .species-section {
-            width: min(1160px, calc(100% - 48px));
-            margin: auto;
             padding: 10px 0 70px;
         }
 
@@ -647,18 +647,17 @@
         }
 
         /* =========================================
-           COMPARISON SECTION (Cream Background)
+           COMPARISON SECTION (Matching Darshan's recommendation)
         ========================================= */
         main section.comparison-section,
         main .comparison-section,
         section.comparison-section,
         .comparison-section {
             width: 100%;
-            padding: 60px 24px 75px;
-            background-color: #f8faf6 !important;
-            background: #f8faf6 !important;
-            border-top: 1px solid #e2ebd0;
-            border-bottom: 1px solid #e2ebd0;
+            padding: 60px 0 75px;
+            background-color: #fafcf8 !important;
+            background: #fafcf8 !important;
+            border: none !important;
         }
 
         .comparison-inner {
@@ -827,55 +826,15 @@
         }
 
         /* =========================================
-           RESPONSIBLE BIRD OWNERSHIP (White Background with Pillars)
+           RESPONSIBLE BIRD OWNERSHIP (Matching Dog & Cat Index)
         ========================================= */
         main section.ownership-section-wrap,
         main .ownership-section-wrap,
         section.ownership-section-wrap,
         .ownership-section-wrap {
-            padding: 65px 0 75px;
+            padding: 40px 0 75px;
             background-color: #ffffff !important;
             background: #ffffff !important;
-        }
-
-        main .ownership-card,
-        .ownership-card {
-            width: min(1120px, calc(100% - 48px));
-            margin: 0 auto;
-            padding: 44px;
-            border: 1px solid var(--line);
-            border-radius: 28px;
-            background-color: #fafcf8 !important;
-            background: #fafcf8 !important;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(35, 75, 45, 0.04);
-        }
-
-        .ownership-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 18px;
-            background: #eaf2e9;
-            color: var(--green);
-            display: inline-grid;
-            place-items: center;
-            font-size: 1.6rem;
-            margin-bottom: 16px;
-        }
-
-        .ownership-card h3 {
-            margin: 0 0 12px;
-            color: var(--ink);
-            font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-            letter-spacing: -0.5px;
-        }
-
-        .ownership-card > p {
-            max-width: 760px;
-            margin: 0 auto 30px;
-            color: #64736a;
-            font-size: 0.95rem;
-            line-height: 1.8;
         }
 
         /* 3 Structured Pillars */
@@ -1229,37 +1188,75 @@
         <!-- =========================================
              2. SECTION TITLE: BIRD SPECIES CARDS
         ========================================= -->
-        <div class="species-topics-heading" id="bird-species">
-            <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" aria-hidden="true">
-                <path d="M0 0 C70 40 140 10 220 0 L220 0 L0 0 Z" fill="#ebf5e8" opacity="0.7"></path>
-                <path d="M0 0 C60 70 120 40 190 0 L190 0 L0 0 Z" fill="#d9edd4" opacity="0.45"></path>
-            </svg>
-            <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" aria-hidden="true">
-                <path d="M220 130 C150 90 80 120 0 130 L0 130 L220 130 Z" fill="#ebf5e8" opacity="0.7"></path>
-                <path d="M220 130 C160 60 100 90 30 130 L30 130 L220 130 Z" fill="#d9edd4" opacity="0.45"></path>
-            </svg>
-            <i class="fa-solid fa-feather-pointed paw paw-left-1" aria-hidden="true"></i>
-            <i class="fa-solid fa-feather-pointed paw paw-left-2" aria-hidden="true"></i>
-            <i class="fa-solid fa-feather-pointed paw paw-right-1" aria-hidden="true"></i>
-            <i class="fa-solid fa-feather-pointed paw paw-right-2" aria-hidden="true"></i>
-
-            <div class="heading-content">
-                <div class="heading-label">
-                    <i class="fa-solid fa-dove" aria-hidden="true"></i>
-                    <span>10 POPULAR SPECIES</span>
+        <div class="section-wrap">
+            <div class="species-topics-heading" id="bird-species">
+                <svg
+                    class="corner-wave wave-tl"
+                    viewBox="0 0 220 130"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+                        fill="#d8e8ce"
+                        opacity="0.7"
+                    />
+                    <path
+                        d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+                        fill="#edf6e6"
+                        opacity="0.95"
+                    />
+                </svg>
+                <svg
+                    class="corner-wave wave-br"
+                    viewBox="0 0 220 130"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+                        fill="#d8e8ce"
+                        opacity="0.7"
+                    />
+                    <path
+                        d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+                        fill="#edf6e6"
+                        opacity="0.95"
+                    />
+                </svg>
+                <div class="paw paw-left-1">
+                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
                 </div>
-                <h2>
-                    <div class="heading-burst left" aria-hidden="true">
-                        <span></span><span></span><span></span>
+                <div class="paw paw-left-2">
+                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                </div>
+                <div class="paw paw-right-1">
+                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                </div>
+                <div class="paw paw-right-2">
+                    <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                </div>
+
+                <div class="heading-content">
+                    <div class="heading-label">
+                        <i class="fa-solid fa-dove" aria-hidden="true"></i>
+                        <span>10 POPULAR SPECIES</span>
                     </div>
-                    Meet Our <span>Feathered Companions</span>
-                    <div class="heading-burst right" aria-hidden="true">
-                        <span></span><span></span><span></span>
-                    </div>
-                </h2>
-                <p>
-                    Every bird has unique social, dietary, environmental, and enrichment needs. Explore each companion bird profile below to understand their personality, lifespan, size, and care level.
-                </p>
+                    <h2>
+                        <div class="heading-burst left" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </div>
+                        Meet Our <span>Feathered Companions</span>
+                        <div class="heading-burst right" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </h2>
+                    <p>
+                        Every bird has unique social, dietary, environmental, and enrichment needs. Explore each companion bird profile below to understand their personality, lifespan, size, and care level.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -1282,7 +1279,7 @@
         <!-- =========================================
              3. BIRD SPECIES CARDS (Consistent Dog & Cat Card Structure)
         ========================================= -->
-        <section class="species-section">
+        <section class="section-wrap species-section">
             <div class="bird-grid">
 
                 <!-- 01 BUDGERIGAR -->
@@ -1709,12 +1706,61 @@
         </section>
 
         <!-- =========================================
-             4. SPECIES COMPARISON SECTION (Cream Background)
+             4. SPECIES COMPARISON SECTION
         ========================================= -->
         <section class="comparison-section" id="comparison">
-            <div class="comparison-inner">
+            <div class="section-wrap">
 
                 <div class="species-topics-heading" style="margin-top: 0;">
+                    <svg
+                        class="corner-wave wave-tl"
+                        viewBox="0 0 220 130"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+                            fill="#d8e8ce"
+                            opacity="0.7"
+                        />
+                        <path
+                            d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+                            fill="#edf6e6"
+                            opacity="0.95"
+                        />
+                    </svg>
+                    <svg
+                        class="corner-wave wave-br"
+                        viewBox="0 0 220 130"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+                            fill="#d8e8ce"
+                            opacity="0.7"
+                        />
+                        <path
+                            d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+                            fill="#edf6e6"
+                            opacity="0.95"
+                        />
+                    </svg>
+                    <div class="paw paw-left-1">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-left-2">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-right-1">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-right-2">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+
                     <div class="heading-content">
                         <div class="heading-label">
                             <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
@@ -1892,19 +1938,82 @@
         </section>
 
         <!-- =========================================
-             5. RESPONSIBLE BIRD OWNERSHIP (White Background with 3 Pillars)
+             5. RESPONSIBLE BIRD OWNERSHIP SECTION
         ========================================= -->
-        <section class="ownership-section-wrap">
-            <div class="ownership-card">
-                <div class="ownership-icon">
-                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                </div>
-                <h3>Responsible Bird Ownership Matters</h3>
-                <p>
-                    Birds require specialized knowledge, long-term commitment, and daily environmental enrichment. True care extends far beyond food and cage maintenance:
-                </p>
+        <section class="ownership-section-wrap" id="bird-care-pillars">
+            <div class="section-wrap">
 
-                <!-- 3 Pillars -->
+                <div class="species-topics-heading">
+                    <svg
+                        class="corner-wave wave-tl"
+                        viewBox="0 0 220 130"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+                            fill="#d8e8ce"
+                            opacity="0.7"
+                        />
+                        <path
+                            d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+                            fill="#edf6e6"
+                            opacity="0.95"
+                        />
+                    </svg>
+                    <svg
+                        class="corner-wave wave-br"
+                        viewBox="0 0 220 130"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+                            fill="#d8e8ce"
+                            opacity="0.7"
+                        />
+                        <path
+                            d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+                            fill="#edf6e6"
+                            opacity="0.95"
+                        />
+                    </svg>
+                    <div class="paw paw-left-1">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-left-2">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-right-1">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+                    <div class="paw paw-right-2">
+                        <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="heading-content">
+                        <div class="heading-label">
+                            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            <span>LIFELONG STEWARDSHIP</span>
+                        </div>
+                        <h2>
+                            <div class="heading-burst left" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                            Responsible <span>Bird Ownership Matters</span>
+                            <div class="heading-burst right" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </h2>
+                        <p>
+                            Birds require specialized knowledge, long-term commitment, and daily environmental enrichment. True care extends far beyond food and cage maintenance:
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 Pillars Grid -->
                 <div class="ownership-pillars">
                     <div class="ownership-pillar">
                         <div class="ownership-pillar-icon">
@@ -1949,6 +2058,7 @@
                         Merck Veterinary Manual ↗
                     </a>
                 </p>
+
             </div>
         </section>
 

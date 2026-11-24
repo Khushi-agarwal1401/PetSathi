@@ -438,10 +438,12 @@
     /* ========================================================
        3. SIGNATURE SECTION HEADING CARDS (Matching Dogs/Cats Index)
        ======================================================== */
+    .cat-topics-heading,
     .rabbit-topics-heading {
       position: relative;
       width: 100%;
-      margin: 50px auto 35px;
+      max-width: 1400px;
+      margin: 45px auto 35px;
       padding: 44px 35px 38px;
       overflow: hidden;
       text-align: center;
@@ -472,36 +474,39 @@
       height: 130px;
     }
 
-    .heading-decor-icon {
+    .paw {
       position: absolute;
-      pointer-events: none;
+      color: rgba(115, 173, 91, 0.28);
       z-index: 1;
-      color: #c9decb;
-      opacity: 0.55;
+      pointer-events: none;
     }
 
-    .decor-pos-1 {
-      left: 35px;
-      top: 25px;
-      font-size: 34px;
+    .paw-left-1 {
+      top: 66px;
+      left: 108px;
+      font-size: 58px;
+      transform: rotate(20deg);
     }
 
-    .decor-pos-2 {
-      left: 18px;
-      bottom: 14px;
-      font-size: 24px;
+    .paw-left-2 {
+      bottom: 24px;
+      left: 82px;
+      font-size: 38px;
+      transform: rotate(-15deg);
     }
 
-    .decor-pos-3 {
-      right: 25px;
-      top: 25px;
-      font-size: 34px;
+    .paw-right-1 {
+      top: 60px;
+      right: 75px;
+      font-size: 56px;
+      transform: rotate(18deg);
     }
 
-    .decor-pos-4 {
-      right: 65px;
-      bottom: 14px;
-      font-size: 24px;
+    .paw-right-2 {
+      bottom: 35px;
+      right: 140px;
+      font-size: 38px;
+      transform: rotate(-15deg);
     }
 
     .heading-content {
@@ -519,18 +524,28 @@
       background: #edf6df;
       border: 1px solid #dcebc9;
       color: #246b43;
+      font-family: "DM Sans", "Manrope", sans-serif !important;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.2px;
       text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
     }
 
+    .heading-label i {
+      font-size: 14px;
+      color: #246b43;
+      line-height: 1;
+    }
+
+    .cat-topics-heading h2,
     .rabbit-topics-heading h2 {
       color: #263b30;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif !important;
       font-size: clamp(24px, 3.2vw, 36px);
       font-weight: 700;
       margin: 0 0 12px;
+      line-height: 1.2;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -538,15 +553,17 @@
       flex-wrap: wrap;
     }
 
+    .cat-topics-heading h2 span,
     .rabbit-topics-heading h2 span {
-      color: var(--rab-green-primary);
+      color: #28764a;
     }
 
+    .cat-topics-heading p,
     .rabbit-topics-heading p {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      font-size: 0.98rem;
-      color: var(--rab-muted);
+      color: #64736a;
+      font-size: 15px;
       line-height: 1.65;
     }
 
@@ -612,6 +629,13 @@
       bottom: 3px;
       width: 14px;
       height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    @media (max-width: 768px) {
+      .paw {
+        display: none;
+      }
     }
 
     /* ========================================================
@@ -897,7 +921,8 @@
        6. ACCORDION FAQS SECTION
        ======================================================== */
     .faq-accordion-list {
-      max-width: 900px;
+      width: 100%;
+      max-width: 100%;
       margin: 0 auto 35px;
       display: flex;
       flex-direction: column;
@@ -1326,7 +1351,7 @@
          3. DAILY RABBIT CARE (6 Centered Cards)
          ======================================================== -->
     <div class="section-wrap" id="daily-care">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1335,16 +1360,14 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-carrot heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-droplet heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-calendar-day" aria-hidden="true"></i> ESSENTIAL ROUTINES
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-calendar-day" aria-hidden="true"></i> Essential Routines
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Daily <span>Rabbit Care Essentials</span>
@@ -1405,7 +1428,7 @@
          4. HOUSING & ENVIRONMENT (Cards + Special Bunny Home Card)
          ======================================================== -->
     <div class="section-wrap" id="housing-environment">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1414,19 +1437,17 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-house-chimney heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-shield-halved heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-temperature-half heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-house" aria-hidden="true"></i> SAFE HABITAT
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> Safe Habitat
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Housing &amp; <span>Indoor Environment</span>
+            Housing & <span>Indoor Environment</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -1438,7 +1459,7 @@
       <!-- Highlighted "Create a Happy Bunny Home" Banner -->
       <div class="highlight-banner-card">
         <div class="banner-icon-badge">
-          <i class="fa-solid fa-couch" aria-hidden="true"></i>
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
         </div>
         <div class="banner-text-content">
           <h3>Create a Happy Bunny Home</h3>
@@ -1495,7 +1516,7 @@
          5. GROOMING & COAT CARE (6 Cards)
          ======================================================== -->
     <div class="section-wrap" id="grooming-coat">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1504,19 +1525,17 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-wand-magic-sparkles heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-scissors heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-eye heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-hand-holding-heart heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-scissors" aria-hidden="true"></i> COAT &amp; BODY CARE
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-scissors" aria-hidden="true"></i> Coat & Body Care
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Grooming &amp; <span>Coat Care</span>
+            Grooming & <span>Coat Care</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -1568,7 +1587,7 @@
          6. HYGIENE & CLEANING (Cards + Clean Habitat Highlight)
          ======================================================== -->
     <div class="section-wrap" id="hygiene-cleaning">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1577,19 +1596,17 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-soap heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-sparkles heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-shield-virus heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i> SANITARY LIVING
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-soap" aria-hidden="true"></i> Sanitary Living
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Hygiene &amp; <span>Enclosure Cleaning</span>
+            Hygiene & <span>Enclosure Cleaning</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -1601,7 +1618,7 @@
       <!-- Clean Habitat Highlight Card -->
       <div class="highlight-banner-card">
         <div class="banner-icon-badge">
-          <i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>
+          <i class="fa-solid fa-soap" aria-hidden="true"></i>
         </div>
         <div class="banner-text-content">
           <h3>Clean Habitat Protocol</h3>
@@ -1658,7 +1675,7 @@
          7. EXERCISE & ENRICHMENT (6 Centered Cards)
          ======================================================== -->
     <div class="section-wrap" id="exercise-enrichment">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1667,19 +1684,17 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-bolt heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-puzzle-piece heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-gamepad" aria-hidden="true"></i> MENTAL &amp; PHYSICAL HEALTH
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-gamepad" aria-hidden="true"></i> Mental & Physical Health
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Exercise &amp; <span>Enrichment</span>
+            Exercise & <span>Enrichment</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -1714,7 +1729,7 @@
         </article>
 
         <article class="care-card">
-          <div class="care-card-icon"><i class="fa-solid fa-shovels" aria-hidden="true"></i></div>
+          <div class="care-card-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
           <h3>Digging &amp; Foraging Boxes</h3>
           <p>Create a dedicated dig box using untreated cardboard strips, dried orchard grass, or child-safe play sand to prevent carpet destruction.</p>
         </article>
@@ -1731,7 +1746,7 @@
          8. LITTER TRAINING (6 Practical Cards)
          ======================================================== -->
     <div class="section-wrap" id="litter-training">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1740,16 +1755,14 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-box heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-check heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-award heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-award" aria-hidden="true"></i> HOUSE TRAINING
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-award" aria-hidden="true"></i> House Training
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Litter <span>Training Habits</span>
@@ -1804,7 +1817,7 @@
          9. COMPANIONSHIP & SOCIAL CARE (6 Cards)
          ======================================================== -->
     <div class="section-wrap" id="companionship-social">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1813,19 +1826,17 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-heart heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-users heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-shield-heart heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-heart" aria-hidden="true"></i> SOCIAL WELLBEING
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Social Wellbeing
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
-            Companionship &amp; <span>Social Care</span>
+            Companionship & <span>Social Care</span>
             <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
           </h2>
           <p>
@@ -1877,7 +1888,7 @@
          10. DAILY RABBIT CARE CHECKLIST (Functional Interactive)
          ======================================================== -->
     <div class="section-wrap" id="care-checklist">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -1886,16 +1897,14 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-list-check heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-calendar-check heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-star heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> TRACK YOUR ROUTINE
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Track Your Routine
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Daily Rabbit <span>Care Checklist</span>
@@ -2000,7 +2009,7 @@
          11. RABBIT CARE FAQS (Accordion Functionality)
          ======================================================== -->
     <div class="section-wrap" id="care-faqs">
-      <div class="rabbit-topics-heading">
+      <div class="cat-topics-heading rabbit-topics-heading">
         <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
@@ -2009,16 +2018,14 @@
           <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
           <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
         </svg>
-
-        <i class="fa-solid fa-circle-question heading-decor-icon decor-pos-1" aria-hidden="true"></i>
-        <i class="fa-solid fa-lightbulb heading-decor-icon decor-pos-2" aria-hidden="true"></i>
-        <i class="fa-solid fa-paw heading-decor-icon decor-pos-3" aria-hidden="true"></i>
-        <i class="fa-solid fa-circle-check heading-decor-icon decor-pos-4" aria-hidden="true"></i>
-
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
         <div class="heading-content">
-          <div class="heading-label">
-            <i class="fa-solid fa-circle-question" aria-hidden="true"></i> EXPERT ANSWERS
-          </div>
+          <span class="heading-label">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i> Expert Answers
+          </span>
           <h2>
             <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
             Rabbit Care <span>FAQs</span>

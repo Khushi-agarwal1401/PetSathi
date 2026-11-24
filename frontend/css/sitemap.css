@@ -249,7 +249,7 @@ body {
 }
 
 /* ==========================================================================
-   2. Section Heading Card (Platform Directory Heading)
+   2. Section Heading Card (Exact Dog Index Design)
    ========================================================================== */
 .sitemap-heading-wrap {
   width: min(1160px, calc(100% - 48px));
@@ -258,11 +258,11 @@ body {
   z-index: 3;
 }
 
-.cat-topics-heading,
+.dog-topics-heading,
 .sitemap-topics-heading {
   position: relative;
   max-width: 1400px;
-  margin: 20px auto 16px;
+  margin: 45px auto 35px;
   padding: 44px 35px 38px;
   overflow: hidden;
   text-align: center;
@@ -294,91 +294,151 @@ body {
 
 .paw {
   position: absolute;
-  font-size: 26px;
-  color: #6a9c78;
-  opacity: 0.35;
-  pointer-events: none;
+  color: rgba(115, 173, 91, 0.28);
   z-index: 1;
+  pointer-events: none;
 }
 
-.paw-left-1 { top: 32px; left: 165px; transform: rotate(-22deg); }
-.paw-left-2 { bottom: 32px; left: 140px; transform: rotate(15deg); }
-.paw-right-1 { top: 32px; right: 165px; transform: rotate(22deg); }
-.paw-right-2 { bottom: 32px; right: 140px; transform: rotate(-15deg); }
+.paw-left-1 {
+  top: 66px;
+  left: 108px;
+  font-size: 58px;
+  transform: rotate(20deg);
+}
+
+.paw-left-2 {
+  bottom: 24px;
+  left: 82px;
+  font-size: 38px;
+  transform: rotate(-15deg);
+}
+
+.paw-right-1 {
+  top: 60px;
+  right: 75px;
+  font-size: 56px;
+  transform: rotate(18deg);
+}
+
+.paw-right-2 {
+  bottom: 35px;
+  right: 140px;
+  font-size: 38px;
+  transform: rotate(-22deg);
+}
 
 .heading-content {
   position: relative;
   z-index: 2;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
 }
 
 .heading-label {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 7px 20px !important;
-  margin: 0 auto 16px auto !important;
-  border-radius: 50px !important;
-  background: #edf6df !important;
-  border: 1px solid #dcebc9 !important;
-  color: #246b43 !important;
-  font-family: "DM Sans", "Manrope", sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1.2px !important;
-  text-transform: uppercase !important;
-  box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 20px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background: #edf6df;
+  border: 1px solid #dcebc9;
+  color: #246b43;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
+.dog-topics-heading h2,
 .sitemap-topics-heading h2 {
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(28px, 3.8vw, 44px) !important;
-  font-weight: 700 !important;
-  color: var(--dark, #1f2f26) !important;
-  margin: 0 auto 16px auto !important;
-  line-height: 1.2 !important;
-  position: relative !important;
-  display: inline-block !important;
-  text-align: center !important;
+  color: #263b30;
+  font-family: Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 700;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
+.dog-topics-heading h2 span,
 .sitemap-topics-heading h2 span {
-  color: var(--green, #286849) !important;
-  font-style: normal !important;
+  color: #28764a;
 }
 
 .heading-burst {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-flex;
-  gap: 4px;
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
-
-.heading-burst.left { left: -36px; }
-.heading-burst.right { right: -36px; }
 
 .heading-burst span {
-  display: inline-block;
-  width: 4px;
-  background: #7ca880;
-  border-radius: 2px;
+  position: absolute;
+  background: #60a872;
+  border-radius: 9999px;
 }
 
-.heading-burst span:nth-child(1) { height: 10px; opacity: 0.6; }
-.heading-burst span:nth-child(2) { height: 18px; }
-.heading-burst span:nth-child(3) { height: 10px; opacity: 0.6; }
+.heading-burst.left span {
+  right: 0;
+  transform-origin: right center;
+}
 
+.heading-burst.left span:nth-child(1) {
+  top: 3px;
+  width: 14px;
+  height: 2.8px;
+  transform: rotate(35deg);
+}
+
+.heading-burst.left span:nth-child(2) {
+  top: 11px;
+  width: 18px;
+  height: 2.8px;
+}
+
+.heading-burst.left span:nth-child(3) {
+  bottom: 3px;
+  width: 14px;
+  height: 2.8px;
+  transform: rotate(-35deg);
+}
+
+.heading-burst.right span {
+  left: 0;
+  transform-origin: left center;
+}
+
+.heading-burst.right span:nth-child(1) {
+  top: 3px;
+  width: 14px;
+  height: 2.8px;
+  transform: rotate(-35deg);
+}
+
+.heading-burst.right span:nth-child(2) {
+  top: 11px;
+  width: 18px;
+  height: 2.8px;
+}
+
+.heading-burst.right span:nth-child(3) {
+  bottom: 3px;
+  width: 14px;
+  height: 2.8px;
+  transform: rotate(35deg);
+}
+
+.dog-topics-heading p,
 .sitemap-topics-heading p {
   max-width: 720px;
   margin: 0 auto;
-  font-family: "DM Sans", "Manrope", sans-serif !important;
+  color: #64736a;
   font-size: 15px;
-  line-height: 1.7;
-  color: #55665c;
+  line-height: 1.65;
 }
 
 /* ==========================================================================

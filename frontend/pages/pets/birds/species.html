@@ -63,37 +63,6 @@
             font-weight: 400 !important;
         }
 
-        /* Breadcrumb Navigation */
-        .breadcrumb-nav {
-            width: min(1160px, calc(100% - 48px));
-            margin: 20px auto 0;
-            padding: 0;
-            font-size: 0.82rem;
-            color: var(--muted);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .breadcrumb-nav a {
-            color: var(--muted);
-            transition: color 0.2s;
-        }
-
-        .breadcrumb-nav a:hover {
-            color: var(--green);
-        }
-
-        .breadcrumb-separator {
-            opacity: 0.5;
-        }
-
-        .breadcrumb-current {
-            color: var(--green);
-            font-weight: 600;
-        }
-
         /* =========================================
            HERO SECTION (Matching Dog & Cat Index)
         ========================================= */
@@ -682,7 +651,7 @@
         .comparison-section {
             width: 100%;
             padding: 60px 24px 75px;
-            background: #f8faf6;
+            background: #f8faf6 !important;
             border-top: 1px solid #e2ebd0;
             border-bottom: 1px solid #e2ebd0;
         }
@@ -857,7 +826,7 @@
         ========================================= */
         .ownership-section-wrap {
             padding: 65px 0 75px;
-            background: #ffffff;
+            background: #ffffff !important;
         }
 
         .ownership-card {
@@ -990,7 +959,7 @@
 
         .bird-pink-cta {
             position: relative;
-            background: var(--bird-pink-bg);
+            background: var(--bird-pink-bg) !important;
             border: 1px solid var(--bird-pink-border);
             border-radius: 32px;
             padding: 44px 48px;
@@ -1001,7 +970,7 @@
             margin: 0 auto;
             max-width: 1160px;
             width: calc(100% - 48px);
-            box-shadow: 0 4px 24px rgba(214, 51, 108, 0.04);
+            box-shadow: none !important;
             overflow: hidden;
         }
 
@@ -1010,6 +979,8 @@
             background: transparent !important;
             border: none !important;
             border-radius: 0 !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
             padding: 0 !important;
             margin: 0 0 12px 0 !important;
             width: auto !important;
@@ -1190,17 +1161,6 @@
     <div id="header"></div>
 
     <main id="main-content">
-
-        <!-- Breadcrumbs -->
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-            <a href="../../../../index.html"><i class="fa-solid fa-house"></i> Home</a>
-            <span class="breadcrumb-separator">/</span>
-            <a href="../index.html">Pets</a>
-            <span class="breadcrumb-separator">/</span>
-            <a href="index.html">Birds</a>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" aria-current="page">Species</span>
-        </nav>
 
         <!-- =========================================
              1. MAIN HERO SECTION (Matching Dog & Cat Index)

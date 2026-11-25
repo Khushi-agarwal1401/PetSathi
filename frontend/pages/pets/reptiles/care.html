@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Complete Reptile Care Guide on PetSathi. Learn about reptile habitats, temperature gradients, humidity, UVB lighting, species-specific nutrition, daily care routines, hygiene, handling, and health monitoring."
+  />
+  <meta name="theme-color" content="#fafcf7" />
+  <title>Complete Reptile Care Guide | PetSathi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Core PetSathi Stylesheets -->
+  <link rel="stylesheet" href="../../../css/global.css" />
+  <link rel="stylesheet" href="../../../css/home.css" />
+  <link rel="stylesheet" href="../../../css/inner.css" />
+
+  <!-- Font Awesome 6.5.2 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    /* ========================================================
+       FONT AWESOME 6 FREE PROTECTION
+       ======================================================== */
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src:
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2")
+          format("woff2"),
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf")
+          format("truetype");
+    }
+
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src:
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.woff2")
+          format("woff2"),
+        url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.ttf")
+          format("truetype");
+    }
+
+    .fa-solid,
+    .fa-regular,
+    .fa-brands {
+      font-family: "Font Awesome 6 Free" !important;
+      font-style: normal !important;
+      font-variant: normal !important;
+      text-rendering: auto !important;
+      line-height: 1 !important;
+    }
+
+    .fa-solid {
+      font-weight: 900 !important;
+    }
+
+    .fa-regular {
+      font-weight: 400 !important;
+    }
+
+    /* ========================================================
+       PETSATHI THEME TOKENS & BASE
+       ======================================================== */
+    :root {
+      --rep-green-dark: #1b3d2b;
+      --rep-green-primary: #246b43;
+      --rep-green-accent: #28764a;
+      --rep-green-light: #edf7f0;
+      --rep-green-soft: #f4faf6;
+      --rep-border: #dcebc9;
+      --rep-card-border: #e2eddc;
+      --rep-cream: #fafcf7;
+      --rep-white: #ffffff;
+      --rep-ink: #1a251e;
+      --rep-muted: #55665c;
+      --rep-shadow: 0 4px 20px rgba(35, 75, 45, 0.05);
+      --rep-hover-shadow: 0 12px 28px rgba(35, 75, 45, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--rep-cream);
+      color: var(--rep-ink);
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    [id] {
+      scroll-margin-top: 95px;
+    }
+
+    /* ========================================================
+       1. HERO SECTION (Matches Cat/Dog Index)
+       ======================================================== */
+    .rep-badge-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: #eaf2e9;
+      color: var(--rep-green-primary);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy h1 em {
+      color: var(--rep-green-primary);
+      font-style: normal;
+    }
+
+    .hero-actions .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 9999px;
+      background: transparent !important;
+      color: var(--rep-green-primary) !important;
+      border: 1.5px solid var(--rep-green-primary) !important;
+      font-family: "DM Sans", "Manrope", sans-serif !important;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .hero-actions .button-outline:hover {
+      background: var(--rep-green-primary) !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(36, 107, 67, 0.2);
+    }
+
+    .floating-card i {
+      font-size: 1.25rem;
+      color: var(--rep-green-primary);
+      display: inline-block;
+      line-height: 1;
+    }
+
+    /* ========================================================
+       2. QUICK NAVIGATION HUB (Matches Cat Index)
+       ======================================================== */
+    .guides-nav-strip {
+      position: relative;
+      background: #ffffff;
+      margin: 40px auto;
+      max-width: 1200px;
+      width: calc(100% - 40px);
+      border: 1px solid #dceade;
+      border-radius: 32px;
+      padding: 42px 36px 38px;
+      box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
+      overflow: hidden;
+    }
+
+    .quick-nav-decor {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      color: #cde4d3;
+      opacity: 0.55;
+    }
+
+    .decor-top-left {
+      top: 14px;
+      left: 20px;
+    }
+
+    .decor-bottom-right {
+      bottom: 14px;
+      right: 20px;
+    }
+
+    .decor-paw {
+      font-size: 28px;
+      margin: 0 4px;
+    }
+
+    .quick-nav-header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .quick-nav-eyebrow-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .quick-nav-line {
+      height: 1px;
+      width: 48px;
+      background: #cde4d3;
+    }
+
+    .quick-nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: #edf6df;
+      border: 1px solid var(--rep-border);
+      color: var(--rep-green-primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .quick-nav-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: #263b30;
+      margin: 0;
+    }
+
+    .quick-nav-title span {
+      color: var(--rep-green-accent);
+    }
+
+    .guides-nav-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .guide-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 12px;
+      border-radius: 20px;
+      background: #f8fbf5;
+      border: 1px solid #e1efe3;
+      color: var(--rep-green-dark);
+      text-decoration: none;
+      transition: all 0.22s ease;
+      text-align: center;
+    }
+
+    .guide-nav-item:hover {
+      background: #edf7f0;
+      border-color: var(--rep-green-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(36, 107, 67, 0.08);
+    }
+
+    .guide-nav-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #dceade;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rep-green-primary);
+      font-size: 18px;
+    }
+
+    .guide-nav-label {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #263b30;
+    }
+
+    /* ========================================================
+       3. SIGNATURE SECTION HEADING CARDS (Matches Cats Index)
+       ======================================================== */
+    .cat-topics-heading {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      margin: 45px auto 35px;
+      padding: 44px 35px 38px;
+      overflow: hidden;
+      text-align: center;
+      border-radius: 35px;
+      border: 1px solid var(--rep-border);
+      background: var(--rep-cream);
+      box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+      box-sizing: border-box;
+    }
+
+    .corner-wave {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wave-tl {
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .wave-br {
+      bottom: 0;
+      right: 0;
+      width: 220px;
+      height: 130px;
+    }
+
+    .paw {
+      position: absolute;
+      color: rgba(115, 173, 91, 0.28);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .paw-left-1 {
+      top: 66px;
+      left: 108px;
+      font-size: 58px;
+      transform: rotate(20deg);
+    }
+
+    .paw-left-2 {
+      bottom: 24px;
+      left: 82px;
+      font-size: 38px;
+      transform: rotate(-15deg);
+    }
+
+    .paw-right-1 {
+      top: 60px;
+      right: 75px;
+      font-size: 56px;
+      transform: rotate(18deg);
+    }
+
+    .paw-right-2 {
+      bottom: 35px;
+      right: 140px;
+      font-size: 38px;
+      transform: rotate(-15deg);
+    }
+
+    .heading-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .heading-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 20px;
+      margin-bottom: 16px;
+      border-radius: 50px;
+      background: #edf6df;
+      border: 1px solid var(--rep-border);
+      color: var(--rep-green-primary);
+      font-family: "DM Sans", "Manrope", sans-serif !important;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
+    }
+
+    .heading-label i {
+      font-size: 14px;
+      color: var(--rep-green-primary);
+      line-height: 1;
+    }
+
+    .cat-topics-heading h2 {
+      color: #263b30;
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 700;
+      margin: 0 0 12px;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cat-topics-heading h2 span {
+      color: var(--rep-green-accent);
+    }
+
+    .cat-topics-heading p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #64736a;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .heading-burst {
+      display: inline-block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    .heading-burst span {
+      position: absolute;
+      background: #60a872;
+      border-radius: 9999px;
+    }
+
+    .heading-burst.left span {
+      right: 0;
+      transform-origin: right center;
+    }
+
+    .heading-burst.left span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    .heading-burst.left span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .heading-burst.left span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .heading-burst.right span {
+      left: 0;
+      transform-origin: left center;
+    }
+
+    .heading-burst.right span:nth-child(1) {
+      top: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(-35deg);
+    }
+
+    .heading-burst.right span:nth-child(2) {
+      top: 11px;
+      width: 18px;
+      height: 2.8px;
+    }
+
+    .heading-burst.right span:nth-child(3) {
+      bottom: 3px;
+      width: 14px;
+      height: 2.8px;
+      transform: rotate(35deg);
+    }
+
+    /* ========================================================
+       4. CLEAN ICON CARDS (Essential Topics, Daily Routine, Tips, Signs)
+       ======================================================== */
+    .rep-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 45px;
+    }
+
+    .rep-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 45px;
+    }
+
+    .rep-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 45px;
+    }
+
+    .care-card {
+      background: var(--rep-white);
+      border: 1px solid var(--rep-card-border);
+      border-radius: 22px;
+      padding: 30px 22px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: var(--rep-shadow);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .care-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--rep-hover-shadow);
+      border-color: #cce4d2;
+    }
+
+    .care-card-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: var(--rep-green-light);
+      color: var(--rep-green-primary);
+      border: 1px solid #d5eadb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .care-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--rep-green-dark);
+      margin: 0 0 10px;
+      line-height: 1.3;
+    }
+
+    .care-card p {
+      font-size: 0.9rem;
+      color: var(--rep-muted);
+      line-height: 1.62;
+      margin: 0;
+    }
+
+    /* ========================================================
+       5. IMAGE CARDS FOR HABITAT SETUP
+       ======================================================== */
+    .rep-image-card {
+      background: var(--rep-white);
+      border: 1px solid var(--rep-card-border);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--rep-shadow);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .rep-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--rep-hover-shadow);
+      border-color: #cce4d2;
+    }
+
+    .rep-image-card-media {
+      position: relative;
+      height: 190px;
+      background: #eef4ec;
+      overflow: hidden;
+    }
+
+    .rep-image-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .rep-image-card:hover .rep-image-card-media img {
+      transform: scale(1.04);
+    }
+
+    .rep-image-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--rep-green-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .rep-image-badge i {
+      color: var(--rep-green-primary);
+    }
+
+    .rep-image-card-body {
+      padding: 22px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .rep-image-card-body h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--rep-green-dark);
+      margin: 0 0 8px;
+    }
+
+    .rep-image-card-body p {
+      font-size: 0.9rem;
+      color: var(--rep-muted);
+      line-height: 1.62;
+      margin: 0;
+    }
+
+    /* ========================================================
+       6. CALLOUT BANNER (Species Variation & Vet Reminder)
+       ======================================================== */
+    .rep-notice-banner {
+      background: linear-gradient(135deg, #f3f8f1 0%, #ebf5ea 100%);
+      border: 1px solid #cce4d2;
+      border-radius: 24px;
+      padding: 28px 32px;
+      margin-bottom: 45px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0 4px 18px rgba(35, 75, 45, 0.04);
+    }
+
+    .rep-notice-icon {
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid #cce4d2;
+      color: var(--rep-green-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(35, 75, 45, 0.06);
+    }
+
+    .rep-notice-text h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      color: var(--rep-green-dark);
+      margin: 0 0 6px;
+    }
+
+    .rep-notice-text p {
+      margin: 0;
+      color: #405748;
+      font-size: 0.94rem;
+      line-height: 1.62;
+    }
+
+    /* ========================================================
+       7. FINAL CTA (Matches Cat Index)
+       ======================================================== */
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta .button.button-outline {
+      background: transparent !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.65) !important;
+      padding: 13px 24px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.25s ease;
+    }
+
+    .cta .button.button-outline:hover {
+      background: #ffffff !important;
+      color: var(--rep-green-primary) !important;
+      border-color: #ffffff !important;
+    }
+
+    /* ========================================================
+       8. RESPONSIVE BREAKPOINTS
+       ======================================================== */
+    @media (max-width: 1100px) {
+      .guides-nav-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .rep-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .rep-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rep-notice-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 26px 22px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .paw {
+        display: none;
+      }
+
+      .guides-nav-grid,
+      .rep-grid-4,
+      .rep-grid-3,
+      .rep-grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .guides-nav-strip {
+        padding: 26px 18px;
+      }
+
+      .cta-actions {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 18px;
+      }
+
+      .cta-actions .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Reusable Header Placeholder -->
+  <div id="header"></div>
+
+  <main>
+    <!-- ========================================================
+         1. MAIN HERO SECTION
+         ======================================================== -->
+    <section class="hero section-wrap" id="reptile-care-hero">
+      <div class="hero-copy">
+        <div class="rep-badge-strip">
+          <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+          <span>REPTILE WELLNESS &bull; PETSATHI CARE GUIDE</span>
+        </div>
+        <h1>Complete <em>Reptile Care</em> Guide</h1>
+        <p class="hero-lead">
+          Responsible reptile keeping goes beyond providing a simple tank. Because reptiles are ectothermic and rely on their environment to regulate body temperature, digestion, and immunity, thriving care depends on species-specific habitats, calibrated thermal gradients, proper humidity, UVB lighting, balanced nutrition, and calm daily routines.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#essential-topics" id="hero-cta-topics">
+            Explore Care Topics <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+          <a class="button button-outline" href="reptiles.html" id="hero-cta-hub">
+            Reptiles Overview
+          </a>
+        </div>
+        <div class="hero-note">
+          <i class="fa-solid fa-circle-check" style="color: var(--rep-green-primary);" aria-hidden="true"></i>
+          &nbsp; Tailored to desert, tropical, and semi-aquatic species needs.
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+        <img
+          src="../../../assets/images/reptiles/bearded-dragon.jpg"
+          alt="Healthy bearded dragon basking calmly in a naturalistic terrarium"
+          class="hero-photo"
+          id="hero-reptile-care-image"
+        />
+        <div class="floating-card card-top">
+          <i class="fa-solid fa-temperature-half" aria-hidden="true"></i>
+          <span>
+            <b>Thermal &amp; UVB Balance</b>
+            <small>Species-calibrated zones</small>
+          </span>
+        </div>
+        <div class="floating-card card-bottom">
+          <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+          <span>
+            <b>Clean &amp; Calm Habitats</b>
+            <small>Low-stress daily routines</small>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         QUICK NAVIGATION HUB
+         ======================================================== -->
+    <nav class="guides-nav-strip" aria-label="Quick Navigation">
+      <div class="quick-nav-decor decor-top-left" aria-hidden="true">
+        <i class="fa-solid fa-paw decor-paw"></i>
+        <i class="fa-solid fa-paw decor-paw"></i>
+      </div>
+      <div class="quick-nav-decor decor-bottom-right" aria-hidden="true">
+        <i class="fa-solid fa-paw decor-paw"></i>
+        <i class="fa-solid fa-paw decor-paw"></i>
+      </div>
+
+      <div class="quick-nav-header">
+        <div class="quick-nav-eyebrow-wrap">
+          <span class="quick-nav-line"></span>
+          <div class="quick-nav-badge">
+            <i class="fa-regular fa-compass" aria-hidden="true"></i>
+            <span>QUICK NAVIGATION</span>
+          </div>
+          <span class="quick-nav-line"></span>
+        </div>
+        <h2 class="quick-nav-title">
+          Jump to <span>Reptile Care Sections</span>
+        </h2>
+      </div>
+
+      <div class="guides-nav-grid">
+        <a class="guide-nav-item" href="#essential-topics">
+          <span class="guide-nav-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Essential Topics</span>
+        </a>
+        <a class="guide-nav-item" href="#habitat-setup">
+          <span class="guide-nav-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Habitat Setup</span>
+        </a>
+        <a class="guide-nav-item" href="#feeding-nutrition">
+          <span class="guide-nav-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Feeding &amp; Diet</span>
+        </a>
+        <a class="guide-nav-item" href="#daily-routine">
+          <span class="guide-nav-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Daily Routine</span>
+        </a>
+        <a class="guide-nav-item" href="#warning-signs">
+          <span class="guide-nav-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Health Signs</span>
+        </a>
+        <a class="guide-nav-item" href="#care-tips">
+          <span class="guide-nav-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Care Tips</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ========================================================
+         2. ESSENTIAL REPTILE CARE TOPICS (8 Cards)
+         ======================================================== -->
+    <section class="section-wrap" id="essential-topics">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i> Core Care Pillars
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Essential <span>Reptile Care Topics</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            Every reptile relies on eight interconnected pillars of husbandry. Mastering these fundamentals prevents common illnesses and supports natural behaviors.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-4">
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
+          <h3>Habitat Setup</h3>
+          <p>Choosing a secure, properly sized enclosure that gives your reptile room to stretch, explore, and thermoregulate comfortably.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-temperature-three-quarters" aria-hidden="true"></i></div>
+          <h3>Temperature Control</h3>
+          <p>Maintaining species-appropriate thermal gradients with thermostat-regulated basking spots and cooler retreat areas.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+          <h3>Humidity Management</h3>
+          <p>Providing accurate moisture levels matched to arid, temperate, or tropical habitats using digital hygrometers.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
+          <h3>Lighting &amp; UVB</h3>
+          <p>Supplying appropriate day-night light cycles and linear UVB output for vitamin D3 synthesis and strong bone health.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-carrot" aria-hidden="true"></i></div>
+          <h3>Feeding &amp; Nutrition</h3>
+          <p>Delivering a balanced, species-specific diet with fresh greens, gut-loaded feeders, or whole prey as appropriate.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-soap" aria-hidden="true"></i></div>
+          <h3>Cleanliness &amp; Hygiene</h3>
+          <p>Spot-cleaning waste promptly, refreshing water bowls daily, and sanitizing surfaces with reptile-safe cleansers.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
+          <h3>Handling &amp; Interaction</h3>
+          <p>Supporting the reptile's full body calmly, respecting shedding or digestion rest periods, and minimizing unnecessary stress.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+          <h3>Health Monitoring</h3>
+          <p>Observing daily changes in appetite, alertness, shedding quality, droppings, and posture to catch issues early.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. HABITAT & ENCLOSURE SETUP
+         ======================================================== -->
+    <section class="section-wrap" id="habitat-setup">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> Vivarium Engineering
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Habitat &amp; <span>Enclosure Setup</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            A well-designed enclosure replicates the microclimates of your reptile's native ecosystem while keeping escape risks and respiratory hazards at zero.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-3">
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Space</span>
+            <img src="../../../assets/images/reptiles/blue-tongued-skink.jpg" alt="Blue-tongued skink in a spacious terrarium enclosure" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Correct Enclosure Size</h3>
+            <p>Select dimensions based on adult length and activity style. Terrestrial lizards and snakes need horizontal floor space, while arboreal species require vertical height.</p>
+          </div>
+        </article>
+
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Substrate &amp; Hides</span>
+            <img src="../../../assets/images/reptiles/ball-python.jpg" alt="Ball python resting comfortably near naturalistic hide and substrate" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Substrate &amp; Hiding Places</h3>
+            <p>Use safe, dust-free substrates such as paper towels, slate tile, cypress mulch, or organic soil blends, paired with snug hides on both the warm and cool sides.</p>
+          </div>
+        </article>
+
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-sun" aria-hidden="true"></i> Thermal Gradient</span>
+            <img src="../../../assets/images/reptiles/bearded-dragon.jpg" alt="Bearded dragon warming under a controlled basking zone" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Basking &amp; Cooler Zones</h3>
+            <p>Position overhead heat lamps at one end of the vivarium so your reptile can move freely between a warm basking spot and a shaded cool retreat.</p>
+          </div>
+        </article>
+
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-wind" aria-hidden="true"></i> Airflow</span>
+            <img src="../../../assets/images/reptiles/leopard-gecko.jpg" alt="Leopard gecko in a well-ventilated dry enclosure" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Proper Ventilation</h3>
+            <p>Balanced cross-ventilation prevents stagnant air, mold growth, and respiratory infections while still retaining the humidity level your species requires.</p>
+          </div>
+        </article>
+
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-tree" aria-hidden="true"></i> Climbing &amp; Branches</span>
+            <img src="../../../assets/images/reptiles/crested-gecko.png" alt="Crested gecko climbing foliage and branches in an arboreal setup" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Climbing &amp; Arboreal Zones</h3>
+            <p>Provide sturdy branches, cork bark, and leafy coverage for tree-dwelling geckos and chameleons to climb, perch, and drink water droplets safely.</p>
+          </div>
+        </article>
+
+        <article class="rep-image-card">
+          <div class="rep-image-card-media">
+            <span class="rep-image-badge"><i class="fa-solid fa-water" aria-hidden="true"></i> Swimming &amp; Burrowing</span>
+            <img src="../../../assets/images/reptiles/red-eared-slider.jpg" alt="Red-eared slider turtle resting beside clean filtered water" loading="lazy" />
+          </div>
+          <div class="rep-image-card-body">
+            <h3>Swimming &amp; Burrowing Areas</h3>
+            <p>Semi-aquatic turtles need filtered swimming depths with dry basking docks, whereas tortoises and burrowing snakes thrive with deep digging substrates.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. FEEDING & NUTRITION
+         ======================================================== -->
+    <section class="section-wrap" id="feeding-nutrition">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Dietary Groups
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Feeding &amp; <span>Species Nutrition</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            Reptile diets fall into four main categories. Portion sizes, meal frequency, and calcium supplementation vary significantly by species, age, and health.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-4">
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
+          <h3>Herbivorous Reptiles</h3>
+          <p>Species like Russian tortoises and green iguanas eat plant-based diets rich in collard greens, dandelion greens, mustard greens, squash, and safe weeds.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></div>
+          <h3>Carnivorous Reptiles</h3>
+          <p>Snakes such as ball pythons and corn snakes require appropriately sized, ethically sourced frozen-thawed whole prey offered on a species-specific schedule.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-bug" aria-hidden="true"></i></div>
+          <h3>Insectivorous Reptiles</h3>
+          <p>Leopard geckos and many chameleons thrive on gut-loaded crickets, dubia roaches, and black soldier fly larvae dusted with calcium powder.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+          <h3>Omnivorous Reptiles</h3>
+          <p>Bearded dragons and blue-tongued skinks need both leafy vegetables and feeder insects or protein, with plant ratios increasing as they reach adulthood.</p>
+        </article>
+      </div>
+
+      <div class="rep-notice-banner">
+        <div class="rep-notice-icon">
+          <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+        </div>
+        <div class="rep-notice-text">
+          <h3>Feeding Needs Vary by Species, Age &amp; Health</h3>
+          <p>
+            Juvenile reptiles typically eat more frequently to fuel rapid growth, whereas adults need fewer, carefully portioned meals to prevent obesity. Always match feeder size to the width between your reptile's eyes and verify calcium-to-D3 ratios for your specific UVB setup.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. DAILY CARE ROUTINE (3 Cards)
+         ======================================================== -->
+    <section class="section-wrap" id="daily-routine">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i> Consistent Husbandry
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Daily <span>Care Routine</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            A structured morning, midday, and evening check keeps environmental parameters steady and helps you spot subtle behavioral shifts early.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-3">
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
+          <h3>Morning Care</h3>
+          <p>Verify daytime heat and UVB timers turned on properly, check digital thermometer and hygrometer readings, scrub and refill fresh water bowls, and observe morning alertness.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+          <h3>Feeding &amp; Observation</h3>
+          <p>Follow your reptile's species-specific feeding schedule, dust or gut-load meals as needed, monitor appetite and posture, and promptly remove uneaten food or soiled substrate.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-moon" aria-hidden="true"></i></div>
+          <h3>Evening Care</h3>
+          <p>Confirm basking and UVB lights switch off for natural nighttime darkness, mist nocturnal or tropical habitats if required, verify night temperatures, and double-check enclosure locks.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. SIGNS YOUR REPTILE NEEDS ATTENTION
+         ======================================================== -->
+    <section class="section-wrap" id="warning-signs">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Early Detection
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Signs Your Reptile <span>Needs Attention</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            Reptiles often hide illness until it becomes serious. Watch closely for these warning signs and consult an exotic veterinarian promptly if they appear.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-3">
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
+          <h3>Loss of Appetite</h3>
+          <p>Refusing multiple consecutive meals outside normal shedding or seasonal brumation cycles can point to improper temperatures, parasites, or stress.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-bed" aria-hidden="true"></i></div>
+          <h3>Unusual Inactivity</h3>
+          <p>Persistent lethargy, sunken eyes, or remaining hidden all day during normal active hours warrants an immediate check of habitat temperatures and hydration.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+          <h3>Abnormal Shedding</h3>
+          <p>Retained skin around toes, tail tips, or eye caps can restrict circulation and vision, often signaling insufficient humidity or dehydration.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div>
+          <h3>Changes in Breathing</h3>
+          <p>Open-mouth breathing, wheezing, clicking sounds, or bubbles around the nostrils are classic indicators of a respiratory infection needing veterinary care.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-bandage" aria-hidden="true"></i></div>
+          <h3>Swelling or Visible Injuries</h3>
+          <p>Swollen limbs, soft jawlines, thermal burns, cuts, or discolored scales require prompt evaluation to prevent infection or metabolic bone disease.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
+          <h3>Consult a Reptile Vet</h3>
+          <p>Whenever concerning symptoms appear, seek guidance from a qualified exotic or reptile veterinarian rather than relying on unverified home remedies.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. REPTILE CARE TIPS (6 Cards)
+         ======================================================== -->
+    <section class="section-wrap" id="care-tips">
+      <div class="cat-topics-heading">
+        <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+          <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6" opacity="0.95" />
+        </svg>
+        <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+        <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+        <div class="heading-content">
+          <span class="heading-label">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Best Practices
+          </span>
+          <h2>
+            <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+            Practical <span>Reptile Care Tips</span>
+            <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <p>
+            Keep these six essential reminders in mind to create a safe, low-stress, and enriching home for your scaly companion.
+          </p>
+        </div>
+      </div>
+
+      <div class="rep-grid-3">
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+          <h3>Research Species Needs</h3>
+          <p>Never apply one reptile's setup to another. Verify exact adult enclosure size, diet, UVB index, and climate requirements for your exact species.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+          <h3>Monitor Heat &amp; Humidity</h3>
+          <p>Avoid incorrect temperature and humidity swings by pairing every heat source with a dimming or pulse thermostat and reliable digital probes.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-glass-water" aria-hidden="true"></i></div>
+          <h3>Provide Fresh Water</h3>
+          <p>Change drinking and soaking water daily, scrubbing bowls to prevent biofilm buildup, and use dechlorinated water when appropriate for your species.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+          <h3>Maintain Hygiene</h3>
+          <p>Spot-clean droppings and shed remnants promptly, perform scheduled deep cleans with pet-safe disinfectants, and wash hands before and after contact.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-hand" aria-hidden="true"></i></div>
+          <h3>Avoid Excessive Handling</h3>
+          <p>Keep handling sessions calm and brief, and allow reptiles to rest undisturbed for 48 hours after feeding or during active shedding.</p>
+        </article>
+
+        <article class="care-card">
+          <div class="care-card-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+          <h3>Schedule Vet Checkups</h3>
+          <p>Establish a relationship with an exotic veterinarian for annual wellness exams and routine fecal screenings to keep your reptile thriving long-term.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         8. FINAL CTA SECTION (Matches Cat Index)
+         ======================================================== -->
+    <section class="cta section-wrap" id="reptile-care-cta">
+      <div>
+        <div class="eyebrow">RESPONSIBLE REPTILE CARE</div>
+        <h2>Build a Thriving Home for <em>Every Scale.</em></h2>
+        <p>
+          Pair a properly calibrated vivarium with balanced, species-specific nutrition and attentive daily observation. Explore our other reptile guides to support your companion at every life stage.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a class="button button-light" href="nutrition.html" id="cta-nutrition-guide">
+          Explore Reptile Nutrition <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="button button-outline" href="reptiles.html" id="cta-reptiles-hub">
+          Back to Reptiles Hub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Footer Placeholder -->
+  <div id="footer"></div>
+
+  <!-- Shared PetSathi Script -->
+  <script src="../../../js/main.js"></script>
+</body>
+
+</html>

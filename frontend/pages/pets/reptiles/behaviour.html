@@ -1,0 +1,1655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Understand reptile behaviour, body language, natural instincts, stress signals, and responsible interaction. Learn about basking, hiding, feeding patterns, and species-specific behaviours on PetSathi."
+    />
+    <title>Reptile Behaviour Guide | PetSathi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/home.css" />
+    <link rel="stylesheet" href="../../../css/inner.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* ========================================================
+         REPTILE BEHAVIOUR PAGE STYLES
+         Aligned with PetSathi Cats page design patterns
+         ======================================================== */
+
+      @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 900;
+        font-display: block;
+        src:
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2")
+            format("woff2"),
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf")
+            format("truetype");
+      }
+
+      /* Protect Font Awesome 6 Free & Brands from global.css font override */
+      body .fa-solid,
+      body .fa-regular {
+        font-family: "Font Awesome 6 Free" !important;
+        font-style: normal !important;
+        font-variant: normal !important;
+        text-rendering: auto !important;
+        line-height: 1 !important;
+      }
+
+      body .fa-solid {
+        font-weight: 900 !important;
+      }
+
+      body .fa-regular {
+        font-weight: 400 !important;
+      }
+
+      body .fa-brands {
+        font-family: "Font Awesome 6 Brands" !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+      }
+
+      /* Accessible focus visibility */
+      :where(a, button):focus-visible {
+        outline: 3px solid var(--green);
+        outline-offset: 3px;
+      }
+
+      /* Hero Section Enhancements (layout & arch photo inherited from home.css) */
+      .rep-badge-strip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background: #eaf2e9;
+        color: var(--green);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .hero-copy h1 em {
+        color: var(--green);
+        font-style: normal;
+      }
+
+      .hero-actions .button-outline {
+        background: transparent;
+        color: var(--green);
+        border: 1.5px solid var(--green);
+      }
+
+      .hero-actions .button-outline:hover {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .hero-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-note i {
+        color: var(--green);
+      }
+
+      .hero-visual .floating-card i {
+        color: var(--green);
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      /* Section Rhythm */
+      .beh-section {
+        padding-block: 56px;
+      }
+
+      /* Section Heading Banner - Matching Cats page (.cat-topics-heading)
+         Prefix with main to match global.css main [class*="section"] specificity */
+      main .section-heading-wrap {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto 36px;
+        padding: 44px 35px 38px;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 35px;
+        border: 1px solid #dcebc9;
+        background-color: #fafcf7 !important;
+        box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+      }
+
+      .corner-wave {
+        position: absolute;
+        width: 220px;
+        height: 130px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .wave-tl {
+        top: 0;
+        left: 0;
+      }
+
+      .wave-br {
+        bottom: 0;
+        right: 0;
+      }
+
+      .paw {
+        position: absolute;
+        color: rgba(115, 173, 91, 0.28);
+        z-index: 1;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      .paw-left-1 {
+        top: 66px;
+        left: 108px;
+        font-size: 58px;
+        transform: rotate(20deg);
+      }
+
+      .paw-left-2 {
+        bottom: 24px;
+        left: 82px;
+        font-size: 38px;
+        transform: rotate(-15deg);
+      }
+
+      .paw-right-1 {
+        top: 60px;
+        right: 75px;
+        font-size: 56px;
+        transform: rotate(18deg);
+      }
+
+      .paw-right-2 {
+        bottom: 35px;
+        right: 140px;
+        font-size: 38px;
+        transform: rotate(-15deg);
+      }
+
+      .heading-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .heading-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 20px;
+        margin-bottom: 16px;
+        border-radius: 50px;
+        background: #edf6df;
+        border: 1px solid #dcebc9;
+        color: #246b43;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
+      }
+
+      .heading-label i {
+        font-size: 14px;
+        color: #246b43;
+        line-height: 1;
+      }
+
+      .heading-content h2 {
+        color: #263b30;
+        font-size: clamp(24px, 3.2vw, 36px);
+        font-weight: 700;
+        margin: 0 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        line-height: 1.2;
+      }
+
+      .heading-content h2 span {
+        color: #28764a;
+      }
+
+      .heading-burst {
+        display: inline-block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        vertical-align: middle;
+      }
+
+      .heading-burst span {
+        position: absolute;
+        background: #60a872;
+        border-radius: 9999px;
+      }
+
+      .heading-burst.left span {
+        right: 0;
+        transform-origin: right center;
+      }
+
+      .heading-burst.left span:nth-child(1) {
+        top: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(35deg);
+      }
+
+      .heading-burst.left span:nth-child(2) {
+        top: 11px;
+        width: 18px;
+        height: 2.8px;
+      }
+
+      .heading-burst.left span:nth-child(3) {
+        bottom: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(-35deg);
+      }
+
+      .heading-burst.right span {
+        left: 0;
+        transform-origin: left center;
+      }
+
+      .heading-burst.right span:nth-child(1) {
+        top: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(-35deg);
+      }
+
+      .heading-burst.right span:nth-child(2) {
+        top: 11px;
+        width: 18px;
+        height: 2.8px;
+      }
+
+      .heading-burst.right span:nth-child(3) {
+        bottom: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(35deg);
+      }
+
+      .heading-content p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #64736a;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      /* Section 2: Understanding Reptile Behaviour (8 Balanced Cards: 4x2 Grid) */
+      .behaviour-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .behaviour-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease,
+          border-color 0.24s ease;
+      }
+
+      .behaviour-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: #cbd9ce;
+      }
+
+      .behaviour-card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: #eaf2e9;
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+        transition:
+          background 0.24s ease,
+          color 0.24s ease;
+      }
+
+      .behaviour-card:hover .behaviour-card-icon {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .behaviour-card h3 {
+        font-size: 1.12rem;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--ink);
+        line-height: 1.3;
+      }
+
+      .behaviour-card p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      /* Section 3: Common Behaviour Signs (6 Balanced Cards: 3x2 Grid) */
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .sign-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease,
+          border-color 0.24s ease;
+      }
+
+      .sign-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: #cbd9ce;
+      }
+
+      .sign-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: #edf7f0;
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+        transition:
+          background 0.24s ease,
+          color 0.24s ease;
+      }
+
+      .sign-card:hover .sign-icon {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .sign-card h3 {
+        font-size: 1.12rem;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--ink);
+      }
+
+      .sign-card p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* Section 4: Stress & Discomfort Cards (6 Balanced Cards: 3x2 Grid) */
+      .stress-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .stress-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-left: 4px solid #d97736;
+        border-radius: 18px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease,
+          border-color 0.24s ease;
+      }
+
+      .stress-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: #cbd9ce;
+        border-left-color: #c25e1e;
+      }
+
+      .stress-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: #fff4eb;
+        color: #b45309;
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        margin-bottom: 14px;
+      }
+
+      .stress-card h3 {
+        font-size: 1.08rem;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--ink);
+      }
+
+      .stress-card p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* Sections 5 & 6: Environment & Safe Handling Panels */
+      .content-panel {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 36px;
+        box-shadow: 0 4px 20px rgba(35, 75, 45, 0.03);
+      }
+
+      .content-panel h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0 0 22px;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .content-panel h3 i {
+        color: var(--green);
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .content-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px;
+        background: #fafcf7;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .content-item:hover {
+        transform: translateY(-2px);
+        border-color: #cbd9ce;
+      }
+
+      .content-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: #eaf2e9;
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .content-item h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0 0 6px;
+        color: var(--ink);
+      }
+
+      .content-item p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* Section 7: Final CTA Section (Exact alignment with cats/index.html) */
+      .cta {
+        margin-top: 24px;
+        margin-bottom: 92px;
+        border: 1px solid #e6d6c6;
+      }
+
+      .cta-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+      }
+
+      .cta .button-outline {
+        background: transparent;
+        color: var(--green);
+        border: 1.5px solid var(--green);
+      }
+
+      .cta .button-outline:hover {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .cta > div:first-child {
+        text-align: left;
+      }
+
+      .cta > div:first-child .eyebrow,
+      .cta > div:first-child h2,
+      .cta > div:first-child p {
+        text-align: left !important;
+      }
+
+      /* Responsive Breakpoints */
+      @media (max-width: 1080px) {
+        .behaviour-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 960px) {
+        .signs-grid,
+        .stress-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .beh-section {
+          padding-block: 42px;
+        }
+
+        main .section-heading-wrap {
+          margin: 0 auto 26px;
+          padding: 34px 18px 28px;
+          border-radius: 24px;
+        }
+
+        .corner-wave {
+          width: 165px;
+          height: 100px;
+        }
+
+        .paw-left-1 {
+          left: 35px;
+          top: 25px;
+          font-size: 34px;
+        }
+
+        .paw-left-2 {
+          left: 18px;
+          bottom: 14px;
+          font-size: 24px;
+        }
+
+        .paw-right-1 {
+          right: 25px;
+          top: 25px;
+          font-size: 34px;
+        }
+
+        .paw-right-2 {
+          right: 65px;
+          bottom: 14px;
+          font-size: 24px;
+        }
+
+        .heading-content h2 {
+          font-size: clamp(20px, 5vw, 26px);
+          gap: 8px;
+        }
+
+        .heading-content p {
+          font-size: 14px;
+        }
+
+        .heading-label {
+          font-size: 11px;
+          padding: 6px 14px;
+          margin-bottom: 12px;
+        }
+
+        .heading-burst {
+          width: 16px;
+          height: 18px;
+        }
+
+        .heading-burst span:nth-child(1),
+        .heading-burst span:nth-child(3) {
+          width: 10px;
+        }
+
+        .heading-burst span:nth-child(2) {
+          width: 13px;
+        }
+
+        .behaviour-grid,
+        .signs-grid,
+        .stress-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .content-panel {
+          padding: 24px 18px;
+        }
+
+        .cta-actions {
+          width: 100%;
+          flex-direction: column;
+          margin-top: 18px;
+        }
+
+        .cta-actions .button {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main>
+      <!-- 1. Main Hero Section -->
+      <section class="hero section-wrap" id="reptile-behaviour-hero">
+        <div class="hero-copy">
+          <div class="rep-badge-strip">
+            <i class="fa-solid fa-dragon" aria-hidden="true"></i>
+            <span>PetSathi &bull; Reptile Behaviour Guide</span>
+          </div>
+          <h1>Understanding <em>Reptile Behaviour</em></h1>
+          <p>
+            Reptiles communicate through subtle body language, natural instincts,
+            and environmental responses shaped over millions of years. Learning to
+            read these signals helps you support natural routines, minimize stress,
+            and care responsibly for your cold-blooded companion.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button"
+              href="#understanding-behaviour"
+              id="hero-cta-understanding"
+              >Explore Behaviour Guide ↓</a
+            >
+            <a
+              class="button button-outline"
+              href="#behaviour-signs"
+              id="hero-cta-signs"
+              >Common Behaviour Signs ↓</a
+            >
+          </div>
+          <div class="hero-note">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <span>Dedicated to understanding and respecting reptile nature.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <img
+            src="https://images.unsplash.com/photo-1532666331191-78776c6a6e32?auto=format&fit=crop&w=1000&q=85"
+            alt="Bearded dragon displaying natural basking behaviour on a rock under warm light"
+            class="hero-photo"
+            id="hero-reptile-image"
+            width="1000"
+            height="667"
+            fetchpriority="high"
+          />
+          <div class="floating-card card-top">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <span
+              ><b>Basking Instinct</b>
+              <small>Thermoregulation is essential</small></span
+            >
+          </div>
+          <div class="floating-card card-bottom">
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            <span
+              ><b>Watch &amp; Learn</b>
+              <small>Subtle cues reveal wellbeing</small></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Understanding Reptile Behaviour (8 Cards: Icon -> Title -> Short Description) -->
+      <section class="beh-section section-wrap" id="understanding-behaviour">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="paw paw-left-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-left-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+
+          <div class="heading-content">
+            <span class="heading-label"
+              ><i class="fa-solid fa-brain" aria-hidden="true"></i> Core
+              Behavioural Concepts</span
+            >
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Understanding <span>Reptile Behaviour</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+            <p>
+              Reptiles express their needs through instinctual routines,
+              postures, and responses to their habitat. These eight core concepts
+              help you interpret your reptile's daily habits accurately.
+            </p>
+          </div>
+        </div>
+
+        <div class="behaviour-grid">
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+            </div>
+            <h3>Natural Instincts</h3>
+            <p>
+              Reptiles retain innate instincts such as hunting, foraging,
+              hiding, and basking. Supporting these natural behaviours in
+              captivity promotes mental stimulation and physical wellbeing.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-hand" aria-hidden="true"></i>
+            </div>
+            <h3>Body Language</h3>
+            <p>
+              Movement speed, posture, and stance reveal comfort or alertness.
+              A relaxed reptile explores calmly, while sudden rigidity, flattened
+              ribs, or puffed throats often indicate tension.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-flag" aria-hidden="true"></i>
+            </div>
+            <h3>Territorial Behaviour</h3>
+            <p>
+              Many lizards and tortoises establish and guard personal spaces,
+              especially when mature or during breeding cycles. Generous
+              enclosures and visual barriers help reduce territorial stress.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </div>
+            <h3>Basking Behaviour</h3>
+            <p>
+              Because reptiles are ectothermic, they seek warm basking zones to
+              raise body temperature for digestion, energy, and immune health,
+              then move to cooler areas when warm enough.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-bed" aria-hidden="true"></i>
+            </div>
+            <h3>Hiding &amp; Resting</h3>
+            <p>
+              Concealed shelters help reptiles feel secure from perceived
+              predators and rest undisturbed. Providing hides on both warm and
+              cool sides allows resting without sacrificing thermoregulation.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+            </div>
+            <h3>Feeding Behaviour</h3>
+            <p>
+              Feeding styles differ widely—ambush snakes wait quietly, active
+              lizards pursue insects, and herbivorous tortoises graze steadily.
+              Knowing your species' hunting rhythm helps spot appetite shifts.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h3>Defensive Behaviour</h3>
+            <p>
+              Hissing, tail whipping, gaping, puffing up, or retreating are
+              self-protective reactions when a reptile feels cornered or
+              startled—never malice. Giving space restores calm quickly.
+            </p>
+          </article>
+
+          <article class="behaviour-card">
+            <div class="behaviour-card-icon">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+            </div>
+            <h3>Social Behaviour</h3>
+            <p>
+              Social needs vary sharply across species. Most snakes and many
+              lizards are strictly solitary and stress when cohoused, whereas a
+              few species tolerate carefully planned space-shared habitats.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Common Reptile Behaviour Signs (6 Cards) -->
+      <section class="beh-section section-wrap" id="behaviour-signs">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="paw paw-left-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-left-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+
+          <div class="heading-content">
+            <span class="heading-label"
+              ><i class="fa-solid fa-eye" aria-hidden="true"></i> Observable
+              Signals</span
+            >
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Common Reptile <span>Behaviour Signs</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+            <p>
+              Recognizing everyday physical signals helps you respond
+              appropriately. Always interpret signals in context—meaning varies
+              significantly by species and individual temperament.
+            </p>
+          </div>
+        </div>
+
+        <div class="signs-grid">
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-arrows-up-down" aria-hidden="true"></i>
+            </div>
+            <h3>Head Bobbing</h3>
+            <p>
+              Up-and-down head movements seen in some lizard species such as
+              bearded dragons, iguanas, and anoles. Depending on speed and
+              species, it can signal territory assertion, courtship, or greeting.
+            </p>
+          </article>
+
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-wave-square" aria-hidden="true"></i>
+            </div>
+            <h3>Tail Waving</h3>
+            <p>
+              Slow swaying or quick tail tip twitching serves different roles by
+              species. In leopard geckos, slow waving is often a defensive alert,
+              while rapid twitching may occur just before striking prey.
+            </p>
+          </article>
+
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-wind" aria-hidden="true"></i>
+            </div>
+            <h3>Tongue Flicking</h3>
+            <p>
+              Used by snakes and many lizards (like monitors and blue-tongued
+              skinks) to gather scent molecules and transfer them to the
+              Jacobson's organ—a normal way of exploring surroundings or food.
+            </p>
+          </article>
+
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+            </div>
+            <h3>Hissing</h3>
+            <p>
+              A forceful breath expulsion seen in certain snakes, lizards, and
+              tortoises when startled or overwhelmed. It is a clear warning to
+              step back and reduce stimulation—not aggression.
+            </p>
+          </article>
+
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </div>
+            <h3>Basking</h3>
+            <p>
+              Moving under a heat lamp or sunlight and flattening the body to
+              absorb warmth. Vital for ectothermic digestion and UVB synthesis,
+              though clinging constantly to heat may point to low ambient heat.
+            </p>
+          </article>
+
+          <article class="sign-card">
+            <div class="sign-icon">
+              <i class="fa-solid fa-house" aria-hidden="true"></i>
+            </div>
+            <h3>Hiding</h3>
+            <p>
+              Retreating into caves, bark, or burrows provides natural comfort
+              and security—especially for nocturnal or crepuscular species.
+              Normal hiding differs from sudden withdrawal or illness.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. Understanding Stress & Discomfort (6 Cards) -->
+      <section class="beh-section section-wrap" id="stress-discomfort">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="paw paw-left-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-left-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+
+          <div class="heading-content">
+            <span class="heading-label"
+              ><i
+                class="fa-solid fa-triangle-exclamation"
+                aria-hidden="true"
+              ></i>
+              Recognizing Distress</span
+            >
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Understanding <span>Stress &amp; Discomfort</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+            <p>
+              Behaviour changes can stem from multiple causes. Evaluate these
+              warning signs alongside habitat temperatures, humidity, lighting,
+              recent changes, and overall physical health—and consult a
+              reptile-experienced veterinarian if concerns persist.
+            </p>
+          </div>
+        </div>
+
+        <div class="stress-grid">
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-eye-slash" aria-hidden="true"></i>
+            </div>
+            <h3>Frequent Hiding or Unusual Withdrawal</h3>
+            <p>
+              Staying hidden far more than usual for the species, or skipping
+              normal basking and feeding windows, can indicate incorrect thermal
+              zones, excessive noise, lack of cover, or underlying illness.
+            </p>
+          </article>
+
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-door-open" aria-hidden="true"></i>
+            </div>
+            <h3>Repeated Attempts to Escape the Enclosure</h3>
+            <p>
+              Relentless pacing, glass surfing, or pushing at screen lids often
+              points to an undersized terrarium, overly high heat, reflection
+              stress, or breeding restlessness.
+            </p>
+          </article>
+
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+            </div>
+            <h3>Loss of Appetite</h3>
+            <p>
+              Refusing meals outside normal shedding or seasonal brumation cycles
+              may result from insufficient basking temperatures, stress from
+              handling, improper diet items, or health issues.
+            </p>
+          </article>
+
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-hand-back-fist" aria-hidden="true"></i>
+            </div>
+            <h3>Excessive Defensive Behaviour</h3>
+            <p>
+              Frequent hissing, lunging, tail whipping, or fleeing whenever
+              approached signals chronic insecurity. Reviewing enclosure cover,
+              traffic nearby, and handling habits helps identify triggers.
+            </p>
+          </article>
+
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-battery-empty" aria-hidden="true"></i>
+            </div>
+            <h3>Unusual Inactivity</h3>
+            <p>
+              Marked lethargy, weakness, or staying unresponsive for days—distinct
+              from normal diurnal rest or brumation—can reflect dehydration,
+              cold temperatures, metabolic imbalance, or infection.
+            </p>
+          </article>
+
+          <article class="stress-card">
+            <div class="stress-icon">
+              <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+            </div>
+            <h3>Changes in Normal Movement</h3>
+            <p>
+              Shaky limbs, muscle tremors, head tilting, circling, or awkward
+              gait are serious signs linked to metabolic bone disease, injury,
+              or neurological issues that warrant prompt veterinary evaluation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. Building a Comfortable Environment -->
+      <section class="beh-section section-wrap" id="comfortable-environment">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="paw paw-left-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-left-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+
+          <div class="heading-content">
+            <span class="heading-label"
+              ><i class="fa-solid fa-house" aria-hidden="true"></i> Habitat
+              Design</span
+            >
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Building a <span>Comfortable Environment</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+            <p>
+              Healthy behaviour starts with a well-designed enclosure that meets
+              your species' natural needs for space, climate, shelter, and
+              enrichment.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-panel">
+          <h3>
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Key
+            Environmental Elements
+          </h3>
+          <div class="content-grid">
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-ruler-combined" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Suitable Enclosure Size</h4>
+                <p>
+                  Choose dimensions scaled to the reptile's full adult length
+                  and lifestyle—terrestrial species need wide floor space while
+                  arboreal species need vertical climbing height.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Proper Hiding Places</h4>
+                <p>
+                  Provide multiple opaque, snug shelters across both warm and
+                  cool ends of the habitat so your reptile feels protected
+                  wherever it chooses to rest.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-temperature-high" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Appropriate Temperature Gradients</h4>
+                <p>
+                  Maintain a regulated warm basking zone transitioning to a
+                  cooler retreat area using thermostats and digital probe
+                  thermometers so reptiles can self-regulate safely.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Species-Specific Humidity</h4>
+                <p>
+                  Match moisture levels to the reptile's native biome with
+                  accurate digital hygrometers—dry enclosures with humid moss
+                  hides for desert species, or misted tropical setups.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-mountain" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Climbing, Burrowing, or Basking Areas</h4>
+                <p>
+                  Encourage natural movement with sturdy branches and foliage
+                  for climbers, deep safe substrate for burrowers, and flat heat-retaining
+                  stones for basking species.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i
+                  class="fa-solid fa-hand-holding-heart"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <h4>Minimal Unnecessary Handling</h4>
+                <p>
+                  Treat the terrarium as a peaceful sanctuary. Observing natural
+                  behaviours calmly from outside the glass helps sensitive
+                  reptiles settle and thrive without disruption.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Safe Handling & Interaction -->
+      <section class="beh-section section-wrap" id="safe-handling">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="paw paw-left-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-left-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-1" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <div class="paw paw-right-2" aria-hidden="true">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+
+          <div class="heading-content">
+            <span class="heading-label"
+              ><i class="fa-solid fa-hand" aria-hidden="true"></i> Responsible
+              Interaction</span
+            >
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Safe Handling &amp; <span>Interaction</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+            <p>
+              Respectful interaction puts the reptile's comfort and safety
+              first. Follow these gentle principles while keeping each species'
+              unique tolerance in mind.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-panel">
+          <h3>
+            <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+            Handling Guidelines
+          </h3>
+          <div class="content-grid">
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Understand Species-Specific Needs</h4>
+                <p>
+                  While species like bearded dragons or corn snakes often tolerate
+                  short handling, chameleons, day geckos, and shy snakes are
+                  primarily display pets that prefer minimal physical contact.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Approach Calmly</h4>
+                <p>
+                  Move slowly in the reptile's line of sight from the side—never
+                  reach suddenly from directly above, which triggers an innate
+                  aerial predator fear response.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-ban" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Avoid Sudden Movements</h4>
+                <p>
+                  Keep your hands steady, voices quiet, and gestures gentle.
+                  Sudden grabs, loud noises, or fast motions can cause panic,
+                  defensive biting, or tail dropping in some lizards.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-hands-holding" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Support the Body Properly</h4>
+                <p>
+                  Scoop gently from beneath to support the chest, belly, and
+                  hindquarters—or two points along a snake's body. Never lift
+                  any reptile by its tail, shell edge, or neck.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i
+                  class="fa-solid fa-triangle-exclamation"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <h4>Recognize Signs of Stress</h4>
+                <p>
+                  Pause immediately and return the reptile calmly to its
+                  enclosure if you observe rapid breathing, gaping, tail
+                  twitching, squirming to escape, or sudden darkening.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-item">
+              <div class="content-icon">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4>Avoid Unnecessary Handling</h4>
+                <p>
+                  Keep sessions brief and infrequent for tolerant species, and
+                  skip handling altogether during shedding, 24–48 hours after a
+                  meal, during brumation, or when unwell.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Final CTA Section (Follows frontend/pages/pets/cats/index.html) -->
+      <section class="cta section-wrap">
+        <div>
+          <div class="eyebrow">CONTINUE YOUR REPTILE JOURNEY</div>
+          <h2>Every Scale Deserves <em>Understanding Care.</em></h2>
+          <p>
+            From recognizing calm basking habits to setting up stress-free
+            vivariums, PetSathi helps you support your reptile with
+            species-accurate care guides and practical nutrition advice.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a
+            class="button button-light"
+            href="reptiles.html"
+            id="cta-reptiles-guide"
+            >Explore Reptiles Guide ↗</a
+          >
+          <a
+            class="button button-outline"
+            href="nutrition.html"
+            id="cta-nutrition"
+            >Learn About Nutrition</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. Reusable Footer Component -->
+    <div id="footer"></div>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          const targetId = anchor.getAttribute("href");
+          if (targetId && targetId.length > 1) {
+            const targetElem = document.querySelector(targetId);
+            if (targetElem) {
+              e.preventDefault();
+              const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+              ).matches;
+              targetElem.scrollIntoView({
+                behavior: reducedMotion ? "auto" : "smooth",
+              });
+            }
+          }
+        });
+      });
+    </script>
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>

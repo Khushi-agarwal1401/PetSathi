@@ -106,37 +106,50 @@
     body {
       background-color: #ffffff;
       color: var(--rep-ink);
-      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       overflow-x: hidden;
       margin: 0;
       padding: 0;
     }
 
-    /* Protect DM Sans UI typography & Georgia headings against global.css (0,7,2) reset */
+    /* Unified typography: Georgia / Playfair Display / Times New Roman everywhere matching Explore Reptile Breeds Guide */
+    #reptile-breeds-main,
     #reptile-breeds-main p,
     #reptile-breeds-main li,
     #reptile-breeds-main span:not([class*="fa-"]),
     #reptile-breeds-main small,
     #reptile-breeds-main b,
+    #reptile-breeds-main strong,
+    #reptile-breeds-main em,
     #reptile-breeds-main a,
+    #reptile-breeds-main button,
+    #reptile-breeds-main input,
     #reptile-breeds-main .rep-badge-strip,
     #reptile-breeds-main .quick-nav-badge,
+    #reptile-breeds-main .quick-nav-title,
     #reptile-breeds-main .guide-nav-label,
     #reptile-breeds-main .heading-label,
+    #reptile-breeds-main .heading-content p,
     #reptile-breeds-main .breed-badge,
     #reptile-breeds-main .breed-sci,
     #reptile-breeds-main .breed-tags span,
     #reptile-breeds-main .category-examples,
     #reptile-breeds-main .care-reminder-badge {
-      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
     }
 
     #reptile-breeds-main h1,
     #reptile-breeds-main h2,
     #reptile-breeds-main h3,
+    #reptile-breeds-main h4,
+    #reptile-breeds-main h5,
+    #reptile-breeds-main h6,
+    #reptile-breeds-main .quick-nav-title,
     #reptile-breeds-main .quick-nav-title span,
+    #reptile-breeds-main .heading-content h2,
     #reptile-breeds-main .heading-content h2 span,
     #reptile-breeds-main .heading-content h2 em,
+    #reptile-breeds-main .care-reminder-copy h2,
     #reptile-breeds-main .care-reminder-copy h2 em {
       font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
     }
@@ -174,7 +187,7 @@
     }
 
     /* ========================================================
-       1. HERO SECTION (Matching cats/index.html)
+       1. HERO SECTION (Matching cats/index.html & dogs/breeds.html)
        ======================================================== */
     #reptile-breeds-hero.hero {
       min-height: 560px;
@@ -196,7 +209,13 @@
     #reptile-breeds-hero .hero-note span,
     #reptile-breeds-hero .floating-card b,
     #reptile-breeds-hero .floating-card small {
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+    }
+
+    #reptile-breeds-hero .hero-note i,
+    #reptile-breeds-hero .floating-card > i {
+      color: var(--rep-green, #286849);
+      font-size: 1.25rem;
     }
 
     #reptile-breeds-hero .hero-copy h1 {
@@ -454,113 +473,216 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .quick-nav-eyebrow-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
-      margin-bottom: 10px;
+      gap: 16px;
+      margin-bottom: 14px;
     }
 
     .quick-nav-line {
-      display: inline-block;
-      width: 54px;
       height: 1px;
-      background: #cce4d2;
+      width: 110px;
+      background: #d6ead9;
     }
 
     .quick-nav-badge {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 5px 14px;
-      background: #eaf5ed;
-      border: 1px solid #cce4d2;
+      gap: 8px;
+      padding: 6px 16px;
+      background: #f4faf5;
+      border: 1px solid #b7deb8;
       border-radius: 9999px;
-      font-size: 0.72rem;
-      font-weight: 800;
       color: #1e6f43;
-      letter-spacing: 0.08em;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
+    }
+
+    .quick-nav-badge i {
+      font-size: 0.95rem;
+      line-height: 1;
+      color: #1e6f43;
+      flex-shrink: 0;
     }
 
     #reptile-breeds-main .quick-nav-title,
     .quick-nav-title {
-      font-family: Georgia, "Times New Roman", serif !important;
-      font-size: clamp(1.35rem, 1rem + 1.2vw, 1.85rem) !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-size: clamp(1.45rem, 2.4vw, 1.95rem) !important;
       font-weight: 700 !important;
       color: #1a251e !important;
       margin: 0;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
       text-align: center;
     }
 
     #reptile-breeds-main .quick-nav-title span,
     .quick-nav-title span {
-      font-family: Georgia, "Times New Roman", serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       color: var(--rep-green) !important;
     }
 
+    /* Quick Nav Search Input & Filter Pill Styling */
+    .guides-nav-search-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+
+    .guides-nav-search-bar {
+      display: flex;
+      align-items: center;
+      background: #fafcf7;
+      border: 1.5px solid #cce4d2;
+      border-radius: 9999px;
+      padding: 6px 18px;
+      box-shadow: 0 2px 10px rgba(35, 80, 50, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .guides-nav-search-bar:focus-within {
+      background: #ffffff;
+      border-color: #237847;
+      box-shadow: 0 4px 18px rgba(35, 120, 71, 0.16);
+    }
+
+    .guides-nav-search-icon {
+      color: #237847;
+      font-size: 1rem;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .guides-nav-search-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-size: 0.95rem;
+      color: #1a251e;
+      padding: 8px 0;
+    }
+
+    .guides-nav-search-input::placeholder {
+      color: #7a8c80;
+    }
+
+    .guides-nav-clear-btn {
+      background: none;
+      border: none;
+      color: #8fa094;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      margin-left: 6px;
+      border-radius: 50%;
+      display: none;
+      transition: color 0.2s ease;
+    }
+
+    .guides-nav-clear-btn:hover {
+      color: #237847;
+    }
+
+    .search-feedback-text {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #246b43;
+      font-weight: 600;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* Navigation Pills Grid */
     .guides-nav-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
       margin: 0;
     }
 
-    .guide-nav-item {
+    button.guide-nav-item {
       display: flex;
       align-items: center;
-      gap: 9px;
-      min-height: 44px;
-      padding: 9px 16px 9px 9px;
+      gap: 12px;
+      padding: 9px 18px 9px 9px;
       background: #edf7f0;
       border: 1px solid #cce4d2;
       border-radius: 9999px;
       text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-      min-width: 0;
       cursor: pointer;
+      font-family: inherit;
+      width: 100%;
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .guide-nav-item:hover {
+    button.guide-nav-item:hover {
       background: #e4f4e8;
-      border-color: var(--rep-green);
+      border-color: #237847;
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(40, 104, 73, 0.12);
+      box-shadow: 0 6px 18px rgba(35, 100, 55, 0.12);
+    }
+
+    button.guide-nav-item.active {
+      background: #237847;
+      border-color: #237847;
+      box-shadow: 0 6px 18px rgba(35, 100, 55, 0.2);
     }
 
     .guide-nav-icon {
-      width: 36px;
-      height: 36px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: #d1ecda;
       color: #1e6f43;
       display: grid;
       place-items: center;
       flex-shrink: 0;
-      font-size: 0.95rem;
+      font-size: 1.15rem;
       line-height: 1;
       transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .guide-nav-item:hover .guide-nav-icon {
-      background: var(--rep-green);
+    .guide-nav-icon i {
+      display: inline-block;
+      line-height: 1;
+    }
+
+    button.guide-nav-item:hover .guide-nav-icon {
+      background: #1e6f43;
       color: #ffffff;
     }
 
+    button.guide-nav-item.active .guide-nav-icon {
+      background: #ffffff;
+      color: #237847;
+    }
+
     .guide-nav-label {
-      font-family: "DM Sans", "Manrope", sans-serif;
-      font-size: 0.88rem;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-size: 0.95rem;
       font-weight: 700;
       color: #1c2b20;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    }
+
+    button.guide-nav-item.active .guide-nav-label {
+      color: #ffffff;
     }
 
     /* ========================================================
@@ -658,7 +780,7 @@
 
     .heading-content h2 {
       color: #263b30;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-size: clamp(24px, 3.2vw, 36px);
       font-weight: 700;
       margin: 0 0 12px;
@@ -750,11 +872,11 @@
     }
 
     /* ========================================================
-       4. POPULAR BREED CARDS
+       4. POPULAR BREED CARDS (3 Cards Per Row)
        ======================================================== */
     .breed-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
 
@@ -805,7 +927,7 @@
       backdrop-filter: blur(4px);
       padding: 5px 12px;
       border-radius: 999px;
-      font-family: "DM Sans", "Manrope", sans-serif;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-size: 0.72rem;
       font-weight: 700;
       color: #1e3325;
@@ -880,11 +1002,11 @@
     }
 
     /* ========================================================
-       5. REPTILE CATEGORY CARDS
+       5. REPTILE CATEGORY CARDS (3 Cards Per Row)
        ======================================================== */
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
 
@@ -1161,7 +1283,7 @@
 
     #reptile-breeds-main > .cta.rep-cta .eyebrow,
     .cta.rep-cta .eyebrow {
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-size: 0.72rem !important;
       font-weight: 700 !important;
       letter-spacing: 1.7px !important;
@@ -1174,7 +1296,7 @@
 
     #reptile-breeds-main > .cta.rep-cta h2,
     .cta.rep-cta h2 {
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-size: clamp(24px, 3.2vw, 36px) !important;
       font-weight: 700 !important;
       letter-spacing: normal !important;
@@ -1186,14 +1308,14 @@
 
     #reptile-breeds-main > .cta.rep-cta h2 em,
     .cta.rep-cta h2 em {
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       color: #28764a !important;
       font-style: normal !important;
     }
 
     #reptile-breeds-main > .cta.rep-cta p,
     .cta.rep-cta p {
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-size: 1rem !important;
       line-height: 1.65 !important;
       color: #26372e !important;
@@ -1222,7 +1344,7 @@
       border-radius: 999px;
       background: #ffffff !important;
       color: var(--dark, #1d5039) !important;
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-weight: 700;
       font-size: 1rem;
       border: 1px solid #ffffff !important;
@@ -1255,7 +1377,7 @@
       background: transparent !important;
       color: var(--green, #286849) !important;
       border: 1px solid var(--green, #286849) !important;
-      font-family: "Times New Roman", Times, serif !important;
+      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
       font-weight: 700;
       font-size: 1rem;
       box-shadow: none !important;
@@ -1278,8 +1400,12 @@
        9. RESPONSIVE DESIGN
        ======================================================== */
     @media (max-width: 1100px) {
-      .breed-grid {
+      .guides-nav-grid {
         grid-template-columns: repeat(3, 1fr);
+      }
+
+      .breed-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .category-grid {
@@ -1322,7 +1448,9 @@
         gap: 20px;
       }
 
-      .breed-grid {
+      .breed-grid,
+      .category-grid,
+      .choosing-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -1571,26 +1699,27 @@
           class="hero-photo" id="hero-reptile-image"
           width="960" height="640" fetchpriority="high" decoding="async">
         <div class="floating-card card-top">
-          <i class="fa-solid fa-sun" style="color: #e09f1d;" aria-hidden="true"></i>
+          <i class="fa-solid fa-dragon" aria-hidden="true"></i>
           <span>
-            <b>Basking &amp; UVB</b>
-            <small>Species-specific light cycles</small>
+            <b>8 Popular Breeds</b>
+            <small>Explore their unique traits</small>
           </span>
         </div>
         <div class="floating-card card-bottom">
-          <i class="fa-solid fa-droplet" style="color: #2f8fbf;" aria-hidden="true"></i>
+          <i class="fa-solid fa-paw" aria-hidden="true"></i>
           <span>
-            <b>Heat &amp; Humidity</b>
-            <small>Balanced micro-climates</small>
+            <b>Find Your Companion</b>
+            <small>Compare care and temperament</small>
           </span>
         </div>
       </div>
     </section>
 
     <!-- ========================================================
-         2. QUICK NAVIGATION STRIP
+         2. QUICK NAVIGATION & FILTER STRIP
          ======================================================== -->
-    <nav class="guides-nav-strip" id="quick-nav" aria-label="Reptile breeds quick navigation">
+    <div class="guides-nav-strip" id="filter-controls-area">
+      <!-- Decorative Corner Paws -->
       <div class="quick-nav-decor decor-top-left" aria-hidden="true">
         <i class="fa-solid fa-paw decor-paw decor-paw-1"></i>
         <i class="fa-solid fa-paw decor-paw decor-paw-2"></i>
@@ -1600,42 +1729,76 @@
         <i class="fa-solid fa-paw decor-paw decor-paw-4"></i>
       </div>
 
+      <!-- Section Heading Inside Strip -->
       <div class="quick-nav-header">
         <div class="quick-nav-eyebrow-wrap">
           <span class="quick-nav-line"></span>
           <div class="quick-nav-badge">
-            <i class="fa-solid fa-compass" aria-hidden="true"></i>
-            <span>Quick Navigation</span>
+            <i class="fa-regular fa-compass quick-nav-badge-icon" aria-hidden="true"></i>
+            <span>QUICK NAVIGATION &amp; FILTER</span>
           </div>
           <span class="quick-nav-line"></span>
         </div>
-        <h2 class="quick-nav-title">Explore Dedicated <span>Reptile Breed Chapters</span></h2>
+        <h3 class="quick-nav-title">Explore Reptile <span>Breeds Guide</span></h3>
       </div>
 
+      <!-- Search Bar with Live Feedback -->
+      <div class="guides-nav-search-wrap">
+        <div class="guides-nav-search-bar">
+          <i class="fa-solid fa-magnifying-glass guides-nav-search-icon" aria-hidden="true"></i>
+          <input
+            type="text"
+            id="breed-search-box"
+            class="guides-nav-search-input"
+            placeholder="Search breeds, species, traits, habitat, temperament..."
+            aria-label="Search Reptile Breeds Guide"
+          />
+          <button
+            id="clear-search-btn"
+            class="guides-nav-clear-btn"
+            aria-label="Clear search input"
+            type="button"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div
+          id="search-feedback"
+          class="search-feedback-text"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </div>
+
+      <!-- Filter Topic Buttons -->
       <div class="guides-nav-grid">
-        <a class="guide-nav-item" href="#popular-reptiles" id="nav-popular-breeds">
+        <button class="guide-nav-item filter-btn active" data-filter="all" type="button">
+          <span class="guide-nav-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">All Topics</span>
+        </button>
+        <button class="guide-nav-item filter-btn" data-filter="popular-reptiles" type="button">
           <span class="guide-nav-icon"><i class="fa-solid fa-dragon" aria-hidden="true"></i></span>
           <span class="guide-nav-label">Popular Breeds</span>
-        </a>
-        <a class="guide-nav-item" href="#reptile-categories" id="nav-reptile-categories">
-          <span class="guide-nav-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
-          <span class="guide-nav-label">Reptile Categories</span>
-        </a>
-        <a class="guide-nav-item" href="#choosing-reptile" id="nav-choosing-reptile">
-          <span class="guide-nav-icon"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></span>
+        </button>
+        <button class="guide-nav-item filter-btn" data-filter="reptile-categories" type="button">
+          <span class="guide-nav-icon"><i class="fa-solid fa-shapes" aria-hidden="true"></i></span>
+          <span class="guide-nav-label">Breed Types</span>
+        </button>
+        <button class="guide-nav-item filter-btn" data-filter="choosing-reptile" type="button">
+          <span class="guide-nav-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
           <span class="guide-nav-label">Choosing Guide</span>
-        </a>
-        <a class="guide-nav-item" href="#care-reminder" id="nav-care-reminder">
-          <span class="guide-nav-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+        </button>
+        <button class="guide-nav-item filter-btn" data-filter="care-reminder" type="button">
+          <span class="guide-nav-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
           <span class="guide-nav-label">Care Reminder</span>
-        </a>
+        </button>
       </div>
-    </nav>
+    </div>
 
     <!-- ========================================================
          3. POPULAR REPTILE BREEDS
          ======================================================== -->
-    <section class="rep-section bg-white" id="popular-reptiles" aria-labelledby="heading-popular">
+    <section class="rep-section bg-white searchable-section" id="popular-reptiles" data-category="popular-reptiles" aria-labelledby="heading-popular">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1675,7 +1838,7 @@
 
         <div class="breed-grid">
           <!-- Leopard Gecko -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Leopard Gecko" data-tags="leopard gecko eublepharis macularius arid desert ground-dwelling insectivore spotted gentle docile">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-dragon" aria-hidden="true"></i>
@@ -1701,7 +1864,7 @@
           </article>
 
           <!-- Bearded Dragon -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Bearded Dragon" data-tags="bearded dragon pogona vitticeps desert basking omnivore curious sociable head bob">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-sun" aria-hidden="true"></i>
@@ -1727,7 +1890,7 @@
           </article>
 
           <!-- Crested Gecko -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Crested Gecko" data-tags="crested gecko correlophus ciliatus arboreal tropical vertical climbing fruit insects eyelashes">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-leaf" aria-hidden="true"></i>
@@ -1753,7 +1916,7 @@
           </article>
 
           <!-- Ball Python -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Ball Python" data-tags="ball python python regius tropical snake ground-dwelling rodent diet docile gentle coil">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
@@ -1779,7 +1942,7 @@
           </article>
 
           <!-- Corn Snake -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Corn Snake" data-tags="corn snake pantherophis guttatus temperate semi-arboreal rodent diet active docile colorful">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-staff-snake" aria-hidden="true"></i>
@@ -1805,7 +1968,7 @@
           </article>
 
           <!-- Russian Tortoise -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Russian Tortoise" data-tags="russian tortoise testudo horsfieldii grassland terrestrial herbivore digging high-fiber long lifespan">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-turtle" aria-hidden="true"></i>
@@ -1831,7 +1994,7 @@
           </article>
 
           <!-- Red-Eared Slider -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Red-Eared Slider" data-tags="red-eared slider trachemys scripta elegans aquatic semi-aquatic turtle swimming basking omnivore water filtration">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-water" aria-hidden="true"></i>
@@ -1857,7 +2020,7 @@
           </article>
 
           <!-- Blue-Tongued Skink -->
-          <article class="breed-card">
+          <article class="breed-card searchable-item" data-title="Blue-Tongued Skink" data-tags="blue-tongued skink tiliqua scincoides terrestrial ground-dwelling omnivore intelligent sturdy inquisitive">
             <div class="breed-media">
               <span class="breed-badge">
                 <i class="fa-solid fa-dragon" aria-hidden="true"></i>
@@ -1888,7 +2051,7 @@
     <!-- ========================================================
          4. REPTILE CATEGORIES
          ======================================================== -->
-    <section class="rep-section bg-cream" id="reptile-categories" aria-labelledby="heading-categories">
+    <section class="rep-section bg-cream searchable-section" id="reptile-categories" data-category="reptile-categories" aria-labelledby="heading-categories">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1927,7 +2090,7 @@
         </div>
 
         <div class="category-grid">
-          <article class="category-card">
+          <article class="category-card searchable-item" data-title="Geckos" data-tags="geckos leopard crested fat-tailed climbers ground dwellers sensitive humidity nocturnal">
             <div class="category-icon"><i class="fa-solid fa-dragon" aria-hidden="true"></i></div>
             <h3>Geckos</h3>
             <p>
@@ -1940,7 +2103,7 @@
             </div>
           </article>
 
-          <article class="category-card">
+          <article class="category-card searchable-item" data-title="Lizards" data-tags="lizards bearded dragon blue-tongued skink chameleon desert tropical basking heat uvb omnivore">
             <div class="category-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
             <h3>Lizards</h3>
             <p>
@@ -1953,7 +2116,7 @@
             </div>
           </article>
 
-          <article class="category-card">
+          <article class="category-card searchable-item" data-title="Snakes" data-tags="snakes ball python corn milk whole-prey carnivores escape-proof calm">
             <div class="category-icon"><i class="fa-solid fa-staff-snake" aria-hidden="true"></i></div>
             <h3>Snakes</h3>
             <p>
@@ -1966,7 +2129,7 @@
             </div>
           </article>
 
-          <article class="category-card">
+          <article class="category-card searchable-item" data-title="Turtles &amp; Tortoises" data-tags="turtles tortoises red-eared slider russian hermann shelled aquatic terrestrial basking dry spacious">
             <div class="category-icon"><i class="fa-solid fa-turtle" aria-hidden="true"></i></div>
             <h3>Turtles &amp; Tortoises</h3>
             <p>
@@ -1985,7 +2148,7 @@
     <!-- ========================================================
          5. CHOOSING THE RIGHT REPTILE
          ======================================================== -->
-    <section class="rep-section bg-white" id="choosing-reptile" aria-labelledby="heading-choosing">
+    <section class="rep-section bg-white searchable-section" id="choosing-reptile" data-category="choosing-reptile" aria-labelledby="heading-choosing">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -2024,7 +2187,7 @@
         </div>
 
         <div class="choosing-grid">
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Space &amp; Enclosure" data-tags="space enclosure adult size dimensions terrarium vivarium vertical ground gradient hides">
             <div class="choosing-icon"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i></div>
             <h3>Space &amp; Enclosure</h3>
             <p>
@@ -2034,7 +2197,7 @@
             </p>
           </article>
 
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Temperature &amp; Humidity" data-tags="temperature humidity external heat thermostats digital hygrometers basking cool retreat microclimate">
             <div class="choosing-icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></div>
             <h3>Temperature &amp; Humidity</h3>
             <p>
@@ -2043,7 +2206,7 @@
             </p>
           </article>
 
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Feeding Requirements" data-tags="feeding requirements live insects fresh greens fruit frozen-thawed gut-load calcium nutrition">
             <div class="choosing-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
             <h3>Feeding Requirements</h3>
             <p>
@@ -2052,7 +2215,7 @@
             </p>
           </article>
 
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Handling &amp; Temperament" data-tags="handling temperament tolerance gentle brief body language overhandling calm display">
             <div class="choosing-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
             <h3>Handling &amp; Temperament</h3>
             <p>
@@ -2061,7 +2224,7 @@
             </p>
           </article>
 
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Long-Term Commitment" data-tags="long-term commitment decades lifespan budget enclosure upgrades uvb replacement veterinary exotic care">
             <div class="choosing-icon"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i></div>
             <h3>Long-Term Commitment</h3>
             <p>
@@ -2070,7 +2233,7 @@
             </p>
           </article>
 
-          <article class="choosing-card">
+          <article class="choosing-card searchable-item" data-title="Sourcing &amp; Vet Care" data-tags="sourcing vet care responsible breeder rescue captive-bred healthy exotic reptile veterinarian">
             <div class="choosing-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
             <h3>Sourcing &amp; Vet Care</h3>
             <p>
@@ -2085,9 +2248,9 @@
     <!-- ========================================================
          6. REPTILE CARE REMINDER
          ======================================================== -->
-    <section class="rep-section bg-cream" id="care-reminder" aria-labelledby="heading-reminder">
+    <section class="rep-section bg-cream searchable-section" id="care-reminder" data-category="care-reminder" aria-labelledby="heading-reminder">
       <div class="section-wrap">
-        <div class="care-reminder">
+        <div class="care-reminder searchable-item" data-title="Every Reptile Species Is Different" data-tags="species different habitat temperature humidity diet desert tropical aquatic arboreal care reminder">
           <div class="care-reminder-copy">
             <span class="care-reminder-badge">
               <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
@@ -2162,6 +2325,145 @@
   <!-- Reusable Footer Placeholder -->
   <div id="footer"></div>
 
+  <!-- Interactive Search & Filter Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Smooth scroll for in-page anchors
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          const targetId = anchor.getAttribute("href");
+          if (targetId && targetId.length > 1) {
+            const targetElem = document.querySelector(targetId);
+            if (targetElem) {
+              e.preventDefault();
+              const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+              ).matches;
+              targetElem.scrollIntoView({
+                behavior: reducedMotion ? "auto" : "smooth",
+              });
+            }
+          }
+        });
+      });
+
+      // 2. Search & Filter
+      const searchBox = document.getElementById("breed-search-box");
+      const clearBtn = document.getElementById("clear-search-btn");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const searchableSections = document.querySelectorAll(".searchable-section");
+      const searchableItems = document.querySelectorAll(".searchable-item");
+      const searchFeedback = document.getElementById("search-feedback");
+
+      let currentFilter = "all";
+      let searchQuery = "";
+
+      function applyFilters() {
+        let matchedItemsCount = 0;
+        const query = searchQuery.trim().toLowerCase();
+
+        searchableItems.forEach((item) => {
+          const itemTitle = (item.getAttribute("data-title") || "").toLowerCase();
+          const itemTags = (item.getAttribute("data-tags") || "").toLowerCase();
+          const itemText = item.textContent.toLowerCase();
+          const parentSection = item.closest(".searchable-section");
+          const sectionCategory = parentSection
+            ? parentSection.getAttribute("data-category")
+            : "";
+
+          // Category filter matching
+          const matchesCategory =
+            currentFilter === "all" || sectionCategory === currentFilter;
+
+          // Search text matching
+          const matchesQuery =
+            !query ||
+            itemTitle.includes(query) ||
+            itemTags.includes(query) ||
+            itemText.includes(query);
+
+          if (matchesCategory && matchesQuery) {
+            item.style.display = "";
+            matchedItemsCount++;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Show/hide sections based on whether any child item is visible or category selected
+        searchableSections.forEach((section) => {
+          const sectionCategory = section.getAttribute("data-category");
+          const visibleChildren = section.querySelectorAll(
+            '.searchable-item:not([style*="display: none"])'
+          );
+
+          if (currentFilter !== "all" && sectionCategory !== currentFilter) {
+            section.style.display = "none";
+          } else if (query && visibleChildren.length === 0) {
+            section.style.display = "none";
+          } else {
+            section.style.display = "";
+          }
+        });
+
+        // Feedback count
+        if (query || currentFilter !== "all") {
+          searchFeedback.style.display = "block";
+          if (matchedItemsCount === 0) {
+            searchFeedback.textContent = `No items found matching "${query || currentFilter}". Try a different keyword.`;
+          } else {
+            searchFeedback.textContent = `Showing ${matchedItemsCount} matching breed guide item${matchedItemsCount === 1 ? "" : "s"}.`;
+          }
+        } else {
+          searchFeedback.style.display = "none";
+          searchFeedback.textContent = "";
+        }
+
+        // Show/hide clear search button
+        if (clearBtn) {
+          clearBtn.style.display = query ? "block" : "none";
+        }
+      }
+
+      if (searchBox) {
+        searchBox.addEventListener("input", (e) => {
+          searchQuery = e.target.value;
+          applyFilters();
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          searchBox.value = "";
+          searchQuery = "";
+          applyFilters();
+          searchBox.focus();
+        });
+      }
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.getAttribute("data-filter");
+          applyFilters();
+
+          // If filtering to a specific section, smoothly scroll to that section if visible
+          if (currentFilter !== "all") {
+            const targetSection = document.querySelector(
+              `.searchable-section[data-category="${currentFilter}"]`
+            );
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
   <!-- Shared Scripts -->
   <script src="../../../js/main.js"></script>
 </body>

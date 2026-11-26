@@ -307,11 +307,11 @@
         transform: rotate(-15deg);
       }
 
-      /* Guides Nav Strip */
+      /* Guides Nav Strip - Matching Dogs/Food & Cats/Nutrition Layout */
       .guides-nav-strip {
         position: relative;
         background: #ffffff;
-        margin: 40px auto;
+        margin: 40px auto 35px;
         max-width: 1200px;
         width: calc(100% - 40px);
         border: 1px solid #dceade;
@@ -321,6 +321,7 @@
         overflow: hidden;
       }
 
+      /* Decorative Corner Paws */
       .quick-nav-decor {
         position: absolute;
         pointer-events: none;
@@ -355,45 +356,46 @@
         border-radius: 100% 0 0 0;
       }
 
-      .decor-sub-icon {
+      .decor-paw {
         position: absolute;
         display: inline-block;
         line-height: 1;
       }
 
-      .decor-sub-1 {
+      .decor-paw-1 {
         top: 14px;
         left: 28px;
-        font-size: 26px;
+        font-size: 28px;
         transform: rotate(-15deg);
       }
 
-      .decor-sub-2 {
+      .decor-paw-2 {
         top: 38px;
         left: 12px;
-        font-size: 18px;
+        font-size: 19px;
         transform: rotate(20deg);
       }
 
-      .decor-sub-3 {
+      .decor-paw-3 {
         bottom: 36px;
         right: 14px;
-        font-size: 18px;
+        font-size: 19px;
         transform: rotate(-25deg);
       }
 
-      .decor-sub-4 {
+      .decor-paw-4 {
         bottom: 14px;
         right: 28px;
-        font-size: 26px;
+        font-size: 28px;
         transform: rotate(15deg);
       }
 
+      /* Centered Header & Pill Badge */
       .quick-nav-header {
         position: relative;
         z-index: 1;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
       }
 
       .quick-nav-eyebrow-wrap {
@@ -450,51 +452,132 @@
         font-weight: 800;
       }
 
+      /* Quick Nav Search Input & Filter Pill Styling */
+      .guides-nav-search-wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+        margin: 0 auto 28px;
+      }
+
+      .guides-nav-search-bar {
+        display: flex;
+        align-items: center;
+        background: #fafcf7;
+        border: 1.5px solid #cce4d2;
+        border-radius: 9999px;
+        padding: 6px 18px;
+        box-shadow: 0 2px 10px rgba(35, 80, 50, 0.05);
+        transition: all 0.25s ease;
+      }
+
+      .guides-nav-search-bar:focus-within {
+        background: #ffffff;
+        border-color: #237847;
+        box-shadow: 0 4px 18px rgba(35, 120, 71, 0.16);
+      }
+
+      .guides-nav-search-icon {
+        color: #237847;
+        font-size: 1rem;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .guides-nav-search-input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-family: "DM Sans", "Manrope", sans-serif;
+        font-size: 0.95rem;
+        color: #1a251e;
+        padding: 8px 0;
+      }
+
+      .guides-nav-search-input::placeholder {
+        color: #7a8c80;
+      }
+
+      .guides-nav-clear-btn {
+        background: none;
+        border: none;
+        color: #8fa094;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 4px 8px;
+        margin-left: 6px;
+        border-radius: 50%;
+        display: none;
+        transition: color 0.2s ease;
+      }
+
+      .guides-nav-clear-btn:hover {
+        color: #237847;
+      }
+
+      .search-feedback-text {
+        text-align: center;
+        font-size: 0.88rem;
+        color: #246b43;
+        font-weight: 600;
+        margin-top: 10px;
+        display: none;
+      }
+
+      /* Navigation Pills Grid */
       .guides-nav-grid {
         position: relative;
         z-index: 1;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 14px;
         margin: 0;
       }
 
-      .guide-nav-item {
+      button.guide-nav-item {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding: 9px 16px 9px 9px;
+        gap: 12px;
+        padding: 9px 18px 9px 9px;
         background: #edf7f0;
         border: 1px solid #cce4d2;
         border-radius: 9999px;
         text-decoration: none;
+        cursor: pointer;
+        font-family: inherit;
+        width: 100%;
+        text-align: left;
         transition:
           transform 0.2s ease,
           box-shadow 0.2s ease,
           border-color 0.2s ease,
           background 0.2s ease;
-        min-width: 0;
-        cursor: pointer;
       }
 
-      .guide-nav-item:hover,
-      .guide-nav-item.active-filter {
+      button.guide-nav-item:hover {
         background: #e4f4e8;
         border-color: #237847;
         transform: translateY(-2px);
         box-shadow: 0 6px 18px rgba(35, 100, 55, 0.12);
       }
 
+      button.guide-nav-item.active {
+        background: #237847;
+        border-color: #237847;
+        box-shadow: 0 6px 18px rgba(35, 100, 55, 0.2);
+      }
+
       .guide-nav-icon {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
         background: #d1ecda;
         color: #1e6f43;
         display: grid;
         place-items: center;
         flex-shrink: 0;
-        font-size: 1rem;
+        font-size: 1.15rem;
         line-height: 1;
         transition:
           background 0.2s ease,
@@ -506,95 +589,26 @@
         line-height: 1;
       }
 
-      .guide-nav-item:hover .guide-nav-icon,
-      .guide-nav-item.active-filter .guide-nav-icon {
+      button.guide-nav-item:hover .guide-nav-icon {
         background: #1e6f43;
         color: #ffffff;
       }
 
+      button.guide-nav-item.active .guide-nav-icon {
+        background: #ffffff;
+        color: #237847;
+      }
+
       .guide-nav-label {
         font-family: "DM Sans", "Manrope", sans-serif !important;
-        font-size: 0.88rem;
+        font-size: 0.95rem;
         font-weight: 700;
         color: #1c2b20;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
 
-      /* Search & Filter Bar */
-      .reptile-search-filter-wrap {
-        max-width: 1200px;
-        width: calc(100% - 40px);
-        margin: 0 auto 35px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: nowrap;
-      }
-
-      .reptile-search-bar {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        background: #ffffff;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 6px 6px 6px 18px;
-        box-shadow: 0 4px 16px rgba(35, 75, 45, 0.03);
-        transition:
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .reptile-search-bar:focus-within {
-        border-color: var(--green);
-        box-shadow: 0 6px 20px rgba(35, 75, 45, 0.08);
-      }
-
-      .reptile-search-bar i {
-        color: var(--muted);
-        font-size: 0.95rem;
-        margin-right: 10px;
-      }
-
-      .reptile-search-bar input {
-        flex: 1;
-        border: none;
-        outline: none;
-        background: transparent;
-        font-family: "DM Sans", sans-serif;
-        font-size: 0.92rem;
-        color: var(--ink);
-      }
-
-      .reptile-search-bar input::placeholder {
-        color: #8a9a90;
-      }
-
-      .reptile-filter-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 22px;
-        background: #edf7f0;
-        border: 1px solid #cce4d2;
-        border-radius: 999px;
-        color: var(--green);
-        font-family: "DM Sans", sans-serif;
-        font-size: 0.92rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        white-space: nowrap;
-      }
-
-      .reptile-filter-btn:hover,
-      .reptile-filter-btn.active-filter-btn {
-        background: var(--green);
+      button.guide-nav-item.active .guide-nav-label {
         color: #ffffff;
-        border-color: var(--green);
-        box-shadow: 0 4px 14px rgba(35, 100, 55, 0.12);
       }
 
       /* ------------------------------------------------------------------
@@ -936,7 +950,7 @@
         }
 
         .guides-nav-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
         }
 
         .vet-alert-list {
@@ -955,13 +969,8 @@
           max-width: none;
         }
 
-        .reptile-search-filter-wrap {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .reptile-filter-btn {
-          justify-content: center;
+        .guides-nav-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -1125,18 +1134,20 @@
         </div>
       </section>
 
-      <!-- Quick Navigation Strip -->
-      <div class="guides-nav-strip">
+      <!-- Quick Guide Navigation & Health Filter Strip - Matching Reference Design -->
+      <div class="guides-nav-strip" id="filter-controls-area">
+        <!-- Decorative Corner Paws -->
         <div class="quick-nav-decor decor-top-left" aria-hidden="true">
-          <i class="fa-solid fa-leaf decor-sub-icon decor-sub-1"></i>
-          <i class="fa-solid fa-leaf decor-sub-icon decor-sub-2"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-1"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-2"></i>
         </div>
 
         <div class="quick-nav-decor decor-bottom-right" aria-hidden="true">
-          <i class="fa-solid fa-leaf decor-sub-icon decor-sub-3"></i>
-          <i class="fa-solid fa-leaf decor-sub-icon decor-sub-4"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-3"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-4"></i>
         </div>
 
+        <!-- Centered Header -->
         <div class="quick-nav-header">
           <div class="quick-nav-eyebrow-wrap">
             <span class="quick-nav-line"></span>
@@ -1145,123 +1156,81 @@
                 class="fa-regular fa-compass quick-nav-badge-icon"
                 aria-hidden="true"
               ></i>
-              <span>QUICK NAVIGATION</span>
+              <span>QUICK NAVIGATION &amp; FILTER</span>
             </div>
             <span class="quick-nav-line"></span>
           </div>
           <h3 class="quick-nav-title">
-            Explore <span>Reptile Health Chapters</span>
+            Explore Reptile <span>Health &amp; Wellness Guide</span>
           </h3>
         </div>
 
+        <!-- Search Input Bar -->
+        <div class="guides-nav-search-wrap">
+          <div class="guides-nav-search-bar">
+            <i class="fa-solid fa-magnifying-glass guides-nav-search-icon" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="health-search-box"
+              class="guides-nav-search-input"
+              placeholder="Search health topics, symptoms, care tips, conditions..."
+              aria-label="Search Reptile Health and Wellness Guide"
+            />
+            <button id="clear-search-btn" class="guides-nav-clear-btn" aria-label="Clear search input" type="button">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="search-feedback" class="search-feedback-text" role="status" aria-live="polite"></div>
+        </div>
+
+        <!-- 6 Quick Filter Navigation Pills matching Reference Design -->
         <div class="guides-nav-grid">
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="common-issues"
-            id="hub-link-common"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Common Issues</span>
-          </div>
+          <button class="guide-nav-item filter-btn active" data-filter="all" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">All Topics</span>
+          </button>
 
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="mbd"
-            id="hub-link-mbd"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-bone" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Metabolic Bone Disease</span>
-          </div>
+          <button class="guide-nav-item filter-btn" data-filter="health-topics" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Health Topics</span>
+          </button>
 
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="respiratory"
-            id="hub-link-respiratory"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-lungs" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Respiratory Infections</span>
-          </div>
+          <button class="guide-nav-item filter-btn" data-filter="signs-unwell" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Warning Signs</span>
+          </button>
 
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="shedding"
-            id="hub-link-shedding"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-feather" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Skin &amp; Shedding</span>
-          </div>
+          <button class="guide-nav-item filter-btn" data-filter="prevention" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Prevention Care</span>
+          </button>
 
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="parasites"
-            id="hub-link-parasites"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-bug" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Parasites</span>
-          </div>
+          <button class="guide-nav-item filter-btn" data-filter="when-vet" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Veterinary Care</span>
+          </button>
 
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="digestive"
-            id="hub-link-digestive"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-utensils" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Digestive Health</span>
-          </div>
-
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="dehydration"
-            id="hub-link-dehydration"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-droplet" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Dehydration</span>
-          </div>
-
-          <div
-            class="guide-nav-item filter-trigger"
-            data-filter="preventive"
-            id="hub-link-preventive"
-          >
-            <span class="guide-nav-icon"
-              ><i class="fa-solid fa-shield-halved" aria-hidden="true"></i
-            ></span>
-            <span class="guide-nav-label">Preventive Care</span>
-          </div>
+          <button class="guide-nav-item filter-btn" data-filter="emergency" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Emergency Signs</span>
+          </button>
         </div>
-      </div>
-
-      <!-- Search & Filter Controls -->
-      <div class="reptile-search-filter-wrap">
-        <div class="reptile-search-bar">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <input
-            type="text"
-            id="reptileSearchInput"
-            placeholder="Search reptile health topics, symptoms, prevention..."
-          />
-        </div>
-        <button class="reptile-filter-btn" id="resetFilterBtn" type="button">
-          <i class="fa-solid fa-filter" aria-hidden="true"></i> Reset Filters
-        </button>
       </div>
 
       <!-- 2. Essential Reptile Health Topics Section (Icon -> Title -> Short Description) -->
-      <section class="section section-wrap" id="health-topics">
+      <section class="section section-wrap searchable-section" id="health-topics" data-category="health-topics">
         <div class="section-heading-wrap">
           <svg
             class="corner-wave wave-tl"
@@ -1332,8 +1301,10 @@
         <div class="topics-grid">
           <!-- Common Health Issues -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="common-issues"
+            data-title="Common Health Issues"
+            data-tags="general enclosure parameters heat lighting nutrition illness care overview"
             id="topic-common"
           >
             <div class="topic-card-media">
@@ -1359,8 +1330,10 @@
 
           <!-- Metabolic Bone Disease -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="mbd"
+            data-title="Metabolic Bone Disease"
+            data-tags="mbd calcium uvb vitamin d3 bones softening deformity skeletal"
             id="topic-mbd"
           >
             <div class="topic-card-media">
@@ -1386,8 +1359,10 @@
 
           <!-- Respiratory Infections -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="respiratory"
+            data-title="Respiratory Infections"
+            data-tags="respiratory breathing wheezing discharge mucus lungs airway"
             id="topic-respiratory"
           >
             <div class="topic-card-media">
@@ -1413,8 +1388,10 @@
 
           <!-- Skin & Shedding Problems -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="shedding"
+            data-title="Skin & Shedding Problems"
+            data-tags="skin shedding dysecdysis humidity retained shed scales ecdysis"
             id="topic-shedding"
           >
             <div class="topic-card-media">
@@ -1440,8 +1417,10 @@
 
           <!-- Parasites -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="parasites"
+            data-title="Internal & External Parasites"
+            data-tags="parasites mites ticks worms protozoa fecal test parasite control"
             id="topic-parasites"
           >
             <div class="topic-card-media">
@@ -1467,8 +1446,10 @@
 
           <!-- Digestive Health -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="digestive"
+            data-title="Digestive Health"
+            data-tags="digestive health digestion appetite impaction stool gut feeding diet"
             id="topic-digestive"
           >
             <div class="topic-card-media">
@@ -1494,8 +1475,10 @@
 
           <!-- Dehydration -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="dehydration"
+            data-title="Dehydration"
+            data-tags="dehydration water soaking humidity misting kidneys eyes hydration"
             id="topic-dehydration"
           >
             <div class="topic-card-media">
@@ -1521,8 +1504,10 @@
 
           <!-- Preventive Healthcare -->
           <article
-            class="topic-card"
+            class="topic-card searchable-item"
             data-category="preventive"
+            data-title="Preventive Healthcare"
+            data-tags="preventive healthcare vet weight checkup lamp replacement quarantine"
             id="topic-preventive"
           >
             <div class="topic-card-media">
@@ -1549,7 +1534,7 @@
       </section>
 
       <!-- 3. Signs Your Reptile May Be Unwell Section -->
-      <section class="section signs-section" id="signs-unwell">
+      <section class="section signs-section searchable-section" id="signs-unwell" data-category="signs-unwell">
         <div class="section-wrap">
           <div class="section-heading-wrap">
             <svg
@@ -1620,7 +1605,12 @@
 
           <div class="signs-grid">
             <!-- Loss of appetite -->
-            <article class="sign-card" id="sign-appetite">
+            <article
+              class="sign-card searchable-item"
+              data-title="Loss of Appetite"
+              data-tags="appetite anorexia hunger refusal food strike weight loss"
+              id="sign-appetite"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
               </div>
@@ -1633,7 +1623,12 @@
             </article>
 
             <!-- Unusual inactivity -->
-            <article class="sign-card" id="sign-inactivity">
+            <article
+              class="sign-card searchable-item"
+              data-title="Unusual Inactivity"
+              data-tags="inactivity lethargy sluggish tired weak alert motionless hide"
+              id="sign-inactivity"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-bed-pulse" aria-hidden="true"></i>
               </div>
@@ -1646,7 +1641,12 @@
             </article>
 
             <!-- Abnormal shedding -->
-            <article class="sign-card" id="sign-shedding">
+            <article
+              class="sign-card searchable-item"
+              data-title="Abnormal Shedding"
+              data-tags="shedding dysecdysis skin stuck shed retained eyecap humidity"
+              id="sign-shedding"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
               </div>
@@ -1659,7 +1659,12 @@
             </article>
 
             <!-- Swelling or visible injuries -->
-            <article class="sign-card" id="sign-swelling">
+            <article
+              class="sign-card searchable-item"
+              data-title="Swelling or Visible Injuries"
+              data-tags="swelling injuries burns wounds fractures blisters mouth rot abscess"
+              id="sign-swelling"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
               </div>
@@ -1672,7 +1677,12 @@
             </article>
 
             <!-- Changes in breathing -->
-            <article class="sign-card" id="sign-breathing">
+            <article
+              class="sign-card searchable-item"
+              data-title="Changes in Breathing"
+              data-tags="breathing respiratory gasping wheezing clicking discharge bubbles mucus"
+              id="sign-breathing"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-lungs" aria-hidden="true"></i>
               </div>
@@ -1685,7 +1695,12 @@
             </article>
 
             <!-- Unusual behavior or movement -->
-            <article class="sign-card" id="sign-behavior">
+            <article
+              class="sign-card searchable-item"
+              data-title="Unusual Behavior or Movement"
+              data-tags="behavior movement tremors twitching ataxia stargazing seizures coordination"
+              id="sign-behavior"
+            >
               <div class="sign-icon-wrap">
                 <i class="fa-solid fa-brain" aria-hidden="true"></i>
               </div>
@@ -1701,7 +1716,7 @@
       </section>
 
       <!-- 4. Reptile Health & Prevention Section -->
-      <section class="section section-wrap" id="prevention">
+      <section class="section section-wrap searchable-section" id="prevention" data-category="prevention">
         <div class="section-heading-wrap">
           <svg
             class="corner-wave wave-tl"
@@ -1771,7 +1786,12 @@
 
         <div class="prevention-grid">
           <!-- Maintaining suitable temperature and humidity -->
-          <article class="prevention-card" id="prev-temp">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Temperature & Humidity Gradients"
+            data-tags="temperature humidity gradient thermostat basking hygrometer microclimate heat"
+            id="prev-temp"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-temperature-high" aria-hidden="true"></i>
             </div>
@@ -1784,7 +1804,12 @@
           </article>
 
           <!-- Providing proper UVB lighting where required -->
-          <article class="prevention-card" id="prev-uvb">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Proper UVB Lighting"
+            data-tags="uvb lighting lamps bulb d3 synthesis calcium spectrum rays radiation"
+            id="prev-uvb"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-sun" aria-hidden="true"></i>
             </div>
@@ -1797,7 +1822,12 @@
           </article>
 
           <!-- Offering species-appropriate nutrition -->
-          <article class="prevention-card" id="prev-nutrition">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Species-Appropriate Nutrition"
+            data-tags="nutrition diet feeding gut loading insects greens calcium dusting multivitamin"
+            id="prev-nutrition"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-utensils" aria-hidden="true"></i>
             </div>
@@ -1810,7 +1840,12 @@
           </article>
 
           <!-- Keeping the enclosure clean -->
-          <article class="prevention-card" id="prev-clean">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Enclosure Sanitation"
+            data-tags="clean cleanliness sanitation disinfectant hygiene spot clean substrate"
+            id="prev-clean"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-broom" aria-hidden="true"></i>
             </div>
@@ -1823,7 +1858,12 @@
           </article>
 
           <!-- Providing fresh water -->
-          <article class="prevention-card" id="prev-water">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Fresh, Clean Water"
+            data-tags="water drinking hydration bowl misting soaking dechlorinated fresh"
+            id="prev-water"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-droplet" aria-hidden="true"></i>
             </div>
@@ -1836,7 +1876,12 @@
           </article>
 
           <!-- Monitoring weight and behavior -->
-          <article class="prevention-card" id="prev-monitor">
+          <article
+            class="prevention-card searchable-item"
+            data-title="Monitoring Weight & Behavior"
+            data-tags="monitoring weight scale records tracking log body condition check"
+            id="prev-monitor"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             </div>
@@ -1849,7 +1894,12 @@
           </article>
 
           <!-- Scheduling regular veterinary checkups -->
-          <article class="prevention-card span-center" id="prev-vet">
+          <article
+            class="prevention-card span-center searchable-item"
+            data-title="Scheduling Regular Veterinary Checkups"
+            data-tags="vet checkups regular annual exam exotic veterinarian fecal test"
+            id="prev-vet"
+          >
             <div class="prevention-icon-wrap">
               <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
             </div>
@@ -1864,8 +1914,12 @@
       </section>
 
       <!-- 5. When to Consult a Veterinarian Section -->
-      <section class="section section-wrap" id="when-vet">
-        <div class="vet-alert-section">
+      <section class="section section-wrap searchable-section" id="when-vet" data-category="when-vet">
+        <div
+          class="vet-alert-section searchable-item"
+          data-title="When to Consult a Qualified Reptile Veterinarian"
+          data-tags="veterinarian vet consult exotic emergency critical symptoms warning doctor"
+        >
           <div class="vet-alert-header">
             <div class="vet-alert-icon">
               <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
@@ -1932,68 +1986,143 @@
 
     <div id="footer"></div>
 
-    <!-- Interactive Filtering & Search Script -->
+    <!-- Interactive Filtering & Search Script - Matching Reference Architecture -->
     <script>
-      const searchInput = document.getElementById("reptileSearchInput");
-      const topicCards = document.querySelectorAll(".topic-card");
-      const filterTriggers = document.querySelectorAll(".filter-trigger");
-      const resetFilterBtn = document.getElementById("resetFilterBtn");
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchBox = document.getElementById("health-search-box");
+        const clearBtn = document.getElementById("clear-search-btn");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const searchableSections = document.querySelectorAll(".searchable-section");
+        const searchableItems = document.querySelectorAll(".searchable-item");
+        const searchFeedback = document.getElementById("search-feedback");
 
-      function filterCards(category) {
-        topicCards.forEach((card) => {
-          const cardCat = card.getAttribute("data-category");
-          if (!category || cardCat === category) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      }
+        let currentFilter = "all";
+        let searchQuery = "";
 
-      if (searchInput) {
-        searchInput.addEventListener("input", (e) => {
-          const query = e.target.value.toLowerCase().trim();
-          filterTriggers.forEach((t) => t.classList.remove("active-filter"));
+        function applyFilters() {
+          let matchedItemsCount = 0;
+          const query = searchQuery.trim().toLowerCase();
 
-          topicCards.forEach((card) => {
-            const title = card.querySelector("h3").textContent.toLowerCase();
-            const description = card
-              .querySelector("p")
-              .textContent.toLowerCase();
-            if (title.includes(query) || description.includes(query)) {
-              card.style.display = "flex";
+          searchableItems.forEach((item) => {
+            const itemTitle = (
+              item.getAttribute("data-title") ||
+              item.querySelector("h3")?.textContent ||
+              ""
+            ).toLowerCase();
+            const itemTags = (item.getAttribute("data-tags") || "").toLowerCase();
+            const itemText = item.textContent.toLowerCase();
+            const parentSection = item.closest(".searchable-section");
+            const sectionCategory = parentSection
+              ? parentSection.getAttribute("data-category")
+              : "";
+
+            // Category filter matching
+            let matchesCategory = false;
+            if (currentFilter === "all") {
+              matchesCategory = true;
+            } else if (currentFilter === "emergency") {
+              matchesCategory = sectionCategory === "when-vet";
             } else {
-              card.style.display = "none";
+              matchesCategory = sectionCategory === currentFilter;
+            }
+
+            // Search query matching
+            const matchesQuery =
+              !query ||
+              itemTitle.includes(query) ||
+              itemTags.includes(query) ||
+              itemText.includes(query);
+
+            if (matchesCategory && matchesQuery) {
+              item.style.display = "";
+              matchedItemsCount++;
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          // Show/hide sections based on whether any child item is visible or category selected
+          searchableSections.forEach((section) => {
+            const sectionCategory = section.getAttribute("data-category");
+            const visibleChildren = section.querySelectorAll(
+              '.searchable-item:not([style*="display: none"])'
+            );
+
+            if (
+              currentFilter !== "all" &&
+              currentFilter !== "emergency" &&
+              sectionCategory !== currentFilter
+            ) {
+              section.style.display = "none";
+            } else if (
+              currentFilter === "emergency" &&
+              sectionCategory !== "when-vet"
+            ) {
+              section.style.display = "none";
+            } else if (query && visibleChildren.length === 0) {
+              section.style.display = "none";
+            } else {
+              section.style.display = "";
+            }
+          });
+
+          // Feedback count
+          if (query || currentFilter !== "all") {
+            searchFeedback.style.display = "block";
+            if (matchedItemsCount === 0) {
+              searchFeedback.textContent = `No health items found matching "${query || currentFilter}". Try a different keyword.`;
+            } else {
+              searchFeedback.textContent = `Showing ${matchedItemsCount} matching health topic${matchedItemsCount === 1 ? "" : "s"}.`;
+            }
+          } else {
+            searchFeedback.style.display = "none";
+            searchFeedback.textContent = "";
+          }
+
+          // Show/hide clear search button
+          if (clearBtn) {
+            clearBtn.style.display = query ? "block" : "none";
+          }
+        }
+
+        if (searchBox) {
+          searchBox.addEventListener("input", (e) => {
+            searchQuery = e.target.value;
+            applyFilters();
+          });
+        }
+
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            searchBox.value = "";
+            searchQuery = "";
+            applyFilters();
+            searchBox.focus();
+          });
+        }
+
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            filterButtons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentFilter = btn.getAttribute("data-filter");
+            applyFilters();
+
+            // Smooth scroll to target section if filtering
+            if (currentFilter !== "all") {
+              let targetSection = null;
+              if (currentFilter === "emergency") {
+                targetSection = document.getElementById("when-vet");
+              } else {
+                targetSection = document.getElementById(currentFilter);
+              }
+              if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
             }
           });
         });
-      }
-
-      filterTriggers.forEach((trigger) => {
-        trigger.addEventListener("click", (e) => {
-          e.preventDefault();
-          const category = trigger.getAttribute("data-filter");
-
-          filterTriggers.forEach((t) => t.classList.remove("active-filter"));
-          trigger.classList.add("active-filter");
-
-          if (searchInput) searchInput.value = "";
-          filterCards(category);
-
-          const topicsSection = document.getElementById("health-topics");
-          if (topicsSection) {
-            topicsSection.scrollIntoView({ behavior: "smooth" });
-          }
-        });
       });
-
-      if (resetFilterBtn) {
-        resetFilterBtn.addEventListener("click", () => {
-          if (searchInput) searchInput.value = "";
-          filterTriggers.forEach((t) => t.classList.remove("active-filter"));
-          filterCards(null);
-        });
-      }
     </script>
     <script src="../../../js/main.js"></script>
   </body>

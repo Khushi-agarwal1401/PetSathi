@@ -957,8 +957,13 @@
       }
 
       @media (max-width: 960px) {
-        .bird-info-grid {
+        .bird-info-grid,
+        .quick-info-grid {
           grid-template-columns: repeat(2, 1fr);
+        }
+
+        .quick-info-grid .quick-info-card:nth-child(3) {
+          grid-column: span 2;
         }
 
         .guides-nav-grid {
@@ -976,37 +981,44 @@
       }
 
       @media (max-width: 640px) {
-        .bird-info-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .quick-info-card {
-          grid-template-columns: 42px minmax(0, 1fr);
-          column-gap: 12px;
-          padding: 20px 16px;
-        }
-
-        .quick-info-icon-wrap {
-          width: 42px;
-          height: 42px;
-          font-size: 1.1rem;
-        }
-
-        .quick-info-card h3 {
-          font-size: 1.02rem;
-        }
-
-        .quick-info-list {
-          gap: 10px;
-          padding-top: 14px;
-        }
-
-        .quick-info-list li {
-          font-size: 0.85rem;
-        }
-
+        .bird-info-grid,
+        .quick-info-grid,
         .guides-nav-grid {
           grid-template-columns: 1fr;
+        }
+
+        .quick-info-grid .quick-info-card:nth-child(3) {
+          grid-column: span 1;
+        }
+
+        .floating-card {
+          padding: 10px 14px;
+        }
+
+        .floating-card b {
+          font-size: 0.78rem;
+        }
+
+        .floating-card small {
+          font-size: 0.68rem;
+        }
+
+        .card-top {
+          right: 12px;
+        }
+
+        .card-bottom {
+          left: 12px;
+        }
+
+        .quick-nav-line {
+          width: 32px;
+        }
+
+        .quick-nav-badge {
+          white-space: nowrap;
+          font-size: 0.7rem;
+          padding: 5px 12px;
         }
 
         .guides-nav-strip {
@@ -1226,7 +1238,7 @@
           <input
             type="text"
             id="birdSearchInput"
-            placeholder="Search bird topics, nutrition, care, health, behaviour..."
+            placeholder="Search bird topics, nutrition, care, health..."
             aria-label="Search bird topics"
           />
         </div>

@@ -168,9 +168,10 @@
       text-align: center;
       margin: 0 0 35px;
       padding: clamp(24px, 4vw, 44px) clamp(18px, 4vw, 35px);
-      border: 1px solid #dcebc9;
+      border: 1px solid #cfe3c0;
       border-radius: clamp(20px, 3vw, 35px);
-      background: #fafcf7 !important;
+      background: linear-gradient(135deg, #e8f3e0 0%, #f6faf1 55%, #fafcf7 100%) !important;
+      box-shadow: 0 4px 24px rgba(35, 75, 45, 0.08);
     }
     .section-title-wrap h2 {
       margin: 8px 0 14px;
@@ -421,38 +422,14 @@
     }
     .breed-image-wrap {
       background: #f0f3eb;
+      overflow: hidden;
     }
     .breed-image {
       display: block;
       width: 100%;
-      height: clamp(180px, 20vw, 224px);
-      object-fit: contain;
+      height: clamp(200px, 22vw, 240px);
+      object-fit: cover;
       object-position: center;
-    }
-    .breed-image-labels {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px;
-    }
-    .breed-tag-pill {
-      background: white;
-      color: var(--dark);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .breed-origin-badge {
-      background: #e4eee3;
-      color: var(--dark);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 999px;
     }
     .breed-body {
       padding: 24px;
@@ -487,107 +464,8 @@
       font-size: 0.9rem;
       line-height: 1.6;
       color: var(--muted);
-      margin: 0 0 18px;
+      margin: 0;
       flex-grow: 1;
-    }
-    .breed-details-list {
-      display: none;
-      background: #f4faf5;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 14px;
-      text-align: left;
-    }
-    .breed-card.details-open .breed-details-list {
-      display: flex;
-    }
-    .breed-details-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 8px 14px;
-      align-self: center;
-      border: 1px solid #cbd9ce;
-      border-radius: 999px;
-      background: #ffffff;
-      color: var(--green);
-      font: 700 0.86rem "DM Sans", sans-serif;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-    .breed-details-toggle:hover,
-    .breed-card.details-open .breed-details-toggle {
-      background: var(--green);
-      border-color: var(--green);
-      color: #ffffff;
-    }
-    .breed-details-toggle:focus-visible,
-    .filter-btn:focus-visible,
-    .filter-search-input:focus-visible {
-      outline: 3px solid #b7deb8;
-      outline-offset: 2px;
-    }
-    .breed-detail-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.83rem;
-      line-height: 1.5;
-    }
-    .breed-detail-icon {
-      display: grid;
-      place-items: center;
-      width: 32px;
-      height: 32px;
-      flex: 0 0 32px;
-      border-radius: 50%;
-      background: #eaf2e9;
-      color: var(--green);
-      font-size: 0.9rem;
-    }
-    .badge-pill i {
-      font-size: 0.78rem;
-    }
-    .breed-detail-content b {
-      display: block;
-      color: var(--ink);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 2px;
-    }
-    .breed-detail-content span {
-      color: #55665d;
-    }
-    .grooming-tag {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 6px;
-      text-transform: uppercase;
-    }
-    .grooming-tag.high {
-      background: #eaf2e9;
-      color: var(--green);
-    }
-    .grooming-tag.moderate {
-      background: #f1f4ed;
-      color: var(--dark);
-    }
-    .grooming-tag.low {
-      background: #eaf2e9;
-      color: var(--green);
-    }
-    .grooming-tag.special {
-      background: #f1f4ed;
-      color: var(--dark);
     }
 
     /* Comparison Table Section */
@@ -1133,10 +1011,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Long-Haired</span>
-              <span class="breed-origin-badge">Ancient Persia</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1146,31 +1020,6 @@
             <p class="breed-desc">
               Renowned for their luxurious flowing coats and expressive sweet faces, Persians are gentle, serene lap cats who cherish quiet domestic bliss.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Sweet-tempered, docile, calm, quiet, and deeply affectionate with family.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Long, dense double coat with a thick undercoat, full neck ruff, and silky texture.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Daily metal comb brushing to prevent mats; daily gentle eye wiping; monthly baths.</span>
-                  <span class="grooming-tag high">Daily Grooming Required</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1183,10 +1032,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">Thailand</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1196,31 +1041,6 @@
             <p class="breed-desc">
               Striking and vocal, the Siamese is a social extrovert with deep sapphire eyes, loving human conversation, play, and close companionship.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Extroverted, highly vocal, affectionate, intelligent, and deeply people-oriented.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Very short, sleek, glossy coat with distinct color points on ears, mask, paws, and tail.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Minimal; quick weekly brushing with a soft bristle brush or grooming mitt to remove dead hair.</span>
-                  <span class="grooming-tag low">Low Maintenance</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1233,10 +1053,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Long-Haired</span>
-              <span class="breed-origin-badge">United States</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1246,31 +1062,6 @@
             <p class="breed-desc">
               The "Gentle Giant" of cats, Maine Coons combine rugged outdoor origins with a goofy, patient, and dog-like friendly personality.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Friendly, playful, adaptable, good with children and dogs, chirpy vocalizations.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Heavy, all-weather shaggy coat, tufted lynx ears, snowshoe paws, and full bushy tail.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Brush 2–3 times per week to detangle belly and flanks; seasonal shedding de-shedding.</span>
-                  <span class="grooming-tag moderate">Moderate Upkeep</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1283,10 +1074,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">United States</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1296,31 +1083,6 @@
             <p class="breed-desc">
               Possessing the exotic look of a wild jungle leopard, Bengals are dynamic athletes who thrive on vertical climbing, puzzle toys, and water play.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>High-energy, curious, athletic, confident, loves high perches and interactive games.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Short, pelt-like silk coat adorned with dramatic rosettes or marbles; luminous glitter sheen.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Very low; weekly rubber brush or chamois cloth wipe to keep the coat gleaming.</span>
-                  <span class="grooming-tag low">Low Maintenance</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1333,10 +1095,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Long-Haired</span>
-              <span class="breed-origin-badge">United States</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1346,31 +1104,6 @@
             <p class="breed-desc">
               Famous for going limp with contentment when held, Ragdolls are deeply relaxed, affectionate lap cats with captivating oval blue eyes.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Placid, cuddly, trusting, docile, gentle companion that loves shadowing its humans.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Semi-long, plush, rabbit-soft silky coat with minimal undercoat, resulting in less matting.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Twice-weekly brushing with a stainless-steel comb preserves the silky coat and removes shed hair.</span>
-                  <span class="grooming-tag moderate">Moderate Upkeep</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1383,10 +1116,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">United Kingdom</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1396,31 +1125,6 @@
             <p class="breed-desc">
               With their plush teddy-bear appearance, round cheeks, and calm demeanor, British Shorthairs are dignified and pleasantly easygoing roommates.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Calm, quiet, dignified, independent yet loyal; content to lounge nearby without demanding attention.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Exceptionally dense, crisp, plush double coat that stands slightly out from the body.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Weekly brushing with a slicker brush; increase frequency during seasonal shed transitions.</span>
-                  <span class="grooming-tag low">Easy Weekly Upkeep</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1433,10 +1137,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Hairless</span>
-              <span class="breed-origin-badge">Canada</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1446,31 +1146,6 @@
             <p class="breed-desc">
               Hairless, wrinkled, and radiating warmth, Sphynx cats are mischievous extroverts who love burrowing under blankets and snuggling for warmth.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Mischievous, extroverted, clownish, heat-seeking, and profoundly affectionate.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Appears hairless; fine peach fuzz texture on warm, wrinkled chamois-like skin.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Specialized care: regular warm sponge baths or wipes every 1–2 weeks, ear cleaning, sun protection.</span>
-                  <span class="grooming-tag special">Specialized Skincare</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1483,10 +1158,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">Scotland</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1496,31 +1167,6 @@
             <p class="breed-desc">
               Instantly recognizable by forward-folded ears and big owl-like eyes, Scottish Folds are gentle, soft-spoken, and often sit upright in a comical Buddha pose.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Sweet-natured, soft-voiced, calm, friendly, and adapts smoothly to indoor routines.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Dense, plush, resilient short coat (or semi-long hair); signature folded ears.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Weekly brushing to remove dead fur; routine ear inspections to maintain hygiene in ear folds.</span>
-                  <span class="grooming-tag low">Weekly Care</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1533,10 +1179,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">Russia</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1546,31 +1188,6 @@
             <p class="breed-desc">
               Graceful and poised with shimmering silver-tipped fur and emerald eyes, Russian Blues form intense, loving bonds with their trusted human family.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Gentle, quiet, observant, slightly reserved with strangers, fiercely loyal to owners.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Silvery-blue double coat with dense, plush texture; silver tipping produces a radiant sparkle.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Very low; gentle weekly brushing or damp cloth wipe; naturally lower dander production.</span>
-                  <span class="grooming-tag low">Low Maintenance</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1583,10 +1200,6 @@
               class="breed-image"
               loading="lazy"
             >
-            <div class="breed-image-labels">
-              <span class="breed-tag-pill">Short-Haired</span>
-              <span class="breed-origin-badge">United States</span>
-            </div>
           </div>
           <div class="breed-body">
             <div class="breed-header">
@@ -1596,31 +1209,6 @@
             <p class="breed-desc">
               Loved for its robust health, cheerful disposition, and classic silver tabby markings, the American Shorthair is an ideal, low-fuss family companion.
             </p>
-            <button type="button" class="breed-details-toggle" aria-expanded="false" onclick="toggleBreedDetails(this)"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> View Details</button>
-            <div class="breed-details-list">
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
-                <div class="breed-detail-content">
-                  <b>General Temperament</b>
-                  <span>Even-tempered, sociable, playful, easygoing, friendly with kids and pets alike.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span>
-                <div class="breed-detail-content">
-                  <b>Coat Characteristics</b>
-                  <span>Short, hard, thick, and protective coat; iconic classic tabby whorls and multiple colorways.</span>
-                </div>
-              </div>
-              <div class="breed-detail-row">
-                <span class="breed-detail-icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
-                <div class="breed-detail-content">
-                  <b>Basic Grooming</b>
-                  <span>Brush once or twice weekly to eliminate loose hairs and stimulate natural skin oils.</span>
-                  <span class="grooming-tag low">Low Maintenance</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
 
@@ -1878,15 +1466,6 @@
   <script>
     // Breed Filter & Search Logic
     let currentCategory = 'all';
-
-    function toggleBreedDetails(button) {
-      const card = button.closest('.breed-card');
-      if (!card) return;
-
-      const expanded = card.classList.toggle('details-open');
-      button.setAttribute('aria-expanded', String(expanded));
-      button.lastChild.textContent = expanded ? ' Hide Details' : ' View Details';
-    }
 
     function setBreedFilter(category) {
       currentCategory = category;

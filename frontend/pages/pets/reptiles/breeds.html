@@ -103,55 +103,21 @@
       scroll-padding-top: 95px;
     }
 
-    body {
-      background-color: #ffffff;
+    body,
+    #reptile-breeds-main {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
       color: var(--rep-ink);
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       overflow-x: hidden;
       margin: 0;
       padding: 0;
     }
 
-    /* Unified typography: Georgia / Playfair Display / Times New Roman everywhere matching Explore Reptile Breeds Guide */
+    /* Match cats/index.html rendered typography (Times New Roman via global.css) */
     #reptile-breeds-main,
-    #reptile-breeds-main p,
-    #reptile-breeds-main li,
-    #reptile-breeds-main span:not([class*="fa-"]),
-    #reptile-breeds-main small,
-    #reptile-breeds-main b,
-    #reptile-breeds-main strong,
-    #reptile-breeds-main em,
-    #reptile-breeds-main a,
-    #reptile-breeds-main button,
-    #reptile-breeds-main input,
-    #reptile-breeds-main .rep-badge-strip,
-    #reptile-breeds-main .quick-nav-badge,
-    #reptile-breeds-main .quick-nav-title,
-    #reptile-breeds-main .guide-nav-label,
-    #reptile-breeds-main .heading-label,
-    #reptile-breeds-main .heading-content p,
-    #reptile-breeds-main .breed-badge,
-    #reptile-breeds-main .breed-sci,
-    #reptile-breeds-main .breed-tags span,
-    #reptile-breeds-main .category-examples,
-    #reptile-breeds-main .care-reminder-badge {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
-    }
-
-    #reptile-breeds-main h1,
-    #reptile-breeds-main h2,
-    #reptile-breeds-main h3,
-    #reptile-breeds-main h4,
-    #reptile-breeds-main h5,
-    #reptile-breeds-main h6,
-    #reptile-breeds-main .quick-nav-title,
-    #reptile-breeds-main .quick-nav-title span,
-    #reptile-breeds-main .heading-content h2,
-    #reptile-breeds-main .heading-content h2 span,
-    #reptile-breeds-main .heading-content h2 em,
-    #reptile-breeds-main .care-reminder-copy h2,
-    #reptile-breeds-main .care-reminder-copy h2 em {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+    #reptile-breeds-main *:not(i):not([class*="fa-"]):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(.fa):not(.fab):not(.fas) {
+      font-family: "Times New Roman", Times, serif !important;
     }
 
     #reptile-breeds-main :where(a:any-link, button):focus-visible {
@@ -164,22 +130,21 @@
       margin: 0 auto;
     }
 
-    /* Prevent global.css [class*="section"] white override from punching a box inside cream sections */
     #reptile-breeds-main div.section-wrap {
       background: transparent !important;
       background-color: transparent !important;
     }
 
+    /* Consistent clean #ffffff page background matching the hero section */
+    #reptile-breeds-main section.rep-section,
     #reptile-breeds-main section.rep-section.bg-white,
-    .bg-white {
+    #reptile-breeds-main section.rep-section.bg-cream,
+    .rep-section,
+    .bg-white,
+    .bg-cream {
       background: #ffffff !important;
       background-color: #ffffff !important;
-    }
-
-    #reptile-breeds-main section.rep-section.bg-cream,
-    .bg-cream {
-      background: var(--rep-cream) !important;
-      background-color: var(--rep-cream) !important;
+      border: none !important;
     }
 
     .rep-section {
@@ -196,6 +161,8 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 40px;
+      background: #ffffff !important;
+      background-color: #ffffff !important;
     }
 
     #reptile-breeds-hero .rep-badge-strip,
@@ -209,7 +176,7 @@
     #reptile-breeds-hero .hero-note span,
     #reptile-breeds-hero .floating-card b,
     #reptile-breeds-hero .floating-card small {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
     }
 
     #reptile-breeds-hero .hero-note i,
@@ -499,7 +466,7 @@
       border: 1px solid #b7deb8;
       border-radius: 9999px;
       color: #1e6f43;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 1.2px;
@@ -516,7 +483,7 @@
 
     #reptile-breeds-main .quick-nav-title,
     .quick-nav-title {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: clamp(1.45rem, 2.4vw, 1.95rem) !important;
       font-weight: 700 !important;
       color: #1a251e !important;
@@ -528,7 +495,7 @@
 
     #reptile-breeds-main .quick-nav-title span,
     .quick-nav-title span {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       color: var(--rep-green) !important;
     }
 
@@ -569,7 +536,7 @@
       border: none;
       background: transparent;
       outline: none;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 0.95rem;
       color: #1a251e;
       padding: 8px 0;
@@ -674,7 +641,7 @@
     }
 
     .guide-nav-label {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 0.95rem;
       font-weight: 700;
       color: #1c2b20;
@@ -780,7 +747,7 @@
 
     .heading-content h2 {
       color: #263b30;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: clamp(24px, 3.2vw, 36px);
       font-weight: 700;
       margin: 0 0 12px;
@@ -793,7 +760,7 @@
 
     .heading-content h2 span,
     .heading-content h2 em {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       color: #28764a;
       font-style: normal;
     }
@@ -927,7 +894,7 @@
       backdrop-filter: blur(4px);
       padding: 5px 12px;
       border-radius: 999px;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 0.72rem;
       font-weight: 700;
       color: #1e3325;
@@ -1132,125 +1099,55 @@
     /* ========================================================
        7. CARE REMINDER
        ======================================================== */
-    main .care-reminder,
-    .care-reminder {
+    .care-reminder-grid {
       display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 34px;
-      align-items: center;
-      background: linear-gradient(135deg, #eef7f0 0%, #f7fbf5 100%) !important;
-      border: 1px solid #cfe4d2;
-      border-radius: 28px;
-      padding: 38px 40px;
-      box-shadow: 0 6px 26px rgba(35, 75, 45, 0.05);
-      position: relative;
-      overflow: hidden;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
-    .care-reminder::before {
-      content: "";
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: rgba(96, 168, 114, 0.09);
-      pointer-events: none;
-    }
-
-    .care-reminder-copy {
-      position: relative;
-      z-index: 1;
-    }
-
-    .care-reminder-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
+    .care-reminder-card {
       background: #ffffff;
-      border: 1px solid #cfe4d2;
-      color: #246b43;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      border: 1px solid var(--rep-line);
+      border-radius: 20px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 4px 18px rgba(35, 75, 45, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      text-align: left;
+      height: 100%;
     }
 
-    .care-reminder-badge i {
-      color: #b7791f;
+    .care-reminder-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(35, 75, 45, 0.08);
+      border-color: var(--rep-green);
     }
 
-    #reptile-breeds-main .care-reminder-copy h2 {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
-      font-size: clamp(1.45rem, 1rem + 1.4vw, 2.05rem) !important;
-      color: #1a251e !important;
-      margin: 0 0 12px;
-      line-height: 1.22 !important;
-      text-align: left !important;
-    }
-
-    #reptile-breeds-main .care-reminder-copy h2 em {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
-      color: var(--rep-green) !important;
-      font-style: normal !important;
-    }
-
-    .care-reminder-copy p {
-      font-size: 0.93rem;
-      line-height: 1.7;
-      color: #4a5c51;
-      margin: 0;
-      max-width: 560px;
-    }
-
-    .care-reminder-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .care-reminder-list li {
-      display: grid;
-      grid-template-columns: 38px minmax(0, 1fr);
-      gap: 12px;
-      align-items: start;
-      background: #ffffff;
-      border: 1px solid #dceade;
+    .care-reminder-icon {
+      width: 48px;
+      height: 48px;
       border-radius: 14px;
-      padding: 12px 14px;
-    }
-
-    .care-reminder-list .reminder-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #edf7f0;
-      color: var(--rep-green);
+      background: #eaf5ed;
+      color: #1e6f43;
       display: grid;
       place-items: center;
-      font-size: 0.95rem;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
     }
 
-    .care-reminder-list b {
-      display: block;
-      font-size: 0.85rem;
+    .care-reminder-card h3 {
+      font-size: 1.12rem;
       color: #1a251e;
-      margin-bottom: 2px;
+      margin: 0 0 9px;
     }
 
-    .care-reminder-list span {
-      display: block;
-      font-size: 0.78rem;
-      line-height: 1.5;
+    .care-reminder-card p {
+      font-size: 0.87rem;
+      line-height: 1.62;
       color: var(--rep-muted);
+      margin: 0;
     }
 
     /* ========================================================
@@ -1283,7 +1180,7 @@
 
     #reptile-breeds-main > .cta.rep-cta .eyebrow,
     .cta.rep-cta .eyebrow {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 0.72rem !important;
       font-weight: 700 !important;
       letter-spacing: 1.7px !important;
@@ -1296,7 +1193,7 @@
 
     #reptile-breeds-main > .cta.rep-cta h2,
     .cta.rep-cta h2 {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: clamp(24px, 3.2vw, 36px) !important;
       font-weight: 700 !important;
       letter-spacing: normal !important;
@@ -1308,14 +1205,14 @@
 
     #reptile-breeds-main > .cta.rep-cta h2 em,
     .cta.rep-cta h2 em {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       color: #28764a !important;
       font-style: normal !important;
     }
 
     #reptile-breeds-main > .cta.rep-cta p,
     .cta.rep-cta p {
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-size: 1rem !important;
       line-height: 1.65 !important;
       color: #26372e !important;
@@ -1344,7 +1241,7 @@
       border-radius: 999px;
       background: #ffffff !important;
       color: var(--dark, #1d5039) !important;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-weight: 700;
       font-size: 1rem;
       border: 1px solid #ffffff !important;
@@ -1377,7 +1274,7 @@
       background: transparent !important;
       color: var(--green, #286849) !important;
       border: 1px solid var(--green, #286849) !important;
-      font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+      font-family: "Times New Roman", Times, serif !important;
       font-weight: 700;
       font-size: 1rem;
       box-shadow: none !important;
@@ -1450,14 +1347,9 @@
 
       .breed-grid,
       .category-grid,
-      .choosing-grid {
+      .choosing-grid,
+      .care-reminder-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .care-reminder {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 30px 26px;
       }
 
       #reptile-breeds-main > .cta.rep-cta,
@@ -1557,7 +1449,8 @@
 
       .breed-grid,
       .category-grid,
-      .choosing-grid {
+      .choosing-grid,
+      .care-reminder-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1596,11 +1489,6 @@
 
       #reptile-breeds-hero .floating-card small {
         font-size: 0.68rem;
-      }
-
-      .care-reminder-list li {
-        grid-template-columns: 34px minmax(0, 1fr);
-        padding: 11px 12px;
       }
 
       #reptile-breeds-main > .cta.rep-cta,
@@ -1680,10 +1568,10 @@
         </p>
         <div class="hero-actions">
           <a class="button" href="#popular-reptiles" id="hero-cta-breeds">
-            Explore Breeds &#x2193;
+            Explore Breeds <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
           <a class="button button-outline" href="reptiles.html" id="hero-cta-hub">
-            Reptile Care Hub &#x2197;
+            Reptile Care Hub
           </a>
         </div>
         <div class="hero-note">
@@ -2051,7 +1939,7 @@
     <!-- ========================================================
          4. REPTILE CATEGORIES
          ======================================================== -->
-    <section class="rep-section bg-cream searchable-section" id="reptile-categories" data-category="reptile-categories" aria-labelledby="heading-categories">
+    <section class="rep-section bg-white searchable-section" id="reptile-categories" data-category="reptile-categories" aria-labelledby="heading-categories">
       <div class="section-wrap">
         <div class="section-heading-wrap">
           <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -2248,15 +2136,37 @@
     <!-- ========================================================
          6. REPTILE CARE REMINDER
          ======================================================== -->
-    <section class="rep-section bg-cream searchable-section" id="care-reminder" data-category="care-reminder" aria-labelledby="heading-reminder">
+    <section class="rep-section bg-white searchable-section" id="care-reminder" data-category="care-reminder" aria-labelledby="heading-reminder">
       <div class="section-wrap">
-        <div class="care-reminder searchable-item" data-title="Every Reptile Species Is Different" data-tags="species different habitat temperature humidity diet desert tropical aquatic arboreal care reminder">
-          <div class="care-reminder-copy">
-            <span class="care-reminder-badge">
+        <div class="section-heading-wrap">
+          <svg class="corner-wave wave-tl" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+          <svg class="corner-wave wave-br" viewBox="0 0 220 130" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z" fill="#d8e8ce" opacity="0.7" />
+            <path d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z" fill="#edf6e6"
+              opacity="0.95" />
+          </svg>
+
+          <div class="paw paw-left-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="paw paw-left-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="paw paw-right-1"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+          <div class="paw paw-right-2"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+
+          <div class="heading-content">
+            <span class="heading-label">
               <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
               Important Care Reminder
             </span>
-            <h2 id="heading-reminder">Every Reptile Species Is <em>Different</em></h2>
+            <h2 id="heading-reminder">
+              <span class="heading-burst left" aria-hidden="true"><span></span><span></span><span></span></span>
+              Every Reptile Species Is <span>Different</span>
+              <span class="heading-burst right" aria-hidden="true"><span></span><span></span><span></span></span>
+            </h2>
             <p>
               There is no single &ldquo;reptile setup&rdquo;. A bearded dragon, a crested gecko, a
               ball python, and a red-eared slider all need different enclosure sizes, temperatures,
@@ -2264,37 +2174,41 @@
               the exact morph or locality—before adjusting heat, UVB, or feeding schedules.
             </p>
           </div>
+        </div>
 
-          <ul class="care-reminder-list">
-            <li>
-              <span class="reminder-icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></span>
-              <div>
-                <b>Habitat</b>
-                <span>Desert, tropical, arboreal, aquatic, or terrestrial—each species needs a different enclosure and substrate.</span>
-              </div>
-            </li>
-            <li>
-              <span class="reminder-icon"><i class="fa-solid fa-temperature-high" aria-hidden="true"></i></span>
-              <div>
-                <b>Temperature</b>
-                <span>Basking spots, cool zones, and nighttime drops must match the species' natural range.</span>
-              </div>
-            </li>
-            <li>
-              <span class="reminder-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
-              <div>
-                <b>Humidity</b>
-                <span>Too dry or too damp can cause shedding problems, respiratory infections, or shell issues.</span>
-              </div>
-            </li>
-            <li>
-              <span class="reminder-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></span>
-              <div>
-                <b>Diet</b>
-                <span>Insectivore, herbivore, omnivore, or carnivore—never assume another reptile's diet will suit yours.</span>
-              </div>
-            </li>
-          </ul>
+        <div class="care-reminder-grid">
+          <article class="care-reminder-card searchable-item" data-title="Habitat" data-tags="habitat desert tropical arboreal aquatic terrestrial enclosure substrate care reminder">
+            <div class="care-reminder-icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></div>
+            <h3>Habitat</h3>
+            <p>
+              Desert, tropical, arboreal, aquatic, or terrestrial—each species needs a different
+              enclosure and substrate.
+            </p>
+          </article>
+
+          <article class="care-reminder-card searchable-item" data-title="Temperature" data-tags="temperature basking spots cool zones nighttime drops thermal range care reminder">
+            <div class="care-reminder-icon"><i class="fa-solid fa-temperature-high" aria-hidden="true"></i></div>
+            <h3>Temperature</h3>
+            <p>
+              Basking spots, cool zones, and nighttime drops must match the species' natural range.
+            </p>
+          </article>
+
+          <article class="care-reminder-card searchable-item" data-title="Humidity" data-tags="humidity dry damp shedding respiratory infections shell issues care reminder">
+            <div class="care-reminder-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+            <h3>Humidity</h3>
+            <p>
+              Too dry or too damp can cause shedding problems, respiratory infections, or shell issues.
+            </p>
+          </article>
+
+          <article class="care-reminder-card searchable-item" data-title="Diet" data-tags="diet insectivore herbivore omnivore carnivore feeding nutrition care reminder">
+            <div class="care-reminder-icon"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i></div>
+            <h3>Diet</h3>
+            <p>
+              Insectivore, herbivore, omnivore, or carnivore—never assume another reptile's diet will suit yours.
+            </p>
+          </article>
         </div>
       </div>
     </section>

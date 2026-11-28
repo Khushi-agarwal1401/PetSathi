@@ -594,81 +594,94 @@
     }
 
     /* Compact Dog Walking Search and Filter */
+    /* Match the navigation treatment on the canine nutrition guide. */
     .guides-nav-strip {
       position: relative;
       background: #ffffff;
-      margin: 28px auto;
-      max-width: 1080px;
-      width: calc(100% - 48px);
+      margin: 40px auto 35px;
+      max-width: 1200px;
+      width: calc(100% - 40px);
       border: 1px solid #dceade;
-      border-radius: 24px;
-      padding: 22px 28px;
+      border-radius: 32px;
+      padding: clamp(24px, 4vw, 42px) clamp(16px, 3.5vw, 36px);
       box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
     }
 
-    /* Centered Header */
+    .quick-nav-decor {
+      position: absolute;
+      color: #cde4d3;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .quick-nav-decor:first-child {
+      top: 12px;
+      left: 12px;
+      transform: rotate(-20deg);
+    }
+
+    .quick-nav-decor:nth-child(2) {
+      right: 12px;
+      bottom: 12px;
+      transform: rotate(20deg);
+    }
+
+    .quick-nav-decor i:first-child {
+      font-size: 1.55rem;
+    }
+
+    .quick-nav-decor i:last-child {
+      font-size: 0.9rem;
+    }
+
     .quick-nav-header {
       position: relative;
-      z-index: 1;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
-    .quick-nav-eyebrow-wrap {
-      display: inline-flex;
+    .quick-nav-eyebrow {
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 8px;
-      width: 100%;
+      gap: clamp(8px, 1.5vw, 16px);
+      margin-bottom: 14px;
+      color: #1e6f43;
     }
 
-    .quick-nav-line {
+    .quick-nav-eyebrow::before,
+    .quick-nav-eyebrow::after {
+      content: "";
       height: 1px;
-      width: 48px;
-      background: #cdded1;
+      width: clamp(16px, 8vw, 110px);
+      background: #d6ead9;
     }
 
     .quick-nav-badge {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: #edf6df;
-      color: #246b43;
-      border: 1px solid #dcebc9;
-      padding: 4px 12px;
-      border-radius: 50px;
-      font-family: 'DM Sans', 'Manrope', sans-serif !important;
-      font-size: 0.7rem;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid #b7deb8;
+      border-radius: 9999px;
+      background: #f4faf5;
+      font-size: 0.74rem;
       font-weight: 700;
-      letter-spacing: 1.1px;
+      letter-spacing: 0.065em;
       text-transform: uppercase;
     }
 
-    .quick-nav-badge i {
-      font-size: 0.8rem;
-    }
-
     .quick-nav-title {
-      font-family: Georgia, 'Times New Roman', serif !important;
-      font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 2.65vw, 2.15rem);
       font-weight: 700;
       color: #1a281f;
-      margin: 0 0 5px;
+      margin: 0;
       line-height: 1.25;
     }
 
     .quick-nav-title span {
       color: #286849;
-    }
-
-    .quick-nav-subtitle {
-      font-family: 'DM Sans', 'Manrope', sans-serif !important;
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin: 0 auto;
-      max-width: 620px;
-      line-height: 1.5;
     }
 
     /* Controls Container */
@@ -677,15 +690,17 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      max-width: 940px;
-      margin: 0 auto;
+      gap: 18px;
+      width: 100%;
+      margin: 0;
     }
 
     /* Search Bar */
     .sf-search-wrap {
       position: relative;
       width: 100%;
+      max-width: 640px;
+      margin-inline: auto;
     }
 
     .sf-search-icon {
@@ -707,7 +722,7 @@
 
     .sf-search-input {
       width: 100%;
-      height: 44px;
+      min-height: 48px;
       padding: 0 48px 0 60px;
       border: 1px solid #cce4d2;
       border-radius: 50px;
@@ -770,6 +785,7 @@
     .sf-filter-inline-row {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -786,6 +802,7 @@
     .sf-mini-pills {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
     }
@@ -794,7 +811,8 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 4px 11px 4px 5px;
+      min-height: 44px;
+      padding: 6px 14px 6px 7px;
       border-radius: 9999px;
       font-family: 'DM Sans', 'Manrope', sans-serif !important;
       font-size: 0.82rem;
@@ -810,8 +828,8 @@
     }
 
     .sf-pill-icon {
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       background: #dcefe1;
       color: #1e6f43;
@@ -1452,8 +1470,8 @@
       margin: 45px auto 35px;
       padding: 46px 35px 38px;
       border-radius: 32px;
-      border: 1.5px solid #fecaca;
-      background: #fafcf7;
+      border: 1.5px solid #cce4d2;
+      background: #edf7f0;
       box-shadow: none;
       overflow: visible;
     }
@@ -1466,7 +1484,7 @@
       width: 46px;
       height: 46px;
       border-radius: 50%;
-      background: #f87171;
+      background: #286849;
       border: 2.5px solid #ffffff;
       box-shadow: none;
       display: flex;
@@ -1497,10 +1515,10 @@
       align-items: center;
       gap: 6px;
       padding: 4px 12px;
-      background: #fee2e2;
-      border: 1px solid #fecaca;
+      background: #edf7f0;
+      border: 1px solid #cce4d2;
       border-radius: 50px;
-      color: #b91c1c;
+      color: #1e6f43;
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.4px;
@@ -1518,7 +1536,7 @@
 
     .dog-warning-heading h2 em {
       font-style: italic;
-      color: #dc2626;
+      color: #286849;
     }
 
     .section-heading-clean p {
@@ -1539,7 +1557,7 @@
     /* Inside cards: Flat, clean, no hover */
     .warning-sign-card {
       background: #ffffff;
-      border: 1px solid #fee2e2;
+      border: 1px solid #edf7f0;
       border-radius: 16px;
       padding: 20px 14px;
       text-align: center;
@@ -1553,16 +1571,16 @@
     .warning-sign-card:hover {
       transform: none;
       box-shadow: none;
-      border-color: #fee2e2;
+      border-color: #edf7f0;
     }
 
     .warning-sign-card .quick-info-icon-wrap {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      color: #dc2626;
+      background: #edf7f0;
+      border: 1px solid #cce4d2;
+      color: #286849;
       display: grid;
       place-items: center;
       font-size: 1.2rem;
@@ -1581,11 +1599,11 @@
       line-height: 1.4;
     }
 
-    /* Proper Red Notice Box: Clean, flat, exact 2 sentences flowing naturally till the end */
+    /* Green Safety Notice Box: Clean, flat, exact 2 sentences flowing naturally till the end */
     .warning-single-box {
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      border-left: 4px solid #ef4444;
+      background: #edf7f0;
+      border: 1px solid #cce4d2;
+      border-left: 4px solid #286849;
       border-radius: 14px;
       padding: 16px 20px;
       display: flex;
@@ -1596,7 +1614,7 @@
 
     .warning-single-box i {
       font-size: 1.25rem;
-      color: #ef4444;
+      color: #286849;
       margin-top: 2px;
       flex-shrink: 0;
     }
@@ -1613,7 +1631,7 @@
     }
 
     .warning-single-box strong {
-      color: #b91c1c;
+      color: #1e6f43;
       font-weight: 700;
     }
 
@@ -2030,6 +2048,13 @@
       color: white;
     }
 
+    .cta > div:first-child,
+    .cta > div:first-child .eyebrow,
+    .cta > div:first-child h2,
+    .cta > div:first-child p {
+      text-align: left;
+    }
+
     .cta .button-light {
       background: white !important;
       color: var(--green) !important;
@@ -2159,10 +2184,6 @@
         margin: 20px auto;
       }
 
-      .quick-nav-line {
-        width: 40px;
-      }
-
       .sf-row-label {
         min-width: 72px;
       }
@@ -2250,7 +2271,7 @@
        Layout & alignment consistency
        - Consistent section spacing
        - Card grids: max 3 per row (desktop), 2 (tablet), 1 (mobile);
-         incomplete last rows are centered
+         incomplete last rows remain left-aligned
        - Every card: icon -> title -> description, center-aligned
        - Same green icon style and subtle hover on all cards
        Scoped to #main-content so the header and footer are untouched.
@@ -2290,9 +2311,9 @@
     #main-content .warning-signs-grid {
       --card-cols: 3;
       --card-gap: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(var(--card-cols), minmax(0, 1fr));
+      grid-auto-rows: 1fr;
       align-items: stretch;
       gap: var(--card-gap);
     }
@@ -2303,8 +2324,7 @@
     #main-content #accessories-grid > *,
     #main-content .safety-cards-grid > *,
     #main-content .warning-signs-grid > * {
-      flex: 0 0 calc((100% - (var(--card-cols) - 1) * var(--card-gap)) / var(--card-cols));
-      max-width: calc((100% - (var(--card-cols) - 1) * var(--card-gap)) / var(--card-cols));
+      max-width: 100%;
       min-width: 0;
       box-sizing: border-box;
     }
@@ -2336,10 +2356,10 @@
       box-shadow: 0 12px 30px rgba(35, 75, 45, 0.1);
     }
 
-    /* Highlighted safety tips keep emphasis using the cream theme colour */
+    /* Safety tips use the same surface and border as their neighboring cards. */
     #main-content .safety-tip-card.warning-highlight {
-      background: #fbf6ec;
-      border-color: #e6d6c6;
+      background: #ffffff;
+      border-color: #dcebc9;
     }
 
     #main-content .safety-tip-card.warning-highlight:hover {
@@ -2360,6 +2380,11 @@
       align-items: center;
       text-align: center;
       padding: 1.625rem 1.375rem 1.5rem;
+    }
+
+    #main-content .benefit-card {
+      min-height: 15rem;
+      justify-content: center;
     }
 
     #main-content .safety-card-content {
@@ -2490,7 +2515,7 @@
     #main-content .sf-filter-inline-row,
     #main-content .sf-mini-pills,
     #main-content .sf-meta-bar {
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     #main-content .sf-filter-inline-row {
@@ -2598,22 +2623,25 @@
 
     <!-- Search & Filter Strip (Matching Quick Navigation Hub in dogs/index.html) -->
     <div class="guides-nav-strip" id="search-filter" role="region" aria-label="Dog Walking Search and Filter">
-      <!-- Centered Header -->
+      <div class="quick-nav-decor" aria-hidden="true">
+        <i class="fa-solid fa-paw"></i>
+        <i class="fa-solid fa-paw"></i>
+      </div>
+      <div class="quick-nav-decor" aria-hidden="true">
+        <i class="fa-solid fa-paw"></i>
+        <i class="fa-solid fa-paw"></i>
+      </div>
       <div class="quick-nav-header">
-        <div class="quick-nav-eyebrow-wrap">
-          <span class="quick-nav-line"></span>
-          <div class="quick-nav-badge">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <span>SEARCH &amp; FILTER</span>
-          </div>
-          <span class="quick-nav-line"></span>
+        <div class="quick-nav-eyebrow">
+          <span class="quick-nav-badge">
+            <i class="fa-regular fa-compass" aria-hidden="true"></i>
+            Quick Navigation &amp; Filter
+          </span>
         </div>
-        <h3 class="quick-nav-title">Dog Walking <span>Search &amp; Filter</span></h3>
-        <p class="quick-nav-subtitle">Search walking tips by keyword, filter daily walking requirements by dog size, and
-          tailor outdoor activities</p>
+        <h2 class="quick-nav-title">Explore Canine <span>Walking &amp; Exercise Guide</span></h2>
       </div>
 
-      <!-- Search & Filter Controls (Clean inline rows, no boxes, no 'All' buttons) -->
+      <!-- Search & Filter Controls -->
       <div class="sf-controls-container">
         <!-- 1. Search Bar -->
         <div class="sf-search-wrap">
@@ -3881,14 +3909,13 @@
         <!-- Urgent '!!' circle badge on extreme top-left outline, no glow, dots pointing bottom-right -->
         <div class="warning-outline-badge" title="Urgent Safety Alert">
           <span class="badge-icons">
-            <i class="fa-solid fa-exclamation" aria-hidden="true"></i><i class="fa-solid fa-exclamation"
-              aria-hidden="true"></i>
+            <i class="fa-solid fa-paw" aria-hidden="true"></i>
           </span>
         </div>
 
         <div class="section-heading-clean" style="margin-bottom: 20px; background: transparent !important;">
           <span class="warning-eyebrow">
-            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Safety Alert
+            <i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Safety Alert
           </span>
           <h2>Signs Your Dog <em>Needs a Break</em></h2>
           <p>
@@ -3930,7 +3957,7 @@
           </div>
         </div>
 
-        <!-- Proper Red Notice Box with Exact Two Sentences -->
+        <!-- Green Safety Notice Box with Exact Two Sentences -->
         <div class="warning-single-box">
           <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           <p>

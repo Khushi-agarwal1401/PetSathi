@@ -39,9 +39,21 @@
             format("truetype");
       }
 
+      @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src:
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.woff2")
+            format("woff2"),
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.ttf")
+            format("truetype");
+      }
+
       /* Protect Font Awesome 6 Free & Brands from global.css font override */
-      body .fa-solid,
-      body .fa-regular {
+      body [class*="fa-"],
+      body [class*="fa-"]::before {
         font-family: "Font Awesome 6 Free" !important;
         font-style: normal !important;
         font-variant: normal !important;
@@ -49,15 +61,18 @@
         line-height: 1 !important;
       }
 
-      body .fa-solid {
+      body .fa-solid,
+      body .fa-solid::before {
         font-weight: 900 !important;
       }
 
-      body .fa-regular {
+      body .fa-regular,
+      body .fa-regular::before {
         font-weight: 400 !important;
       }
 
-      body .fa-brands {
+      body .fa-brands,
+      body .fa-brands::before {
         font-family: "Font Awesome 6 Brands" !important;
         font-weight: 400 !important;
         font-style: normal !important;
@@ -318,7 +333,7 @@
         width: calc(100% - 40px);
         border: 1px solid #dceade;
         border-radius: 32px;
-        padding: 42px 36px 38px;
+        padding: 40px 28px 36px;
         box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
         overflow: hidden;
       }
@@ -417,6 +432,7 @@
       .quick-nav-badge {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         padding: 6px 16px;
         background: #f4faf5;
@@ -428,14 +444,24 @@
         font-weight: 700;
         letter-spacing: 1.2px;
         text-transform: uppercase;
+        line-height: 1;
         box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
       }
 
       .quick-nav-badge i {
-        font-size: 0.95rem;
+        font-size: 0.88rem;
         line-height: 1;
         color: #1e6f43;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
+      }
+
+      .quick-nav-badge span {
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
       }
 
       .quick-nav-title {
@@ -483,6 +509,10 @@
         color: #237847;
         font-size: 1rem;
         margin-right: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
         flex-shrink: 0;
       }
 
@@ -511,6 +541,9 @@
         margin-left: 6px;
         border-radius: 50%;
         display: none;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
         transition: color 0.2s ease;
       }
 
@@ -532,16 +565,17 @@
         position: relative;
         z-index: 1;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
         margin: 0;
       }
 
       button.guide-nav-item {
         display: flex;
         align-items: center;
-        gap: 12px;
-        padding: 9px 18px 9px 9px;
+        gap: 9px;
+        min-width: 0;
+        padding: 7px 14px 7px 7px;
         background: #edf7f0;
         border: 1px solid #cce4d2;
         border-radius: 9999px;
@@ -550,6 +584,8 @@
         font-family: inherit;
         width: 100%;
         text-align: left;
+        line-height: 1;
+        box-sizing: border-box;
         transition:
           transform 0.2s ease,
           box-shadow 0.2s ease,
@@ -571,15 +607,16 @@
       }
 
       .guide-nav-icon {
-        width: 42px;
-        height: 42px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: #d1ecda;
         color: #1e6f43;
-        display: grid;
-        place-items: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
-        font-size: 1.15rem;
+        font-size: 0.98rem;
         line-height: 1;
         transition:
           background 0.2s ease,
@@ -587,7 +624,9 @@
       }
 
       .guide-nav-icon i {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         line-height: 1;
       }
 
@@ -603,10 +642,14 @@
 
       .guide-nav-label {
         font-family: "DM Sans", "Manrope", sans-serif !important;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 700;
         color: #1c2b20;
         white-space: nowrap;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        min-width: 0;
       }
 
       button.guide-nav-item.active .guide-nav-label {
@@ -906,9 +949,10 @@
       }
 
       /* Responsive Breakpoints */
-      @media (max-width: 1100px) {
+      @media (max-width: 1240px) {
         .guides-nav-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
         }
       }
 
@@ -1065,13 +1109,15 @@
               class="button"
               href="#understanding-behaviour"
               id="hero-cta-understanding"
-              >Explore Behaviour Guide ↓</a
             >
+              Explore Behaviour Guide
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
             <a
               class="button button-outline"
               href="#behaviour-signs"
               id="hero-cta-signs"
-              >Common Behaviour Signs ↓</a
+              >Common Behaviour Signs</a
             >
           </div>
           <div class="hero-note">
@@ -2136,7 +2182,7 @@
 
           // Show/hide clear search button
           if (clearBtn) {
-            clearBtn.style.display = query ? "block" : "none";
+            clearBtn.style.display = query ? "inline-flex" : "none";
           }
         }
 

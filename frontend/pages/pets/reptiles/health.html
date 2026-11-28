@@ -1,0 +1,2130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore comprehensive reptile health and wellness guidance on PetSathi. Learn about common health problems, metabolic bone disease, respiratory care, shedding, digestive wellness, and prevention for pet reptiles."
+    />
+    <title>Reptile Health &amp; Wellness Guide | PetSathi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/global.css" />
+    <link rel="stylesheet" href="../../../css/home.css" />
+    <link rel="stylesheet" href="../../../css/inner.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* Font Awesome 6 Resilience & Free font declarations */
+      @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 900;
+        font-display: block;
+        src:
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2")
+            format("woff2"),
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.ttf")
+            format("truetype");
+      }
+
+      @font-face {
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src:
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.woff2")
+            format("woff2"),
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-regular-400.ttf")
+            format("truetype");
+      }
+
+      body [class*="fa-"],
+      body [class*="fa-"]::before {
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 900 !important;
+        font-style: normal !important;
+        font-variant: normal !important;
+        text-rendering: auto !important;
+        line-height: 1 !important;
+      }
+
+      .fa-regular,
+      .fa-regular::before {
+        font-weight: 400 !important;
+      }
+
+      /* Dropdown icon and spacing fixes matching dogs/cats */
+      .dropdown a::before,
+      .dropdown a::after {
+        display: none !important;
+        content: none !important;
+      }
+
+      .dropdown a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 10px 16px !important;
+      }
+
+      .dropdown a i {
+        width: 18px;
+        text-align: center;
+      }
+
+      /* Reptile Badge Strip */
+      .reptile-badge-strip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background: #eaf2e9;
+        color: var(--green);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .reptile-badge-strip i {
+        color: var(--green);
+        font-size: 0.85rem;
+      }
+
+      /* Hero Visual Overrides */
+      .hero-visual .floating-card i {
+        color: var(--green) !important;
+        font-size: 1.25rem !important;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      .hero-note i {
+        color: var(--green);
+        margin-right: 3px;
+      }
+
+      /* Section Heading Banner (Exact match to Cats / Dogs index) */
+      .section-heading-wrap {
+        position: relative;
+        max-width: 1400px;
+        margin: 45px auto 35px;
+        padding: 44px 35px 38px;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 35px;
+        border: 1px solid #dcebc9;
+        background: #fafcf7;
+        box-shadow: 0 4px 24px rgba(35, 75, 45, 0.04);
+      }
+
+      .corner-wave {
+        position: absolute;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .wave-tl {
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 130px;
+      }
+
+      .wave-br {
+        bottom: 0;
+        right: 0;
+        width: 220px;
+        height: 130px;
+      }
+
+      .heading-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .heading-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 20px;
+        margin-bottom: 16px;
+        border-radius: 50px;
+        background: #edf6df;
+        border: 1px solid #dcebc9;
+        color: #246b43;
+        font-family: "DM Sans", "Manrope", sans-serif !important;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        box-shadow: 0 1px 4px rgba(36, 107, 67, 0.06);
+      }
+
+      .heading-label i {
+        font-size: 14px;
+        color: #246b43;
+        line-height: 1;
+      }
+
+      .section-heading-wrap h2 {
+        color: #263b30;
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: clamp(24px, 3.2vw, 36px);
+        font-weight: 700;
+        margin: 0 0 12px;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .section-heading-wrap h2 span {
+        color: #28764a;
+      }
+
+      .heading-burst {
+        display: inline-block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        vertical-align: middle;
+      }
+
+      .heading-burst span {
+        position: absolute;
+        background: #60a872;
+        border-radius: 9999px;
+      }
+
+      .heading-burst.left span {
+        right: 0;
+        transform-origin: right center;
+      }
+
+      .heading-burst.left span:nth-child(1) {
+        top: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(35deg);
+      }
+
+      .heading-burst.left span:nth-child(2) {
+        top: 11px;
+        width: 18px;
+        height: 2.8px;
+      }
+
+      .heading-burst.left span:nth-child(3) {
+        bottom: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(-35deg);
+      }
+
+      .heading-burst.right span {
+        left: 0;
+        transform-origin: left center;
+      }
+
+      .heading-burst.right span:nth-child(1) {
+        top: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(-35deg);
+      }
+
+      .heading-burst.right span:nth-child(2) {
+        top: 11px;
+        width: 18px;
+        height: 2.8px;
+      }
+
+      .heading-burst.right span:nth-child(3) {
+        bottom: 3px;
+        width: 14px;
+        height: 2.8px;
+        transform: rotate(35deg);
+      }
+
+      .section-heading-wrap p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #64736a;
+        font-family: "DM Sans", "Manrope", sans-serif !important;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .decor-icon {
+        position: absolute;
+        color: rgba(115, 173, 91, 0.28);
+        z-index: 1;
+        pointer-events: none;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      .decor-left-1 {
+        top: 66px;
+        left: 108px;
+        font-size: 58px;
+        transform: rotate(20deg);
+      }
+
+      .decor-left-2 {
+        bottom: 24px;
+        left: 82px;
+        font-size: 38px;
+        transform: rotate(-15deg);
+      }
+
+      .decor-right-1 {
+        top: 60px;
+        right: 75px;
+        font-size: 56px;
+        transform: rotate(18deg);
+      }
+
+      .decor-right-2 {
+        bottom: 35px;
+        right: 140px;
+        font-size: 38px;
+        transform: rotate(-15deg);
+      }
+
+      /* Guides Nav Strip - Matching Dogs/Food & Cats/Nutrition Layout */
+      .guides-nav-strip {
+        position: relative;
+        background: #ffffff;
+        margin: 40px auto 35px;
+        max-width: 1200px;
+        width: calc(100% - 40px);
+        border: 1px solid #dceade;
+        border-radius: 32px;
+        padding: 42px 36px 38px;
+        box-shadow: 0 4px 24px rgba(35, 80, 50, 0.04);
+        overflow: hidden;
+      }
+
+      /* Decorative Corner Paws */
+      .quick-nav-decor {
+        position: absolute;
+        pointer-events: none;
+        z-index: 0;
+        color: #cde4d3;
+        opacity: 0.55;
+      }
+
+      .decor-top-left {
+        top: -8px;
+        left: -8px;
+        width: 130px;
+        height: 130px;
+        background: radial-gradient(
+          circle at 10% 10%,
+          #eaf5ed 0%,
+          rgba(234, 245, 237, 0) 70%
+        );
+        border-radius: 0 0 100% 0;
+      }
+
+      .decor-bottom-right {
+        bottom: -8px;
+        right: -8px;
+        width: 130px;
+        height: 130px;
+        background: radial-gradient(
+          circle at 90% 90%,
+          #eaf5ed 0%,
+          rgba(234, 245, 237, 0) 70%
+        );
+        border-radius: 100% 0 0 0;
+      }
+
+      .decor-paw {
+        position: absolute;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      .decor-paw-1 {
+        top: 14px;
+        left: 28px;
+        font-size: 28px;
+        transform: rotate(-15deg);
+      }
+
+      .decor-paw-2 {
+        top: 38px;
+        left: 12px;
+        font-size: 19px;
+        transform: rotate(20deg);
+      }
+
+      .decor-paw-3 {
+        bottom: 36px;
+        right: 14px;
+        font-size: 19px;
+        transform: rotate(-25deg);
+      }
+
+      .decor-paw-4 {
+        bottom: 14px;
+        right: 28px;
+        font-size: 28px;
+        transform: rotate(15deg);
+      }
+
+      /* Centered Header & Pill Badge */
+      .quick-nav-header {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .quick-nav-eyebrow-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      .quick-nav-line {
+        height: 1px;
+        width: 110px;
+        background: #d6ead9;
+      }
+
+      .quick-nav-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 6px 16px;
+        background: #f4faf5;
+        border: 1px solid #b7deb8;
+        border-radius: 9999px;
+        color: #1e6f43;
+        font-family: "DM Sans", "Manrope", sans-serif !important;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        line-height: 1;
+        box-shadow: 0 1px 4px rgba(35, 100, 55, 0.04);
+      }
+
+      .quick-nav-badge i {
+        font-size: 0.88rem;
+        line-height: 1;
+        color: #1e6f43;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .quick-nav-badge span {
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
+      }
+
+      .quick-nav-title {
+        font-family: "Manrope", sans-serif !important;
+        font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+        font-weight: 800;
+        color: #1a251e;
+        margin: 0;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .quick-nav-title span {
+        color: #1e6f43;
+        font-weight: 800;
+      }
+
+      /* Quick Nav Search Input & Filter Pill Styling */
+      .guides-nav-search-wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+        margin: 0 auto 28px;
+      }
+
+      .guides-nav-search-bar {
+        display: flex;
+        align-items: center;
+        background: #fafcf7;
+        border: 1.5px solid #cce4d2;
+        border-radius: 9999px;
+        padding: 6px 18px;
+        box-shadow: 0 2px 10px rgba(35, 80, 50, 0.05);
+        transition: all 0.25s ease;
+      }
+
+      .guides-nav-search-bar:focus-within {
+        background: #ffffff;
+        border-color: #237847;
+        box-shadow: 0 4px 18px rgba(35, 120, 71, 0.16);
+      }
+
+      .guides-nav-search-icon {
+        color: #237847;
+        font-size: 1rem;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .guides-nav-search-input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-family: "DM Sans", "Manrope", sans-serif;
+        font-size: 0.95rem;
+        color: #1a251e;
+        padding: 8px 0;
+      }
+
+      .guides-nav-search-input::placeholder {
+        color: #7a8c80;
+      }
+
+      .guides-nav-clear-btn {
+        background: none;
+        border: none;
+        color: #8fa094;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 4px 8px;
+        margin-left: 6px;
+        border-radius: 50%;
+        display: none;
+        transition: color 0.2s ease;
+      }
+
+      .guides-nav-clear-btn:hover {
+        color: #237847;
+      }
+
+      .search-feedback-text {
+        text-align: center;
+        font-size: 0.88rem;
+        color: #246b43;
+        font-weight: 600;
+        margin-top: 10px;
+        display: none;
+      }
+
+      /* Navigation Pills Grid */
+      .guides-nav-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+        margin: 0;
+      }
+
+      button.guide-nav-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 18px 8px 8px;
+        background: #edf7f0;
+        border: 1px solid #cce4d2;
+        border-radius: 9999px;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: inherit;
+        width: 100%;
+        text-align: left;
+        line-height: 1;
+        box-sizing: border-box;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
+      }
+
+      button.guide-nav-item:hover {
+        background: #e4f4e8;
+        border-color: #237847;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(35, 100, 55, 0.12);
+      }
+
+      button.guide-nav-item.active {
+        background: #237847;
+        border-color: #237847;
+        box-shadow: 0 6px 18px rgba(35, 100, 55, 0.2);
+      }
+
+      .guide-nav-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #d1ecda;
+        color: #1e6f43;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+        line-height: 1;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .guide-nav-icon i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+
+      button.guide-nav-item:hover .guide-nav-icon {
+        background: #1e6f43;
+        color: #ffffff;
+      }
+
+      button.guide-nav-item.active .guide-nav-icon {
+        background: #ffffff;
+        color: #237847;
+      }
+
+      .guide-nav-label {
+        font-family: "DM Sans", "Manrope", sans-serif !important;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #1c2b20;
+        white-space: nowrap;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      button.guide-nav-item.active .guide-nav-label {
+        color: #ffffff;
+      }
+
+      /* ------------------------------------------------------------------
+         SECTION 2: Essential Reptile Health Topics (Cats Page Card Architecture)
+         ------------------------------------------------------------------ */
+      .topics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .topic-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .topic-card:hover {
+        transform: translateY(-6px);
+        border-color: #cbd9ce;
+        box-shadow: var(--shadow);
+      }
+
+      .topic-card-media {
+        position: relative;
+        height: 190px;
+        overflow: hidden;
+        background: #f0f3eb;
+      }
+
+      .topic-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+      }
+
+      .topic-card:hover .topic-card-media img {
+        transform: scale(1.05);
+      }
+
+      .topic-card-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(4px);
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .topic-card-badge i {
+        color: var(--green);
+        font-size: 0.85rem;
+      }
+
+      .topic-card-body {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .topic-card-body h3 {
+        font-size: 1.18rem;
+        margin: 0 0 10px;
+        color: var(--ink);
+        line-height: 1.35;
+      }
+
+      .topic-card-body p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin: 0;
+        flex-grow: 1;
+        color: var(--muted);
+      }
+
+      /* ------------------------------------------------------------------
+         SECTION 3: Signs Your Reptile May Be Unwell
+         ------------------------------------------------------------------ */
+      .signs-section {
+        background: #ffffff;
+        padding-top: 20px;
+      }
+
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .sign-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .sign-card:hover {
+        transform: translateY(-4px);
+        border-color: #cbd9ce;
+        box-shadow: var(--shadow);
+      }
+
+      .sign-icon-wrap {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: #edf7f0;
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+      }
+
+      .sign-card:hover .sign-icon-wrap {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .sign-card h3 {
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0 0 8px;
+      }
+
+      .sign-card p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* ------------------------------------------------------------------
+         SECTION 4: Reptile Health & Prevention
+         ------------------------------------------------------------------ */
+      .prevention-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .prevention-card {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .prevention-card:hover {
+        transform: translateY(-4px);
+        border-color: #cbd9ce;
+        box-shadow: var(--shadow);
+      }
+
+      .prevention-icon-wrap {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: #eaf2e9;
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+      }
+
+      .prevention-card:hover .prevention-icon-wrap {
+        background: var(--green);
+        color: #ffffff;
+      }
+
+      .prevention-card h3 {
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0 0 8px;
+      }
+
+      .prevention-card p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* ------------------------------------------------------------------
+         SECTION 5: When to Consult a Veterinarian
+         ------------------------------------------------------------------ */
+      .vet-alert-section {
+        background: linear-gradient(135deg, #f4faf6 0%, #edf7f0 100%);
+        border: 1px solid #cce4d2;
+        border-radius: 24px;
+        padding: 40px;
+        margin: 40px 0;
+        box-shadow: 0 4px 20px rgba(35, 80, 50, 0.05);
+      }
+
+      .vet-alert-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .vet-alert-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: #d1ecda;
+        color: #1e6f43;
+        display: grid;
+        place-items: center;
+        font-size: 1.65rem;
+        flex-shrink: 0;
+      }
+
+      .vet-alert-content h3 {
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: #263b30;
+        margin: 0 0 8px;
+      }
+
+      .vet-alert-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--muted);
+        margin: 0 0 20px;
+      }
+
+      .vet-alert-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 24px;
+      }
+
+      .vet-alert-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.92rem;
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      .vet-alert-list li i {
+        color: #1e6f43;
+        font-size: 1.05rem;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      /* ------------------------------------------------------------------
+         SECTION 6: Final CTA Section (Exact Match to cats/index.html)
+         ------------------------------------------------------------------ */
+      .cta {
+        margin-top: 0;
+        margin-bottom: 92px;
+        border: 1px solid #e6d6c6;
+      }
+
+      .cta-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+      }
+
+      .cta .button-outline {
+        background: transparent;
+        color: var(--green);
+        border-color: var(--green);
+      }
+
+      .cta .button-outline:hover {
+        background: var(--green);
+        color: white;
+      }
+
+      .cta > div:first-child {
+        text-align: left;
+      }
+
+      .cta > div:first-child .eyebrow,
+      .cta > div:first-child h2,
+      .cta > div:first-child p {
+        text-align: left;
+      }
+
+      /* ------------------------------------------------------------------
+         RESPONSIVE MEDIA QUERIES
+         ------------------------------------------------------------------ */
+      @media (max-width: 1100px) {
+        .topics-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .guides-nav-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .vet-alert-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 960px) {
+        .signs-grid,
+        .prevention-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .guides-nav-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-heading-wrap {
+          margin: 25px 0;
+          padding: 35px 16px 30px;
+          border-radius: 24px;
+        }
+
+        .corner-wave {
+          width: 170px;
+          height: 110px;
+        }
+
+        .section-heading-wrap h2 {
+          font-size: clamp(20px, 5vw, 26px);
+          gap: 8px;
+        }
+
+        .section-heading-wrap p {
+          font-size: 14px;
+        }
+
+        .heading-label {
+          font-size: 11px;
+          padding: 6px 14px;
+          margin-bottom: 12px;
+        }
+
+        .decor-left-1,
+        .decor-right-1 {
+          font-size: 34px;
+        }
+
+        .decor-left-2,
+        .decor-right-2 {
+          font-size: 24px;
+        }
+
+        .heading-burst {
+          width: 16px;
+          height: 18px;
+        }
+
+        .heading-burst span:nth-child(1),
+        .heading-burst span:nth-child(3) {
+          width: 10px;
+        }
+
+        .heading-burst span:nth-child(2) {
+          width: 13px;
+        }
+
+        .guides-nav-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .guides-nav-strip {
+          padding: 24px 18px;
+        }
+
+        .topics-grid,
+        .signs-grid,
+        .prevention-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .vet-alert-section {
+          padding: 28px 20px;
+        }
+
+        .vet-alert-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .vet-alert-content h3 {
+          text-align: center;
+        }
+
+        .vet-alert-content p {
+          text-align: center;
+        }
+
+        .cta-actions {
+          width: 100%;
+          flex-direction: column;
+          margin-top: 18px;
+        }
+
+        .cta-actions .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main>
+      <!-- 1. Main Hero Section -->
+      <section class="hero section-wrap" id="reptile-hero">
+        <div class="hero-copy">
+          <div class="reptile-badge-strip">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            PetSathi • Reptile Health &amp; Wellness
+          </div>
+          <h1>Reptile Health &amp; <em>Wellness Guide</em></h1>
+          <p>
+            Comprehensive care guidance for keeping your pet reptiles healthy and
+            thriving. From calibrated temperature gradients and proper UVB photoperiods
+            to early illness detection, discover essential husbandry practices to support
+            your scaly companions through every stage of life.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#health-topics" id="hero-cta-topics">
+              Explore Health Topics <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a
+              class="button button-outline"
+              href="#signs-unwell"
+              id="hero-cta-signs"
+              >Signs of Illness</a
+            >
+          </div>
+          <div class="hero-note">
+            <i class="fa-solid fa-heart" style="color: var(--green);"></i>
+            &nbsp; Dedicated to the vitality and wellbeing of every reptile companion.
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <img
+            src="../../../assets/images/reptiles/bearded-dragon.jpg"
+            alt="Healthy bearded dragon basking peacefully in terrarium"
+            class="hero-photo"
+            id="hero-reptile-image"
+          />
+          <div class="floating-card card-top">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <span
+              ><b>UVB Lighting Essential</b
+              ><small>Critical for calcium metabolism</small></span
+            >
+          </div>
+          <div class="floating-card card-bottom">
+            <i class="fa-solid fa-temperature-high" aria-hidden="true"></i>
+            <span
+              ><b>Thermal Gradients</b
+              ><small>Essential for digestion &amp; immunity</small></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Guide Navigation & Health Filter Strip - Matching Reference Design -->
+      <div class="guides-nav-strip" id="filter-controls-area">
+        <!-- Decorative Corner Paws -->
+        <div class="quick-nav-decor decor-top-left" aria-hidden="true">
+          <i class="fa-solid fa-paw decor-paw decor-paw-1"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-2"></i>
+        </div>
+
+        <div class="quick-nav-decor decor-bottom-right" aria-hidden="true">
+          <i class="fa-solid fa-paw decor-paw decor-paw-3"></i>
+          <i class="fa-solid fa-paw decor-paw decor-paw-4"></i>
+        </div>
+
+        <!-- Centered Header -->
+        <div class="quick-nav-header">
+          <div class="quick-nav-eyebrow-wrap">
+            <span class="quick-nav-line"></span>
+            <div class="quick-nav-badge">
+              <i
+                class="fa-regular fa-compass quick-nav-badge-icon"
+                aria-hidden="true"
+              ></i>
+              <span>QUICK NAVIGATION &amp; FILTER</span>
+            </div>
+            <span class="quick-nav-line"></span>
+          </div>
+          <h3 class="quick-nav-title">
+            Explore Reptile <span>Health &amp; Wellness Guide</span>
+          </h3>
+        </div>
+
+        <!-- Search Input Bar -->
+        <div class="guides-nav-search-wrap">
+          <div class="guides-nav-search-bar">
+            <i class="fa-solid fa-magnifying-glass guides-nav-search-icon" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="health-search-box"
+              class="guides-nav-search-input"
+              placeholder="Search health topics, symptoms, care tips, conditions..."
+              aria-label="Search Reptile Health and Wellness Guide"
+            />
+            <button id="clear-search-btn" class="guides-nav-clear-btn" aria-label="Clear search input" type="button">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="search-feedback" class="search-feedback-text" role="status" aria-live="polite"></div>
+        </div>
+
+        <!-- 6 Quick Filter Navigation Pills matching Reference Design -->
+        <div class="guides-nav-grid">
+          <button class="guide-nav-item filter-btn active" data-filter="all" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">All Topics</span>
+          </button>
+
+          <button class="guide-nav-item filter-btn" data-filter="health-topics" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Health Topics</span>
+          </button>
+
+          <button class="guide-nav-item filter-btn" data-filter="signs-unwell" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Warning Signs</span>
+          </button>
+
+          <button class="guide-nav-item filter-btn" data-filter="prevention" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Prevention Care</span>
+          </button>
+
+          <button class="guide-nav-item filter-btn" data-filter="when-vet" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Veterinary Care</span>
+          </button>
+
+          <button class="guide-nav-item filter-btn" data-filter="emergency" type="button">
+            <span class="guide-nav-icon">
+              <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+            </span>
+            <span class="guide-nav-label">Emergency Signs</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Essential Reptile Health Topics Section (Icon -> Title -> Short Description) -->
+      <section class="section section-wrap searchable-section" id="health-topics" data-category="health-topics">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="decor-icon decor-left-1"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-left-2"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-right-1"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-right-2"><i class="fa-solid fa-leaf"></i></div>
+
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-book-medical"></i>
+              Essential Reptile Health Topics
+            </span>
+
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Understanding <span>Key Health Concerns</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+
+            <p>
+              Reptiles have unique ectothermic physiology requiring precise environmental
+              husbandry. Learn about common health challenges and how proper care keeps
+              them active, healthy, and resilient.
+            </p>
+          </div>
+        </div>
+
+        <div class="topics-grid">
+          <!-- Common Health Issues -->
+          <article
+            class="topic-card searchable-item"
+            data-category="common-issues"
+            data-title="Common Health Issues"
+            data-tags="general enclosure parameters heat lighting nutrition illness care overview"
+            id="topic-common"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                Overview
+              </span>
+              <img
+                src="../../../assets/images/reptiles/leopard-gecko.jpg"
+                alt="Leopard gecko resting on desert rock"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Common Health Issues</h3>
+              <p>
+                Pet reptiles often develop health challenges rooted in incorrect enclosure
+                parameters, improper heating gradients, inadequate lighting, or unbalanced
+                nutrition. Recognizing common concerns early protects long-term wellness.
+              </p>
+            </div>
+          </article>
+
+          <!-- Metabolic Bone Disease -->
+          <article
+            class="topic-card searchable-item"
+            data-category="mbd"
+            data-title="Metabolic Bone Disease"
+            data-tags="mbd calcium uvb vitamin d3 bones softening deformity skeletal"
+            id="topic-mbd"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-bone" aria-hidden="true"></i>
+                Skeletal Care
+              </span>
+              <img
+                src="../../../assets/images/reptiles/calcium-supplement.jpg"
+                alt="Essential calcium and mineral supplement for reptiles"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Metabolic Bone Disease</h3>
+              <p>
+                A severe yet entirely preventable disease stemming from lack of high-quality
+                UVB lighting, dietary calcium deficiency, or skewed calcium-to-phosphorus ratios.
+                Proper light gradients and calcium dusting are critical.
+              </p>
+            </div>
+          </article>
+
+          <!-- Respiratory Infections -->
+          <article
+            class="topic-card searchable-item"
+            data-category="respiratory"
+            data-title="Respiratory Infections"
+            data-tags="respiratory breathing wheezing discharge mucus lungs airway"
+            id="topic-respiratory"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-lungs" aria-hidden="true"></i>
+                Respiratory
+              </span>
+              <img
+                src="../../../assets/images/reptiles/corn-snake.jpg"
+                alt="Healthy corn snake resting with clear breathing airway"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Respiratory Infections</h3>
+              <p>
+                Sub-optimal basking temperatures, damp stale air, or poor enclosure ventilation
+                often trigger bacterial lung infections. Typical signs include open-mouth
+                breathing, audible wheezing, and excessive mucus discharge.
+              </p>
+            </div>
+          </article>
+
+          <!-- Skin & Shedding Problems -->
+          <article
+            class="topic-card searchable-item"
+            data-category="shedding"
+            data-title="Skin & Shedding Problems"
+            data-tags="skin shedding dysecdysis humidity retained shed scales ecdysis"
+            id="topic-shedding"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                Ecdysis
+              </span>
+              <img
+                src="../../../assets/images/reptiles/ball-python.jpg"
+                alt="Ball python displaying clean healthy scales"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Skin &amp; Shedding Problems</h3>
+              <p>
+                Healthy ecdysis depends heavily on proper humidity gradients and hydration.
+                Retained shed (dysecdysis) around eyes, claws, and tail tips can restrict
+                blood flow and indicates immediate environmental correction is needed.
+              </p>
+            </div>
+          </article>
+
+          <!-- Parasites -->
+          <article
+            class="topic-card searchable-item"
+            data-category="parasites"
+            data-title="Internal & External Parasites"
+            data-tags="parasites mites ticks worms protozoa fecal test parasite control"
+            id="topic-parasites"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                Parasite Control
+              </span>
+              <img
+                src="../../../assets/images/reptiles/blue-tongued-skink.jpg"
+                alt="Blue-tongued skink receiving health inspection"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Internal &amp; External Parasites</h3>
+              <p>
+                Reptiles can harbor external snake mites and ticks or internal protozoa and
+                helminths. Regular fecal screenings, careful quarantine of new additions,
+                and thorough enclosure sanitization prevent severe infestations.
+              </p>
+            </div>
+          </article>
+
+          <!-- Digestive Health -->
+          <article
+            class="topic-card searchable-item"
+            data-category="digestive"
+            data-title="Digestive Health"
+            data-tags="digestive health digestion appetite impaction stool gut feeding diet"
+            id="topic-digestive"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                Digestion
+              </span>
+              <img
+                src="../../../assets/images/reptiles/bearded-dragon-eating.jpg"
+                alt="Bearded dragon feeding on nutritious fresh diet"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Digestive Health</h3>
+              <p>
+                Reptilian metabolism relies on target temperatures to produce digestive enzymes.
+                Appropriate prey sizing, high-fiber gut-loaded diets, and avoiding loose impaction-prone
+                substrates safeguard gastrointestinal wellness.
+              </p>
+            </div>
+          </article>
+
+          <!-- Dehydration -->
+          <article
+            class="topic-card searchable-item"
+            data-category="dehydration"
+            data-title="Dehydration"
+            data-tags="dehydration water soaking humidity misting kidneys eyes hydration"
+            id="topic-dehydration"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                Hydration
+              </span>
+              <img
+                src="../../../assets/images/reptiles/red-eared-slider.jpg"
+                alt="Red-eared slider turtle enjoying aquatic hydration"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Dehydration</h3>
+              <p>
+                Many pet reptiles do not drink from static water dishes. Scheduled misting,
+                dripper setups, humid micro-hides, and species-appropriate soakings prevent
+                sunken eyes, wrinkled skin, lethargy, and dangerous kidney strain.
+              </p>
+            </div>
+          </article>
+
+          <!-- Preventive Healthcare -->
+          <article
+            class="topic-card searchable-item"
+            data-category="preventive"
+            data-title="Preventive Healthcare"
+            data-tags="preventive healthcare vet weight checkup lamp replacement quarantine"
+            id="topic-preventive"
+          >
+            <div class="topic-card-media">
+              <span class="topic-card-badge">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                Preventive Care
+              </span>
+              <img
+                src="../../../assets/images/reptiles/russian-tortoise.jpg"
+                alt="Russian tortoise thriving in well-maintained habitat"
+                loading="lazy"
+              />
+            </div>
+            <div class="topic-card-body">
+              <h3>Preventive Healthcare</h3>
+              <p>
+                Proactive husbandry practices—including weekly weight tracking, routine fecal tests,
+                lamp bulb replacements every 6 to 12 months, and annual exams with a reptile-savvy
+                vet—form the foundation of lifelong wellbeing.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Signs Your Reptile May Be Unwell Section -->
+      <section class="section signs-section searchable-section" id="signs-unwell" data-category="signs-unwell">
+        <div class="section-wrap">
+          <div class="section-heading-wrap">
+            <svg
+              class="corner-wave wave-tl"
+              viewBox="0 0 220 130"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+                fill="#d8e8ce"
+                opacity="0.7"
+              />
+              <path
+                d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+                fill="#edf6e6"
+                opacity="0.95"
+              />
+            </svg>
+            <svg
+              class="corner-wave wave-br"
+              viewBox="0 0 220 130"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+                fill="#d8e8ce"
+                opacity="0.7"
+              />
+              <path
+                d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+                fill="#edf6e6"
+                opacity="0.95"
+              />
+            </svg>
+
+            <div class="decor-icon decor-left-1"><i class="fa-solid fa-leaf"></i></div>
+            <div class="decor-icon decor-left-2"><i class="fa-solid fa-leaf"></i></div>
+            <div class="decor-icon decor-right-1"><i class="fa-solid fa-leaf"></i></div>
+            <div class="decor-icon decor-right-2"><i class="fa-solid fa-leaf"></i></div>
+
+            <div class="heading-content">
+              <span class="heading-label">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Early Warning Indicators
+              </span>
+
+              <h2>
+                <span class="heading-burst left" aria-hidden="true"
+                  ><span></span><span></span><span></span
+                ></span>
+                Signs Your Reptile May Be <span>Unwell</span>
+                <span class="heading-burst right" aria-hidden="true"
+                  ><span></span><span></span><span></span
+                ></span>
+              </h2>
+
+              <p>
+                As prey animals in nature, reptiles instinctively mask pain and illness.
+                Monitoring these six critical warning signs allows owners to intervene
+                before minor conditions become medical emergencies.
+              </p>
+            </div>
+          </div>
+
+          <div class="signs-grid">
+            <!-- Loss of appetite -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Loss of Appetite"
+              data-tags="appetite anorexia hunger refusal food strike weight loss"
+              id="sign-appetite"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+              </div>
+              <h3>Loss of Appetite</h3>
+              <p>
+                Refusing food beyond normal species brumation or shed cycles, showing
+                hesitation when striking, or losing weight indicates potential stress,
+                mouth rot, or sub-optimal habitat heat.
+              </p>
+            </article>
+
+            <!-- Unusual inactivity -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Unusual Inactivity"
+              data-tags="inactivity lethargy sluggish tired weak alert motionless hide"
+              id="sign-inactivity"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-bed-pulse" aria-hidden="true"></i>
+              </div>
+              <h3>Unusual Inactivity</h3>
+              <p>
+                Prolonged lethargy, failure to thermoregulate between warm and cool zones,
+                or remaining pinned inside hides without alertness can signal systematic
+                infection or metabolic imbalance.
+              </p>
+            </article>
+
+            <!-- Abnormal shedding -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Abnormal Shedding"
+              data-tags="shedding dysecdysis skin stuck shed retained eyecap humidity"
+              id="sign-shedding"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+              </div>
+              <h3>Abnormal Shedding</h3>
+              <p>
+                Patchy, incomplete skin shed, retained eye spectacles in snakes, or constricting
+                rings of dry skin around digits often stem from low ambient humidity or
+                underlying nutritional deficiencies.
+              </p>
+            </article>
+
+            <!-- Swelling or visible injuries -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Swelling or Visible Injuries"
+              data-tags="swelling injuries burns wounds fractures blisters mouth rot abscess"
+              id="sign-swelling"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+              </div>
+              <h3>Swelling or Visible Injuries</h3>
+              <p>
+                Noticeable swelling in joints, limbs, or jawbones, heating lamp burn blisters,
+                rostral abrasions from rubbing enclosure mesh, or shell fractures require
+                prompt professional attention.
+              </p>
+            </article>
+
+            <!-- Changes in breathing -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Changes in Breathing"
+              data-tags="breathing respiratory gasping wheezing clicking discharge bubbles mucus"
+              id="sign-breathing"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-lungs" aria-hidden="true"></i>
+              </div>
+              <h3>Changes in Breathing</h3>
+              <p>
+                Open-mouth gasping, audible clicking, raspy breaths, extended neck stretching,
+                or bubbly discharge from nostrils and oral cavity point to acute respiratory
+                infections needing urgent care.
+              </p>
+            </article>
+
+            <!-- Unusual behavior or movement -->
+            <article
+              class="sign-card searchable-item"
+              data-title="Unusual Behavior or Movement"
+              data-tags="behavior movement tremors twitching ataxia stargazing seizures coordination"
+              id="sign-behavior"
+            >
+              <div class="sign-icon-wrap">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              </div>
+              <h3>Unusual Behavior or Movement</h3>
+              <p>
+                Muscle twitches, trembling limbs, lack of righting reflex, head tilting,
+                loss of grip strength, or sudden disoriented stumbling are classic neurological
+                or advanced hypocalcemia indicators.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Reptile Health & Prevention Section -->
+      <section class="section section-wrap searchable-section" id="prevention" data-category="prevention">
+        <div class="section-heading-wrap">
+          <svg
+            class="corner-wave wave-tl"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 0 L220 0 C175 12 130 22 95 20 C60 18 30 32 0 60 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M0 0 L220 0 C165 24 120 40 85 46 C50 52 22 82 6 104 C2 114 0 122 0 130 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+          <svg
+            class="corner-wave wave-br"
+            viewBox="0 0 220 130"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M220 130 L0 130 C45 118 90 108 125 110 C160 112 190 98 220 70 Z"
+              fill="#d8e8ce"
+              opacity="0.7"
+            />
+            <path
+              d="M220 130 L0 130 C55 106 100 90 135 84 C170 78 198 48 214 26 C218 16 220 8 220 0 Z"
+              fill="#edf6e6"
+              opacity="0.95"
+            />
+          </svg>
+
+          <div class="decor-icon decor-left-1"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-left-2"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-right-1"><i class="fa-solid fa-leaf"></i></div>
+          <div class="decor-icon decor-right-2"><i class="fa-solid fa-leaf"></i></div>
+
+          <div class="heading-content">
+            <span class="heading-label">
+              <i class="fa-solid fa-shield-halved"></i>
+              Proactive Husbandry Standards
+            </span>
+
+            <h2>
+              <span class="heading-burst left" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+              Reptile Health &amp; <span>Prevention</span>
+              <span class="heading-burst right" aria-hidden="true"
+                ><span></span><span></span><span></span
+              ></span>
+            </h2>
+
+            <p>
+              The vast majority of reptile medical conditions can be averted through
+              consistent, species-appropriate husbandry routines. Follow these essential
+              preventative principles to build an optimal habitat foundation.
+            </p>
+          </div>
+        </div>
+
+        <div class="prevention-grid">
+          <!-- Maintaining suitable temperature and humidity -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Temperature & Humidity Gradients"
+            data-tags="temperature humidity gradient thermostat basking hygrometer microclimate heat"
+            id="prev-temp"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-temperature-high" aria-hidden="true"></i>
+            </div>
+            <h3>Temperature &amp; Humidity Gradients</h3>
+            <p>
+              Establish a distinct warm basking zone and cool retreat end, verified by digital
+              probe thermometers. Regulate humidity with calibrated misting schedules and hygrometers
+              tailored to your reptile's native habitat.
+            </p>
+          </article>
+
+          <!-- Providing proper UVB lighting where required -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Proper UVB Lighting"
+            data-tags="uvb lighting lamps bulb d3 synthesis calcium spectrum rays radiation"
+            id="prev-uvb"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </div>
+            <h3>Proper UVB Lighting</h3>
+            <p>
+              Diurnal reptiles require linear T5 or compact UVB lamps to synthesize Vitamin D3
+              and process dietary calcium. Position lamps at recommended distances without glass
+              obstruction and replace bulbs every 6 to 12 months.
+            </p>
+          </article>
+
+          <!-- Offering species-appropriate nutrition -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Species-Appropriate Nutrition"
+            data-tags="nutrition diet feeding gut loading insects greens calcium dusting multivitamin"
+            id="prev-nutrition"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            </div>
+            <h3>Species-Appropriate Nutrition</h3>
+            <p>
+              Feed species-aligned balanced diets—whether leafy calcium-rich greens for herbivores,
+              gut-loaded live feeder insects, or properly thawed whole prey. Dust meals regularly
+              with calcium and multivitamin supplements.
+            </p>
+          </article>
+
+          <!-- Keeping the enclosure clean -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Enclosure Sanitation"
+            data-tags="clean cleanliness sanitation disinfectant hygiene spot clean substrate"
+            id="prev-clean"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-broom" aria-hidden="true"></i>
+            </div>
+            <h3>Enclosure Sanitation</h3>
+            <p>
+              Spot-clean waste daily, remove uneaten fresh foods within hours to inhibit bacterial
+              growth, and conduct deep enclosure sanitization with reptile-safe disinfectants
+              on a predictable monthly schedule.
+            </p>
+          </article>
+
+          <!-- Providing fresh water -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Fresh, Clean Water"
+            data-tags="water drinking hydration bowl misting soaking dechlorinated fresh"
+            id="prev-water"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+            </div>
+            <h3>Fresh, Clean Water</h3>
+            <p>
+              Provide dechlorinated fresh drinking water daily in shallow, tip-proof bowls.
+              For arboreal species that drink only droplets, utilize automated misting or
+              drip systems to keep hydration consistent.
+            </p>
+          </article>
+
+          <!-- Monitoring weight and behavior -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Monitoring Weight & Behavior"
+            data-tags="monitoring weight scale records tracking log body condition check"
+            id="prev-monitor"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3>Monitoring Weight &amp; Behavior</h3>
+            <p>
+              Maintain a log of weekly gram-scale weights, feeding dates, shed cycles, and
+              stool consistency. Gradual weight drops or shifts in basking time reveal problems
+              long before external symptoms manifest.
+            </p>
+          </article>
+
+          <!-- Scheduling regular veterinary checkups -->
+          <article
+            class="prevention-card searchable-item"
+            data-title="Scheduling Regular Veterinary Checkups"
+            data-tags="vet checkups regular annual exam exotic veterinarian fecal test"
+            id="prev-vet"
+          >
+            <div class="prevention-icon-wrap">
+              <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+            </div>
+            <h3>Scheduling Regular Veterinary Checkups</h3>
+            <p>
+              Schedule annual wellness examinations with an experienced exotics/reptile
+              veterinarian. Routine fecal float tests, oral cavity inspections, and husbandry reviews
+              ensure subtle parasitic or metabolic issues are resolved promptly.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. When to Consult a Veterinarian Section -->
+      <section class="section section-wrap searchable-section" id="when-vet" data-category="when-vet">
+        <div
+          class="vet-alert-section searchable-item"
+          data-title="When to Consult a Qualified Reptile Veterinarian"
+          data-tags="veterinarian vet consult exotic emergency critical symptoms warning doctor"
+        >
+          <div class="vet-alert-header">
+            <div class="vet-alert-icon">
+              <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+            </div>
+            <div class="vet-alert-content">
+              <h3>When to Consult a Qualified Reptile Veterinarian</h3>
+              <p>
+                Because reptiles mask symptoms until their metabolic reserves are depleted,
+                early veterinary intervention is crucial. Seek prompt care from an exotic or
+                reptile-certified veterinarian whenever you encounter the following symptoms:
+              </p>
+              <ul class="vet-alert-list">
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Breathing Difficulties:</strong> Audible wheezing, open-mouth gasping, clicking noises, or nasal mucus discharge.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Severe Weakness:</strong> Inability to lift body or right itself, flaccid limbs, or prolonged non-responsiveness.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Injuries &amp; Burns:</strong> Heat lamp thermal burns, rodent bite wounds, shell fractures, or visible bleeding.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Persistent Appetite Loss:</strong> Prolonged refusal of food accompanied by progressive body weight loss.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Metabolic Crises:</strong> Trembling toes, rubbery or soft jawbones, seizures, or curved back deformities.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span><strong>Digestive Obstruction:</strong> Swollen distended abdomen, lack of urates or feces, or suspected substrate impaction.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Final CTA Section (Matches frontend/pages/pets/cats/index.html) -->
+      <section class="cta section-wrap">
+        <div>
+          <div class="eyebrow">YOUR REPTILE'S WELLBEING MATTERS</div>
+          <h2>Every Scale Deserves <em>Expert Care.</em></h2>
+          <p>
+            Whether you are designing a bioactive enclosure for your first gecko
+            or managing heating gradients for a long-time reptile companion,
+            PetSathi delivers verified, species-specific guidance to support your care journey.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-light" href="#health-topics" id="cta-topics"
+            >Explore Health Topics ↗</a
+          >
+          <a class="button button-outline" href="#signs-unwell" id="cta-signs"
+            >Review Warning Signs</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Interactive Filtering & Search Script - Matching Reference Architecture -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchBox = document.getElementById("health-search-box");
+        const clearBtn = document.getElementById("clear-search-btn");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const searchableSections = document.querySelectorAll(".searchable-section");
+        const searchableItems = document.querySelectorAll(".searchable-item");
+        const searchFeedback = document.getElementById("search-feedback");
+
+        let currentFilter = "all";
+        let searchQuery = "";
+
+        function applyFilters() {
+          let matchedItemsCount = 0;
+          const query = searchQuery.trim().toLowerCase();
+
+          searchableItems.forEach((item) => {
+            const itemTitle = (
+              item.getAttribute("data-title") ||
+              item.querySelector("h3")?.textContent ||
+              ""
+            ).toLowerCase();
+            const itemTags = (item.getAttribute("data-tags") || "").toLowerCase();
+            const itemText = item.textContent.toLowerCase();
+            const parentSection = item.closest(".searchable-section");
+            const sectionCategory = parentSection
+              ? parentSection.getAttribute("data-category")
+              : "";
+
+            // Category filter matching
+            let matchesCategory = false;
+            if (currentFilter === "all") {
+              matchesCategory = true;
+            } else if (currentFilter === "emergency") {
+              matchesCategory = sectionCategory === "when-vet";
+            } else {
+              matchesCategory = sectionCategory === currentFilter;
+            }
+
+            // Search query matching
+            const matchesQuery =
+              !query ||
+              itemTitle.includes(query) ||
+              itemTags.includes(query) ||
+              itemText.includes(query);
+
+            if (matchesCategory && matchesQuery) {
+              item.style.display = "";
+              matchedItemsCount++;
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          // Show/hide sections based on whether any child item is visible or category selected
+          searchableSections.forEach((section) => {
+            const sectionCategory = section.getAttribute("data-category");
+            const visibleChildren = section.querySelectorAll(
+              '.searchable-item:not([style*="display: none"])'
+            );
+
+            if (
+              currentFilter !== "all" &&
+              currentFilter !== "emergency" &&
+              sectionCategory !== currentFilter
+            ) {
+              section.style.display = "none";
+            } else if (
+              currentFilter === "emergency" &&
+              sectionCategory !== "when-vet"
+            ) {
+              section.style.display = "none";
+            } else if (query && visibleChildren.length === 0) {
+              section.style.display = "none";
+            } else {
+              section.style.display = "";
+            }
+          });
+
+          // Feedback count
+          if (query || currentFilter !== "all") {
+            searchFeedback.style.display = "block";
+            if (matchedItemsCount === 0) {
+              searchFeedback.textContent = `No health items found matching "${query || currentFilter}". Try a different keyword.`;
+            } else {
+              searchFeedback.textContent = `Showing ${matchedItemsCount} matching health topic${matchedItemsCount === 1 ? "" : "s"}.`;
+            }
+          } else {
+            searchFeedback.style.display = "none";
+            searchFeedback.textContent = "";
+          }
+
+          // Show/hide clear search button
+          if (clearBtn) {
+            clearBtn.style.display = query ? "block" : "none";
+          }
+        }
+
+        if (searchBox) {
+          searchBox.addEventListener("input", (e) => {
+            searchQuery = e.target.value;
+            applyFilters();
+          });
+        }
+
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            searchBox.value = "";
+            searchQuery = "";
+            applyFilters();
+            searchBox.focus();
+          });
+        }
+
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            filterButtons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentFilter = btn.getAttribute("data-filter");
+            applyFilters();
+
+            // Smooth scroll to target section if filtering
+            if (currentFilter !== "all") {
+              let targetSection = null;
+              if (currentFilter === "emergency") {
+                targetSection = document.getElementById("when-vet");
+              } else {
+                targetSection = document.getElementById(currentFilter);
+              }
+              if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
+          });
+        });
+      });
+    </script>
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>
